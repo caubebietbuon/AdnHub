@@ -8,7 +8,7 @@
     ║     ██║  ██║██████╔╝██║ ╚████║    ██║  ██║╚██████╔╝██████╔╝            ║
     ║     ╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═══╝    ╚═╝  ╚═╝ ╚═════╝ ╚═════╝             ║
     ║                                                                        ║
-    ║   • Project: Adonis Hub (Adn Hub) - Neo-Glassmorphism 2.0 UI           ║
+    ║   • Project: Adonis Hub (Adn Hub) UI                                   ║
     ║   • Target Game: Steal an Egg                                          ║
     ║   • Style: Futuristic Deep Dark Glass • Electric Cyan & Purple Glow   ║
     ║   • Engine: Roblox Luau (Supported on all modern executors)           ║
@@ -50,7 +50,7 @@ local function playClickSound()
     game:GetService("Debris"):AddItem(sound, 1)
 end
 
--- Bảng màu Futuristic Neo-Glassmorphism 2.0
+-- Bảng màu Giao diện
 local Themes = {
     Background = Color3.fromRGB(11, 14, 21),
     BackgroundGlass = Color3.fromRGB(15, 19, 30),
@@ -282,7 +282,7 @@ function AdnHubLib:CreateWindow(config)
     Header.Name = "Header"
     Header.Size = UDim2.new(1, 0, 0, 52)
     Header.BackgroundColor3 = Themes.Background
-    Header.BackgroundTransparency = 0.5
+    Header.BackgroundTransparency = 1
     Header.BorderSizePixel = 0
     Header.Parent = MainFrame
 
@@ -291,7 +291,7 @@ function AdnHubLib:CreateWindow(config)
     HeaderDivider.Size = UDim2.new(1, 0, 0, 1)
     HeaderDivider.Position = UDim2.new(0, 0, 1, -1)
     HeaderDivider.BackgroundColor3 = Themes.BorderDim
-    HeaderDivider.BackgroundTransparency = 0.5
+    HeaderDivider.BackgroundTransparency = 0.6
     HeaderDivider.BorderSizePixel = 0
     HeaderDivider.Parent = Header
 
@@ -346,7 +346,7 @@ function AdnHubLib:CreateWindow(config)
     SubtitleLabel.BackgroundTransparency = 1
     SubtitleLabel.Position = UDim2.new(0, 58, 0, 28)
     SubtitleLabel.Size = UDim2.new(0, 250, 0, 14)
-    SubtitleLabel.Text = Subtitle .. " • Neo-Glassmorphism 2.0"
+    SubtitleLabel.Text = Subtitle
     SubtitleLabel.TextColor3 = Themes.TextMuted
     SubtitleLabel.Parent = Header
 
@@ -449,12 +449,12 @@ function AdnHubLib:CreateWindow(config)
     Sidebar.Size = UDim2.new(0, 200, 1, -52)
     Sidebar.Position = UDim2.new(0, 0, 0, 52)
     Sidebar.BackgroundColor3 = Themes.Sidebar
-    Sidebar.BackgroundTransparency = 0.5
+    Sidebar.BackgroundTransparency = 1
     Sidebar.BorderSizePixel = 0
     Sidebar.Parent = MainFrame
 
     local SidebarDivider = Instance.new("Frame")
-    SidebarDivider.Size = UDim2.new(0, 1, 1, 0)
+    SidebarDivider.Size = UDim2.new(0, 1, 1, -16)
     SidebarDivider.Position = UDim2.new(1, -1, 0, 0)
     SidebarDivider.BackgroundColor3 = Themes.BorderDim
     SidebarDivider.BackgroundTransparency = 0.6
@@ -1378,11 +1378,11 @@ local Hub = AdnHubLib:CreateWindow({
     ToggleKey = Enum.KeyCode.RightControl
 })
 
--- 1. TAB: 🏠 TRANG CHỦ
-local HomeTab = Hub:CreateTab("Trang chủ", "🏠")
+-- 1. TAB: 📬 CONTACT (Trang chủ đưa lên đầu & đổi tên thành Contact)
+local ContactTab = Hub:CreateTab("Contact", "📬")
 do
-    local StatusSection = HomeTab:CreateSection("Thông Tin & Trạng Thái Hệ Thống")
-    StatusSection:CreateBanner("✨ <b>Adonis Hub Neo-Glassmorphism 2.0</b> • Thiết kế hiện đại độc quyền cho <i>Steal an Egg</i>.")
+    local StatusSection = ContactTab:CreateSection("Thông Tin & Liên Hệ")
+    StatusSection:CreateBanner("✨ <b>Adonis Hub</b> • Thiết kế độc quyền cho <i>Steal an Egg</i>.")
     
     StatusSection:CreateButton({
         Name = "📋 Sao chép Liên kết Hỗ trợ / Discord",
@@ -1396,7 +1396,7 @@ do
         end
     })
 
-    local QuickSection = HomeTab:CreateSection("Thiết Lập Nhanh")
+    local QuickSection = ContactTab:CreateSection("Thiết Lập Nhanh")
     QuickSection:CreateToggle({
         Name = "Tối ưu hóa FPS & Giảm Lag (Boost FPS)",
         Default = false,
@@ -1410,10 +1410,10 @@ do
     })
 end
 
--- 2. TAB: 🥚 HACK TRỨNG (Steal an Egg Core Features)
-local EggTab = Hub:CreateTab("Hack Trứng", "🥚")
+-- 2. TAB: 🥚 FARM (Hack Trứng đổi tên thành Farm & đặt dưới Contact)
+local FarmTab = Hub:CreateTab("Farm", "🥚")
 do
-    local AutoSection = EggTab:CreateSection("Tự Động Đoạt Trứng (Auto Steal)")
+    local AutoSection = FarmTab:CreateSection("Tự Động Đoạt Trứng (Auto Steal)")
     
     AutoSection:CreateToggle({
         Name = "Tự Động Cướp Trứng Gần Nhất",
@@ -1446,7 +1446,7 @@ do
         end
     })
 
-    local SettingEggSection = EggTab:CreateSection("Cấu Hình Khoảng Cách & Bộ Lọc")
+    local SettingEggSection = FarmTab:CreateSection("Cấu Hình Khoảng Cách & Bộ Lọc")
     
     SettingEggSection:CreateSlider({
         Name = "Egg Steal Range (Khoảng cách cướp trứng)",
@@ -1481,7 +1481,7 @@ do
         end
     })
 
-    local VisualEggSection = EggTab:CreateSection("Hiển Thị & Định Vị (ESP Trứng)")
+    local VisualEggSection = FarmTab:CreateSection("Hiển Thị & Định Vị (ESP Trứng)")
     VisualEggSection:CreateToggle({
         Name = "Bật ESP Vòng Sáng Quả Trứng (Egg Aura ESP)",
         Default = false,
@@ -1492,200 +1492,7 @@ do
     })
 end
 
--- 3. TAB: 🏃 MOD NHÂN VẬT
-local PlayerTab = Hub:CreateTab("Mod Nhân vật", "🏃")
-do
-    local MovementSection = PlayerTab:CreateSection("Chỉ Số Di Chuyển")
-    
-    MovementSection:CreateSlider({
-        Name = "Tốc Độ Di Chuyển (WalkSpeed)",
-        Min = 16,
-        Max = 200,
-        Default = 16,
-        Suffix = " spd",
-        Callback = function(val)
-            local char = LocalPlayer.Character
-            if char and char:FindFirstChildOfClass("Humanoid") then
-                char:FindFirstChildOfClass("Humanoid").WalkSpeed = val
-            end
-        end
-    })
-
-    MovementSection:CreateSlider({
-        Name = "Độ Cao Khi Nhảy (JumpPower)",
-        Min = 50,
-        Max = 250,
-        Default = 50,
-        Suffix = " pwr",
-        Callback = function(val)
-            local char = LocalPlayer.Character
-            if char and char:FindFirstChildOfClass("Humanoid") then
-                char:FindFirstChildOfClass("Humanoid").JumpPower = val
-            end
-        end
-    })
-
-    local SpecialSection = PlayerTab:CreateSection("Khả Năng Đặc Biệt")
-
-    -- Infinite Jump
-    local infJumpEnabled = false
-    SpecialSection:CreateToggle({
-        Name = "Nhảy Vô Hạn Trên Không (Infinite Jump)",
-        Default = false,
-        Callback = function(val)
-            infJumpEnabled = val
-        end
-    })
-
-    UserInputService.JumpRequest:Connect(function()
-        if infJumpEnabled then
-            local char = LocalPlayer.Character
-            if char and char:FindFirstChildOfClass("Humanoid") then
-                char:FindFirstChildOfClass("Humanoid"):ChangeState(Enum.HumanoidStateType.Jumping)
-            end
-        end
-    end)
-
-    -- Noclip
-    local noclipEnabled = false
-    SpecialSection:CreateToggle({
-        Name = "Đi Xuyên Vật Cản (Noclip)",
-        Default = false,
-        Callback = function(val)
-            noclipEnabled = val
-        end
-    })
-
-    RunService.Stepped:Connect(function()
-        if noclipEnabled and LocalPlayer.Character then
-            for _, part in ipairs(LocalPlayer.Character:GetDescendants()) do
-                if part:IsA("BasePart") and part.CanCollide then
-                    part.CanCollide = false
-                end
-            end
-        end
-    end)
-
-    SpecialSection:CreateToggle({
-        Name = "Bay Tự Do (Fly Mod)",
-        Default = false,
-        DesignOnly = true,
-        Callback = function(val)
-            AdnHubLib:Notify({Title = "Fly Mod", Content = val and "Chế độ bay đã sẵn sàng [E để kích hoạt]" or "Đã tắt chế độ bay", Type = "Info"})
-        end
-    })
-end
-
--- 4. TAB: 🗺️ DỊCH CHUYỂN
-local TpTab = Hub:CreateTab("Dịch chuyển", "🗺️")
-do
-    local QuickTpSection = TpTab:CreateSection("Địa Điểm Quan Trọng")
-
-    QuickTpSection:CreateButton({
-        Name = "🚀 Dịch chuyển đến Tổ Trứng Trung Tâm (Center Egg Nest)",
-        Callback = function()
-            local char = LocalPlayer.Character
-            if char and char:FindFirstChild("HumanoidRootPart") then
-                -- Ví dụ dịch chuyển mô phỏng
-                AdnHubLib:Notify({Title = "Teleport", Content = "Đã dịch chuyển tới khu vực Trứng Trung Tâm!", Type = "Success"})
-            end
-        end
-    })
-
-    QuickTpSection:CreateButton({
-        Name = "🛡️ Trở về Căn Cứ An Toàn (Safe Base)",
-        Callback = function()
-            AdnHubLib:Notify({Title = "Teleport", Content = "Đã đưa bạn trở về Base an toàn!", Type = "Success"})
-        end
-    })
-
-    QuickTpSection:CreateButton({
-        Name = "👑 Khu Vực Trứng Thần Thoại Vàng (Mythic Golden Nest)",
-        Callback = function()
-            AdnHubLib:Notify({Title = "Teleport", Content = "Đang dịch chuyển tới ổ trứng thần thoại...", Type = "Success"})
-        end
-    })
-
-    local PlayerTpSection = TpTab:CreateSection("Dịch Chuyển Đến Người Chơi")
-    PlayerTpSection:CreateButton({
-        Name = "👤 Dịch chuyển sau lưng Người Có Nhiều Trứng Nhất",
-        Callback = function()
-            AdnHubLib:Notify({Title = "Player Teleport", Content = "Đang nhắm mục tiêu dẫn đầu bảng xếp hạng...", Type = "Info"})
-        end
-    })
-end
-
--- 5. TAB: 🛍️ SHOP MISC
-local ShopTab = Hub:CreateTab("Shop Misc", "🛍️")
-do
-    local AutoBuySection = ShopTab:CreateSection("Tự Động Mua Sắm & Nâng Cấp")
-    
-    AutoBuySection:CreateToggle({
-        Name = "Tự Động Mua Balo Dung Tích Lớn Hơn (Auto Bag)",
-        Default = false,
-        DesignOnly = true,
-        Callback = function(val)
-            AdnHubLib:Notify({Title = "Shop", Content = val and "Tự động nâng cấp balo khi đủ tiền" or "Đã tắt", Type = "Info"})
-        end
-    })
-
-    AutoBuySection:CreateToggle({
-        Name = "Tự Động Nâng Cấp Giày Tốc Độ (Speed Boots)",
-        Default = false,
-        DesignOnly = true,
-        Callback = function(val)
-            AdnHubLib:Notify({Title = "Shop", Content = val and "Tự động mua giày tốc độ mới nhất" or "Đã tắt", Type = "Info"})
-        end
-    })
-
-    AutoBuySection:CreateToggle({
-        Name = "Tự Động Nhận Phần Thưởng Hàng Ngày (Auto Daily)",
-        Default = false,
-        DesignOnly = true,
-        Callback = function(val)
-            AdnHubLib:Notify({Title = "Daily Claim", Content = val and "Đã bật tự động nhận quà điểm danh" or "Đã tắt", Type = "Info"})
-        end
-    })
-end
-
--- 6. TAB: 🛡️ ANTI-CHEAT
-local AntiTab = Hub:CreateTab("Anti-Cheat", "🛡️")
-do
-    local ProtectSection = AntiTab:CreateSection("Phòng Thủ & Bypass")
-
-    ProtectSection:CreateToggle({
-        Name = "Bảo Vệ Khỏi Bị Hất Tung (Anti-Fling / No Push)",
-        Default = true,
-        Callback = function(val)
-            AdnHubLib:Notify({Title = "Anti-Fling", Content = val and "Đã kích hoạt khiên chống người chơi khác đẩy bạn" or "Đã tắt khiên", Type = "Info"})
-        end
-    })
-
-    ProtectSection:CreateToggle({
-        Name = "Chống Văng Khi Treo Máy (Anti-AFK 20 Mins)",
-        Default = true,
-        Callback = function(val)
-            if val then
-                LocalPlayer.Idled:Connect(function()
-                    game:GetService("VirtualUser"):CaptureController()
-                    game:GetService("VirtualUser"):ClickButton2(Vector2.new())
-                end)
-                AdnHubLib:Notify({Title = "Anti-AFK", Content = "Đã kích hoạt bảo vệ chống văng khi treo máy!", Type = "Success"})
-            end
-        end
-    })
-
-    ProtectSection:CreateToggle({
-        Name = "Ẩn Danh & Ẩn Hoạt Ảnh (Ghost Mode - Design only)",
-        Default = false,
-        DesignOnly = true,
-        Callback = function(val)
-            AdnHubLib:Notify({Title = "Ghost Mode", Content = val and "Chế độ tàng hình đối với hệ thống giám sát" or "Đã tắt", Type = "Info"})
-        end
-    })
-end
-
--- 7. TAB: ⚙️ CÀI ĐẶT
+-- 3. TAB: ⚙️ CÀI ĐẶT (Được chuyển xuống vị trí cuối cùng)
 local SettingTab = Hub:CreateTab("Cài đặt", "⚙️")
 do
     local ConfigSection = SettingTab:CreateSection("Tùy Chỉnh Giao Diện")
