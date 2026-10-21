@@ -166,3 +166,21 @@ Verification:47 Python tests passed (41 previous+6 new); luac syntax checks for
 AdnHub.lua/Loader.lua and git diff --check passed. No Roblox/payload runtime test.
 Next: encodedbuffer/string readers and nonempty descriptor->consumer edges,
 without factories or dynamic metamethod evaluation.
+
+## Phase 8 backing-copy reconstruction — 2026-10-22
+Added reconstructor.py. Critical scope: footer fills backing ciphertext copy,
+NOT transformed plaintext. Copy[41177,95046)=0xdd;53668 actual byte changes;
+plaintext53886 bytes unchanged. No payload/factory/__index/opcodes/network API.
+584 directory-index-bounded IDs in root streams;503 have backing-bounded offsets,
+81 opaque out-of-slice values. All281 primitive candidates unchanged (279numbers,
+2booleans), mapped to wrapper/index uses;303 unresolved. No valid string candidate
+or verified child hierarchy; fully_materialized=false. Initial shared -2 cache
+empty, survey observations are not runtime cache; individual wrapper use maps
+are candidate analysis metadata only. ID1 length1477608 rejected; ID2 format85
+8byte aux91 assumption remains unvalidated, not reconstructed/filled.
+Output/phase8: plaintext, postfill backing, streams, mapping, manifest (ignored).
+See research/reconstruction-2026-10-22/FINDINGS.md. Need compound decoder and
+consumer-edge proof before claiming complete source/native constants/prototypes.
+Verification:53 Python tests passed (47previous+6new), luac syntax checks for
+AdnHub.lua/Loader.lua and git diff --check passed. No payload/runtime validation.
+Phase8 stays local (no push) to honor current explicit no-network constraint.

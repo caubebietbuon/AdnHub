@@ -1,0 +1,66 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "lua_executed": false,
+  "factory_invocations": 0,
+  "index_invocations": 0,
+  "opcode_executions": 0,
+  "network_requests": 0,
+  "limits": "No native Luau serialization, complete constants, reachable child hierarchy or OS-enforced air gap claimed",
+  "root": {
+    "id": 664,
+    "footer": {
+      "offset": 53881,
+      "hex": "05ed8324dd",
+      "source_state_path": [
+        "zW32",
+        "oW25",
+        "zW34",
+        "QW2",
+        "oW26",
+        "iW11",
+        "DW19",
+        "KW13"
+      ],
+      "relative_source_offset": 5,
+      "length": 53869,
+      "fill_byte": 221,
+      "backing_slice_range": [
+        41177,
+        95046
+      ],
+      "reader_end": 53886,
+      "remaining_bytes": 0,
+      "meaning": "post-GW source-buffer fill directive applied to isolated backing copy",
+      "scope": "backing ciphertext slice, not transformed plaintext",
+      "purpose": "overwrite is source-supported; motivation not established"
+    },
+    "transformed_sha256": "662f0f35fe18e7a992c0f0db81f186c4dd314b6e0c346c779153782b178901d3",
+    "prefill_backing_sha256": "ccdb73e79f5d6b5fcb56fc3885ef7d0c8c989b3475e6c73cb2a303cac22ee7b6",
+    "postfill_backing_sha256": "969c1df78c95963fbd1751de7c4eb882f69d9fc190d689fb7afa4b660e279f60",
+    "transformed_bytes_preserved": true,
+    "fully_materialized": false,
+    "fill_changed_bytes": 53668,
+    "distinct_observations": 584,
+    "primitive_observations_before_fill": 281,
+    "eligible_constant_candidates": 281,
+    "observations_changed_after_fill": 0,
+    "unresolved_references": 303,
+    "verified_child_hierarchy": null,
+    "type_check": "custom reader kinds compatible with number/boolean/string value categories; not native Luau constant tags"
+  },
+  "comparison_records": [
+    {
+      "id": 1,
+      "status": "record_bounds_not_validated",
+      "length": 1477608
+    },
+    {
+      "id": 2,
+      "bytes": 8,
+      "format_byte": 85,
+      "auxiliary_assumption": "91 only for the reviewed v call family",
+      "status": "unvalidated_record_not_reconstructed"
+    }
+  ]
+}

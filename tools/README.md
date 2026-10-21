@@ -153,3 +153,18 @@ a source-buffer fill directive (offset5,length53869,byte0xdd), reported without
 applying it. See research/lazy-analysis-2026-10-21/FINDINGS.md. Full local output
 is ignored output/phase7/lazy-analysis.json. No network API is used; OS air-gap
 enforcement is outside this tool.
+
+## Phase 8 backing reconstruction and candidate mapping
+
+```powershell
+python tools/reconstructor.py --record-ids 664,1,2
+```
+
+Applies the footer to a copy of the backing ciphertext slice, preserving the
+transformed plaintext and both inputs. Exports raw arrays, before/after data
+observations, 281 unchanged number/boolean candidates and their wrapper-index
+uses. Unknown readers, strings and child hierarchy remain explicit unresolved
+metadata; no runtime cache or complete native bytecode stream is fabricated.
+ID1 fails bounds; ID2 remains an unvalidated format85 comparison. No payload,
+factory, __index, opcode or network API runs. See research/reconstruction-2026-10-22/
+FINDINGS.md; generated artifacts stay ignored in output/phase8.
