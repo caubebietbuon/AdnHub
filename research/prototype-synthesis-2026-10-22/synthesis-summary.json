@@ -1,0 +1,45 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "method": "bounded Python data readers and guarded source cross-references; no opcode dispatch",
+  "root": {
+    "record_id": 664,
+    "factory_slot": 4890,
+    "register_capacity": 181,
+    "entry_pc": 9942,
+    "transformed_sha256": "662f0f35fe18e7a992c0f0db81f186c4dd314b6e0c346c779153782b178901d3"
+  },
+  "lua_executed": false,
+  "factory_invocations": 0,
+  "index_invocations": 0,
+  "opcode_executions": 0,
+  "network_requests": 0,
+  "limits": "Final synthesis of recovered static evidence, not complete deobfuscation or a verified lexical prototype tree. No OS air gap asserted.",
+  "primitive_candidates": 281,
+  "string_candidates": 172,
+  "descriptor_tables": 32,
+  "capture_entries": 163,
+  "capture_kinds": {
+    "3": 142,
+    "1": 19,
+    "0": 2
+  },
+  "descriptor_failures": [],
+  "conditional_function_edges": 34,
+  "conditional_string_targets": 47,
+  "verified_hierarchy": null,
+  "comparison_records": [
+    {
+      "id": 1,
+      "status": "record_bounds_not_validated",
+      "length": 1477608
+    },
+    {
+      "id": 2,
+      "bytes": 8,
+      "format_byte": 85,
+      "auxiliary_assumption": "91 only for the reviewed v call family",
+      "status": "unvalidated_record_not_reconstructed"
+    }
+  ]
+}

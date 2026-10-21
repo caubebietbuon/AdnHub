@@ -203,3 +203,22 @@ See research/string-resolution-2026-10-22/FINDINGS.md; output/phase9 ignored.
 Verification:61 Python tests passed (53previous+8new); luac syntax checks for
 AdnHub.lua/Loader.lua and git diff --check passed. No payload/runtime test.
 Phase9 committed locally, no push/network per current constraint.
+
+## Phase 10 descriptor bodies / guarded graph — 2026-10-22
+prototype_mapper.py rebuilds pinned Phase8/9 offline; emits unified metadata
+output/phase10/static-synthesis.json.32 tag219 bodies parse exactly:163capture
+triplets, kinds3=142/1=19/0=2/2=0. Packeduint low2bits=kind, >>2=targetindex;
+kind2 extra+1 field1span, others7030sentinel. Not prototypeIDs; owners unverified.
+Factory source explicitly XORs directoryvalues306486104 then separately XORs
+payload with runtime-derived byte mask. Analysis-only XOR of81opaque entries
+produces81bounded offsets:34tag1 functiontargets +47tag174 stringtargets.
+Guarded root->function referenceedges include streamindices, clear length bounds
+and payloadhash. NO actual directory mutation/payloadunmask/opcodeexecution.
+Not proven lexical children/reachable: verifiedhierarchy=null, edgesconditional.
+Unified281primitives+172strings, wrappers,captures,register181,entry9942,hashes,
+comparisonfailures,cache boundaries. No Lua/factory/__index/network/inputwrites.
+See research/prototype-synthesis-2026-10-22/FINDINGS.md. Need source mask/state
+and capture-owner/reachability proof before verified prototype tree claims.
+Verification:68 Python tests passed (61previous+7new), luac syntax checks for
+AdnHub.lua/Loader.lua and git diff --check passed. No payload/runtime validation.
+Local commit only; no push/network per current constraint.

@@ -183,3 +183,18 @@ unresolved.99 references remain unsupported/opaque/rejected. No direct recursive
 candidate edges observed for root664; verified prototype hierarchy remains null.
 No factory/__index/Lua/opcode/network calls or input writes. See
 research/string-resolution-2026-10-22/FINDINGS.md for algorithms and limitations.
+
+## Phase 10 descriptor bodies and static synthesis
+
+```powershell
+python tools/prototype_mapper.py
+```
+
+Rebuilds pinned Phase8/9 data locally; parses all32 descriptor bodies exactly
+(163 captures). Source directory XOR306486104 gives conditional offsets for81
+opaque referenced IDs:34 function targets and47 string targets. Additional
+payload masks/reachability/lexical ownership remain unresolved; these are guarded
+references, not a verified child hierarchy. Unified output/phase10/static-synthesis.json
+contains281 primitives,172 strings, wrapper uses, captures, register capacity181,
+entryPC9942 and link provenance. Factory/__index/opcodes remain unexecuted; no
+network/input mutation. See research/prototype-synthesis-2026-10-22/FINDINGS.md.
