@@ -14,7 +14,7 @@ def mix(word):
 
 def analyze(streams, entry, first_word, second_word, budget=10000, numeric_constant=None, text_constant=None,
             symbolic_environment=False, branch_decisions=None, snapshot_pcs=(), symbolic_field_reads=False,
-            patch_observer=None, track_register_writes=False, closure_builder=None):
+            patch_observer=None, track_register_writes=False, closure_builder=None, source_transfer=None):
     arrays = deepcopy(streams)
     class Registers(dict):
         event = None
@@ -45,6 +45,20 @@ def analyze(streams, entry, first_word, second_word, budget=10000, numeric_const
             event["registers_before"] = dict(registers)
             event["state_words_before"] = [first_word, second_word]
         trace.append(event)
+        if source_transfer:
+            transfer = source_transfer(variant, op, a, b, c, registers, event)
+            if transfer:
+                if type(transfer) is dict and "next_pc" in transfer:
+                    destination = transfer["next_pc"]
+                    if type(destination) is not int or not 1 <= destination <= limit + 1:
+                        raise ValueError("Source transfer target outside reviewed arrays")
+                    pc = destination
+                    continue
+                advance = transfer.get("advance", 1) if type(transfer) is dict else 1
+                if type(advance) is not int or not 1 <= advance <= 4:
+                    raise ValueError("Source transfer advance outside reviewed range")
+                pc += advance
+                continue
         closure_patterns = {157: (132, c, b, a), 163: (38, b, a, c), 228: (82, b, c, a)}
         if symbolic_environment and symbolic_field_reads and closure_builder and variant in closure_patterns:
             expected, child, descriptor, destination = closure_patterns[variant]

@@ -222,7 +222,8 @@ python tools/symbolic_resolver.py
 ```
 
 Uses named environment symbols, not dummy defaults: passes task read9063, stops
-at unresolved fused call9251. Analyzes31 VM records/7 native declarations with
+at9251 in its historical mode (Phase13 corrected this to a field lookup, not a
+fused call). Analyzes31 VM records/7 native declarations with
 bounded branch constraints. Exhaustive7424 XOR candidates for29 strings; ten
 strings have entry-trace equations, one further initial-state-only hypothesis,
 18noequations. All guards remain explicit; entropy/printability not key proof.
@@ -231,3 +232,23 @@ Tree validator checks source/path/capture/header/ancestry evidence and graph
 coverage; current verified_hierarchy staysnull. No Lua/API/factory/network calls.
 See research/symbolic-resolution-2026-10-22/FINDINGS.md and ignored
 output/phase12/symbolic-resolution.json.
+
+## Phase 13 / 14: exact dispatcher and proof obligations
+
+```powershell
+python tools/fused_call_analyzer.py
+python tools/obligation_resolver.py
+```
+
+Phase13 proves PC9251 reads task.cancel, models guarded closure captures and
+derives the exact mask mixer inverse. Phase14 follows source-checked transfers
+to real fused call8398, where context-slot109 aliases assert with debug as its
+first argument. It does not execute that call or assume its success.
+All31 VM candidate entries are bounded hypothetical analyses; ID192 gains the
+guarded key5/rawlen equation at711:938. Seventeen other IDs lack reached trace
+equations; all18 unconditional keys remainnull. The six prototype verification
+rules and complete-coverage gate remain unchanged; verified_hierarchy=null.
+See research/obligation-audit-2026-10-22/FINDINGS.md for the candidate137 nil/XOR
+contradiction, capture-frame maps, remaining guards and reproduction commands.
+Detailed output/phase14/obligation-resolution.json stays ignored. No payload,
+factory, __index, application or network execution; demo/ESP work stays paused.

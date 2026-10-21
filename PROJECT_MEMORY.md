@@ -307,3 +307,45 @@ luac -p AdnHub.lua Loader.lua;git diff --check. Verification:92 Python tests
 passed (83previous+9new), Lua syntax and diff checks passed. No Lua/payload/
 factory/__index/API/network execution, no Roblox runtime checks, no Git push.
 Demo/ESP work remains paused. Full decompilation and 1:1 script remain incomplete.
+
+## Phase 14 exact-domain obligations / prototype root causes — 2026-10-22
+Added tools/obligation_resolver.py and test_phase14.py. prologue_analyzer accepts
+optional bounded source-transfer callbacks (nextPC/advance validated); default
+historical modes remain unchanged. Phase13 ownership audit optionally accepts
+a context-specific transfer factory. No Lua/source evaluation or runtime calls.
+Source-pinned rules:228/op131 decoder-context alias,228/op114 constant read,
+163/op78 exact numeric branch,163/op83 bounded integer addition. Unknown inputs
+stop; no dummy values or asserted environment success. Root363steps45patches,
+frontier8398 is actual228/op93 fusedcall: copy r5->r2;T2,d2,I1;args r3=global.debug,
+r4=required-debug-library message. Source context109=assert; builtin identity
+and debug truthiness remain contracts, never executed. Normal returnPC8400 only.
+Exact mixer inverse intersects only same-PC/owner/dispatcher/operand state;
+wrong visit/rewritten operand cannot constrain future visits. Root prefix patches
+none of18 IDs. Refreshed scan15potentialsites across10IDs (supersedes stale9-ID
+count in Phase13 handover), not exhaustive because initialization rewrites code.
+Expanded bounded hypothetical entry analyses31VMrecords, no sibling mutation
+sharing or invented args/captures. NEW guarded ID192 key5 atrecord711 PC938,
+variant228/op100; decodes rawlen.711liveheader matches root mask113 at9952;
+42steps to patch, no unknown branch assumptions. Activation/directory/cache
+lifecycle not proved, so unconditional key remainsnull. Other17 IDs still lack
+reached equations:74,141,160,196,203,267,269,432,457,476,485,512,545,580,616,632,702.
+All18nonempty payloads yield256distinct local XOR plaintexts; length/UTF8/entropy
+do not select keys. Local ambiguity is not proof of whole-program feasibility.
+Six-rule audit original4links retained.664->506 not reached before8398;
+137->747 projectedprefix at29 reads XOR(r0,r0) with r0unwritten: nil operands
+refute normal continuation under fresh-table/bxornumeric/header contracts;
+do NOT simplify XORselfto0 without type proof. Scope is conditional prefix,
+not global proof137neverexecutes.237->572 exactbranch238:11<=8=false; nowfrontier
+152unprovedr1+1,enclosingcaptures8..10unknown.704->288 frontier3 readsarg1[6],
+caller type/value unknown; enclosingcaptures1..9unknown. Allocationfitnotowner.
+Frame maps for664->567/258/379/663 retain explicitcaptureordinals,cellidentities
+andfrontiervalues; capture1isnotchildregister1.379's capture->maskV/y chain not
+proved. All original+newguardededges go through unchanged treevalidator with
+fullnodeinventory; no partial/root-only workaround. verified_hierarchy=null.
+See research/obligation-audit-2026-10-22/FINDINGS.md and summary.json; detailed
+ignored output/phase14/obligation-resolution.json includes all31traces, mask
+intersections, localambiguitycertificates, typedfrontierproofs androotcallframe.
+Reproduce:python tools/obligation_resolver.py;python -m unittest discover -s tools;
+luac -p AdnHub.lua Loader.lua;git diff --check.108 Python tests passed
+(92previous+16new), Lua syntax and diff checks passed. No Roblox/payload/Luau
+runtime checks, no network/push. Demo/ESP untouched; complete decompile unproved.

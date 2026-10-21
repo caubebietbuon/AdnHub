@@ -219,7 +219,7 @@ def mask_word_domain(operand, allowed_keys=range(256)):
                    for word in inverse_mix(operand ^ key)})
 
 
-def audit_ownership(previous, baseline, root, root_constants, source, defs):
+def audit_ownership(previous, baseline, root, root_constants, source, defs, source_transfer_factory=None):
     """Audit each nominated edge, keeping activation, ancestry and input guards."""
     functions = {f["reference_id"]: f for f in baseline["functions"]}
     descriptors = {d["reference_id"]: d for d in baseline["capture_descriptors"]}
@@ -245,7 +245,8 @@ def audit_ownership(previous, baseline, root, root_constants, source, defs):
                 numeric_constant=context.number, text_constant=context.text,
                 symbolic_environment=True, symbolic_field_reads=True,
                 patch_observer=context.observe, track_register_writes=True,
-                closure_builder=closures.build, snapshot_pcs=(edge["pc"],))
+                closure_builder=closures.build, snapshot_pcs=(edge["pc"],),
+                source_transfer=source_transfer_factory(context) if source_transfer_factory else None)
             input_guard = candidate["verification"] + "; hypothetical activation in root-prefix directory context; enclosing captures unknown"
         seen = [e for e in analysis["trace"] if e["pc"] == edge["pc"]]
         matching = [e for e in seen if e["variant"] == edge["variant_guard"]]

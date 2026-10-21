@@ -1,0 +1,890 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "fused_call_frontier": {
+    "pc": 8398,
+    "opcode": 93,
+    "pre_call_copy": {
+      "destination": 2,
+      "source": 5
+    },
+    "callee_register": 2,
+    "callee_expression": {
+      "decoder_context_slot": 109
+    },
+    "argument_count": 2,
+    "argument_range_half_open": [
+      3,
+      5
+    ],
+    "requested_results": 1,
+    "result_range_half_open": [
+      2,
+      3
+    ],
+    "pack": "table.pack retains actual result count in n, including nil positions",
+    "move": "copy requested results1..I to t[T..T+I-1], pad missing values with nil",
+    "normal_return_pc": 8400,
+    "exception_or_nonreturn_pc": null,
+    "callee_invoked": false,
+    "effects": "unknown until callee and alias effects are proven",
+    "argument_expressions": [
+      {
+        "symbol": "global.debug"
+      },
+      {
+        "string_literal": "The debug library is required on Luau platforms. Please open a support ticket.",
+        "reference_id": 444
+      }
+    ],
+    "context_slot109_source_binding": "assert",
+    "pending_contracts": [
+      "context slot109 still denotes the reviewed standard assertion",
+      "global.debug is truthy for normal assertion return"
+    ]
+  },
+  "new_conditional_string_results": [
+    {
+      "owner": 711,
+      "reference_id": 192,
+      "key": 5,
+      "pc": 938,
+      "utf8": "rawlen",
+      "guard": "hypothetical entry, current directory/cache lifecycle, all preceding source transformations",
+      "exact_equation_proof": {
+        "observed_visit_results": [
+          {
+            "status": "guarded_trace_equation",
+            "key": 5,
+            "state": null,
+            "pc": 938,
+            "guard": "all preceding activation/context/normal-completion obligations"
+          }
+        ],
+        "inverse_domain_count": null,
+        "local_equation_satisfiable": true,
+        "local_equation_witnesses": [],
+        "witness_scope": "local equation only; not proof of whole-program satisfiability",
+        "unconditional_key": null
+      },
+      "prefix_steps_to_patch": 42,
+      "unknown_branch_constraints_before_patch": []
+    }
+  ],
+  "still_without_trace_equation": [
+    74,
+    141,
+    160,
+    196,
+    203,
+    267,
+    269,
+    432,
+    457,
+    476,
+    485,
+    512,
+    545,
+    580,
+    616,
+    632,
+    702
+  ],
+  "projected_frontier_proofs": [
+    {
+      "owner": 137,
+      "pc": 29,
+      "operation": "bit32.bxor",
+      "read_registers": [
+        0,
+        0
+      ],
+      "unwritten_operands": [
+        0,
+        0
+      ],
+      "opaque_prior_transfers": [],
+      "unreviewed_prior_frame_effects": [],
+      "status": "normal continuation refuted under stated contracts",
+      "contracts": [
+        "candidate plaintext and dispatcher transformations are correct",
+        "reviewed table.create initializes absent entries to nil",
+        "reviewed bit32.bxor requires numeric operands",
+        "no hidden frame writes outside the reviewed prefix"
+      ],
+      "consequence": "do not simplify XOR(r0,r0) to zero without first proving numeric type; this prefix does not establish PC33 reachability",
+      "scope": "conditional source-prefix contradiction, not global proof that function137 can never execute"
+    },
+    {
+      "owner": 237,
+      "pc": 152,
+      "operation": "numeric addition",
+      "source_equation": "r1 = r1 + 1",
+      "input_provenance": [
+        {
+          "pc": 297,
+          "value": null
+        },
+        {
+          "pc": 151,
+          "value": {
+            "symbol": "enclosing_capture_cell[1].value"
+          }
+        }
+      ],
+      "status": "pending numeric input provenance",
+      "consequence": "exact branch78 was evaluated using11<=8=false; subsequent add cannot use an invented numeric default"
+    },
+    {
+      "owner": 704,
+      "pc": 3,
+      "operation": "argument field read",
+      "source_equation": "r2 = r10[6]",
+      "base_provenance": [
+        {
+          "pc": 2,
+          "value": {
+            "symbol": "argument[1]"
+          }
+        }
+      ],
+      "status": "pending caller input/type and field resolution",
+      "consequence": "argument1 is not interchangeable with enclosing capture1 or parent register10"
+    }
+  ],
+  "capture_frame_constraints": [
+    {
+      "parent": 664,
+      "child": 567,
+      "descriptor_id": 486,
+      "captures": [
+        {
+          "capture_ordinal": 1,
+          "cell_identity": "frame:664:register:107",
+          "parent_register": 107,
+          "frontier_value": 0,
+          "scope": "guarded root frame at current frontier; later mutations invalidate value snapshots"
+        },
+        {
+          "capture_ordinal": 2,
+          "cell_identity": "frame:664:register:106",
+          "parent_register": 106,
+          "frontier_value": {
+            "fresh_plain_table": "1007:3"
+          },
+          "scope": "guarded root frame at current frontier; later mutations invalidate value snapshots"
+        }
+      ],
+      "capture_count": 2,
+      "mask_word_dependency_proved": false,
+      "missing_dependency": "no proved def-use chain from these cells into the selected child patch state V/y"
+    },
+    {
+      "parent": 664,
+      "child": 258,
+      "descriptor_id": 486,
+      "captures": [
+        {
+          "capture_ordinal": 1,
+          "cell_identity": "frame:664:register:107",
+          "parent_register": 107,
+          "frontier_value": 0,
+          "scope": "guarded root frame at current frontier; later mutations invalidate value snapshots"
+        },
+        {
+          "capture_ordinal": 2,
+          "cell_identity": "frame:664:register:106",
+          "parent_register": 106,
+          "frontier_value": {
+            "fresh_plain_table": "1007:3"
+          },
+          "scope": "guarded root frame at current frontier; later mutations invalidate value snapshots"
+        }
+      ],
+      "capture_count": 2,
+      "mask_word_dependency_proved": false,
+      "missing_dependency": "no proved def-use chain from these cells into the selected child patch state V/y"
+    },
+    {
+      "parent": 664,
+      "child": 379,
+      "descriptor_id": 462,
+      "captures": [
+        {
+          "capture_ordinal": 1,
+          "cell_identity": "frame:664:register:107",
+          "parent_register": 107,
+          "frontier_value": 0,
+          "scope": "guarded root frame at current frontier; later mutations invalidate value snapshots"
+        },
+        {
+          "capture_ordinal": 2,
+          "cell_identity": "frame:664:register:106",
+          "parent_register": 106,
+          "frontier_value": {
+            "fresh_plain_table": "1007:3"
+          },
+          "scope": "guarded root frame at current frontier; later mutations invalidate value snapshots"
+        },
+        {
+          "capture_ordinal": 3,
+          "cell_identity": "frame:664:register:103",
+          "parent_register": 103,
+          "frontier_value": 12,
+          "scope": "guarded root frame at current frontier; later mutations invalidate value snapshots"
+        },
+        {
+          "capture_ordinal": 4,
+          "cell_identity": "frame:664:register:92",
+          "parent_register": 92,
+          "frontier_value": {
+            "fresh_plain_table": "8043:1"
+          },
+          "scope": "guarded root frame at current frontier; later mutations invalidate value snapshots"
+        },
+        {
+          "capture_ordinal": 5,
+          "cell_identity": "frame:664:register:104",
+          "parent_register": 104,
+          "frontier_value": 12,
+          "scope": "guarded root frame at current frontier; later mutations invalidate value snapshots"
+        },
+        {
+          "capture_ordinal": 6,
+          "cell_identity": "frame:664:register:93",
+          "parent_register": 93,
+          "frontier_value": {
+            "fresh_plain_table": "823:2"
+          },
+          "scope": "guarded root frame at current frontier; later mutations invalidate value snapshots"
+        }
+      ],
+      "capture_count": 6,
+      "mask_word_dependency_proved": false,
+      "missing_dependency": "no proved def-use chain from these cells into the selected child patch state V/y"
+    },
+    {
+      "parent": 664,
+      "child": 663,
+      "descriptor_id": 722,
+      "captures": [
+        {
+          "capture_ordinal": 1,
+          "cell_identity": "frame:664:register:159",
+          "parent_register": 159,
+          "frontier_value": {
+            "symbolic_closure": 379,
+            "owner": 664,
+            "creation_pc": 8393,
+            "captures": [
+              {
+                "cell_identity": "frame:664:register:107",
+                "span": 1
+              },
+              {
+                "cell_identity": "frame:664:register:106",
+                "span": 1
+              },
+              {
+                "cell_identity": "frame:664:register:103",
+                "span": 1
+              },
+              {
+                "cell_identity": "frame:664:register:92",
+                "span": 1
+              },
+              {
+                "cell_identity": "frame:664:register:104",
+                "span": 1
+              },
+              {
+                "cell_identity": "frame:664:register:93",
+                "span": 1
+              }
+            ],
+            "capture_argument_is_nil": false
+          },
+          "scope": "guarded root frame at current frontier; later mutations invalidate value snapshots"
+        },
+        {
+          "capture_ordinal": 2,
+          "cell_identity": "frame:664:register:105",
+          "parent_register": 105,
+          "frontier_value": 10054,
+          "scope": "guarded root frame at current frontier; later mutations invalidate value snapshots"
+        }
+      ],
+      "capture_count": 2,
+      "mask_word_dependency_proved": false,
+      "missing_dependency": "no proved def-use chain from these cells into the selected child patch state V/y"
+    }
+  ],
+  "prototype_root_causes": [
+    {
+      "parent": 664,
+      "child": 506,
+      "pc": 9554,
+      "descriptor_id": 251,
+      "variant_guard": 228,
+      "proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "failed_or_unproved_criteria": [
+        "child_header_verified",
+        "control_flow_verified",
+        "ancestry_unconditional"
+      ],
+      "criterion_explanations": {
+        "source_consumer_verified": "pinned source family matches; actual slot dispatcher still a separate obligation",
+        "descriptor_parsed_exactly": "triplets consume descriptor bytes exactly; descriptor carries no parent prototype ID",
+        "capture_indices_fit_owner": "local index fit only; allocation size cannot identify owner; enclosing bounds unproved",
+        "child_header_verified": "layout parsing does not establish live child selection, cumulative mask or cached-template identity",
+        "control_flow_verified": "candidate site not reached before current frontier in this activation context",
+        "ancestry_unconditional": "no complete proof of parent activation, shared-cache lifecycle and unique incoming owner"
+      },
+      "capture_index_audit": [
+        {
+          "kind": 3,
+          "index": 53,
+          "end_exclusive": 54,
+          "owner_allocation_hint": 181,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 3,
+          "index": 121,
+          "end_exclusive": 122,
+          "owner_allocation_hint": 181,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 3,
+          "index": 54,
+          "end_exclusive": 55,
+          "owner_allocation_hint": 181,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 3,
+          "index": 109,
+          "end_exclusive": 110,
+          "owner_allocation_hint": 181,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 3,
+          "index": 95,
+          "end_exclusive": 96,
+          "owner_allocation_hint": 181,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 3,
+          "index": 110,
+          "end_exclusive": 111,
+          "owner_allocation_hint": 181,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 3,
+          "index": 111,
+          "end_exclusive": 112,
+          "owner_allocation_hint": 181,
+          "enclosing_bound_known": null
+        }
+      ],
+      "frontier": {
+        "pc": 8398,
+        "reason": "unsupported or unresolved operation; application boundary"
+      },
+      "candidate_visit_observed": false,
+      "incoming_capture_bound_proofs": [],
+      "owner_inference_from_register_overlap": "rejected: register indices are frame-relative",
+      "descriptor_parent_inference": "rejected: the same descriptor may be consumed by multiple closures"
+    },
+    {
+      "parent": 137,
+      "child": 747,
+      "pc": 33,
+      "descriptor_id": 58,
+      "variant_guard": 163,
+      "proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "failed_or_unproved_criteria": [
+        "child_header_verified",
+        "control_flow_verified",
+        "ancestry_unconditional"
+      ],
+      "criterion_explanations": {
+        "source_consumer_verified": "pinned source family matches; actual slot dispatcher still a separate obligation",
+        "descriptor_parsed_exactly": "triplets consume descriptor bytes exactly; descriptor carries no parent prototype ID",
+        "capture_indices_fit_owner": "local index fit only; allocation size cannot identify owner; enclosing bounds unproved",
+        "child_header_verified": "layout parsing does not establish live child selection, cumulative mask or cached-template identity",
+        "control_flow_verified": "candidate site not reached before current frontier in this activation context",
+        "ancestry_unconditional": "no complete proof of parent activation, shared-cache lifecycle and unique incoming owner"
+      },
+      "capture_index_audit": [],
+      "frontier": {
+        "pc": 29,
+        "reason": "unsupported or unresolved operation; application boundary"
+      },
+      "candidate_visit_observed": false,
+      "incoming_capture_bound_proofs": [],
+      "owner_inference_from_register_overlap": "rejected: register indices are frame-relative",
+      "descriptor_parent_inference": "rejected: the same descriptor may be consumed by multiple closures"
+    },
+    {
+      "parent": 237,
+      "child": 572,
+      "pc": 257,
+      "descriptor_id": 181,
+      "variant_guard": 163,
+      "proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": false,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "failed_or_unproved_criteria": [
+        "capture_indices_fit_owner",
+        "child_header_verified",
+        "control_flow_verified",
+        "ancestry_unconditional"
+      ],
+      "criterion_explanations": {
+        "source_consumer_verified": "pinned source family matches; actual slot dispatcher still a separate obligation",
+        "descriptor_parsed_exactly": "triplets consume descriptor bytes exactly; descriptor carries no parent prototype ID",
+        "capture_indices_fit_owner": "local index fit only; allocation size cannot identify owner; enclosing bounds unproved",
+        "child_header_verified": "layout parsing does not establish live child selection, cumulative mask or cached-template identity",
+        "control_flow_verified": "candidate site not reached before current frontier in this activation context",
+        "ancestry_unconditional": "no complete proof of parent activation, shared-cache lifecycle and unique incoming owner"
+      },
+      "capture_index_audit": [
+        {
+          "kind": 3,
+          "index": 11,
+          "end_exclusive": 12,
+          "owner_allocation_hint": 18,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 3,
+          "index": 4,
+          "end_exclusive": 5,
+          "owner_allocation_hint": 18,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 1,
+          "index": 8,
+          "end_exclusive": 9,
+          "owner_allocation_hint": 18,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 9,
+          "end_exclusive": 10,
+          "owner_allocation_hint": 18,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 10,
+          "end_exclusive": 11,
+          "owner_allocation_hint": 18,
+          "enclosing_bound_known": false
+        }
+      ],
+      "frontier": {
+        "pc": 152,
+        "reason": "unsupported or unresolved operation; application boundary"
+      },
+      "candidate_visit_observed": false,
+      "incoming_capture_bound_proofs": [],
+      "owner_inference_from_register_overlap": "rejected: register indices are frame-relative",
+      "descriptor_parent_inference": "rejected: the same descriptor may be consumed by multiple closures"
+    },
+    {
+      "parent": 704,
+      "child": 288,
+      "pc": 10,
+      "descriptor_id": 299,
+      "variant_guard": 163,
+      "proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": false,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "failed_or_unproved_criteria": [
+        "capture_indices_fit_owner",
+        "child_header_verified",
+        "control_flow_verified",
+        "ancestry_unconditional"
+      ],
+      "criterion_explanations": {
+        "source_consumer_verified": "pinned source family matches; actual slot dispatcher still a separate obligation",
+        "descriptor_parsed_exactly": "triplets consume descriptor bytes exactly; descriptor carries no parent prototype ID",
+        "capture_indices_fit_owner": "local index fit only; allocation size cannot identify owner; enclosing bounds unproved",
+        "child_header_verified": "layout parsing does not establish live child selection, cumulative mask or cached-template identity",
+        "control_flow_verified": "candidate site not reached before current frontier in this activation context",
+        "ancestry_unconditional": "no complete proof of parent activation, shared-cache lifecycle and unique incoming owner"
+      },
+      "capture_index_audit": [
+        {
+          "kind": 0,
+          "index": 4,
+          "end_exclusive": 5,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 0,
+          "index": 10,
+          "end_exclusive": 11,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 1,
+          "index": 1,
+          "end_exclusive": 2,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 2,
+          "end_exclusive": 3,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 3,
+          "end_exclusive": 4,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 4,
+          "end_exclusive": 5,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 5,
+          "end_exclusive": 6,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 6,
+          "end_exclusive": 7,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 7,
+          "end_exclusive": 8,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 8,
+          "end_exclusive": 9,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 9,
+          "end_exclusive": 10,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        }
+      ],
+      "frontier": {
+        "pc": 3,
+        "reason": "unsupported or unresolved operation; application boundary"
+      },
+      "candidate_visit_observed": false,
+      "incoming_capture_bound_proofs": [],
+      "owner_inference_from_register_overlap": "rejected: register indices are frame-relative",
+      "descriptor_parent_inference": "rejected: the same descriptor may be consumed by multiple closures"
+    }
+  ],
+  "verified_hierarchy": null,
+  "application_calls_executed": 0,
+  "factory_invocations": 0,
+  "network_requests": 0,
+  "root_frontier": {
+    "pc": 8398,
+    "stop": "unsupported or unresolved operation; application boundary"
+  },
+  "root_abstract_steps": 363,
+  "root_patch_count": 45,
+  "candidate_entry_count": 31,
+  "potential_site_count": 15,
+  "ids_with_potential_sites": 10,
+  "mask_overview": [
+    {
+      "reference_id": 74,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 981,
+          "variant": 228,
+          "operand": 4,
+          "word_variable": "V"
+        },
+        {
+          "owner": 664,
+          "pc": 3238,
+          "variant": 228,
+          "operand": 112,
+          "word_variable": null
+        },
+        {
+          "owner": 402,
+          "pc": 83,
+          "variant": 163,
+          "operand": 7,
+          "word_variable": "y"
+        }
+      ],
+      "unconditional_key": null,
+      "trace_equations": []
+    },
+    {
+      "reference_id": 141,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 4319,
+          "variant": 228,
+          "operand": 43,
+          "word_variable": null
+        },
+        {
+          "owner": 711,
+          "pc": 269,
+          "variant": 163,
+          "operand": 2,
+          "word_variable": "V"
+        },
+        {
+          "owner": 593,
+          "pc": 393,
+          "variant": 157,
+          "operand": 121,
+          "word_variable": "y"
+        }
+      ],
+      "unconditional_key": null,
+      "trace_equations": []
+    },
+    {
+      "reference_id": 160,
+      "potential_sites": [],
+      "unconditional_key": null,
+      "trace_equations": []
+    },
+    {
+      "reference_id": 192,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 3120,
+          "variant": 163,
+          "operand": 36,
+          "word_variable": "y"
+        }
+      ],
+      "unconditional_key": null,
+      "trace_equations": [
+        {
+          "owner": 711,
+          "reference_id": 192,
+          "key": 5,
+          "pc": 938,
+          "variant": 228,
+          "confidence": "restricted initialization data-flow equation",
+          "directory_before": 306540362,
+          "directory_after": 128018,
+          "cumulative_payload_xor": 5,
+          "guard": "normal continuation on audited abstract path, activation/context assumptions remain"
+        }
+      ]
+    },
+    {
+      "reference_id": 196,
+      "potential_sites": [],
+      "unconditional_key": null,
+      "trace_equations": []
+    },
+    {
+      "reference_id": 203,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 3921,
+          "variant": 157,
+          "operand": 110,
+          "word_variable": null
+        },
+        {
+          "owner": 664,
+          "pc": 718,
+          "variant": 228,
+          "operand": 140,
+          "word_variable": null
+        }
+      ],
+      "unconditional_key": null,
+      "trace_equations": []
+    },
+    {
+      "reference_id": 267,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 7083,
+          "variant": 228,
+          "operand": 242,
+          "word_variable": null
+        }
+      ],
+      "unconditional_key": null,
+      "trace_equations": []
+    },
+    {
+      "reference_id": 269,
+      "potential_sites": [],
+      "unconditional_key": null,
+      "trace_equations": []
+    },
+    {
+      "reference_id": 432,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 7103,
+          "variant": 228,
+          "operand": 2,
+          "word_variable": null
+        }
+      ],
+      "unconditional_key": null,
+      "trace_equations": []
+    },
+    {
+      "reference_id": 457,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 5095,
+          "variant": 228,
+          "operand": 169,
+          "word_variable": null
+        }
+      ],
+      "unconditional_key": null,
+      "trace_equations": []
+    },
+    {
+      "reference_id": 476,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 4809,
+          "variant": 228,
+          "operand": 80,
+          "word_variable": null
+        }
+      ],
+      "unconditional_key": null,
+      "trace_equations": []
+    },
+    {
+      "reference_id": 485,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 4810,
+          "variant": 228,
+          "operand": 146,
+          "word_variable": null
+        }
+      ],
+      "unconditional_key": null,
+      "trace_equations": []
+    },
+    {
+      "reference_id": 512,
+      "potential_sites": [],
+      "unconditional_key": null,
+      "trace_equations": []
+    },
+    {
+      "reference_id": 545,
+      "potential_sites": [],
+      "unconditional_key": null,
+      "trace_equations": []
+    },
+    {
+      "reference_id": 580,
+      "potential_sites": [],
+      "unconditional_key": null,
+      "trace_equations": []
+    },
+    {
+      "reference_id": 616,
+      "potential_sites": [],
+      "unconditional_key": null,
+      "trace_equations": []
+    },
+    {
+      "reference_id": 632,
+      "potential_sites": [],
+      "unconditional_key": null,
+      "trace_equations": []
+    },
+    {
+      "reference_id": 702,
+      "potential_sites": [
+        {
+          "owner": 379,
+          "pc": 686,
+          "variant": 228,
+          "operand": 52,
+          "word_variable": "V"
+        }
+      ],
+      "unconditional_key": null,
+      "trace_equations": []
+    }
+  ],
+  "verification": "108 Python tests passed; luac -p AdnHub.lua Loader.lua; git diff --check. No Roblox/payload runtime checks."
+}
