@@ -184,3 +184,22 @@ consumer-edge proof before claiming complete source/native constants/prototypes.
 Verification:53 Python tests passed (47previous+6new), luac syntax checks for
 AdnHub.lua/Loader.lua and git diff --check passed. No payload/runtime validation.
 Phase8 stays local (no push) to honor current explicit no-network constraint.
+
+## Phase 9 strings / reference mapping — 2026-10-22
+Added string_resolver.py: source-pinned length-prefixed leaf98 (tags170..174)
+aux83 decrypt->buffer.tostring->sharedcache, leaf55 rawstring bounded reader.
+No Lua/__index/factory/opcode/network/input writes. Rebuilds backing postfill
+from pinned inputs instead of trusting old JSON.303 unresolved->172strings,
+32partial descriptorheaders,99still opaque/unsupported/rejected. Strings3836bytes,
+allUTF8, max2311; hex+SHA preserve arbitrary bytes, invalidUTF8 yieldsnulltext.
+ID2 EnumType,4 Clone,7 Destroy. Wrapper uses and candidate cachekeys recorded;
+runtime cache/accessorder not fabricated. Phase7 leaf95/tag219 priorlabel
+encoded_string_reader_unresolved corrected: decodedbuffer enters count/triplet
+reader, not buffer.tostring. Headercounts0..13, bodies/meaning unresolved.
+No root664 direct recursive-v candidateedges;81opaque directoryIDs retained.
+verifiedhierarchy=null, NOT proof nochildfunctions. Needtripletbody/consumer and
+opaque-directory representation evidence before lexical parenthood claims.
+See research/string-resolution-2026-10-22/FINDINGS.md; output/phase9 ignored.
+Verification:61 Python tests passed (53previous+8new); luac syntax checks for
+AdnHub.lua/Loader.lua and git diff --check passed. No payload/runtime test.
+Phase9 committed locally, no push/network per current constraint.

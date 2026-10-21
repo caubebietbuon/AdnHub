@@ -1,0 +1,41 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "root": 664,
+  "phase8_unresolved_count": 303,
+  "lua_executed": false,
+  "factory_invocations": 0,
+  "index_invocations": 0,
+  "opcode_executions": 0,
+  "network_requests": 0,
+  "limits": "Custom reader data, not native Luau bytecode validation. Descriptor bodies and child hierarchy unresolved. No OS air gap asserted.",
+  "resolved_string_candidates": 172,
+  "decoded_string_bytes": 3836,
+  "valid_utf8_strings": 172,
+  "descriptor_headers": 32,
+  "descriptor_count_histogram": {
+    "0": 1,
+    "3": 5,
+    "10": 1,
+    "2": 8,
+    "5": 4,
+    "13": 1,
+    "7": 1,
+    "4": 2,
+    "9": 1,
+    "11": 4,
+    "6": 2,
+    "1": 1,
+    "8": 1
+  },
+  "remaining_unresolved": 99,
+  "unresolved_statuses": {
+    "opaque_directory_value": 81,
+    "other_reader_unresolved": 17,
+    "bounded_reader_rejected": 1
+  },
+  "candidate_prototype_edges": 0,
+  "verified_hierarchy": null,
+  "opaque_directory_ids": 81,
+  "string_cache": "analysis candidates only, actual initial runtime cache empty"
+}

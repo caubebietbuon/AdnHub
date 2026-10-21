@@ -44,7 +44,7 @@ LEAVES = {
     82: "Vector2_constructor_blocked", 21: "triplet_table_reader_unresolved",
     84: "table_create_reader_unresolved", 33: "compound_reader_unresolved",
     136: "fill_buffer_reader_unresolved", 98: "shared_cache_then_encoded_buffer_unresolved",
-    68: "fill_buffer_reader_unresolved", 95: "encoded_string_reader_unresolved",
+    68: "fill_buffer_reader_unresolved", 95: "encoded_descriptor_reader_unresolved",
     55: "shared_cache_then_raw_string",
 }
 

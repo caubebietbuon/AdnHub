@@ -168,3 +168,18 @@ metadata; no runtime cache or complete native bytecode stream is fabricated.
 ID1 fails bounds; ID2 remains an unvalidated format85 comparison. No payload,
 factory, __index, opcode or network API runs. See research/reconstruction-2026-10-22/
 FINDINGS.md; generated artifacts stay ignored in output/phase8.
+
+## Phase 9 string resolution
+
+```powershell
+python tools/string_resolver.py
+```
+
+Source-pinned Python translations of length-prefixed shared-cache string readers;
+172 candidates decoded losslessly (3836bytes). Exports hex, strict UTF-8 views,
+hashes and wrapper-index uses in output/phase9/string-resolution.json. Leaf95/
+tag219 is corrected to an encoded descriptor branch;32 headers decoded, bodies
+unresolved.99 references remain unsupported/opaque/rejected. No direct recursive-v
+candidate edges observed for root664; verified prototype hierarchy remains null.
+No factory/__index/Lua/opcode/network calls or input writes. See
+research/string-resolution-2026-10-22/FINDINGS.md for algorithms and limitations.
