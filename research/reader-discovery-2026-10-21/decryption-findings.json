@@ -1,0 +1,985 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "payload_executed": false,
+  "network_used": false,
+  "offset_convention": "zero-based ASCII byte offsets in g",
+  "anchors": {
+    "initial_state": {
+      "offset": 73244,
+      "bytes": 29
+    },
+    "init_coefficients": {
+      "offset": 180885,
+      "bytes": 42
+    },
+    "counter_increment": {
+      "offset": 183446,
+      "bytes": 27
+    },
+    "mask_recurrence": {
+      "offset": 110535,
+      "bytes": 60
+    },
+    "mask_pack": {
+      "offset": 110640,
+      "bytes": 34
+    },
+    "word_xor": {
+      "offset": 112548,
+      "bytes": 28
+    },
+    "byte_xor": {
+      "offset": 112684,
+      "bytes": 57
+    },
+    "payload_boundary": {
+      "offset": 206006,
+      "bytes": 37
+    }
+  },
+  "fields": [
+    {
+      "field": "BW",
+      "offset": 5920,
+      "candidate_interval_end": 6276,
+      "references": [
+        {
+          "offset": 6070,
+          "reference": "x[46]"
+        }
+      ],
+      "numeric_literals": {
+        "24": 1,
+        "34": 1,
+        "5": 3,
+        "1": 2,
+        "0": 3,
+        "26": 1,
+        "25": 1,
+        "46": 1,
+        "2": 2,
+        "128": 1,
+        "15": 1,
+        "28": 1,
+        "4": 1,
+        "3": 1,
+        "8": 1
+      },
+      "method_calls": []
+    },
+    {
+      "field": "CW",
+      "offset": 442763,
+      "candidate_interval_end": 443531,
+      "references": [],
+      "numeric_literals": {
+        "88": 2,
+        "17": 1,
+        "8": 1,
+        "3": 1,
+        "12": 1,
+        "1": 1,
+        "2": 1,
+        "14": 1,
+        "26": 1,
+        "21": 1,
+        "23": 1,
+        "31": 1,
+        "51": 1
+      },
+      "method_calls": [
+        "AW",
+        "BW",
+        "FW",
+        "MW",
+        "TW",
+        "XW",
+        "aW",
+        "jW",
+        "mW",
+        "sW",
+        "uW",
+        "xW"
+      ]
+    },
+    {
+      "field": "DW",
+      "offset": 129035,
+      "candidate_interval_end": 129418,
+      "references": [
+        {
+          "offset": 129174,
+          "reference": "x[46]"
+        }
+      ],
+      "numeric_literals": {
+        "19": 2,
+        "18": 1,
+        "128": 3,
+        "16384": 1,
+        "27": 1,
+        "3": 1,
+        "46": 1,
+        "1": 4,
+        "78": 1,
+        "13": 1,
+        "20": 1,
+        "4": 1,
+        "2": 1,
+        "0": 1,
+        "35": 1,
+        "23": 1
+      },
+      "method_calls": []
+    },
+    {
+      "field": "GW",
+      "offset": 432180,
+      "candidate_interval_end": 434794,
+      "references": [],
+      "numeric_literals": {
+        "86": 1,
+        "42": 1,
+        "20": 1,
+        "9": 1,
+        "4": 1,
+        "1": 2,
+        "14": 1,
+        "31": 1,
+        "25": 1,
+        "36": 1,
+        "39": 1,
+        "64": 1,
+        "53": 1,
+        "47": 1,
+        "58": 1,
+        "61": 1,
+        "75": 1,
+        "69": 1,
+        "80": 1,
+        "129": 1,
+        "107": 1,
+        "96": 1,
+        "91": 1,
+        "88": 1,
+        "2": 1,
+        "101": 1,
+        "118": 1,
+        "112": 1,
+        "115": 1,
+        "123": 1,
+        "151": 1,
+        "140": 1,
+        "134": 1,
+        "137": 1,
+        "145": 1,
+        "162": 1,
+        "156": 1,
+        "153": 1,
+        "159": 1,
+        "167": 1,
+        "164": 1,
+        "170": 1
+      },
+      "method_calls": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "L",
+        "M",
+        "N",
+        "P",
+        "R",
+        "S",
+        "T",
+        "X",
+        "Y",
+        "Z",
+        "_",
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "x",
+        "y",
+        "z"
+      ]
+    },
+    {
+      "field": "KW",
+      "offset": 427226,
+      "candidate_interval_end": 427711,
+      "references": [
+        {
+          "offset": 427306,
+          "reference": "x[46]"
+        }
+      ],
+      "numeric_literals": {
+        "13": 1,
+        "1": 1,
+        "46": 1,
+        "3": 3,
+        "2097152": 2,
+        "128": 8,
+        "16384": 1,
+        "2": 7,
+        "27": 1,
+        "4": 2,
+        "15": 1,
+        "8": 1,
+        "16": 1,
+        "34": 1,
+        "0": 1,
+        "33": 1,
+        "6": 1
+      },
+      "method_calls": []
+    },
+    {
+      "field": "MW",
+      "offset": 73244,
+      "candidate_interval_end": 73317,
+      "references": [],
+      "numeric_literals": {
+        "33": 1
+      },
+      "method_calls": []
+    },
+    {
+      "field": "QW",
+      "offset": 1237576,
+      "candidate_interval_end": 1238010,
+      "references": [
+        {
+          "offset": 1237638,
+          "reference": "x[46]"
+        },
+        {
+          "offset": 1237792,
+          "reference": "x[46]"
+        },
+        {
+          "offset": 1237851,
+          "reference": "x[46]"
+        }
+      ],
+      "numeric_literals": {
+        "1": 3,
+        "0": 1,
+        "46": 3,
+        "128": 11,
+        "24": 1,
+        "16": 1,
+        "16384": 2,
+        "34": 1,
+        "3": 2,
+        "2": 1,
+        "7": 1,
+        "26": 1,
+        "2097152": 2,
+        "19": 1,
+        "4": 1,
+        "116": 1
+      },
+      "method_calls": []
+    },
+    {
+      "field": "TW",
+      "offset": 110491,
+      "candidate_interval_end": 110843,
+      "references": [
+        {
+          "offset": 110621,
+          "reference": "x.OW"
+        },
+        {
+          "offset": 110664,
+          "reference": "x.VW"
+        },
+        {
+          "offset": 110700,
+          "reference": "x[46]"
+        }
+      ],
+      "numeric_literals": {
+        "22": 1,
+        "256": 5,
+        "65536": 1,
+        "16777216": 1,
+        "6": 1,
+        "46": 1,
+        "3": 1,
+        "2097152": 2,
+        "128": 6,
+        "16384": 1,
+        "13": 1,
+        "4": 1
+      },
+      "method_calls": []
+    },
+    {
+      "field": "UW",
+      "offset": 110843,
+      "candidate_interval_end": 111212,
+      "references": [
+        {
+          "offset": 110907,
+          "reference": "x[46]"
+        },
+        {
+          "offset": 110968,
+          "reference": "x[46]"
+        }
+      ],
+      "numeric_literals": {
+        "5": 1,
+        "4": 2,
+        "46": 2,
+        "2": 2,
+        "128": 4,
+        "14": 1,
+        "18": 1,
+        "1": 2,
+        "28": 1,
+        "6": 2,
+        "31": 1,
+        "7": 1,
+        "19": 1,
+        "12": 1,
+        "9": 1,
+        "41": 1
+      },
+      "method_calls": []
+    },
+    {
+      "field": "aW",
+      "offset": 183241,
+      "candidate_interval_end": 183696,
+      "references": [
+        {
+          "offset": 183305,
+          "reference": "x[46]"
+        },
+        {
+          "offset": 183643,
+          "reference": "x[46]"
+        }
+      ],
+      "numeric_literals": {
+        "5": 1,
+        "4": 2,
+        "46": 2,
+        "1": 3,
+        "128": 5,
+        "14": 1,
+        "0": 2,
+        "16384": 1,
+        "24": 2,
+        "3": 3,
+        "6": 1,
+        "22": 1,
+        "27": 1,
+        "7": 1,
+        "35": 1,
+        "9": 1
+      },
+      "method_calls": []
+    },
+    {
+      "field": "jW",
+      "offset": 6276,
+      "candidate_interval_end": 6721,
+      "references": [
+        {
+          "offset": 6355,
+          "reference": "x.U"
+        },
+        {
+          "offset": 6373,
+          "reference": "x.U"
+        },
+        {
+          "offset": 6377,
+          "reference": "x[104]"
+        },
+        {
+          "offset": 6392,
+          "reference": "x[46]"
+        },
+        {
+          "offset": 6552,
+          "reference": "x[46]"
+        },
+        {
+          "offset": 6631,
+          "reference": "x[46]"
+        }
+      ],
+      "numeric_literals": {
+        "28": 1,
+        "27": 1,
+        "5": 1,
+        "104": 1,
+        "46": 3,
+        "128": 6,
+        "16": 1,
+        "11": 1,
+        "16384": 1,
+        "20": 1,
+        "3": 1,
+        "29": 1,
+        "2": 1,
+        "32": 1,
+        "19": 1,
+        "30": 1,
+        "4": 2,
+        "31": 1,
+        "13": 1,
+        "1": 1
+      },
+      "method_calls": []
+    },
+    {
+      "field": "rW",
+      "offset": 834699,
+      "candidate_interval_end": 835172,
+      "references": [
+        {
+          "offset": 834789,
+          "reference": "x[67]"
+        },
+        {
+          "offset": 835011,
+          "reference": "x[46]"
+        }
+      ],
+      "numeric_literals": {
+        "28": 1,
+        "27": 2,
+        "256": 1,
+        "67": 1,
+        "16843009": 1,
+        "4": 3,
+        "1": 1,
+        "0": 3,
+        "17": 1,
+        "61": 1,
+        "123": 1,
+        "128": 8,
+        "2": 1,
+        "29": 1,
+        "32": 1,
+        "91": 1,
+        "46": 1,
+        "3": 1,
+        "2097152": 2,
+        "16384": 1,
+        "34": 1
+      },
+      "method_calls": []
+    },
+    {
+      "field": "sW",
+      "offset": 205900,
+      "candidate_interval_end": 206142,
+      "references": [
+        {
+          "offset": 205952,
+          "reference": "x[67]"
+        },
+        {
+          "offset": 205961,
+          "reference": "x[55]"
+        },
+        {
+          "offset": 205997,
+          "reference": "x[104]"
+        },
+        {
+          "offset": 206056,
+          "reference": "x[46]"
+        }
+      ],
+      "numeric_literals": {
+        "13": 1,
+        "67": 1,
+        "55": 1,
+        "0": 1,
+        "104": 1,
+        "12": 1,
+        "91": 1,
+        "46": 2,
+        "2": 1,
+        "128": 1,
+        "21": 1,
+        "23": 1,
+        "88": 1
+      },
+      "method_calls": [
+        "v"
+      ]
+    },
+    {
+      "field": "v",
+      "offset": 347409,
+      "candidate_interval_end": 363026,
+      "references": [
+        {
+          "offset": 347498,
+          "reference": "x[99]"
+        },
+        {
+          "offset": 347504,
+          "reference": "x[24]"
+        },
+        {
+          "offset": 347510,
+          "reference": "x[46]"
+        },
+        {
+          "offset": 347516,
+          "reference": "x[74]"
+        },
+        {
+          "offset": 347526,
+          "reference": "x[20]"
+        },
+        {
+          "offset": 347542,
+          "reference": "x[67]"
+        },
+        {
+          "offset": 347548,
+          "reference": "x[69]"
+        },
+        {
+          "offset": 347554,
+          "reference": "x[8]"
+        },
+        {
+          "offset": 347559,
+          "reference": "x.OW"
+        },
+        {
+          "offset": 347564,
+          "reference": "x.VW"
+        },
+        {
+          "offset": 347579,
+          "reference": "x[71]"
+        },
+        {
+          "offset": 347592,
+          "reference": "x[79]"
+        },
+        {
+          "offset": 347604,
+          "reference": "x[55]"
+        },
+        {
+          "offset": 347618,
+          "reference": "x[13]"
+        },
+        {
+          "offset": 347624,
+          "reference": "x[122]"
+        }
+      ],
+      "numeric_literals": {
+        "99": 3,
+        "24": 3,
+        "46": 3,
+        "74": 3,
+        "20": 3,
+        "85": 3,
+        "67": 3,
+        "69": 4,
+        "8": 6,
+        "34": 3,
+        "71": 3,
+        "433": 1,
+        "79": 6,
+        "78": 8,
+        "55": 3,
+        "2396": 1,
+        "13": 4,
+        "122": 3,
+        "54": 3,
+        "39": 6,
+        "93": 3,
+        "10": 4,
+        "17": 3,
+        "3": 45,
+        "12": 4,
+        "9": 3,
+        "5": 13,
+        "42": 2,
+        "4": 34,
+        "1": 82,
+        "0": 62,
+        "2": 43,
+        "7030": 1,
+        "63": 4,
+        "25": 5,
+        "56": 5,
+        "128": 184,
+        "53": 3,
+        "21": 3,
+        "82": 2,
+        "31": 2,
+        "44": 2,
+        "6": 4,
+        "167": 4,
+        "77": 2,
+        "119": 2,
+        "195": 1,
+        "28": 3,
+        "130": 2,
+        "7": 4,
+        "132": 2,
+        "163": 2,
+        "131": 2,
+        "14": 3,
+        "11": 2,
+        "2097152": 26,
+        "16384": 26,
+        "38": 2,
+        "35": 2,
+        "134": 3,
+        "114": 2,
+        "15": 6,
+        "125": 24,
+        "16": 5,
+        "48": 2,
+        "61": 10,
+        "123": 10,
+        "187": 2,
+        "256": 24,
+        "171": 2,
+        "18": 2,
+        "96": 4,
+        "19": 2,
+        "112": 3,
+        "22": 4,
+        "120": 2,
+        "105": 2,
+        "23": 3,
+        "158": 5,
+        "91": 4,
+        "83": 9,
+        "1397969747": 4,
+        "47": 3,
+        "26": 3,
+        "27": 3,
+        "100": 2,
+        "197": 1,
+        "65": 2,
+        "68": 2,
+        "29": 3,
+        "80": 2,
+        "60": 2,
+        "30": 3,
+        "36": 2,
+        "33": 2,
+        "32": 3,
+        "87": 2,
+        "137": 2,
+        "52": 2,
+        "94": 2,
+        "37": 2,
+        "218": 1,
+        "95": 2,
+        "58": 2,
+        "156": 2,
+        "40": 2,
+        "41": 2,
+        "113": 3,
+        "43": 2,
+        "50": 4,
+        "81": 6,
+        "45": 2,
+        "168": 5,
+        "110": 2,
+        "141": 2,
+        "49": 2,
+        "51": 2,
+        "57": 2,
+        "62": 3,
+        "70": 4,
+        "1179010630": 1,
+        "59": 2,
+        "76": 2,
+        "72": 5,
+        "127": 2,
+        "154": 2,
+        "64": 2,
+        "1044266558": 1,
+        "147": 2,
+        "66": 2,
+        "121": 2,
+        "162": 4,
+        "126": 2,
+        "206": 1,
+        "73": 2,
+        "75": 2,
+        "117": 2,
+        "124": 2,
+        "157": 2,
+        "146": 2,
+        "223": 1,
+        "3755991007": 1,
+        "84": 2,
+        "118": 2,
+        "106": 2,
+        "90": 2,
+        "86": 2,
+        "109": 2,
+        "88": 2,
+        "174": 2,
+        "2930683566": 1,
+        "89": 2,
+        "161": 2,
+        "92": 2,
+        "101": 2,
+        "160": 2,
+        "97": 2,
+        "108": 2,
+        "98": 2,
+        "103": 2,
+        "169": 3,
+        "136": 2,
+        "102": 2,
+        "104": 3,
+        "116": 5,
+        "115": 2,
+        "111": 2,
+        "107": 2,
+        "219": 1,
+        "159": 2,
+        "139": 2,
+        "172": 1,
+        "151": 2,
+        "143": 2,
+        "150": 2,
+        "203": 1,
+        "135": 2,
+        "152": 2,
+        "133": 2,
+        "129": 2,
+        "255": 2,
+        "165": 2,
+        "166": 2,
+        "170": 2,
+        "138": 2,
+        "144": 2,
+        "140": 2,
+        "142": 2,
+        "244": 1,
+        "145": 2,
+        "148": 2,
+        "149": 2,
+        "155": 2,
+        "153": 2,
+        "2256963206": 1,
+        "237": 1,
+        "216": 2,
+        "164": 2
+      },
+      "method_calls": [
+        "DW",
+        "KW",
+        "QW",
+        "UW",
+        "iW",
+        "oW",
+        "rW",
+        "wW",
+        "zW"
+      ]
+    },
+    {
+      "field": "wW",
+      "offset": 1238010,
+      "candidate_interval_end": 1238105,
+      "references": [
+        {
+          "offset": 1238059,
+          "reference": "x[46]"
+        }
+      ],
+      "numeric_literals": {
+        "5": 2,
+        "4": 1,
+        "1": 1,
+        "46": 1,
+        "128": 1,
+        "22": 1
+      },
+      "method_calls": []
+    },
+    {
+      "field": "xW",
+      "offset": 180738,
+      "candidate_interval_end": 181128,
+      "references": [
+        {
+          "offset": 181019,
+          "reference": "x[46]"
+        }
+      ],
+      "numeric_literals": {
+        "33": 1,
+        "32": 1,
+        "128": 8,
+        "16384": 1,
+        "10": 2,
+        "3": 1,
+        "1": 2,
+        "0": 3,
+        "6": 1,
+        "255": 1,
+        "61": 1,
+        "123": 1,
+        "34": 1,
+        "2": 2,
+        "35": 1,
+        "46": 1,
+        "25": 1,
+        "18": 1,
+        "24": 1
+      },
+      "method_calls": []
+    },
+    {
+      "field": "zW",
+      "offset": 112282,
+      "candidate_interval_end": 112771,
+      "references": [
+        {
+          "offset": 112450,
+          "reference": "x[46]"
+        },
+        {
+          "offset": 112530,
+          "reference": "x[69]"
+        },
+        {
+          "offset": 112536,
+          "reference": "x[8]"
+        },
+        {
+          "offset": 112555,
+          "reference": "x[20]"
+        },
+        {
+          "offset": 112561,
+          "reference": "x.OW"
+        },
+        {
+          "offset": 112590,
+          "reference": "x.VW"
+        },
+        {
+          "offset": 112630,
+          "reference": "x[46]"
+        },
+        {
+          "offset": 112704,
+          "reference": "x[74]"
+        },
+        {
+          "offset": 112715,
+          "reference": "x[20]"
+        },
+        {
+          "offset": 112723,
+          "reference": "x[46]"
+        }
+      ],
+      "numeric_literals": {
+        "32": 1,
+        "31": 1,
+        "1": 2,
+        "0": 3,
+        "21": 2,
+        "46": 3,
+        "128": 2,
+        "25": 1,
+        "33": 1,
+        "69": 1,
+        "8": 1,
+        "20": 3,
+        "17": 1,
+        "34": 1,
+        "2": 1,
+        "256": 1,
+        "74": 1
+      },
+      "method_calls": [
+        "GW"
+      ]
+    }
+  ],
+  "confirmed_arithmetic": {
+    "multiplier": 61,
+    "increment": 123,
+    "modulus": 256,
+    "seed_range": [
+      0,
+      255
+    ],
+    "formula": "s1=(123+61*seed)%256; s2=(123+61*s1)%256; s3=(123+61*s2)%256; s4=(123+61*s3)%256",
+    "OW": "s1 + 256*s2 + 65536*s3 + 16777216*s4",
+    "VW": "s4",
+    "example_seed0_word_hex": "e49dca7b",
+    "example_seed0_next_state": 228,
+    "word_transform": "output_u32 = bxor(OW[index], other_mask, input_u32); index/other_mask depend on reader state",
+    "byte_transform": "next_state=(addend+state*multiplier)%256; output_u8=bxor(other_mask,input_u8,next_state)"
+  },
+  "initialization_path": [
+    "CW receives MW -> loop=true,state=33",
+    "state33 xW -> state6,counter=[1,nil,-1,255,...],multiplier61,increment123",
+    "state6 aW -> increments counter then state22 while counter<=255",
+    "state22 TW -> writes OW[counter],VW[counter], returns state6"
+  ],
+  "interpretation": "State-dependent masks and XOR are observed. No single global XOR key or full d schema is established.",
+  "other_constants_in_v": [
+    83,
+    187,
+    1397969747,
+    1179010630,
+    1044266558,
+    3755991007,
+    2930683566
+  ],
+  "other_constants_status": "Numeric constants occur in lazy-reader branches; not universal keys or proven d offsets.",
+  "trace_gate": {
+    "full_source_execution_allowed": false,
+    "reason": "sW immediately invokes the function returned by v. No globally validated pre-dispatch constant-table checkpoint exists yet.",
+    "required": "Reviewed decoder-only adapter; explicitly identified table/cursor and stop before invoking generated closures."
+  },
+  "limitations": "Candidate intervals are lexical, not AST/dataflow proofs. Init-path and transform anchors are manually reviewed for this hash only. Lazy __index decoding may occur during dispatch; a pre-dispatch dump need not contain every constant."
+}

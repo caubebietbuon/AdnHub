@@ -86,3 +86,18 @@ See research/static-analysis-2026-10-21/FINDINGS.md and analysis-report.json.
 Run python -m unittest discover -s tools -p "test_*.py" -v (11 tests passed).
 Generated string dumps stay in ignored output/phase2. Graph is lexical candidate
 calls, not verified CFG. Never claim arbitrary printable runs are constants.
+
+## Phase 3 discovery / tracer blueprint — 2026-10-21
+User requested discovery and safe tracing framework. decryption_finder.py pins g
+hash, records reader aliases/anchors, translates TW mask recurrence with 61/123
+mod256; OW[0]=0xe49dca7b,VW[0]=228. This is NOT a global XOR key for d.
+CW init state33 -> xW -> aW counter -> TW fills OW/VW. zW XOR sites identified.
+sW immediately calls the closure returned by v; full-source tracing remains gated.
+Added sandbox_tracer.luau (allowlist, bounded raw JSON snapshots, pre-dispatch stop),
+inactive decoder_adapter_template.luau, synthetic demo, run_tracer.py (prepare-only
+by default; optional local pinned Docker --network none, limits, no downloads).
+See tools/PHASE3.md and research/reader-discovery-2026-10-21/decryption-findings.json.
+19 Python tests passed. Lua5.1 syntax check only for Lua/Luau common syntax;
+no Luau/Docker installed, no decoder or payload runtime test and no actual
+constant-table snapshot. Source2 fetching remains inactive. Air gap cannot be
+claimed from environment hooks; runtime needs OS isolation / disconnected VM.

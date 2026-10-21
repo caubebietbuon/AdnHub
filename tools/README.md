@@ -84,3 +84,10 @@ escapes are decoded, unsupported escapes remain marked raw. Values over 4096
 characters are truncated explicitly. This is a survey, not a Luau AST/CFG,
 a constant-table decoder, an XOR solver or an opcode mapper. See
 research/static-analysis-2026-10-21/FINDINGS.md for evidence and unresolved fields.
+
+## Phase 3 reader discovery and tracer blueprint
+See PHASE3.md for source evidence, per-function explanations and offline-container
+requirements. Run python tools/decryption_finder.py for static findings. Run
+python tools/run_tracer.py --demo to PREPARE a synthetic bundle only. Runtime
+requires an independently provisioned, pinned local Luau image and OS isolation.
+No full-g tracing or complete constant-table checkpoint has been validated.
