@@ -1,0 +1,1593 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "network_used": false,
+  "lua_executed": false,
+  "vm_opcodes_executed": 0,
+  "method": "bounded numeric/table reader IR; API whitelist readu8/readu32/table.create; metatables metadata-only; factory calls blocked",
+  "helper_definitions": {
+    "A": {
+      "offset": 354,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B",
+        "H"
+      ]
+    },
+    "B": {
+      "offset": 138573,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S"
+      ]
+    },
+    "C": {
+      "offset": 1235975,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o"
+      ]
+    },
+    "E": {
+      "offset": 1045210,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O"
+      ]
+    },
+    "F": {
+      "offset": 7596,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B"
+      ]
+    },
+    "G": {
+      "offset": 435224,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B",
+        "H",
+        "i",
+        "Z",
+        "R"
+      ]
+    },
+    "GW": {
+      "offset": 432180,
+      "parameters": [
+        "x",
+        "W",
+        "b"
+      ]
+    },
+    "H": {
+      "offset": 472198,
+      "parameters": [
+        "x",
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B",
+        "H",
+        "i",
+        "Z"
+      ]
+    },
+    "I": {
+      "offset": 459020,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o"
+      ]
+    },
+    "J": {
+      "offset": 1236307,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B",
+        "H"
+      ]
+    },
+    "L": {
+      "offset": 471331,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B",
+        "H"
+      ]
+    },
+    "M": {
+      "offset": 176945,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B",
+        "H"
+      ]
+    },
+    "N": {
+      "offset": 1085173,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o"
+      ]
+    },
+    "P": {
+      "offset": 1085949,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O"
+      ]
+    },
+    "R": {
+      "offset": 835364,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B",
+        "H"
+      ]
+    },
+    "S": {
+      "offset": 174801,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S"
+      ]
+    },
+    "T": {
+      "offset": 53,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A"
+      ]
+    },
+    "X": {
+      "offset": 109693,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B",
+        "H"
+      ]
+    },
+    "Y": {
+      "offset": 981616,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A"
+      ]
+    },
+    "Z": {
+      "offset": 176431,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o"
+      ]
+    },
+    "_": {
+      "offset": 836251,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A"
+      ]
+    },
+    "a": {
+      "offset": 242737,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B"
+      ]
+    },
+    "b": {
+      "offset": 1238652,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S"
+      ]
+    },
+    "c": {
+      "offset": 189685,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o"
+      ]
+    },
+    "d": {
+      "offset": 111702,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B",
+        "H"
+      ]
+    },
+    "e": {
+      "offset": 137944,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O"
+      ]
+    },
+    "f": {
+      "offset": 1259564,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o"
+      ]
+    },
+    "g": {
+      "offset": 441287,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B"
+      ]
+    },
+    "h": {
+      "offset": 181974,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B",
+        "H",
+        "i"
+      ]
+    },
+    "j": {
+      "offset": 459327,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B"
+      ]
+    },
+    "k": {
+      "offset": 435703,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S"
+      ]
+    },
+    "l": {
+      "offset": 471178,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j"
+      ]
+    },
+    "m": {
+      "offset": 73317,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A"
+      ]
+    },
+    "n": {
+      "offset": 1236764,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S"
+      ]
+    },
+    "o": {
+      "offset": 1237150,
+      "parameters": [
+        "x"
+      ]
+    },
+    "p": {
+      "offset": 431765,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O"
+      ]
+    },
+    "q": {
+      "offset": 114440,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B",
+        "H",
+        "i",
+        "Z"
+      ]
+    },
+    "r": {
+      "offset": 1238377,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B"
+      ]
+    },
+    "s": {
+      "offset": 981867,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B",
+        "H"
+      ]
+    },
+    "t": {
+      "offset": 428864,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B",
+        "H",
+        "i",
+        "Z",
+        "R",
+        "N",
+        "z",
+        "E",
+        "Q",
+        "I",
+        "T"
+      ]
+    },
+    "u": {
+      "offset": 177483,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S"
+      ]
+    },
+    "x": {
+      "offset": 471839,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B",
+        "H",
+        "i"
+      ]
+    },
+    "y": {
+      "offset": 109333,
+      "parameters": [
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B",
+        "H"
+      ]
+    },
+    "z": {
+      "offset": 137374,
+      "parameters": [
+        "x",
+        "x",
+        "W",
+        "b",
+        "h",
+        "w",
+        "j",
+        "O",
+        "o",
+        "S",
+        "A",
+        "B"
+      ]
+    }
+  },
+  "auxiliary_scope": "91 is observed at root and recursive v callsites in this snapshot; not an assertion about all possible records/snapshots",
+  "v_callsite_evidence": [
+    {
+      "offset": 206016,
+      "kind": "root",
+      "auxiliary": 91
+    },
+    {
+      "offset": 350210,
+      "kind": "recursive_alias_H",
+      "auxiliary": 91
+    }
+  ],
+  "seed_rule": "(record_id+auxiliary)%256; depends on ID modulo256, not necessarily unique; auxiliary mask stays constant only within the observed91 callsite family",
+  "GW_name": "reader method in g; not evidence of a separate global-data buffer",
+  "records": [
+    {
+      "id": 664,
+      "auxiliary": 91,
+      "selection": "loader-selected root",
+      "status": "stopped_before_function_factory_or_lazy_read",
+      "stop_reason": "Function factory / unknown API denied BEFORE call",
+      "stopped_at_source_offset": 429293,
+      "factory_slot": 4890,
+      "factory": {
+        "slot": 4890,
+        "formal_parameters_including_duplicates": [
+          "x",
+          "W",
+          "W",
+          "b",
+          "h",
+          "w",
+          "j",
+          "O",
+          "o",
+          "S",
+          "S",
+          "A",
+          "B",
+          "B",
+          "H",
+          "i",
+          "Z",
+          "R"
+        ],
+        "effective_bindings": {
+          "x": {
+            "type": "reader_receiver"
+          },
+          "W": {
+            "table_id": 5,
+            "capacity_hint": 2,
+            "positive_key_count": 2,
+            "metadata_keys": [],
+            "created_at_source_offset": 109398,
+            "created_after_read_offset": 10,
+            "first_value_read_end": 14,
+            "last_value_read_end": 18,
+            "integer_range": [
+              1947447901,
+              4179906283
+            ],
+            "metatable_metadata_present": false
+          },
+          "b": {
+            "table_id": 1,
+            "capacity_hint": 0,
+            "positive_key_count": 4,
+            "metadata_keys": [],
+            "created_at_source_offset": 0,
+            "created_after_read_offset": null,
+            "first_value_read_end": null,
+            "last_value_read_end": null,
+            "integer_range": null,
+            "metatable_metadata_present": false
+          },
+          "h": 181,
+          "w": {
+            "table_id": 16,
+            "capacity_hint": 9962,
+            "positive_key_count": 9962,
+            "metadata_keys": [],
+            "created_at_source_offset": 109789,
+            "created_after_read_offset": 39605,
+            "first_value_read_end": 39606,
+            "last_value_read_end": 53879,
+            "integer_range": [
+              0,
+              328979855
+            ],
+            "metatable_metadata_present": false
+          },
+          "j": {
+            "table_id": 8,
+            "capacity_hint": 9963,
+            "positive_key_count": 0,
+            "metadata_keys": [
+              "-1",
+              "-2"
+            ],
+            "created_at_source_offset": 1236482,
+            "created_after_read_offset": 21,
+            "first_value_read_end": null,
+            "last_value_read_end": null,
+            "integer_range": null,
+            "metatable_metadata_present": true
+          },
+          "O": {
+            "table_id": 11,
+            "capacity_hint": 9965,
+            "positive_key_count": 0,
+            "metadata_keys": [
+              "-1",
+              "-2"
+            ],
+            "created_at_source_offset": 114616,
+            "created_after_read_offset": 13276,
+            "first_value_read_end": null,
+            "last_value_read_end": null,
+            "integer_range": null,
+            "metatable_metadata_present": true
+          },
+          "o": 157,
+          "S": 9942,
+          "A": {
+            "table_id": 10,
+            "capacity_hint": 9965,
+            "positive_key_count": 9965,
+            "metadata_keys": [],
+            "created_at_source_offset": 114607,
+            "created_after_read_offset": 13276,
+            "first_value_read_end": 13278,
+            "last_value_read_end": 26883,
+            "integer_range": [
+              0,
+              536870900
+            ],
+            "metatable_metadata_present": false
+          },
+          "B": {
+            "table_id": 17,
+            "capacity_hint": 9962,
+            "positive_key_count": 0,
+            "metadata_keys": [
+              "-1",
+              "-2"
+            ],
+            "created_at_source_offset": 109798,
+            "created_after_read_offset": 39605,
+            "first_value_read_end": null,
+            "last_value_read_end": null,
+            "integer_range": null,
+            "metatable_metadata_present": true
+          },
+          "H": {
+            "table_id": 13,
+            "capacity_hint": 9962,
+            "positive_key_count": 9962,
+            "metadata_keys": [],
+            "created_at_source_offset": 435492,
+            "created_after_read_offset": 26886,
+            "first_value_read_end": 26887,
+            "last_value_read_end": 39602,
+            "integer_range": [
+              0,
+              536870909
+            ],
+            "metatable_metadata_present": false
+          },
+          "i": {
+            "table_id": 7,
+            "capacity_hint": 9963,
+            "positive_key_count": 9963,
+            "metadata_keys": [],
+            "created_at_source_offset": 1236473,
+            "created_after_read_offset": 21,
+            "first_value_read_end": 22,
+            "last_value_read_end": 13270,
+            "integer_range": [
+              0,
+              195055216
+            ],
+            "metatable_metadata_present": false
+          },
+          "Z": {
+            "table_id": 14,
+            "capacity_hint": 9962,
+            "positive_key_count": 0,
+            "metadata_keys": [
+              "-1",
+              "-2"
+            ],
+            "created_at_source_offset": 435501,
+            "created_after_read_offset": 26886,
+            "first_value_read_end": null,
+            "last_value_read_end": null,
+            "integer_range": null,
+            "metatable_metadata_present": true
+          },
+          "R": null
+        },
+        "source_supported_roles": {
+          "opcode_slot_array_parameter": "A",
+          "opcode_slots": {
+            "table_id": 10,
+            "capacity_hint": 9965,
+            "positive_key_count": 9965,
+            "metadata_keys": [],
+            "created_at_source_offset": 114607,
+            "created_after_read_offset": 13276,
+            "first_value_read_end": 13278,
+            "last_value_read_end": 26883,
+            "integer_range": [
+              0,
+              536870900
+            ],
+            "metatable_metadata_present": false
+          },
+          "entry_pc_parameter": "S",
+          "entry_pc": 9942,
+          "dispatch_variant_parameter": "o",
+          "dispatch_variant": 157,
+          "register_allocation_parameter": "h",
+          "register_capacity": 181,
+          "other_raw_arrays": {
+            "i": {
+              "table_id": 7,
+              "capacity_hint": 9963,
+              "positive_key_count": 9963,
+              "metadata_keys": [],
+              "created_at_source_offset": 1236473,
+              "created_after_read_offset": 21,
+              "first_value_read_end": 22,
+              "last_value_read_end": 13270,
+              "integer_range": [
+                0,
+                195055216
+              ],
+              "metatable_metadata_present": false
+            },
+            "H": {
+              "table_id": 13,
+              "capacity_hint": 9962,
+              "positive_key_count": 9962,
+              "metadata_keys": [],
+              "created_at_source_offset": 435492,
+              "created_after_read_offset": 26886,
+              "first_value_read_end": 26887,
+              "last_value_read_end": 39602,
+              "integer_range": [
+                0,
+                536870909
+              ],
+              "metatable_metadata_present": false
+            },
+            "w": {
+              "table_id": 16,
+              "capacity_hint": 9962,
+              "positive_key_count": 9962,
+              "metadata_keys": [],
+              "created_at_source_offset": 109789,
+              "created_after_read_offset": 39605,
+              "first_value_read_end": 39606,
+              "last_value_read_end": 53879,
+              "integer_range": [
+                0,
+                328979855
+              ],
+              "metatable_metadata_present": false
+            }
+          },
+          "lazy_reference_wrappers": {
+            "j": {
+              "table_id": 8,
+              "capacity_hint": 9963,
+              "positive_key_count": 0,
+              "metadata_keys": [
+                "-1",
+                "-2"
+              ],
+              "created_at_source_offset": 1236482,
+              "created_after_read_offset": 21,
+              "first_value_read_end": null,
+              "last_value_read_end": null,
+              "integer_range": null,
+              "metatable_metadata_present": true
+            },
+            "O": {
+              "table_id": 11,
+              "capacity_hint": 9965,
+              "positive_key_count": 0,
+              "metadata_keys": [
+                "-1",
+                "-2"
+              ],
+              "created_at_source_offset": 114616,
+              "created_after_read_offset": 13276,
+              "first_value_read_end": null,
+              "last_value_read_end": null,
+              "integer_range": null,
+              "metatable_metadata_present": true
+            },
+            "Z": {
+              "table_id": 14,
+              "capacity_hint": 9962,
+              "positive_key_count": 0,
+              "metadata_keys": [
+                "-1",
+                "-2"
+              ],
+              "created_at_source_offset": 435501,
+              "created_after_read_offset": 26886,
+              "first_value_read_end": null,
+              "last_value_read_end": null,
+              "integer_range": null,
+              "metatable_metadata_present": true
+            },
+            "B": {
+              "table_id": 17,
+              "capacity_hint": 9962,
+              "positive_key_count": 0,
+              "metadata_keys": [
+                "-1",
+                "-2"
+              ],
+              "created_at_source_offset": 109798,
+              "created_after_read_offset": 39605,
+              "first_value_read_end": null,
+              "last_value_read_end": null,
+              "integer_range": null,
+              "metatable_metadata_present": true
+            }
+          }
+        }
+      },
+      "record_input_offset": 43414,
+      "record_bytes": 53886,
+      "plaintext_sha256": "662f0f35fe18e7a992c0f0db81f186c4dd314b6e0c346c779153782b178901d3",
+      "header_checks": {
+        "standard_lua_signature": false,
+        "gzip_signature": false,
+        "xz_signature": false,
+        "lz4_frame_signature": false,
+        "luau_or_luraph_prototype_header": "not_validated_no_universal_header_assumed"
+      },
+      "initial_header": {
+        "format_byte_offset": 0,
+        "format_byte": 0,
+        "dispatch_selector": 157,
+        "leading_descriptor_word_count": 0,
+        "leading_count_offset": 3,
+        "upvalue_meaning": "unverified; descriptor words must not be relabeled upvalues yet",
+        "factory_slot": 4890,
+        "u32_seed_or_parameter_word_count": 2,
+        "u32_words_offset": 10,
+        "first_raw_array_count_offset": 18
+      },
+      "seed": 243,
+      "submask_hex": "5b5b5b5b",
+      "reader_steps": 10649705,
+      "bytes_read_through": 53881,
+      "unread_tail_bytes": 5,
+      "distinct_bytes_read": 53881,
+      "contiguous_coverage_to_cursor": true,
+      "tables": [
+        {
+          "table_id": 3,
+          "capacity_hint": 0,
+          "positive_key_count": 3,
+          "metadata_keys": [],
+          "created_at_source_offset": 1236723,
+          "created_after_read_offset": 7,
+          "first_value_read_end": 7,
+          "last_value_read_end": 7,
+          "integer_range": [
+            0,
+            1
+          ],
+          "metatable_metadata_present": false
+        },
+        {
+          "table_id": 4,
+          "capacity_hint": 0,
+          "positive_key_count": 0,
+          "metadata_keys": [],
+          "created_at_source_offset": 1236749,
+          "created_after_read_offset": 7,
+          "first_value_read_end": null,
+          "last_value_read_end": null,
+          "integer_range": null,
+          "metatable_metadata_present": false
+        },
+        {
+          "table_id": 5,
+          "capacity_hint": 2,
+          "positive_key_count": 2,
+          "metadata_keys": [],
+          "created_at_source_offset": 109398,
+          "created_after_read_offset": 10,
+          "first_value_read_end": 14,
+          "last_value_read_end": 18,
+          "integer_range": [
+            1947447901,
+            4179906283
+          ],
+          "metatable_metadata_present": false
+        },
+        {
+          "table_id": 6,
+          "capacity_hint": 0,
+          "positive_key_count": 3,
+          "metadata_keys": [],
+          "created_at_source_offset": 109428,
+          "created_after_read_offset": 10,
+          "first_value_read_end": 10,
+          "last_value_read_end": 18,
+          "integer_range": [
+            1,
+            3
+          ],
+          "metatable_metadata_present": false
+        },
+        {
+          "table_id": 7,
+          "capacity_hint": 9963,
+          "positive_key_count": 9963,
+          "metadata_keys": [],
+          "created_at_source_offset": 1236473,
+          "created_after_read_offset": 21,
+          "first_value_read_end": 22,
+          "last_value_read_end": 13270,
+          "integer_range": [
+            0,
+            195055216
+          ],
+          "metatable_metadata_present": false
+        },
+        {
+          "table_id": 8,
+          "capacity_hint": 9963,
+          "positive_key_count": 0,
+          "metadata_keys": [
+            "-1",
+            "-2"
+          ],
+          "created_at_source_offset": 1236482,
+          "created_after_read_offset": 21,
+          "first_value_read_end": null,
+          "last_value_read_end": null,
+          "integer_range": null,
+          "metatable_metadata_present": true
+        },
+        {
+          "table_id": 9,
+          "capacity_hint": 0,
+          "positive_key_count": 3,
+          "metadata_keys": [],
+          "created_at_source_offset": 1236513,
+          "created_after_read_offset": 21,
+          "first_value_read_end": 21,
+          "last_value_read_end": 13270,
+          "integer_range": [
+            1,
+            9964
+          ],
+          "metatable_metadata_present": false
+        },
+        {
+          "table_id": 10,
+          "capacity_hint": 9965,
+          "positive_key_count": 9965,
+          "metadata_keys": [],
+          "created_at_source_offset": 114607,
+          "created_after_read_offset": 13276,
+          "first_value_read_end": 13278,
+          "last_value_read_end": 26883,
+          "integer_range": [
+            0,
+            536870900
+          ],
+          "metatable_metadata_present": false
+        },
+        {
+          "table_id": 11,
+          "capacity_hint": 9965,
+          "positive_key_count": 0,
+          "metadata_keys": [
+            "-1",
+            "-2"
+          ],
+          "created_at_source_offset": 114616,
+          "created_after_read_offset": 13276,
+          "first_value_read_end": null,
+          "last_value_read_end": null,
+          "integer_range": null,
+          "metatable_metadata_present": true
+        },
+        {
+          "table_id": 12,
+          "capacity_hint": 0,
+          "positive_key_count": 3,
+          "metadata_keys": [],
+          "created_at_source_offset": 114634,
+          "created_after_read_offset": 13276,
+          "first_value_read_end": 13276,
+          "last_value_read_end": 26883,
+          "integer_range": [
+            1,
+            9966
+          ],
+          "metatable_metadata_present": false
+        },
+        {
+          "table_id": 13,
+          "capacity_hint": 9962,
+          "positive_key_count": 9962,
+          "metadata_keys": [],
+          "created_at_source_offset": 435492,
+          "created_after_read_offset": 26886,
+          "first_value_read_end": 26887,
+          "last_value_read_end": 39602,
+          "integer_range": [
+            0,
+            536870909
+          ],
+          "metatable_metadata_present": false
+        },
+        {
+          "table_id": 14,
+          "capacity_hint": 9962,
+          "positive_key_count": 0,
+          "metadata_keys": [
+            "-1",
+            "-2"
+          ],
+          "created_at_source_offset": 435501,
+          "created_after_read_offset": 26886,
+          "first_value_read_end": null,
+          "last_value_read_end": null,
+          "integer_range": null,
+          "metatable_metadata_present": true
+        },
+        {
+          "table_id": 15,
+          "capacity_hint": 0,
+          "positive_key_count": 3,
+          "metadata_keys": [],
+          "created_at_source_offset": 435519,
+          "created_after_read_offset": 26886,
+          "first_value_read_end": 26886,
+          "last_value_read_end": 39602,
+          "integer_range": [
+            1,
+            9963
+          ],
+          "metatable_metadata_present": false
+        },
+        {
+          "table_id": 16,
+          "capacity_hint": 9962,
+          "positive_key_count": 9962,
+          "metadata_keys": [],
+          "created_at_source_offset": 109789,
+          "created_after_read_offset": 39605,
+          "first_value_read_end": 39606,
+          "last_value_read_end": 53879,
+          "integer_range": [
+            0,
+            328979855
+          ],
+          "metatable_metadata_present": false
+        },
+        {
+          "table_id": 17,
+          "capacity_hint": 9962,
+          "positive_key_count": 0,
+          "metadata_keys": [
+            "-1",
+            "-2"
+          ],
+          "created_at_source_offset": 109798,
+          "created_after_read_offset": 39605,
+          "first_value_read_end": null,
+          "last_value_read_end": null,
+          "integer_range": null,
+          "metatable_metadata_present": true
+        },
+        {
+          "table_id": 18,
+          "capacity_hint": 0,
+          "positive_key_count": 3,
+          "metadata_keys": [],
+          "created_at_source_offset": 109829,
+          "created_after_read_offset": 39605,
+          "first_value_read_end": 39605,
+          "last_value_read_end": 53879,
+          "integer_range": [
+            1,
+            9963
+          ],
+          "metatable_metadata_present": false
+        },
+        {
+          "table_id": 19,
+          "capacity_hint": 0,
+          "positive_key_count": 0,
+          "metadata_keys": [],
+          "created_at_source_offset": 429166,
+          "created_after_read_offset": 53881,
+          "first_value_read_end": null,
+          "last_value_read_end": null,
+          "integer_range": null,
+          "metatable_metadata_present": false
+        }
+      ],
+      "helper_calls": {
+        "GW": 1,
+        "o": 1,
+        "N": 2,
+        "f": 2,
+        "x": 1,
+        "c": 1,
+        "n": 5,
+        "p": 2,
+        "J": 2,
+        "Z": 4309,
+        "s": 3225,
+        "C": 9964,
+        "m": 2,
+        "j": 9967,
+        "y": 2,
+        "t": 4,
+        "B": 3227,
+        "L": 19930,
+        "q": 2,
+        "a": 9964,
+        "M": 19974,
+        "u": 7153,
+        "R": 29888,
+        "_": 3233,
+        "H": 25514,
+        "k": 46,
+        "b": 215,
+        "X": 5,
+        "G": 1481,
+        "A": 1907,
+        "d": 2,
+        "E": 9964,
+        "h": 12394,
+        "l": 428,
+        "r": 5,
+        "F": 1,
+        "S": 1,
+        "e": 4
+      },
+      "first_buffer_reads": [
+        {
+          "at": 1085228,
+          "offset": 0,
+          "width": 1,
+          "helper": "N"
+        },
+        {
+          "at": 189739,
+          "offset": 1,
+          "width": 1,
+          "helper": "c"
+        },
+        {
+          "at": 1236862,
+          "offset": 2,
+          "width": 1,
+          "helper": "n"
+        },
+        {
+          "at": 1236698,
+          "offset": 3,
+          "width": 4,
+          "helper": "J"
+        },
+        {
+          "at": 431833,
+          "offset": 7,
+          "width": 1,
+          "helper": "p"
+        },
+        {
+          "at": 1236043,
+          "offset": 8,
+          "width": 1,
+          "helper": "C"
+        },
+        {
+          "at": 73601,
+          "offset": 9,
+          "width": 1,
+          "helper": "m"
+        },
+        {
+          "at": 981989,
+          "offset": 10,
+          "width": 4,
+          "helper": "s"
+        },
+        {
+          "at": 981989,
+          "offset": 14,
+          "width": 4,
+          "helper": "s"
+        },
+        {
+          "at": 471450,
+          "offset": 18,
+          "width": 1,
+          "helper": "L"
+        },
+        {
+          "at": 1237074,
+          "offset": 19,
+          "width": 1,
+          "helper": "n"
+        },
+        {
+          "at": 114781,
+          "offset": 20,
+          "width": 1,
+          "helper": "q"
+        },
+        {
+          "at": 177019,
+          "offset": 21,
+          "width": 1,
+          "helper": "M"
+        },
+        {
+          "at": 177019,
+          "offset": 22,
+          "width": 1,
+          "helper": "M"
+        },
+        {
+          "at": 836325,
+          "offset": 23,
+          "width": 1,
+          "helper": "_"
+        },
+        {
+          "at": 177019,
+          "offset": 24,
+          "width": 1,
+          "helper": "M"
+        },
+        {
+          "at": 177019,
+          "offset": 25,
+          "width": 1,
+          "helper": "M"
+        },
+        {
+          "at": 836325,
+          "offset": 26,
+          "width": 1,
+          "helper": "_"
+        },
+        {
+          "at": 177019,
+          "offset": 27,
+          "width": 1,
+          "helper": "M"
+        },
+        {
+          "at": 836325,
+          "offset": 28,
+          "width": 1,
+          "helper": "_"
+        }
+      ],
+      "constant_count": "not_an_eager_flat_table; lazy reference wrappers retained without evaluation",
+      "child_prototype_count": "unresolved; lookup count is not a verified prototype count",
+      "upvalue_list": "leading descriptor data observed, semantics not verified",
+      "native_instruction_byte_width": "not applicable to these custom virtual arrays",
+      "decoded_vm_instructions_executed": 0,
+      "header_crosscheck": true,
+      "normalized_layout": {
+        "status": "normalized_primary_sequence_parsed",
+        "arrays": [
+          {
+            "ordinal": 1,
+            "count_offset": 18,
+            "encoded_count": 30194,
+            "bias": 20231,
+            "slots": 9963,
+            "values_start": 21,
+            "values_end": 13270
+          },
+          {
+            "ordinal": 2,
+            "count_offset": 13273,
+            "encoded_count": 30196,
+            "bias": 20231,
+            "slots": 9965,
+            "values_start": 13276,
+            "values_end": 26883
+          },
+          {
+            "ordinal": 3,
+            "count_offset": 26883,
+            "encoded_count": 30193,
+            "bias": 20231,
+            "slots": 9962,
+            "values_start": 26886,
+            "values_end": 39602
+          },
+          {
+            "ordinal": 4,
+            "count_offset": 39602,
+            "encoded_count": 30193,
+            "bias": 20231,
+            "slots": 9962,
+            "values_start": 39605,
+            "values_end": 53879
+          }
+        ],
+        "unclassified_scalar": {
+          "offset": 13270,
+          "value": 0
+        },
+        "register_capacity": {
+          "offset": 13271,
+          "value": 181
+        },
+        "entry_pc": {
+          "offset": 53879,
+          "value": 9942
+        },
+        "reader_end": 53881,
+        "unread_tail_bytes": 5
+      },
+      "normalized_reader_crosscheck": "counts_ranges_pc_register_size_and_cursor_match",
+      "virtual_function_header": {
+        "format": "custom_GW_constructor_not_native_Luau_header",
+        "factory_slot": 4890,
+        "dispatch_variant": 157,
+        "entry_pc": 9942,
+        "register_capacity": 181,
+        "opcode_array_slots": 9965,
+        "instruction_width_bytes": null,
+        "eager_constant_count": null,
+        "child_prototype_count": null,
+        "verified_upvalue_count": null
+      }
+    },
+    {
+      "id": 1,
+      "auxiliary": 91,
+      "selection": "explicit structural-comparison ID; runtime reachability unproven",
+      "status": "record_bounds_not_validated",
+      "length": 1477608
+    },
+    {
+      "id": 2,
+      "auxiliary": 91,
+      "selection": "explicit structural-comparison ID; runtime reachability unproven",
+      "status": "reader_returned_without_factory",
+      "result": [
+        null,
+        null,
+        1
+      ],
+      "record_input_offset": 2279,
+      "record_bytes": 8,
+      "plaintext_sha256": "67da50bc068633bbef91abea8718e1e0f928fb124154e73a37ba83ace8ce66e2",
+      "header_checks": {
+        "standard_lua_signature": false,
+        "gzip_signature": false,
+        "xz_signature": false,
+        "lz4_frame_signature": false,
+        "luau_or_luraph_prototype_header": "not_validated_no_universal_header_assumed"
+      },
+      "initial_header": {
+        "format_byte_offset": 0,
+        "format_byte": 85,
+        "layout": "alternate_or_unvalidated_GW_path; no primary header interpretation"
+      },
+      "seed": 93,
+      "submask_hex": "5b5b5b5b",
+      "reader_steps": 330,
+      "bytes_read_through": 1,
+      "unread_tail_bytes": 7,
+      "distinct_bytes_read": 1,
+      "contiguous_coverage_to_cursor": true,
+      "tables": [],
+      "helper_calls": {
+        "GW": 1,
+        "o": 1,
+        "N": 1,
+        "f": 2,
+        "x": 1,
+        "H": 1
+      },
+      "first_buffer_reads": [
+        {
+          "at": 1085228,
+          "offset": 0,
+          "width": 1,
+          "helper": "N"
+        }
+      ],
+      "constant_count": "not_an_eager_flat_table; lazy reference wrappers retained without evaluation",
+      "child_prototype_count": "unresolved; lookup count is not a verified prototype count",
+      "upvalue_list": "leading descriptor data observed, semantics not verified",
+      "native_instruction_byte_width": "not applicable to these custom virtual arrays",
+      "decoded_vm_instructions_executed": 0
+    }
+  ],
+  "limits": "No opcode mapping/execution, lazy constant evaluation or unreviewed function factory calls. Unread bytes and unresolved field meanings remain explicit."
+}

@@ -120,3 +120,19 @@ auxiliary91, replicated word0x5b5b5b5b, starting state243. Only64 selected-recor
 bytes are transformed; no Lua runs, no whole-d decryption/schema is claimed.
 See research/targeted-reader-2026-10-21/FINDINGS.md. Local reader-trace.json
 contains exact masks and byte previews; committed summary excludes raw bytes.
+
+## Phase 6 GW alignment
+
+```powershell
+python tools/gw_aligner.py --record-ids 664
+python tools/gw_aligner.py --record-ids 664,1,2
+```
+
+Uses gw_reader_model.py's bounded numeric/table IR from44 reviewed reader helpers;
+no Lua, application factory, VM opcode or lazy __index is invoked. Record664
+aligns to factory4890: opcode slots9965, entry PC9942, register capacity181;
+reader end53881/53886 with5 bytes unresolved. Independent normalized parser agrees.
+Constant/prototype/upvalue counts remain unresolved. IDs1/2 are unvalidated
+structural comparisons, not accepted prototypes. Source callsites passaux91;
+seed depends on ID modulo256, not fixed243. See research/gw-alignment-2026-10-21/
+FINDINGS.md; dumps stay in ignored output/phase6.

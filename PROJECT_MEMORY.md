@@ -128,3 +128,21 @@ No native magic or validated constant/prototype tags yet. Original d first64 are
 loader data, not blindly XORed. No Lua/opcodes executed; no network. 33 tests passed.
 See research/targeted-reader-2026-10-21/FINDINGS.md. Next source-map GW on decoded
 buffer and separately inspect lazy readers; never generalize aux91 to every record.
+
+## Phase 6 GW alignment — 2026-10-21
+Added gw_aligner.py + gw_reader_model.py: hash-pinned, bounded reader-only IR
+(44 helpers), readu8/readu32/table.create; metatables opaque metadata, unknown
+factory/lazy calls stop. No Lua/application/opcode executed; no network requests.
+v context[6] is an opaque lazy __index metatable before GW, not nil or runnable.
+Record664: customformat0,variant157,leadingdescriptorcount0 (NOT proven upvalues),
+factory4890,u32parameterwords2. Raw streams i9963,A9965,H9962,w9962; factory A is
+opcode-slot array. Register capacity181,entryPC9942. Independent normalized
+reader matches all counts/ranges/cursor. Coverage53881/53886;5 tail bytes unknown.
+Lazy wrappers carry[-1]/[-2] metadata and cache: capacities are not constant counts.
+Child-prototype/upvalue semantics unresolved. Aux91 observed at root/recursive v
+calls; seed=(ID+91)%256, not globally243. Comparison ID1 fails assumed-length
+bounds,ID2 returns after1/8 bytes withformat85: neither accepted as prototype.
+See research/gw-alignment-2026-10-21/FINDINGS.md.41 tests passed (33+8).
+Raw arrays/transformed records stay ignored in output/phase6. GW is a reader
+method name, not proof of a separate global-data buffer. Next: lazy tag readers,
+leading descriptors and5 unread bytes; keep factory/opcode execution blocked.
