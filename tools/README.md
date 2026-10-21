@@ -107,3 +107,16 @@ by128 cannot be distinguished by entropy. See research/lcg-experiments-2026-10-2
 FINDINGS.md and experiment-summary.json for measured results and controls.
 state_separator emits view-only source excerpts, a cut BEFORE v, region hashes
 and operation metadata. It does not produce a runnable or proven-safe decoder.
+
+## Phase 5 targeted reader
+
+```powershell
+python tools/reader_tracer.py
+```
+
+Source-pinned CW integer reader (permuted digits, not ULEB128) locates selected
+record ID664 at d offset43414, length53886. The rW/zW parameter chain yields
+auxiliary91, replicated word0x5b5b5b5b, starting state243. Only64 selected-record
+bytes are transformed; no Lua runs, no whole-d decryption/schema is claimed.
+See research/targeted-reader-2026-10-21/FINDINGS.md. Local reader-trace.json
+contains exact masks and byte previews; committed summary excludes raw bytes.

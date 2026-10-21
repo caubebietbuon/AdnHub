@@ -114,3 +114,17 @@ standalone decoder or validated CFG. Raw excerpts/candidate bytes stay ignored.
 See research/lcg-experiments-2026-10-21/FINDINGS.md. 27 tests passed; no Lua or
 payload runtime, no network. Next: source-derived cursor/seed/extra-mask schedule,
 then bounded record parsing; never infer a second encryption layer from entropy.
+
+## Phase 5 targeted record — 2026-10-21
+reader_tracer.py translates the reviewed CW custom uint (permuted digit weights,
+not ULEB128) and rW/zW mask branch. Encoded count95495-bias94747=748; flag0;
+selected ID664; slice2242..154419 (length152177); selected lookup41168; skip1byte,
+length fe8324 ->53886, ciphertext begins absolute43414. Other lookup values may
+be encoded references; not all are plain offsets. Later d bytes unexamined.
+sW passes91 to v; on this branch rW j=e664,S=P91 -> seed243; auxiliary word
+91*0x01010101=0x5b5b5b5b. OW/VW updates state; zW extra mask fixed per record.
+Transformed64 selected-record bytes, prefix SHA256 fa6871bc0acd37b71207626e55d7e880a87c7b981a3dcf14cbd8170dde5eb243.
+No native magic or validated constant/prototype tags yet. Original d first64 are
+loader data, not blindly XORed. No Lua/opcodes executed; no network. 33 tests passed.
+See research/targeted-reader-2026-10-21/FINDINGS.md. Next source-map GW on decoded
+buffer and separately inspect lazy readers; never generalize aux91 to every record.

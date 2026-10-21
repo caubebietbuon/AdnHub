@@ -1,0 +1,338 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "payload_executed": false,
+  "network_used": false,
+  "status": "source_derived_selected_record_transform_not_complete_VM_deobfuscation",
+  "source_evidence": {
+    "anchors": {
+      "word_mask_replication": {
+        "field": "rW",
+        "offset": 834798,
+        "bytes": 10
+      },
+      "initial_seed": {
+        "field": "rW",
+        "offset": 834779,
+        "bytes": 9
+      },
+      "loop_coefficients": {
+        "field": "rW",
+        "offset": 834861,
+        "bytes": 20
+      },
+      "word_xor": {
+        "field": "zW",
+        "offset": 112555,
+        "bytes": 18
+      },
+      "word_read": {
+        "field": "zW",
+        "offset": 112536,
+        "bytes": 11
+      },
+      "word_next_state": {
+        "field": "zW",
+        "offset": 112590,
+        "bytes": 7
+      },
+      "tail_update": {
+        "field": "zW",
+        "offset": 112692,
+        "bytes": 11
+      },
+      "tail_xor": {
+        "field": "zW",
+        "offset": 112715,
+        "bytes": 23
+      },
+      "rW_argument_mapping": {
+        "field": "v",
+        "offset": 362931,
+        "bytes": 29
+      },
+      "zW_argument_mapping": {
+        "field": "v",
+        "offset": 362980,
+        "bytes": 33
+      },
+      "root_auxiliary": {
+        "field": "sW",
+        "offset": 206016,
+        "bytes": 24
+      },
+      "lookup_and_tag": {
+        "field": "wW",
+        "offset": 1238028,
+        "bytes": 41
+      },
+      "count_bias": {
+        "field": "XW",
+        "offset": 176251,
+        "bytes": 7
+      },
+      "three_byte_permutation": {
+        "field": "xW",
+        "offset": 180796,
+        "bytes": 47
+      },
+      "four_byte_permutation": {
+        "field": "AW",
+        "offset": 428664,
+        "bytes": 45
+      },
+      "root_length_byte2_branch": {
+        "field": "v",
+        "offset": 347795,
+        "bytes": 21
+      },
+      "root_length_byte3_branch": {
+        "field": "v",
+        "offset": 362744,
+        "bytes": 23
+      },
+      "root_P_initial_value": {
+        "field": "v",
+        "offset": 347660,
+        "bytes": 35
+      },
+      "length_byte2_threshold": {
+        "field": "UW",
+        "offset": 110981,
+        "bytes": 33
+      },
+      "length_byte3_threshold": {
+        "field": "UW",
+        "offset": 110920,
+        "bytes": 35
+      },
+      "record_length_formula": {
+        "field": "DW",
+        "offset": 129095,
+        "bytes": 64
+      }
+    },
+    "zW_numeric_literals": [
+      0,
+      1,
+      2,
+      8,
+      17,
+      20,
+      21,
+      25,
+      31,
+      32,
+      33,
+      34,
+      46,
+      69,
+      74,
+      128,
+      256
+    ],
+    "root_auxiliary_byte": 91,
+    "zW_shift_operator_offsets": [],
+    "zW_band_calls": 0,
+    "zW_bitwise_notes": "The pinned zW branch uses bxor aliases, arithmetic and mod256, not band or << / >>. 128/16384/2097152 also occur in integer-read branches and are not XOR keys.",
+    "aliases": {
+      "[8]": "buffer.readu32",
+      "[20]": "bit32.bxor",
+      "[46]": "buffer.readu8",
+      "[69]": "buffer.writeu32",
+      "[74]": "buffer.writeu8"
+    },
+    "rW_state_mapping": {
+      "j": "v.e (selected lookup id on this path)",
+      "S": "v.P (91 on this path)",
+      "o": "record_length"
+    },
+    "zW_state_mapping": {
+      "W": "rolling LCG state",
+      "H": "replicated auxiliary byte",
+      "i": "auxiliary byte",
+      "B": "source start",
+      "O": "word offset"
+    }
+  },
+  "loader": {
+    "encoded_count": 95495,
+    "count_bias": 94747,
+    "lookup_count": 748,
+    "flag_offset": 3,
+    "flag_byte": 0,
+    "selected_id_offset": 4,
+    "selected_id": 664,
+    "slice_length_field_offset": 2239,
+    "slice_offset": 2242,
+    "slice_length": 152177,
+    "slice_end": 154419,
+    "unexamined_bytes_after_slice": 219247,
+    "selected_lookup_value": 41168,
+    "selected_record_skipped_byte": 1,
+    "record_header_slice_offset": 41169,
+    "record_payload_slice_offset": 41172,
+    "record_payload_input_offset": 43414,
+    "record_length": 53886,
+    "limitations": "Other lookup values can be encoded references, not necessarily plain in-slice offsets. Skipped-byte meaning and subsequent input sections are unresolved.",
+    "lookup_entries_count": 748,
+    "lookup_entries_note": "Full raw entries retained only in local output/phase5/reader-trace.json; most are opaque references."
+  },
+  "original_d_first64": {
+    "header_checks": {
+      "standard_lua_signature": false,
+      "gzip_signature": false,
+      "xz_signature": false,
+      "lz4_frame_signature": false,
+      "luau_or_luraph_prototype_header": "not_validated_no_universal_header_assumed"
+    },
+    "interpretation": "Loader integer/lookup prefix, not the selected record ciphertext; not blindly XORed"
+  },
+  "selected_record_first64": {
+    "input_offset": 43414,
+    "decoded_sha256": "fa6871bc0acd37b71207626e55d7e880a87c7b981a3dcf14cbd8170dde5eb243",
+    "input_entropy": 5.769454882778696,
+    "output_entropy": 5.220714015923012,
+    "header_checks": {
+      "standard_lua_signature": false,
+      "gzip_signature": false,
+      "xz_signature": false,
+      "lz4_frame_signature": false,
+      "luau_or_luraph_prototype_header": "not_validated_no_universal_header_assumed"
+    },
+    "trace": {
+      "selected_id": 664,
+      "auxiliary_byte": 91,
+      "initial_state": 243,
+      "submask_hex": "5b5b5b5b",
+      "final_state": 51,
+      "bytes": 64,
+      "word_trace_first16": [
+        {
+          "relative_offset": 0,
+          "state_before": 243,
+          "OW_hex": "c73cd562",
+          "submask_hex": "5b5b5b5b",
+          "state_after": 199
+        },
+        {
+          "relative_offset": 4,
+          "state_before": 199,
+          "OW_hex": "dbe049e6",
+          "submask_hex": "5b5b5b5b",
+          "state_after": 219
+        },
+        {
+          "relative_offset": 8,
+          "state_before": 219,
+          "OW_hex": "2fc4fdaa",
+          "submask_hex": "5b5b5b5b",
+          "state_after": 47
+        },
+        {
+          "relative_offset": 12,
+          "state_before": 47,
+          "OW_hex": "c3e8f1ae",
+          "submask_hex": "5b5b5b5b",
+          "state_after": 195
+        },
+        {
+          "relative_offset": 16,
+          "state_before": 195,
+          "OW_hex": "974c25f2",
+          "submask_hex": "5b5b5b5b",
+          "state_after": 151
+        },
+        {
+          "relative_offset": 20,
+          "state_before": 151,
+          "OW_hex": "abf09976",
+          "submask_hex": "5b5b5b5b",
+          "state_after": 171
+        },
+        {
+          "relative_offset": 24,
+          "state_before": 171,
+          "OW_hex": "ffd44d3a",
+          "submask_hex": "5b5b5b5b",
+          "state_after": 255
+        },
+        {
+          "relative_offset": 28,
+          "state_before": 255,
+          "OW_hex": "93f8413e",
+          "submask_hex": "5b5b5b5b",
+          "state_after": 147
+        },
+        {
+          "relative_offset": 32,
+          "state_before": 147,
+          "OW_hex": "675c7582",
+          "submask_hex": "5b5b5b5b",
+          "state_after": 103
+        },
+        {
+          "relative_offset": 36,
+          "state_before": 103,
+          "OW_hex": "7b00e906",
+          "submask_hex": "5b5b5b5b",
+          "state_after": 123
+        },
+        {
+          "relative_offset": 40,
+          "state_before": 123,
+          "OW_hex": "cfe49dca",
+          "submask_hex": "5b5b5b5b",
+          "state_after": 207
+        },
+        {
+          "relative_offset": 44,
+          "state_before": 207,
+          "OW_hex": "630891ce",
+          "submask_hex": "5b5b5b5b",
+          "state_after": 99
+        },
+        {
+          "relative_offset": 48,
+          "state_before": 99,
+          "OW_hex": "376cc512",
+          "submask_hex": "5b5b5b5b",
+          "state_after": 55
+        },
+        {
+          "relative_offset": 52,
+          "state_before": 55,
+          "OW_hex": "4b103996",
+          "submask_hex": "5b5b5b5b",
+          "state_after": 75
+        },
+        {
+          "relative_offset": 56,
+          "state_before": 75,
+          "OW_hex": "9ff4ed5a",
+          "submask_hex": "5b5b5b5b",
+          "state_after": 159
+        },
+        {
+          "relative_offset": 60,
+          "state_before": 159,
+          "OW_hex": "3318e15e",
+          "submask_hex": "5b5b5b5b",
+          "state_after": 51
+        }
+      ],
+      "tail_trace": [],
+      "word_trace_truncated": false
+    }
+  },
+  "root_path": [
+    "v starts y10 with e=selected_id, P=91",
+    "wW tag byte254 -> state5",
+    "UW reads byte131 -> state4",
+    "UW reads byte36 -> state18",
+    "DW length53886, cursor41172 -> state27",
+    "rW seed=(664+91)%256=243; mask91*0x01010101",
+    "KW word-loop counter -> zW state33; word XOR; repeat"
+  ],
+  "limits": "Only 64 selected-record bytes transformed. Length53886 describes that encrypted record, not an opcode count. Constants/prototypes remain unparsed, later d segments and lazy readers not traced. Header magic absence does not imply another cipher."
+}
