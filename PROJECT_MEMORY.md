@@ -269,3 +269,41 @@ No Lua/__index/factory/applicationcall/network/inputwrites. Demo/ESP untouched.
 See research/symbolic-resolution-2026-10-22/FINDINGS.md; output/phase12 ignored.
 Verification:83 Python tests passed (76previous+7new); luac checks on AdnHub.lua/
 Loader.lua and git diff --check passed. No payload/runtime validation or push.
+
+## Phase 13 dispatcher correction / guarded closure transfers — 2026-10-22
+Added tools/fused_call_analyzer.py, tools/test_phase13.py; extended optional
+prologue_analyzer mode with register-write provenance, symbolic field reads,
+fresh-table heap copies, exact integer additions, state reads and proof-gated
+closure construction. Historical default Phase11/12 behavior stays reproducible.
+IMPORTANT: Phase12's PC9251 "fused call" label was WRONG. Pinned variant228
+subtree at g offset49745 proves opcode95=field lookup, opcode93=fused call.
+9063 r72=global.task;9251 r57=task.cancel;9252 patches736/key75;
+9253 r14=task.spawn. These are symbolic expressions, no task calls.
+Actual93 copies a register before callee lookup, reads next-cell T/d/I,
+packs return values incl nil, moves I results; PC+2 only on normal return.
+Rejecting the old9251 decode follows predicates, not register181 hardbounds:
+table.create capacity is an allocation hint, NOT a Lua index limit.
+Root trace360steps45patches, now stops8395 variant228/op131. y evolves from
+1947447901 to2639318406. Path-local directory applies only already-observed
+patches; no future key injection. Extra patches vsPhase11:736/75,606/194,
+349/208,303/12,258/246,672/121,455/92. No claims of unconditional runtime path.
+Observed guarded closure transfers664->567/258/379/663 at8390/8391/8393/8394,
+descriptors486/486/462/722; first two share capture cells107,106. Source4890
+construction prefixes are alias-only; plain decoder context remains a guard.
+Bodies/factories never invoked. Header/fill validation uses private byte copies.
+Original candidates664->506,137->747,237->572,704->288 remain unverified:
+audited frontiers8395/29/238/3 precede their candidate sites9554/33/257/10.
+237 has unknown enclosing capture bounds8..10;704 has1..9;137 descriptor empty.
+Six criteria retained; no source-family/overlap shortcut to ancestry. Parent
+activation/context and shared lazy caches still need proof. verified_hierarchy=null.
+Exact uint32 mixer inverse: n=(h<<29)|(m XOR h),h=0..7; eight preimages.
+Byte key equation gives at most2048 states, not a unique key. Scan records15
+guarded potential patch sites for9of18 remaining strings; no newly reached
+equation for any18, all unconditional byte domains remain256. No strings added.
+See research/fused-call-audit-2026-10-22/FINDINGS.md and summary.json;
+detailed regenerated output/phase13/fused-call-analysis.json is ignored.
+Reproduce:python tools/fused_call_analyzer.py;python -m unittest discover -s tools;
+luac -p AdnHub.lua Loader.lua;git diff --check. Verification:92 Python tests
+passed (83previous+9new), Lua syntax and diff checks passed. No Lua/payload/
+factory/__index/API/network execution, no Roblox runtime checks, no Git push.
+Demo/ESP work remains paused. Full decompilation and 1:1 script remain incomplete.

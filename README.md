@@ -6,6 +6,11 @@
 >
 > Hướng dẫn bảo trì và lịch sử lỗi: [PROJECT_MEMORY.md](PROJECT_MEMORY.md).
 
+Phân tích tĩnh Chilli: [báo cáo Phase 13](research/fused-call-audit-2026-10-22/FINDINGS.md).
+PC 9251 đã được xác định lại là phép đọc `task.cancel`; chưa hoàn tất dịch ngược
+hoặc xác minh cây prototype. Công cụ: `python tools/fused_call_analyzer.py`
+(cần các tệp g/d đã bóc tách cục bộ; không thực thi payload hay gọi mạng).
+
 ---
 
 ## ✨ Điểm Nổi Bật Trong Thiết Kế

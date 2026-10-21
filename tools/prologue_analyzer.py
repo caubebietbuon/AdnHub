@@ -13,29 +13,83 @@ def mix(word):
 
 
 def analyze(streams, entry, first_word, second_word, budget=10000, numeric_constant=None, text_constant=None,
-            symbolic_environment=False, branch_decisions=None, snapshot_pcs=()):
+            symbolic_environment=False, branch_decisions=None, snapshot_pcs=(), symbolic_field_reads=False,
+            patch_observer=None, track_register_writes=False, closure_builder=None):
     arrays = deepcopy(streams)
-    registers, trace, patches = {}, [], []
+    class Registers(dict):
+        event = None
+        def __setitem__(self, register, value):
+            super().__setitem__(register, value)
+            if track_register_writes and self.event is not None:
+                self.event.setdefault("register_writes", []).append({"register": register, "value": value})
+    registers, trace, patches = Registers(), [], []
+    heap = {}
     pc = entry
     variant = 157
     branch_decisions = branch_decisions or {}
     limit = min(len(values) for values in arrays.values())
     for _ in range(budget):
         if not 1 <= pc <= limit:
-            return {"trace": trace, "patches": patches, "stop": "PC outside reviewed arrays", "pc": pc, "arrays": arrays}
+            return {"trace": trace, "patches": patches, "stop": "PC outside reviewed arrays", "pc": pc, "arrays": arrays, "heap": heap}
         ix = pc - 1
         names = {157: ("O", "j", "Z", "B"), 163: ("j", "B", "Z", "O"),
                  228: ("B", "j", "Z", "O")}.get(variant)
         if names is None:
-            return {"trace": trace, "patches": patches, "stop": "unreviewed dispatch variant", "pc": pc, "arrays": arrays}
+            return {"trace": trace, "patches": patches, "stop": "unreviewed dispatch variant", "pc": pc, "arrays": arrays, "heap": heap}
         op, a, b, c = [arrays[k][ix] for k in names]
         event = {"pc": pc, "variant": variant, "opcode": op, "operand1": a, "H": b, "operand3": c}
+        registers.event = event
+        if track_register_writes:
+            event["state_words_before"] = [first_word, second_word]
         if pc in snapshot_pcs:
             event["registers_before"] = dict(registers)
             event["state_words_before"] = [first_word, second_word]
         trace.append(event)
+        closure_patterns = {157: (132, c, b, a), 163: (38, b, a, c), 228: (82, b, c, a)}
+        if symbolic_environment and symbolic_field_reads and closure_builder and variant in closure_patterns:
+            expected, child, descriptor, destination = closure_patterns[variant]
+            if op == expected:
+                closure = closure_builder(child, descriptor, pc, variant, dict(registers))
+                if closure is None:
+                    event["closure_proof_boundary"] = {"child": child, "descriptor": descriptor}
+                    break
+                registers[destination] = closure
+                event["symbolic_closure_creation"] = {"child": child, "descriptor": descriptor, "destination": destination}
+                pc += 1
+                continue
         if variant == 228:
-            if op == 111:
+            if op == 148 and symbolic_environment and symbolic_field_reads:
+                table = registers.get(a)
+                identity = table.get("fresh_plain_table") if type(table) is dict else None
+                if identity not in heap or not 0 <= b <= 10000 or not 0 <= c <= 100000: break
+                values = [registers.get(a + 1 + offset) for offset in range(b)]
+                for offset, value in enumerate(values): heap[identity][c + 1 + offset] = value
+                event["fresh_table_move"] = {"table_id": identity, "source_register_range": [a + 1, a + b + 1],
+                                              "destination_range": [c + 1, c + b + 1], "values": values}
+            elif op == 134 and symbolic_environment and symbolic_field_reads:
+                registers[c], registers[c + 1] = a, b
+            elif op == 122 and symbolic_environment and symbolic_field_reads:
+                left, right = registers.get(a), registers.get(b)
+                if type(left) is not int or type(right) is not int or max(abs(left), abs(right), abs(left + right)) > 2**53:
+                    break
+                registers[c] = left + right
+                event["exact_integer_addition"] = [left, right, left + right]
+            elif op == 56 and symbolic_environment and symbolic_field_reads:
+                registers[b] = second_word
+                event["state_word_read"] = {"destination": b, "word": "y", "value": second_word}
+            elif op == 149 and symbolic_environment and symbolic_field_reads:
+                identity = f"{pc}:{len(heap) + 1}"
+                heap[identity] = {}
+                registers[c] = {"fresh_plain_table": identity}
+                event["symbolic_allocation"] = {"destination": c, "table_id": identity, "kind": "fresh plain table"}
+            elif op == 95 and symbolic_environment and symbolic_field_reads:
+                base = registers.get(c)
+                key = text_constant(a) if text_constant else None
+                registers[b] = {"index": base, "key_reference": a, "key_text": key}
+                event["symbolic_field_read"] = {"destination": b, "base_register": c,
+                                                 "key_reference": a, "key_text": key}
+                event["normal_completion_assumption"] = "symbolic field read succeeds; no actual table or metamethod accessed"
+            elif op == 111:
                 event["application_boundary"] = {"operation": "environment_read",
                                                  "global_name": text_constant(c) if text_constant else None}
                 if not symbolic_environment: break
@@ -62,6 +116,7 @@ def analyze(streams, entry, first_word, second_word, budget=10000, numeric_const
                 if not 0 <= key <= 255: break
                 patches.append({"reference_id": a, "key": key, "pc": pc, "variant": variant,
                                 "confidence": "restricted initialization data-flow equation"})
+                if patch_observer and patch_observer(patches[-1]) is False: break
                 arrays["B"][ix] = 70
             elif op in (129, 119):
                 state = second_word ^ ((second_word >> 14) & 262143) ^ ((second_word >> 28) & 15)
@@ -116,7 +171,12 @@ def analyze(streams, entry, first_word, second_word, budget=10000, numeric_const
             pc += 1
             continue
         if variant == 163:
-            if op == 144:
+            if op == 22 and symbolic_environment and symbolic_field_reads:
+                registers[c] = {"symbol": f"enclosing_capture_cell[{b}].value"}
+                event["normal_completion_assumption"] = "enclosing capture cell read succeeds; cell not dereferenced"
+            elif op == 17 and symbolic_environment and symbolic_field_reads:
+                registers[b] = {"symbol": "decoder_context"}
+            elif op == 144:
                 variant, pc = a, b + 1
                 continue
             elif op in (84, 96, 141):
@@ -125,6 +185,7 @@ def analyze(streams, entry, first_word, second_word, budget=10000, numeric_const
                 if not 0 <= key <= 255: break
                 patches.append({"reference_id": ref, "key": key, "pc": pc, "variant": variant,
                                 "confidence": "restricted initialization data-flow equation"})
+                if patch_observer and patch_observer(patches[-1]) is False: break
                 arrays["j"][ix] = 30
             elif op == 86:
                 state = second_word ^ ((second_word >> 14) & 262143) ^ ((second_word >> 28) & 15)
@@ -178,6 +239,7 @@ def analyze(streams, entry, first_word, second_word, budget=10000, numeric_const
             if not 0 <= key <= 255: break
             patches.append({"reference_id": ref, "key": key, "pc": pc,
                             "confidence": "restricted initialization data-flow equation"})
+            if patch_observer and patch_observer(patches[-1]) is False: break
             arrays["O"][ix] = 140
         elif op in (127, 33, 57):
             state = b ^ mix(second_word if op == 127 else first_word) if op != 57 else b
@@ -265,5 +327,5 @@ def analyze(streams, entry, first_word, second_word, budget=10000, numeric_const
             break
         pc += 1
     else:
-        return {"trace": trace, "patches": patches, "stop": "initialization budget exhausted", "pc": pc, "arrays": arrays}
-    return {"trace": trace, "patches": patches, "stop": "unsupported or unresolved operation; application boundary", "pc": pc, "arrays": arrays}
+        return {"trace": trace, "patches": patches, "stop": "initialization budget exhausted", "pc": pc, "arrays": arrays, "heap": heap}
+    return {"trace": trace, "patches": patches, "stop": "unsupported or unresolved operation; application boundary", "pc": pc, "arrays": arrays, "heap": heap}

@@ -1,0 +1,1057 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "correction": "PC9251 is opcode95 field lookup task.cancel, not a fused call. Opcode93 is the fused call.",
+  "dispatch_truth_table": [
+    {
+      "opcode": 92,
+      "handler": "indirect_jump",
+      "numeric_path_proof": [
+        {
+          "predicate": "o>=92",
+          "value": true
+        },
+        {
+          "predicate": "o>=95",
+          "value": false
+        },
+        {
+          "predicate": "o<93",
+          "value": true
+        }
+      ]
+    },
+    {
+      "opcode": 93,
+      "handler": "fused_call",
+      "numeric_path_proof": [
+        {
+          "predicate": "o>=92",
+          "value": true
+        },
+        {
+          "predicate": "o>=95",
+          "value": false
+        },
+        {
+          "predicate": "o<93",
+          "value": false
+        },
+        {
+          "predicate": "o==94",
+          "value": false
+        }
+      ]
+    },
+    {
+      "opcode": 94,
+      "handler": "multiply",
+      "numeric_path_proof": [
+        {
+          "predicate": "o>=92",
+          "value": true
+        },
+        {
+          "predicate": "o>=95",
+          "value": false
+        },
+        {
+          "predicate": "o<93",
+          "value": false
+        },
+        {
+          "predicate": "o==94",
+          "value": true
+        }
+      ]
+    },
+    {
+      "opcode": 95,
+      "handler": "field_lookup",
+      "numeric_path_proof": [
+        {
+          "predicate": "o>=92",
+          "value": true
+        },
+        {
+          "predicate": "o>=95",
+          "value": true
+        },
+        {
+          "predicate": "o<97",
+          "value": true
+        },
+        {
+          "predicate": "o==96",
+          "value": false
+        }
+      ]
+    },
+    {
+      "opcode": 96,
+      "handler": "not",
+      "numeric_path_proof": [
+        {
+          "predicate": "o>=92",
+          "value": true
+        },
+        {
+          "predicate": "o>=95",
+          "value": true
+        },
+        {
+          "predicate": "o<97",
+          "value": true
+        },
+        {
+          "predicate": "o==96",
+          "value": true
+        }
+      ]
+    },
+    {
+      "opcode": 97,
+      "handler": "constant_add",
+      "numeric_path_proof": [
+        {
+          "predicate": "o>=92",
+          "value": true
+        },
+        {
+          "predicate": "o>=95",
+          "value": true
+        },
+        {
+          "predicate": "o<97",
+          "value": false
+        },
+        {
+          "predicate": "o~=98",
+          "value": true
+        }
+      ]
+    },
+    {
+      "opcode": 98,
+      "handler": "subtract",
+      "numeric_path_proof": [
+        {
+          "predicate": "o>=92",
+          "value": true
+        },
+        {
+          "predicate": "o>=95",
+          "value": true
+        },
+        {
+          "predicate": "o<97",
+          "value": false
+        },
+        {
+          "predicate": "o~=98",
+          "value": false
+        }
+      ]
+    }
+  ],
+  "guarded_closure_bindings": [
+    {
+      "parent": 664,
+      "child": 567,
+      "descriptor_id": 486,
+      "pc": 8390,
+      "variant": 228,
+      "capture_bounds": [
+        {
+          "kind": 3,
+          "index_range": [
+            107,
+            108
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            106,
+            107
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        }
+      ],
+      "captures": [
+        {
+          "cell_identity": "frame:664:register:107",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:106",
+          "span": 1
+        }
+      ],
+      "child_factory": 4890,
+      "scope": "source transfer established on guarded abstract path; unconditional ancestry not proved",
+      "constructor_alias_guard": "decoder context is the reviewed plain table; alias reads do not invoke metamethods"
+    },
+    {
+      "parent": 664,
+      "child": 258,
+      "descriptor_id": 486,
+      "pc": 8391,
+      "variant": 228,
+      "capture_bounds": [
+        {
+          "kind": 3,
+          "index_range": [
+            107,
+            108
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            106,
+            107
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        }
+      ],
+      "captures": [
+        {
+          "cell_identity": "frame:664:register:107",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:106",
+          "span": 1
+        }
+      ],
+      "child_factory": 4890,
+      "scope": "source transfer established on guarded abstract path; unconditional ancestry not proved",
+      "constructor_alias_guard": "decoder context is the reviewed plain table; alias reads do not invoke metamethods"
+    },
+    {
+      "parent": 664,
+      "child": 379,
+      "descriptor_id": 462,
+      "pc": 8393,
+      "variant": 228,
+      "capture_bounds": [
+        {
+          "kind": 3,
+          "index_range": [
+            107,
+            108
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            106,
+            107
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            103,
+            104
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            92,
+            93
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            104,
+            105
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            93,
+            94
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        }
+      ],
+      "captures": [
+        {
+          "cell_identity": "frame:664:register:107",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:106",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:103",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:92",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:104",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:93",
+          "span": 1
+        }
+      ],
+      "child_factory": 4890,
+      "scope": "source transfer established on guarded abstract path; unconditional ancestry not proved",
+      "constructor_alias_guard": "decoder context is the reviewed plain table; alias reads do not invoke metamethods"
+    },
+    {
+      "parent": 664,
+      "child": 663,
+      "descriptor_id": 722,
+      "pc": 8394,
+      "variant": 228,
+      "capture_bounds": [
+        {
+          "kind": 3,
+          "index_range": [
+            159,
+            160
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            105,
+            106
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        }
+      ],
+      "captures": [
+        {
+          "cell_identity": "frame:664:register:159",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:105",
+          "span": 1
+        }
+      ],
+      "child_factory": 4890,
+      "scope": "source transfer established on guarded abstract path; unconditional ancestry not proved",
+      "constructor_alias_guard": "decoder context is the reviewed plain table; alias reads do not invoke metamethods"
+    }
+  ],
+  "ownership_audits": [
+    {
+      "parent": 664,
+      "child": 506,
+      "pc": 9554,
+      "variant_guard": 228,
+      "descriptor_id": 251,
+      "capture_count": 7,
+      "local_register_ranges_fit": true,
+      "unvalidated_enclosing_capture_indices": [],
+      "proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "capture_index_audit": [
+        {
+          "kind": 3,
+          "index": 53,
+          "end_exclusive": 54,
+          "owner_allocation_hint": 181,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 3,
+          "index": 121,
+          "end_exclusive": 122,
+          "owner_allocation_hint": 181,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 3,
+          "index": 54,
+          "end_exclusive": 55,
+          "owner_allocation_hint": 181,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 3,
+          "index": 109,
+          "end_exclusive": 110,
+          "owner_allocation_hint": 181,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 3,
+          "index": 95,
+          "end_exclusive": 96,
+          "owner_allocation_hint": 181,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 3,
+          "index": 110,
+          "end_exclusive": 111,
+          "owner_allocation_hint": 181,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 3,
+          "index": 111,
+          "end_exclusive": 112,
+          "owner_allocation_hint": 181,
+          "enclosing_bound_known": null
+        }
+      ],
+      "bounds_caveat": "table.create size is an allocation hint, not a Lua table index limit",
+      "input_guard": "root pinned bytes; guarded abstract normal continuation",
+      "events_at_candidate_pc": [],
+      "guarded_transfer_observed": false,
+      "guarded_transfer_evidence": [],
+      "frontier": {
+        "pc": 8395,
+        "reason": "unsupported or unresolved operation; application boundary"
+      },
+      "closure_obligations": [],
+      "missing_proof": "unconditional activation and ancestry; exact input masks/lazy-cache state; enclosing capture bounds where present"
+    },
+    {
+      "parent": 137,
+      "child": 747,
+      "pc": 33,
+      "variant_guard": 163,
+      "descriptor_id": 58,
+      "capture_count": 0,
+      "local_register_ranges_fit": true,
+      "unvalidated_enclosing_capture_indices": [],
+      "proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "capture_index_audit": [],
+      "bounds_caveat": "table.create size is an allocation hint, not a Lua table index limit",
+      "input_guard": "source-mask plus reader-structure; hypothetical activation in root-prefix directory context; enclosing captures unknown",
+      "events_at_candidate_pc": [],
+      "guarded_transfer_observed": false,
+      "guarded_transfer_evidence": [],
+      "frontier": {
+        "pc": 29,
+        "reason": "unsupported or unresolved operation; application boundary"
+      },
+      "closure_obligations": [],
+      "missing_proof": "unconditional activation and ancestry; exact input masks/lazy-cache state; enclosing capture bounds where present"
+    },
+    {
+      "parent": 237,
+      "child": 572,
+      "pc": 257,
+      "variant_guard": 163,
+      "descriptor_id": 181,
+      "capture_count": 5,
+      "local_register_ranges_fit": true,
+      "unvalidated_enclosing_capture_indices": [
+        8,
+        9,
+        10
+      ],
+      "proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": false,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "capture_index_audit": [
+        {
+          "kind": 3,
+          "index": 11,
+          "end_exclusive": 12,
+          "owner_allocation_hint": 18,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 3,
+          "index": 4,
+          "end_exclusive": 5,
+          "owner_allocation_hint": 18,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 1,
+          "index": 8,
+          "end_exclusive": 9,
+          "owner_allocation_hint": 18,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 9,
+          "end_exclusive": 10,
+          "owner_allocation_hint": 18,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 10,
+          "end_exclusive": 11,
+          "owner_allocation_hint": 18,
+          "enclosing_bound_known": false
+        }
+      ],
+      "bounds_caveat": "table.create size is an allocation hint, not a Lua table index limit",
+      "input_guard": "source-mask plus reader-structure; hypothetical activation in root-prefix directory context; enclosing captures unknown",
+      "events_at_candidate_pc": [],
+      "guarded_transfer_observed": false,
+      "guarded_transfer_evidence": [],
+      "frontier": {
+        "pc": 238,
+        "reason": "unsupported or unresolved operation; application boundary"
+      },
+      "closure_obligations": [],
+      "missing_proof": "unconditional activation and ancestry; exact input masks/lazy-cache state; enclosing capture bounds where present"
+    },
+    {
+      "parent": 704,
+      "child": 288,
+      "pc": 10,
+      "variant_guard": 163,
+      "descriptor_id": 299,
+      "capture_count": 11,
+      "local_register_ranges_fit": true,
+      "unvalidated_enclosing_capture_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": false,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "capture_index_audit": [
+        {
+          "kind": 0,
+          "index": 4,
+          "end_exclusive": 5,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 0,
+          "index": 10,
+          "end_exclusive": 11,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": null
+        },
+        {
+          "kind": 1,
+          "index": 1,
+          "end_exclusive": 2,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 2,
+          "end_exclusive": 3,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 3,
+          "end_exclusive": 4,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 4,
+          "end_exclusive": 5,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 5,
+          "end_exclusive": 6,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 6,
+          "end_exclusive": 7,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 7,
+          "end_exclusive": 8,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 8,
+          "end_exclusive": 9,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        },
+        {
+          "kind": 1,
+          "index": 9,
+          "end_exclusive": 10,
+          "owner_allocation_hint": 11,
+          "enclosing_bound_known": false
+        }
+      ],
+      "bounds_caveat": "table.create size is an allocation hint, not a Lua table index limit",
+      "input_guard": "source-mask plus reader-structure; hypothetical activation in root-prefix directory context; enclosing captures unknown",
+      "events_at_candidate_pc": [],
+      "guarded_transfer_observed": false,
+      "guarded_transfer_evidence": [],
+      "frontier": {
+        "pc": 3,
+        "reason": "unsupported or unresolved operation; application boundary"
+      },
+      "closure_obligations": [],
+      "missing_proof": "unconditional activation and ancestry; exact input masks/lazy-cache state; enclosing capture bounds where present"
+    }
+  ],
+  "remaining_string_constraints": [
+    {
+      "reference_id": 74,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 981,
+          "variant": 228,
+          "equation": "key = 4 XOR mix(V_at_pc)",
+          "word_variable": "V",
+          "operand": 4,
+          "uint32_word_domain_size": 2048,
+          "word_domain_sha256": "e0fc660a833e2e2dee29baf5f7edb3ce19b70b7390e77be0bc13b50d6d2c7756",
+          "guard": "correct dispatcher, source slot not rewritten, site reachable, owner payload valid: root arrays at current frontier"
+        },
+        {
+          "owner": 664,
+          "pc": 3238,
+          "variant": 228,
+          "equation": "key = 112",
+          "word_variable": null,
+          "operand": 112,
+          "uint32_word_domain_size": null,
+          "word_domain_sha256": null,
+          "guard": "correct dispatcher, source slot not rewritten, site reachable, owner payload valid: root arrays at current frontier"
+        },
+        {
+          "owner": 402,
+          "pc": 83,
+          "variant": 163,
+          "equation": "key = 7 XOR mix(y_at_pc)",
+          "word_variable": "y",
+          "operand": 7,
+          "uint32_word_domain_size": 2048,
+          "word_domain_sha256": "e0fc660a833e2e2dee29baf5f7edb3ce19b70b7390e77be0bc13b50d6d2c7756",
+          "guard": "correct dispatcher, source slot not rewritten, site reachable, owner payload valid: header-constrained structural hypothesis; runtime mask unproven"
+        }
+      ],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    },
+    {
+      "reference_id": 141,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 4319,
+          "variant": 228,
+          "equation": "key = 43",
+          "word_variable": null,
+          "operand": 43,
+          "uint32_word_domain_size": null,
+          "word_domain_sha256": null,
+          "guard": "correct dispatcher, source slot not rewritten, site reachable, owner payload valid: root arrays at current frontier"
+        },
+        {
+          "owner": 711,
+          "pc": 269,
+          "variant": 163,
+          "equation": "key = 2 XOR mix(V_at_pc)",
+          "word_variable": "V",
+          "operand": 2,
+          "uint32_word_domain_size": 2048,
+          "word_domain_sha256": "e0fc660a833e2e2dee29baf5f7edb3ce19b70b7390e77be0bc13b50d6d2c7756",
+          "guard": "correct dispatcher, source slot not rewritten, site reachable, owner payload valid: source-mask plus reader-structure"
+        },
+        {
+          "owner": 593,
+          "pc": 393,
+          "variant": 157,
+          "equation": "key = 121 XOR mix(y_at_pc)",
+          "word_variable": "y",
+          "operand": 121,
+          "uint32_word_domain_size": 2048,
+          "word_domain_sha256": "e0fc660a833e2e2dee29baf5f7edb3ce19b70b7390e77be0bc13b50d6d2c7756",
+          "guard": "correct dispatcher, source slot not rewritten, site reachable, owner payload valid: source-mask plus reader-structure"
+        }
+      ],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    },
+    {
+      "reference_id": 160,
+      "potential_sites": [],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    },
+    {
+      "reference_id": 192,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 3120,
+          "variant": 163,
+          "equation": "key = 36 XOR mix(y_at_pc)",
+          "word_variable": "y",
+          "operand": 36,
+          "uint32_word_domain_size": 2048,
+          "word_domain_sha256": "e0fc660a833e2e2dee29baf5f7edb3ce19b70b7390e77be0bc13b50d6d2c7756",
+          "guard": "correct dispatcher, source slot not rewritten, site reachable, owner payload valid: root arrays at current frontier"
+        }
+      ],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    },
+    {
+      "reference_id": 196,
+      "potential_sites": [],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    },
+    {
+      "reference_id": 203,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 3921,
+          "variant": 157,
+          "equation": "key = 110",
+          "word_variable": null,
+          "operand": 110,
+          "uint32_word_domain_size": null,
+          "word_domain_sha256": null,
+          "guard": "correct dispatcher, source slot not rewritten, site reachable, owner payload valid: root arrays at current frontier"
+        },
+        {
+          "owner": 664,
+          "pc": 718,
+          "variant": 228,
+          "equation": "key = 140",
+          "word_variable": null,
+          "operand": 140,
+          "uint32_word_domain_size": null,
+          "word_domain_sha256": null,
+          "guard": "correct dispatcher, source slot not rewritten, site reachable, owner payload valid: root arrays at current frontier"
+        }
+      ],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    },
+    {
+      "reference_id": 267,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 7083,
+          "variant": 228,
+          "equation": "key = 242",
+          "word_variable": null,
+          "operand": 242,
+          "uint32_word_domain_size": null,
+          "word_domain_sha256": null,
+          "guard": "correct dispatcher, source slot not rewritten, site reachable, owner payload valid: root arrays at current frontier"
+        }
+      ],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    },
+    {
+      "reference_id": 269,
+      "potential_sites": [],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    },
+    {
+      "reference_id": 432,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 7103,
+          "variant": 228,
+          "equation": "key = 2",
+          "word_variable": null,
+          "operand": 2,
+          "uint32_word_domain_size": null,
+          "word_domain_sha256": null,
+          "guard": "correct dispatcher, source slot not rewritten, site reachable, owner payload valid: root arrays at current frontier"
+        }
+      ],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    },
+    {
+      "reference_id": 457,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 5095,
+          "variant": 228,
+          "equation": "key = 169",
+          "word_variable": null,
+          "operand": 169,
+          "uint32_word_domain_size": null,
+          "word_domain_sha256": null,
+          "guard": "correct dispatcher, source slot not rewritten, site reachable, owner payload valid: root arrays at current frontier"
+        }
+      ],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    },
+    {
+      "reference_id": 476,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 4809,
+          "variant": 228,
+          "equation": "key = 80",
+          "word_variable": null,
+          "operand": 80,
+          "uint32_word_domain_size": null,
+          "word_domain_sha256": null,
+          "guard": "correct dispatcher, source slot not rewritten, site reachable, owner payload valid: root arrays at current frontier"
+        }
+      ],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    },
+    {
+      "reference_id": 485,
+      "potential_sites": [
+        {
+          "owner": 664,
+          "pc": 4810,
+          "variant": 228,
+          "equation": "key = 146",
+          "word_variable": null,
+          "operand": 146,
+          "uint32_word_domain_size": null,
+          "word_domain_sha256": null,
+          "guard": "correct dispatcher, source slot not rewritten, site reachable, owner payload valid: root arrays at current frontier"
+        }
+      ],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    },
+    {
+      "reference_id": 512,
+      "potential_sites": [],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    },
+    {
+      "reference_id": 545,
+      "potential_sites": [],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    },
+    {
+      "reference_id": 580,
+      "potential_sites": [],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    },
+    {
+      "reference_id": 616,
+      "potential_sites": [],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    },
+    {
+      "reference_id": 632,
+      "potential_sites": [],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    },
+    {
+      "reference_id": 702,
+      "potential_sites": [
+        {
+          "owner": 379,
+          "pc": 686,
+          "variant": 228,
+          "equation": "key = 52 XOR mix(V_at_pc)",
+          "word_variable": "V",
+          "operand": 52,
+          "uint32_word_domain_size": 2048,
+          "word_domain_sha256": "e0fc660a833e2e2dee29baf5f7edb3ce19b70b7390e77be0bc13b50d6d2c7756",
+          "guard": "correct dispatcher, source slot not rewritten, site reachable, owner payload valid: source-mask plus reader-structure"
+        }
+      ],
+      "guarded_trace_equations": [],
+      "unconditional_key": null,
+      "status": "no reachable equation proved",
+      "unconditional_domain_inclusive": [
+        0,
+        255
+      ]
+    }
+  ],
+  "verified_hierarchy": null,
+  "application_calls_executed": 0,
+  "factory_invocations": 0,
+  "network_requests": 0,
+  "root_frontier": {
+    "pc": 8395,
+    "stop": "unsupported or unresolved operation; application boundary"
+  },
+  "abstract_steps": 360,
+  "path_local_patch_count": 45,
+  "verification": "92 Python tests; luac -p AdnHub.lua Loader.lua; git diff --check. No Roblox/payload runtime checks."
+}
