@@ -1,3 +1,8 @@
 
 # Untrusted third-party snapshots: local research only
 /research/source-audit-2026-10-21/*.txt
+
+# Local reverse-engineering inputs and extracted third-party data
+/input/
+/output/
+/tools/__pycache__/

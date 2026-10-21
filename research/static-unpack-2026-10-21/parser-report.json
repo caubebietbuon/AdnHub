@@ -1,0 +1,75 @@
+{
+  "input_bytes": 825885,
+  "input_sha256": "0b7d0741f10fd211b2ce18fb33f3814f845f703b942bff32cd354a20dfcf8809",
+  "source_header": {
+    "first_32_bytes_hex": "2d2d20546869732066696c65207761732070726f746563746564207573696e67",
+    "lua_bytecode_signature": false,
+    "lz4_frame_signature": false,
+    "gzip_signature": false,
+    "xz_signature": false,
+    "zlib_header_candidate_only": false,
+    "note": "Raw LZMA has no self-identifying magic; configuration comes from the wrapper."
+  },
+  "declared_protection": "Luraph Obfuscator v15.1 (source comment)",
+  "method": "literal extraction -> shorthand expansion -> custom radix85 -> raw LZMA1",
+  "lzma_parameters": {
+    "lc": 3,
+    "lp": 0,
+    "pb": 0,
+    "decoder_dictionary_limit_bytes": 8388608
+  },
+  "payload_executed": false,
+  "network_used": false,
+  "verified_vm_instruction_bytes": null,
+  "limitations": "Binary output is VM input data, not yet a validated opcode/constant layout.",
+  "streams": [
+    {
+      "field": "g",
+      "start_offset": 622,
+      "end_offset_exclusive": 349912,
+      "literal_bytes": 349290,
+      "marker": "LPH~",
+      "compressed_word_buffer_bytes": 279464,
+      "compressed_stream_bytes": 279461,
+      "trailing_word_padding_bytes": 3,
+      "declared_unpacked_bytes": 1261603,
+      "actual_unpacked_bytes": 1261603,
+      "output_file": "stage1-vm-source.lua.txt",
+      "output_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+      "compressed_sha256": "39034b2141696edeef9389a70042534d6b8b4210158de80e33dffb6b057ae496",
+      "decoded_header": {
+        "first_32_bytes_hex": "72657475726e207365746d6574617461626c65287b5b34305d3d70616972732c",
+        "lua_bytecode_signature": false,
+        "lz4_frame_signature": false,
+        "gzip_signature": false,
+        "xz_signature": false,
+        "zlib_header_candidate_only": false,
+        "note": "Raw LZMA has no self-identifying magic; configuration comes from the wrapper."
+      }
+    },
+    {
+      "field": "d",
+      "start_offset": 351954,
+      "end_offset_exclusive": 822978,
+      "literal_bytes": 471024,
+      "marker": "LPH#",
+      "compressed_word_buffer_bytes": 376816,
+      "compressed_stream_bytes": 376815,
+      "trailing_word_padding_bytes": 1,
+      "declared_unpacked_bytes": 373666,
+      "actual_unpacked_bytes": 373666,
+      "output_file": "stage1-vm-data.bin",
+      "output_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+      "compressed_sha256": "c578338246530e2589f3a759f59360e9938a3edc7ed68dd0cc1d9fe39d856158",
+      "decoded_header": {
+        "first_32_bytes_hex": "87856a009805a8883c23c78762cb8819d585708a8819b5872498823b9082419f",
+        "lua_bytecode_signature": false,
+        "lz4_frame_signature": false,
+        "gzip_signature": false,
+        "xz_signature": false,
+        "zlib_header_candidate_only": false,
+        "note": "Raw LZMA has no self-identifying magic; configuration comes from the wrapper."
+      }
+    }
+  ]
+}

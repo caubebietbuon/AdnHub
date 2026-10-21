@@ -1,0 +1,71 @@
+# Static outer-wrapper extraction
+
+## Run
+Python 3.10+ standard library only (including lzma). From repository root:
+
+```powershell
+python tools/parser.py input/StealAnEggg.lua --output output
+python -m unittest discover -s tools -p test_parser.py -v
+```
+
+Place the audited snapshot at input/StealAnEggg.lua. Its SHA-256 must be
+0b7d0741f10fd211b2ce18fb33f3814f845f703b942bff32cd354a20dfcf8809.
+Other inputs fail closed; do not remove the hash check to pretend other Luraph
+builds use the same layout. input/ and output/ are local, Git-ignored directories.
+No network calls, source evaluation, Lua interpreter, or executor is used.
+
+## What the wrapper actually does
+The input starts with a Lua comment, not a binary compression header. The comment
+claims Luraph v15.1; this alone does not authenticate a tool version.
+Field g contains a Lua long string with LPH~; d has LPH#. The four-character
+marker is skipped. Y is the literal substitution table used by string.gsub with
+pattern [u-~]. Each matched character expands to five printable characters.
+These are single-pass substitutions, not recursive replacements.
+
+For each resulting five-byte group a,b,c,d,e (ASCII byte values), the wrapper
+computes:
+
+```text
+v = (a-32)*85^4 + (b-32)*85^3 + (c-32)*85^2 + (e-32)*85 + (d-32)
+```
+
+It writes v as a little-endian uint32. The last two radix digits are swapped;
+ordinary Ascii85 decoding is not a drop-in replacement.
+
+The _ decompressor has range-coded probability models and literal contexts.
+Raw LZMA1 with lc=3, lp=0, pb=0 reproduces both streams, reaches EOS, and matches
+the sizes in j(i,e,1261603),j(i,M,373666). Python uses an 8 MiB dictionary limit;
+this is a chosen decoder configuration, not an original dictionary-size header.
+Trailing word alignment bytes are reported (3 for g, 1 for d), not silently
+counted as compressed data. Raw LZMA has no magic identifying it by header alone.
+No XOR key or zlib/lz4 layer has been established for this snapshot.
+
+## Verified results
+| Field | Encoded literal bytes, including LPH marker | Word buffer bytes | Decompressed bytes | Meaning |
+| --- | ---: | ---: | ---: | --- |
+| g | 349290 | 279464 | 1261603 | Next-stage Lua VM source, still obfuscated |
+| d | 471024 | 376816 | 373666 | Binary input to the next stage; layout unparsed |
+
+Output: g-compressed.bin, d-compressed.bin, stage1-vm-source.lua.txt,
+stage1-vm-data.bin and parser-report.json. The report includes offsets, hashes,
+exact sizes and limitations. These are untrusted extracted artifacts: do not
+execute them. A .txt suffix is intentional for extracted Lua source.
+
+373666 bytes is the size of the entire decoded binary stream. It is NOT a
+verified instruction-array length: constants, metadata, operands or other
+sections may share the stream. Constant/string tables, opcode mapping, dynamic
+tracing and clean source reconstruction are not implemented in this parser.
+The Lua bytecode magic check concerns standard Lua's ESC-Lua header, not a
+universal Luau bytecode identifier.
+
+## Limits and checks
+Input capped at 2 MiB; declared decoded streams capped at 8 MiB. Validate SHA-256,
+radix digits, uint32 bounds, compressed EOS, output sizes and alignment. Both
+streams are decoded before outputs are written. Unit tests cover the custom
+digit order, invalid input, decompression limits and the known snapshot hashes.
+Luau standalone is not installed in this workspace; this static phase does not
+require it. Do not treat the local Lua 5.1 CLI as Luau.
+
+The earlier closed audit/handover remains an immutable historical record.
+This phase was reopened by the user's explicit request for a static parser;
+source 2 fetching and dynamic payload execution remain inactive.

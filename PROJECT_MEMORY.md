@@ -65,3 +65,14 @@ Do not bypass protection or execute unreviewed payloads. No fetch schedule was c
 See TECHNICAL_AUDIT_SUMMARY.md and HANDOVER.md in the audit directory.
 Handover ZIP includes documentation/metadata only, with checksums; ignored raw
 third-party snapshots remain local and are excluded from redistribution.
+
+## Static extraction reopened — 2026-10-21
+User explicitly reopened work to request tools/parser.py for the local Luraph snapshot.
+Previous audit archive remains closed/historical. No network fetch or Lua execution.
+Parser is SHA-256-pinned: Y substitution + custom base85 (last digits swapped),
+LE uint32 + raw LZMA1 lc3/lp0/pb0. Verified outputs: g=1261603 bytes next-stage
+obfuscated Lua; d=373666 bytes binary VM input, NOT verified opcode-array size.
+See tools/README.md and research/static-unpack-2026-10-21/parser-report.json.
+5 tests pass, including malformed input and snapshot hashes. Python 3.13 present;
+Luau CLI absent and not needed for static parsing. input/ and output/ are ignored;
+never execute extracted source. Source 2 and dynamic tracing remain inactive.
