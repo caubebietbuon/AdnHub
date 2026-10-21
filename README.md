@@ -2,6 +2,10 @@
 
 > **Futuristic Dark Glass UI Script Menu** dành cho trò chơi Roblox **Steal an Egg**.
 
+> **Trạng thái:** Farm, Auto Steal, Base Return, Vacuum, bộ lọc trứng và ESP hiện là demo giao diện, chưa có logic game. Boost FPS tắt bóng và hiệu ứng hiện có, khôi phục khi tắt hoặc unload.
+>
+> Hướng dẫn bảo trì và lịch sử lỗi: [PROJECT_MEMORY.md](PROJECT_MEMORY.md).
+
 ---
 
 ## ✨ Điểm Nổi Bật Trong Thiết Kế

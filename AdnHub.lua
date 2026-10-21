@@ -20,19 +20,23 @@ local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
 local CoreGui = game:GetService("CoreGui")
+local GUIParent
 
 local LocalPlayer = Players.LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 
 -- Xử lý an toàn cho Parent ScreenGui (Bảo vệ trước Anti-Cheat Client)
 local function getSafeGuiParent()
+    if GUIParent then return GUIParent end
     if gethui then
-        return gethui()
+        GUIParent = gethui()
+        return GUIParent
     elseif syn and syn.protect_gui then
         local gui = Instance.new("Folder")
         syn.protect_gui(gui)
         gui.Parent = CoreGui
-        return gui
+        GUIParent = gui
+        return GUIParent
     elseif CoreGui:FindFirstChild("RobloxGui") then
         return CoreGui
     else
@@ -42,12 +46,14 @@ end
 
 -- Âm thanh tương tác tinh tế
 local function playClickSound()
-    local sound = Instance.new("Sound")
-    sound.SoundId = "rbxassetid://6895079853"
-    sound.Volume = 0.25
-    sound.Parent = getSafeGuiParent()
-    sound:Play()
-    game:GetService("Debris"):AddItem(sound, 1)
+    pcall(function()
+        local sound = Instance.new("Sound")
+        sound.SoundId = "rbxassetid://6895079853"
+        sound.Volume = 0.25
+        sound.Parent = game:GetService("SoundService")
+        sound:Play()
+        game:GetService("Debris"):AddItem(sound, 1)
+    end)
 end
 
 -- Bảng màu Giao diện
@@ -71,6 +77,8 @@ local Themes = {
 
 -- Module Thư Viện UI
 local AdnHubLib = {}
+local restoreGraphics
+local activeWindow
 AdnHubLib.__index = AdnHubLib
 
 -- Helper: Tween mượt mà
@@ -204,6 +212,7 @@ end
 -- Tạo Cửa Sổ Chính
 function AdnHubLib:CreateWindow(config)
     config = config or {}
+    if activeWindow then activeWindow:Destroy() end
     local Title = config.Title or "ADONIS HUB"
     local Subtitle = config.Subtitle or "Steal an Egg"
     local DefaultKeybind = config.ToggleKey or Enum.KeyCode.RightControl
@@ -214,6 +223,20 @@ function AdnHubLib:CreateWindow(config)
     ScreenGui.ResetOnSpawn = false
     ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     ScreenGui.Parent = getSafeGuiParent()
+
+    local connections = {}
+    local destroyed = false
+    local function connectInput(signal, callback)
+        local connection = signal:Connect(callback)
+        table.insert(connections, connection)
+        return connection
+    end
+    ScreenGui.Destroying:Connect(function()
+        destroyed = true
+        for _, connection in ipairs(connections) do connection:Disconnect() end
+        table.clear(connections)
+        if restoreGraphics then restoreGraphics(); restoreGraphics = nil end
+    end)
 
     -- Main Container Frame
     local MainFrame = Instance.new("Frame")
@@ -415,7 +438,7 @@ function AdnHubLib:CreateWindow(config)
             dragging = true
             dragStart = input.Position
             startPos = MainFrame.Position
-            input.Changed:Connect(function()
+            connectInput(input.Changed, function()
                 if input.UserInputState == Enum.UserInputState.End then
                     dragging = false
                 end
@@ -429,7 +452,7 @@ function AdnHubLib:CreateWindow(config)
         end
     end)
 
-    UserInputService.InputChanged:Connect(function(input)
+    connectInput(UserInputService.InputChanged, function(input)
         if input == dragInput and dragging then
             local delta = input.Position - dragStart
             tween(MainFrame, TweenInfo.new(0.08, Enum.EasingStyle.Sine), {
@@ -476,6 +499,7 @@ function AdnHubLib:CreateWindow(config)
     TabScroll.Parent = Sidebar
 
     local TabListLayout = Instance.new("UIListLayout")
+    TabListLayout.SortOrder = Enum.SortOrder.LayoutOrder
     TabListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
     TabListLayout.Padding = UDim.new(0, 6)
     TabListLayout.Parent = TabScroll
@@ -568,14 +592,14 @@ function AdnHubLib:CreateWindow(config)
             pillDragging = true
             pillDragStart = input.Position
             pillStartPos = FloatingPill.Position
-            input.Changed:Connect(function()
+            connectInput(input.Changed, function()
                 if input.UserInputState == Enum.UserInputState.End then
                     pillDragging = false
                 end
             end)
         end
     end)
-    UserInputService.InputChanged:Connect(function(input)
+    connectInput(UserInputService.InputChanged, function(input)
         if pillDragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
             local delta = input.Position - pillDragStart
             FloatingPill.Position = UDim2.new(
@@ -589,7 +613,11 @@ function AdnHubLib:CreateWindow(config)
 
     -- Minimize Functionality
     local isMinimized = false
+    local isVisible = true
+    local minimizeVersion = 0
     local function setMinimized(state)
+        minimizeVersion = minimizeVersion + 1
+        local version = minimizeVersion
         isMinimized = state
         playClickSound()
         if state then
@@ -599,8 +627,9 @@ function AdnHubLib:CreateWindow(config)
             })
             tween(ShadowHolder, TweenInfo.new(0.2), {ImageTransparency = 1})
             task.delay(0.3, function()
+                if destroyed or version ~= minimizeVersion then return end
                 MainFrame.Visible = false
-                FloatingPill.Visible = true
+                FloatingPill.Visible = isVisible
                 FloatingPill.Size = UDim2.new(0, 0, 0, 0)
                 tween(FloatingPill, TweenInfo.new(0.3, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
                     Size = UDim2.new(0, 140, 0, 40)
@@ -608,7 +637,7 @@ function AdnHubLib:CreateWindow(config)
             end)
         else
             FloatingPill.Visible = false
-            MainFrame.Visible = true
+            MainFrame.Visible = isVisible
             tween(MainFrame, TweenInfo.new(0.35, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
                 Size = UDim2.new(0, 750, 0, 480),
                 BackgroundTransparency = 0.12
@@ -634,6 +663,7 @@ function AdnHubLib:CreateWindow(config)
         })
         tween(ShadowHolder, TweenInfo.new(0.2), {ImageTransparency = 1})
         task.delay(0.25, function()
+            if destroyed then return end
             ScreenGui:Destroy()
             AdnHubLib:Notify({
                 Title = "Adonis Hub",
@@ -645,15 +675,12 @@ function AdnHubLib:CreateWindow(config)
     CloseBtn.MouseButton1Click:Connect(closeMenu)
 
     -- Keybind đóng mở menu
-    local isVisible = true
-    UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    connectInput(UserInputService.InputBegan, function(input, gameProcessed)
         if not gameProcessed and input.KeyCode == DefaultKeybind then
             isVisible = not isVisible
-            MainFrame.Visible = isVisible
-            ShadowHolder.Visible = isVisible
-            if isMinimized then
-                FloatingPill.Visible = isVisible
-            end
+            MainFrame.Visible = isVisible and not isMinimized
+            ShadowHolder.Visible = isVisible and not isMinimized
+            FloatingPill.Visible = isVisible and isMinimized
         end
     end)
 
@@ -667,12 +694,28 @@ function AdnHubLib:CreateWindow(config)
         CurrentTab = nil
     }
 
+    function Window:Destroy()
+        if not destroyed then ScreenGui:Destroy() end
+        local notifications = getSafeGuiParent():FindFirstChild("AdnHub_NotifContainer")
+        if notifications then notifications:Destroy() end
+    end
+    function Window:Reset()
+        setMinimized(false)
+        isVisible = true
+        MainFrame.Visible = true
+        ShadowHolder.Visible = true
+        MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+    end
+    activeWindow = Window
+
     -- TẠO TAB MỚI
     function Window:CreateTab(tabName, iconEmoji)
         iconEmoji = iconEmoji or "📁"
         
         local TabBtn = Instance.new("TextButton")
         TabBtn.Name = "Tab_" .. tabName
+        TabBtn.LayoutOrder = #Window.Tabs + 1
+        TabBtn.Active = true
         TabBtn.Size = UDim2.new(1, -16, 0, 38)
         TabBtn.BackgroundColor3 = Themes.Card
         TabBtn.BackgroundTransparency = 1
@@ -686,6 +729,7 @@ function AdnHubLib:CreateWindow(config)
 
         local ActiveIndicator = Instance.new("Frame")
         ActiveIndicator.Name = "ActiveIndicator"
+        ActiveIndicator.Active = false
         ActiveIndicator.Size = UDim2.new(0, 3, 0, 18)
         ActiveIndicator.Position = UDim2.new(0, 4, 0.5, -9)
         ActiveIndicator.BackgroundColor3 = Themes.AccentCyan
@@ -699,6 +743,7 @@ function AdnHubLib:CreateWindow(config)
 
         local IconLabel = Instance.new("TextLabel")
         IconLabel.Name = "Icon"
+        IconLabel.Active = false
         IconLabel.Size = UDim2.new(0, 24, 1, 0)
         IconLabel.Position = UDim2.new(0, 12, 0, 0)
         IconLabel.BackgroundTransparency = 1
@@ -707,7 +752,8 @@ function AdnHubLib:CreateWindow(config)
         IconLabel.Parent = TabBtn
 
         local NameLabel = Instance.new("TextLabel")
-        NameLabel.Name = "Name"
+        NameLabel.Name = "TabLabel"
+        NameLabel.Active = false
         NameLabel.Size = UDim2.new(1, -44, 1, 0)
         NameLabel.Position = UDim2.new(0, 38, 0, 0)
         NameLabel.BackgroundTransparency = 1
@@ -734,6 +780,7 @@ function AdnHubLib:CreateWindow(config)
         Page.Parent = ContentArea
 
         local PageLayout = Instance.new("UIListLayout")
+        PageLayout.SortOrder = Enum.SortOrder.LayoutOrder
         PageLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
         PageLayout.Padding = UDim.new(0, 12)
         PageLayout.Parent = Page
@@ -742,7 +789,10 @@ function AdnHubLib:CreateWindow(config)
             Button = TabBtn,
             Page = Page,
             Name = tabName,
-            Layout = PageLayout
+            NameLabel = NameLabel,
+            ActiveIndicator = ActiveIndicator,
+            Layout = PageLayout,
+            SectionCount = 0
         }
 
         -- Chuyển Tab (Spring / Elastic Slide Animation)
@@ -755,19 +805,25 @@ function AdnHubLib:CreateWindow(config)
             if Window.CurrentTab then
                 local oldTab = Window.CurrentTab
                 tween(oldTab.Button, TweenInfo.new(0.2), {BackgroundTransparency = 1})
-                tween(oldTab.Button.ActiveIndicator, TweenInfo.new(0.2), {BackgroundTransparency = 1})
-                tween(oldTab.Button.Name, TweenInfo.new(0.2), {
-                    TextColor3 = Themes.TextSecondary,
-                    Position = UDim2.new(0, 38, 0, 0)
-                })
+                if oldTab.ActiveIndicator then
+                    tween(oldTab.ActiveIndicator, TweenInfo.new(0.2), {BackgroundTransparency = 1})
+                end
+                if oldTab.NameLabel then
+                    tween(oldTab.NameLabel, TweenInfo.new(0.2), {
+                        TextColor3 = Themes.TextSecondary,
+                        Position = UDim2.new(0, 38, 0, 0)
+                    })
+                end
 
                 -- Ẩn trang cũ với hiệu ứng slide & fade
                 local oldPage = oldTab.Page
                 local outTween = tween(oldPage, TweenInfo.new(0.2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
                     Position = UDim2.new(0, -20, 0, 8)
                 })
-                outTween.Completed:Connect(function()
-                    oldPage.Visible = false
+                outTween.Completed:Connect(function(playbackState)
+                    if playbackState == Enum.PlaybackState.Completed and Window.CurrentTab ~= oldTab then
+                        oldPage.Visible = false
+                    end
                 end)
             end
 
@@ -806,26 +862,31 @@ function AdnHubLib:CreateWindow(config)
             end
         end)
 
-        TabBtn.MouseButton1Click:Connect(function()
+        local function triggerActivate()
             TabObj:Activate()
-        end)
+        end
+        TabBtn.Activated:Connect(triggerActivate)
 
         -- TẠO SECTION (Phần con với UX Whitespace mượt mà)
         function TabObj:CreateSection(sectionTitle)
+            TabObj.SectionCount = (TabObj.SectionCount or 0) + 1
             local SectionContainer = Instance.new("Frame")
             SectionContainer.Name = "Section_" .. sectionTitle
+            SectionContainer.LayoutOrder = TabObj.SectionCount
             SectionContainer.Size = UDim2.new(1, 0, 0, 0)
             SectionContainer.AutomaticSize = Enum.AutomaticSize.Y
             SectionContainer.BackgroundTransparency = 1
             SectionContainer.Parent = Page
 
             local SectionLayout = Instance.new("UIListLayout")
+            SectionLayout.SortOrder = Enum.SortOrder.LayoutOrder
             SectionLayout.Padding = UDim.new(0, 8)
             SectionLayout.Parent = SectionContainer
 
             -- Tiêu đề Section phong cách Neo-Minimalist
             local TitleFrame = Instance.new("Frame")
             TitleFrame.Name = "TitleFrame"
+            TitleFrame.LayoutOrder = 1
             TitleFrame.Size = UDim2.new(1, 0, 0, 24)
             TitleFrame.BackgroundTransparency = 1
             TitleFrame.Parent = SectionContainer
@@ -850,7 +911,7 @@ function AdnHubLib:CreateWindow(config)
             SLine.BorderSizePixel = 0
             SLine.Parent = TitleFrame
 
-            local Section = {}
+            local Section = { ItemIndex = 1 }
 
             -- 1. TOGGLE SWITCH (Capsule Minimalist)
             function Section:CreateToggle(tConfig)
@@ -860,8 +921,10 @@ function AdnHubLib:CreateWindow(config)
                 local callback = tConfig.Callback or function() end
                 local isDesignOnly = tConfig.DesignOnly or false
 
+                Section.ItemIndex = Section.ItemIndex + 1
                 local ToggleCard = Instance.new("TextButton")
                 ToggleCard.Name = "ToggleCard"
+                ToggleCard.LayoutOrder = Section.ItemIndex
                 ToggleCard.Size = UDim2.new(1, 0, 0, 44)
                 ToggleCard.BackgroundColor3 = Themes.Card
                 ToggleCard.BackgroundTransparency = 0.4
@@ -981,8 +1044,10 @@ function AdnHubLib:CreateWindow(config)
                 local callback = sConfig.Callback or function() end
                 local isDesignOnly = sConfig.DesignOnly or false
 
+                Section.ItemIndex = Section.ItemIndex + 1
                 local SliderCard = Instance.new("Frame")
                 SliderCard.Name = "SliderCard"
+                SliderCard.LayoutOrder = Section.ItemIndex
                 SliderCard.Size = UDim2.new(1, 0, 0, 56)
                 SliderCard.BackgroundColor3 = Themes.Card
                 SliderCard.BackgroundTransparency = 0.4
@@ -1081,13 +1146,13 @@ function AdnHubLib:CreateWindow(config)
                     end
                 end)
 
-                UserInputService.InputEnded:Connect(function(input)
+                connectInput(UserInputService.InputEnded, function(input)
                     if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
                         isSliding = false
                     end
                 end)
 
-                UserInputService.InputChanged:Connect(function(input)
+                connectInput(UserInputService.InputChanged, function(input)
                     if isSliding and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
                         slide(input)
                     end
@@ -1112,8 +1177,10 @@ function AdnHubLib:CreateWindow(config)
                 local callback = bConfig.Callback or function() end
                 local isAccent = bConfig.Accent or false
 
+                Section.ItemIndex = Section.ItemIndex + 1
                 local Btn = Instance.new("TextButton")
                 Btn.Name = "Btn_" .. title
+                Btn.LayoutOrder = Section.ItemIndex
                 Btn.Size = UDim2.new(1, 0, 0, 40)
                 Btn.BackgroundColor3 = isAccent and Themes.AccentCyan or Themes.Card
                 Btn.BackgroundTransparency = isAccent and 0.2 or 0.4
@@ -1158,6 +1225,7 @@ function AdnHubLib:CreateWindow(config)
                     -- Click pulse animation
                     tween(Btn, TweenInfo.new(0.08), {Size = UDim2.new(1, -6, 0, 38)})
                     task.delay(0.08, function()
+                        if destroyed or not Btn.Parent then return end
                         tween(Btn, TweenInfo.new(0.1), {Size = UDim2.new(1, 0, 0, 40)})
                     end)
                     callback()
@@ -1174,8 +1242,10 @@ function AdnHubLib:CreateWindow(config)
                 local default = dConfig.Default or options[1] or "Select..."
                 local callback = dConfig.Callback or function() end
 
+                Section.ItemIndex = Section.ItemIndex + 1
                 local DropdownCard = Instance.new("Frame")
                 DropdownCard.Name = "DropdownCard"
+                DropdownCard.LayoutOrder = Section.ItemIndex
                 DropdownCard.Size = UDim2.new(1, 0, 0, 44)
                 DropdownCard.BackgroundColor3 = Themes.Card
                 DropdownCard.BackgroundTransparency = 0.4
@@ -1305,8 +1375,10 @@ function AdnHubLib:CreateWindow(config)
                 local bColor = Themes.AccentCyan
                 if bannerType == "Warning" then bColor = Themes.AccentAmber end
 
+                Section.ItemIndex = Section.ItemIndex + 1
                 local Banner = Instance.new("Frame")
                 Banner.Name = "Banner"
+                Banner.LayoutOrder = Section.ItemIndex
                 Banner.Size = UDim2.new(1, 0, 0, 36)
                 Banner.BackgroundColor3 = Themes.Card
                 Banner.BackgroundTransparency = 0.5
@@ -1401,6 +1473,31 @@ do
         Name = "Tối ưu hóa FPS & Giảm Lag (Boost FPS)",
         Default = false,
         Callback = function(val)
+            if val and not restoreGraphics then
+                local lighting = game:GetService("Lighting")
+                local saved = {}
+                local function lower(object, property, value)
+                    pcall(function()
+                        local original = object[property]
+                        object[property] = value
+                        table.insert(saved, {object, property, original})
+                    end)
+                end
+                lower(lighting, "GlobalShadows", false)
+                for _, object in ipairs(workspace:GetDescendants()) do
+                    if object:IsA("ParticleEmitter") or object:IsA("Trail") or object:IsA("Smoke") or object:IsA("Fire") or object:IsA("Sparkles") then
+                        lower(object, "Enabled", false)
+                    end
+                end
+                restoreGraphics = function()
+                    for _, entry in ipairs(saved) do
+                        pcall(function() entry[1][entry[2]] = entry[3] end)
+                    end
+                end
+            elseif not val and restoreGraphics then
+                restoreGraphics()
+                restoreGraphics = nil
+            end
             AdnHubLib:Notify({
                 Title = "Tối ưu FPS",
                 Content = val and "Đã kích hoạt chế độ siêu mượt (Low Graphics Mode)" or "Đã khôi phục đồ họa ban đầu",
@@ -1413,6 +1510,8 @@ end
 -- 2. TAB: 🥚 FARM (Hack Trứng đổi tên thành Farm & đặt dưới Contact)
 local FarmTab = Hub:CreateTab("Farm", "🥚")
 do
+    local DemoSection = FarmTab:CreateSection("Trạng Thái Tính Năng")
+    DemoSection:CreateBanner("Farm / ESP hiện là bản demo UI, chưa có logic tương tác với game.", "Warning")
     local AutoSection = FarmTab:CreateSection("Tự Động Đoạt Trứng (Auto Steal)")
     
     AutoSection:CreateToggle({
@@ -1422,7 +1521,7 @@ do
         Callback = function(val)
             AdnHubLib:Notify({
                 Title = "Auto Steal Egg",
-                Content = val and "Đang quét các ổ trứng gần nhất..." or "Đã tắt Auto Steal",
+                Content = "Demo UI: Auto Steal chưa được triển khai.",
                 Type = "Info"
             })
         end
@@ -1433,7 +1532,7 @@ do
         Default = false,
         DesignOnly = true,
         Callback = function(val)
-            AdnHubLib:Notify({Title = "Auto Base Return", Content = val and "Đã bật chế độ tự mang trứng về căn cứ" or "Đã tắt", Type = "Info"})
+            AdnHubLib:Notify({Title = "Auto Base Return", Content = "Demo UI: Auto Base Return chưa được triển khai.", Type = "Info"})
         end
     })
 
@@ -1442,7 +1541,7 @@ do
         Default = false,
         DesignOnly = true,
         Callback = function(val)
-            AdnHubLib:Notify({Title = "Silent Vacuum", Content = val and "Hút trứng từ xa qua kết nối giả lập" or "Đã tắt", Type = "Info"})
+            AdnHubLib:Notify({Title = "Silent Vacuum", Content = "Demo UI: Silent Vacuum chưa được triển khai.", Type = "Info"})
         end
     })
 
@@ -1477,7 +1576,7 @@ do
         Options = {"Tất cả các loại trứng", "🥚 Trứng Thần Thoại (Mythic)", "💎 Trứng Kim Cương (Diamond)", "✨ Trứng Vàng (Golden)", "⚪ Trứng Thường (Common)"},
         Default = "🥚 Trứng Thần Thoại (Mythic)",
         Callback = function(selected)
-            AdnHubLib:Notify({Title = "Bộ lọc trứng", Content = "Ưu tiên: " .. selected, Type = "Info"})
+            AdnHubLib:Notify({Title = "Bộ lọc trứng", Content = "Bộ lọc demo (chưa áp dụng trong game): " .. selected, Type = "Info"})
         end
     })
 
@@ -1487,7 +1586,7 @@ do
         Default = false,
         DesignOnly = true,
         Callback = function(val)
-            AdnHubLib:Notify({Title = "Egg ESP", Content = val and "Đã hiển thị vị trí tất cả các quả trứng trên bản đồ" or "Đã tắt ESP", Type = "Info"})
+            AdnHubLib:Notify({Title = "Egg ESP", Content = "Demo UI: Egg ESP chưa được triển khai.", Type = "Info"})
         end
     })
 end
@@ -1502,18 +1601,14 @@ do
     ConfigSection:CreateButton({
         Name = "❌ Đóng & Gỡ Hoàn Toàn Script (Unload UI)",
         Callback = function()
-            local gui = getSafeGuiParent():FindFirstChild("AdnHub_Gui")
-            if gui then gui:Destroy() end
-            local notif = getSafeGuiParent():FindFirstChild("AdnHub_NotifContainer")
-            if notif then notif:Destroy() end
+            Hub:Destroy()
         end
     })
 
     ConfigSection:CreateButton({
         Name = "🎨 Khôi Phục Kích Thước Ban Đầu",
         Callback = function()
-            Hub.MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-            Hub.MainFrame.Size = UDim2.new(0, 750, 0, 480)
+            Hub:Reset()
             AdnHubLib:Notify({Title = "Cài đặt", Content = "Đã khôi phục vị trí mặc định ở giữa màn hình", Type = "Success"})
         end
     })

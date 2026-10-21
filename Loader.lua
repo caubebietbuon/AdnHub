@@ -11,5 +11,5 @@ local success, result = pcall(function()
 end)
 
 if not success then
-    warn("[AdnHub] Không thể tải từ GitHub Raw, đang thử tải fallback: " .. tostring(result))
+    warn("[AdnHub] Không thể tải hoặc khởi chạy AdnHub: " .. tostring(result))
 end
