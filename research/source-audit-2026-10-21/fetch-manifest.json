@@ -1,0 +1,30 @@
+[
+  {
+    "name": "chilli-loader",
+    "url": "https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua",
+    "fetched_at_utc": "2026-10-21T15:02:05.275919+00:00",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 1423,
+    "sha256": "3533a8ee6e3894be6ea941831dc75a76ee9650b10e80b5bdebc8aec172143806",
+    "prefix": "local SAE = \"https://raw.githubusercontent.com/tienkhanh1/Chilli-Hub-Script/refs/heads/main/StealAnE"
+  },
+  {
+    "name": "steal-an-egg",
+    "url": "https://raw.githubusercontent.com/tienkhanh1/Chilli-Hub-Script/refs/heads/main/StealAnEggg",
+    "fetched_at_utc": "2026-10-21T15:02:05.579798+00:00",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 825885,
+    "sha256": "0b7d0741f10fd211b2ce18fb33f3814f845f703b942bff32cd354a20dfcf8809",
+    "prefix": "-- This file was protected using Luraph Obfuscator v15.1 [https://lura.ph/]\n\nreturn setmetatable({[3"
+  },
+  {
+    "name": "vxezestudio-init",
+    "url": "https://vxezestudio.online/api/scripts/script_G5CGjqj2X3rOS/stream/init",
+    "fetched_at_utc": "2026-10-21T15:02:06.041206+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "status": 403,
+    "error_body_bytes": 17
+  }
+]

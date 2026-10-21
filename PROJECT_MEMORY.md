@@ -49,3 +49,11 @@ The README loadstring fetches GitHub main, not this local working tree.
 Local fixes do not reach that URL until committed and pushed. Record the commit
 and exact script URL when comparing a reported stack trace. Line numbers move;
 search the function names above instead of relying on old line numbers.
+
+## Source audit — 2026-10-21
+See research/source-audit-2026-10-21/REPORT.md and fetch-manifest.json.
+Chilli.lua is a router; StealAnEggg is Luraph-obfuscated source, not deobfuscated.
+VxEze endpoint returned HTTP 403 (error code 1010); no payload obtained.
+SourceInventory.lua is metadata only, not a synthesized feature implementation.
+Third-party source snapshots are local ignored TXT files; never execute or bundle.
+No verified remote names/arguments or extracted gameplay logic yet.
