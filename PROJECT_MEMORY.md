@@ -3,6 +3,8 @@
 ## Purpose and current state
 Current user priority: deep Chilli static decryption only; demo/ESP feature work
 temporarily paused. Do not resume those feature changes without user direction.
+Current scope is layer-by-layer static decomposition; 1:1 reproduction is out
+of scope per latest user direction. Keep decoder algebra separate from guards.
 Roblox client UI written in Lua/Luau, for the Steal an Egg project.
 Repository: https://github.com/caubebietbuon/AdnHub ; branch: main.
 The UI and local graphics toggle work independently of game mechanics.
@@ -349,3 +351,41 @@ Reproduce:python tools/obligation_resolver.py;python -m unittest discover -s too
 luac -p AdnHub.lua Loader.lua;git diff --check.108 Python tests passed
 (92previous+16new), Lua syntax and diff checks passed. No Roblox/payload/Luau
 runtime checks, no network/push. Demo/ESP untouched; complete decompile unproved.
+
+## Phase 15 backward slicing / scoped diagnostic matrix — 2026-10-22
+Added tools/register_slicer.py (bounded trace-order SSA), layer_decomposer.py
+(offline pinned orchestration/core equations/matrix/proxies), test_phase15.py.
+prologue_analyzer records numeric constant_inputs and successful state_word_write
+only when provenance tracking enabled. Copy-order correction also fixes default mode.
+Sourceaudit FIX:163/op109 inherited forwardmodel reversed sources. Pinned
+g offset25174 proves r[c],r[c+1]=old(r[a]),old(r[b]); forward and backward now
+correct, regression uses distinct10/20 inputs. Pipeline rebuilt; counts unchanged.
+Slices follow trace-index definitions, not sortedPC. Parallel copies readold
+versions; opaquewrites kill prior constants; nil isnot0; captureaddresses are
+notvalues. Only whitelisted numeric arithmetic propagatesconstants; forward
+observations checked. Root y2639318406 via9nodes, r2samevia8, r107=0 vialiteral.
+Successful statewrite annotation prevents slicing through failed typechecks.
+For17IDs (exclude192),14potentialsites across9IDs:9directbyte-XOR equations,
+5state-mixer equations,8IDs withnosite. Directresults retainallbytes inclinvalid
+UTF8.203key110->81hex andkey140->63hex bothretained; no readability selection.
+Core equations independent of activation predicates. V/y inputs traced where
+siteactuallyobserved; noneof14sitesreachedcurrently. Frontier slicescontextonly,
+never substituted into future/unvisitedsites. All17selectedkeysremainnull.
+Matrixcovers8pairs(original4+guardedroot4),sixrequestedcolumns capturebounds,
+upvaluemappings,childheaders,controlflow,coverage,cyclechecks. ExplicitPASS/FAIL/
+UNKNOWN withscope/reason; UNKNOWN!=observedfalse. These columns differfromold
+six-proofvalidator; bothretained,oldrulesunchanged. GuardedcontrolPASSdoesnot
+promoteunconditionalancestry.137->747controlFAILunderPhase14nil-XORcontracts.
+CoverageFAILglobal:6of41expectednodescandidate-reachable,35missing; nocycle
+in8enumeratededgesonly. verified_hierarchy=null, no new ancestry promoted.
+Typedproxy routes ownerto wrapper/cachelookup/template/constructoruse/body,
+descriptorinputseparate. Cachemissroutecandidate, cachehitidentityunproved.
+7pairsreusefactory4890;572nativeboundary4916. Source4890prefixesalias-only,
+notexecuted. Sharedfactory/descriptor486isnotparentproof; distinctconstruction
+identities maintained. Noadditionalmultihopprototypepathinenumerated8pairs;
+unseenproxiesunknown. Do not infer edges by traversing common implementation.
+See research/layer-decomposition-2026-10-22/FINDINGS.md,DIAGNOSTIC_MATRIX.md,
+summary.json. Detailed ignored output/phase15/layer-decomposition.json rebuilt
+by python tools/layer_decomposer.py. Verification:124Python tests(108+16),
+luac -p AdnHub.lua Loader.lua,git diff --check passed. No Lua/payload/factory/
+API/network execution or Roblox runtime checks; no push; demo/ESP unchanged.

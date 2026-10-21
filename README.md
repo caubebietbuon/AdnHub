@@ -6,9 +6,9 @@
 >
 > Hướng dẫn bảo trì và lịch sử lỗi: [PROJECT_MEMORY.md](PROJECT_MEMORY.md).
 
-Phân tích tĩnh Chilli: [báo cáo Phase 14](research/obligation-audit-2026-10-22/FINDINGS.md).
-ID 192 giải ra `rawlen` với phương trình có điều kiện; chưa hoàn tất dịch ngược
-hoặc xác minh cây prototype. Công cụ: `python tools/obligation_resolver.py`
+Phân tích tĩnh Chilli: [báo cáo Phase 15](research/layer-decomposition-2026-10-22/FINDINGS.md).
+Backward slicing, phương trình decoder tách khỏi guard và ma trận chẩn đoán
+prototype. Công cụ: `python tools/layer_decomposer.py`
 (cần các tệp g/d đã bóc tách cục bộ; không thực thi payload hay gọi mạng).
 
 ---

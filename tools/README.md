@@ -252,3 +252,20 @@ See research/obligation-audit-2026-10-22/FINDINGS.md for the candidate137 nil/XO
 contradiction, capture-frame maps, remaining guards and reproduction commands.
 Detailed output/phase14/obligation-resolution.json stays ignored. No payload,
 factory, __index, application or network execution; demo/ESP work stays paused.
+
+## Phase 15: backward slices, independent decoders and diagnostic matrix
+
+```powershell
+python tools/layer_decomposer.py
+```
+
+Builds trace-order SSA with register_slicer.py. Reconstructs literal/copy/XOR/
+addition/state dependencies, preserves unknown writes and capture addresses.
+Separates14 potential core equations for17 pending IDs from activation/cache
+predicates. Nine direct keys produce unfiltered bytes; five mixer equations
+retain unknown site state. No frontier-to-unvisited-PC substitution.
+Outputs six scoped diagnostic columns for8 prototype pairs and typed proxy
+routes through lazy wrappers, cache lookups and constructor instances. The
+historical validator is unchanged; verified_hierarchy remainsnull. Full output
+is ignored in output/phase15; tracked matrix and findings are under
+research/layer-decomposition-2026-10-22. No payload or network execution.

@@ -120,11 +120,15 @@ def analyze(streams, entry, first_word, second_word, budget=10000, numeric_const
             elif op == 142:
                 left = numeric_constant(c) if numeric_constant else None
                 right = numeric_constant(b) if numeric_constant else None
+                if track_register_writes:
+                    event["constant_inputs"] = [{"reference_id": c, "value": left}, {"reference_id": b, "value": right}]
                 registers[a] = left ^ right if type(left) is int and type(right) is int else None
             elif op == 132:
                 value = registers.get(b)
                 if type(value) is not int: break
                 second_word = value
+                if track_register_writes:
+                    event["state_word_write"] = {"word": "y", "source_register": b, "value": value}
             elif op in (74, 125, 100):
                 key = c if op == 100 else b ^ mix(second_word if op == 74 else first_word)
                 if not 0 <= key <= 255: break
@@ -234,7 +238,7 @@ def analyze(streams, entry, first_word, second_word, budget=10000, numeric_const
             elif op == 147:
                 registers[a] = registers.get(b)
             elif op == 109:
-                registers[c], registers[c + 1] = registers.get(b), registers.get(a)
+                registers[c], registers[c + 1] = registers.get(a), registers.get(b)
             elif op == 2:
                 destination = registers.get(c)
                 if type(destination) is not int: break

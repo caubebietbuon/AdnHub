@@ -1,0 +1,1369 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "backward_slice_controls": {
+    "root_y_at_frontier": {
+      "owner": 664,
+      "root_node": 261,
+      "register": null,
+      "word": "y",
+      "before_trace_step": null,
+      "constant": 2639318406,
+      "nodes": [
+        {
+          "id": 1,
+          "op": "header_word",
+          "deps": [],
+          "value": 1947447901,
+          "word": "y",
+          "constant": 1947447901
+        },
+        {
+          "id": 227,
+          "op": "decoded_constant",
+          "deps": [],
+          "value": 416700668,
+          "reference_id": 737,
+          "premise": "pinned primitive reader observation",
+          "constant": 416700668
+        },
+        {
+          "id": 228,
+          "op": "decoded_constant",
+          "deps": [],
+          "value": 0,
+          "reference_id": 19,
+          "premise": "pinned primitive reader observation",
+          "constant": 0
+        },
+        {
+          "id": 229,
+          "op": "xor",
+          "deps": [
+            227,
+            228
+          ],
+          "step": 233,
+          "pc": 9061,
+          "register": 1,
+          "constant": 416700668
+        },
+        {
+          "id": 245,
+          "op": "literal",
+          "deps": [],
+          "value": 275169837,
+          "constant": 275169837
+        },
+        {
+          "id": 246,
+          "op": "add",
+          "deps": [
+            229,
+            245
+          ],
+          "step": 256,
+          "pc": 9394,
+          "register": 1,
+          "constant": 691870505
+        },
+        {
+          "id": 259,
+          "op": "copy",
+          "deps": [
+            1
+          ],
+          "step": 294,
+          "pc": 1250,
+          "register": 2,
+          "constant": 1947447901
+        },
+        {
+          "id": 260,
+          "op": "add",
+          "deps": [
+            259,
+            246
+          ],
+          "step": 295,
+          "pc": 1251,
+          "register": 2,
+          "constant": 2639318406
+        },
+        {
+          "id": 261,
+          "op": "copy",
+          "deps": [
+            260
+          ],
+          "step": 296,
+          "pc": 1252,
+          "word": "y",
+          "observed": 2639318406,
+          "constant": 2639318406
+        }
+      ],
+      "unresolved_leaves": [],
+      "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+    },
+    "root_register2_at_frontier": {
+      "owner": 664,
+      "root_node": 260,
+      "register": 2,
+      "word": null,
+      "before_trace_step": null,
+      "constant": 2639318406,
+      "nodes": [
+        {
+          "id": 1,
+          "op": "header_word",
+          "deps": [],
+          "value": 1947447901,
+          "word": "y",
+          "constant": 1947447901
+        },
+        {
+          "id": 227,
+          "op": "decoded_constant",
+          "deps": [],
+          "value": 416700668,
+          "reference_id": 737,
+          "premise": "pinned primitive reader observation",
+          "constant": 416700668
+        },
+        {
+          "id": 228,
+          "op": "decoded_constant",
+          "deps": [],
+          "value": 0,
+          "reference_id": 19,
+          "premise": "pinned primitive reader observation",
+          "constant": 0
+        },
+        {
+          "id": 229,
+          "op": "xor",
+          "deps": [
+            227,
+            228
+          ],
+          "step": 233,
+          "pc": 9061,
+          "register": 1,
+          "constant": 416700668
+        },
+        {
+          "id": 245,
+          "op": "literal",
+          "deps": [],
+          "value": 275169837,
+          "constant": 275169837
+        },
+        {
+          "id": 246,
+          "op": "add",
+          "deps": [
+            229,
+            245
+          ],
+          "step": 256,
+          "pc": 9394,
+          "register": 1,
+          "constant": 691870505
+        },
+        {
+          "id": 259,
+          "op": "copy",
+          "deps": [
+            1
+          ],
+          "step": 294,
+          "pc": 1250,
+          "register": 2,
+          "constant": 1947447901
+        },
+        {
+          "id": 260,
+          "op": "add",
+          "deps": [
+            259,
+            246
+          ],
+          "step": 295,
+          "pc": 1251,
+          "register": 2,
+          "constant": 2639318406
+        }
+      ],
+      "unresolved_leaves": [],
+      "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+    },
+    "root_register107_at_frontier": {
+      "owner": 664,
+      "root_node": 296,
+      "register": 107,
+      "word": null,
+      "before_trace_step": null,
+      "constant": 0,
+      "nodes": [
+        {
+          "id": 296,
+          "op": "literal",
+          "deps": [],
+          "value": 0,
+          "step": 328,
+          "pc": 1008,
+          "register": 107,
+          "constant": 0
+        }
+      ],
+      "unresolved_leaves": [],
+      "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+    }
+  },
+  "prototype_diagnostic_matrix": [
+    {
+      "parent": 137,
+      "child": 747,
+      "descriptor_id": 58,
+      "criteria": {
+        "capture_bounds": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "local indices fit allocation hint, or descriptor empty",
+          "scope": "descriptor and proposed frame only; allocation fit is not ownership"
+        },
+        "upvalue_mappings": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "empty capture list",
+          "scope": "descriptor schema"
+        },
+        "child_headers": {
+          "status": "UNKNOWN",
+          "passed": false,
+          "reason": "layout hypothesis/source mask alone does not prove live selection/cache identity",
+          "scope": "candidate bytes"
+        },
+        "control_flow": {
+          "status": "FAIL",
+          "passed": false,
+          "reason": "projected normal prefix refuted at29 under reviewed contracts",
+          "scope": "guarded prefix; no unconditional activation claim"
+        },
+        "coverage": {
+          "status": "FAIL",
+          "passed": false,
+          "reason": "35 expected nodes absent from candidate root reachability",
+          "scope": "global candidate graph, not a local claim that this edge is invalid"
+        },
+        "cycle_checks": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "no cycles in enumerated candidates",
+          "scope": "enumerated graph only; unseen links are unknown"
+        }
+      },
+      "all_diagnostic_checks_pass": false,
+      "unchanged_validator_proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "indirect_prototype_paths": []
+    },
+    {
+      "parent": 237,
+      "child": 572,
+      "descriptor_id": 181,
+      "criteria": {
+        "capture_bounds": {
+          "status": "UNKNOWN",
+          "passed": false,
+          "reason": "enclosing capture bounds missing",
+          "scope": "descriptor and proposed frame only; allocation fit is not ownership"
+        },
+        "upvalue_mappings": {
+          "status": "UNKNOWN",
+          "passed": false,
+          "reason": "no observed owner-to-capture binding",
+          "scope": "descriptor schema"
+        },
+        "child_headers": {
+          "status": "UNKNOWN",
+          "passed": false,
+          "reason": "layout hypothesis/source mask alone does not prove live selection/cache identity",
+          "scope": "candidate bytes"
+        },
+        "control_flow": {
+          "status": "UNKNOWN",
+          "passed": false,
+          "reason": "site not reached before recorded frontier",
+          "scope": "guarded prefix; no unconditional activation claim"
+        },
+        "coverage": {
+          "status": "FAIL",
+          "passed": false,
+          "reason": "35 expected nodes absent from candidate root reachability",
+          "scope": "global candidate graph, not a local claim that this edge is invalid"
+        },
+        "cycle_checks": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "no cycles in enumerated candidates",
+          "scope": "enumerated graph only; unseen links are unknown"
+        }
+      },
+      "all_diagnostic_checks_pass": false,
+      "unchanged_validator_proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": false,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "indirect_prototype_paths": []
+    },
+    {
+      "parent": 664,
+      "child": 258,
+      "descriptor_id": 486,
+      "criteria": {
+        "capture_bounds": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "local indices fit allocation hint, or descriptor empty",
+          "scope": "descriptor and proposed frame only; allocation fit is not ownership"
+        },
+        "upvalue_mappings": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "capture ordinals map to recorded frame cells",
+          "scope": "guarded binding"
+        },
+        "child_headers": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "child header read with path-local key at guarded constructor transfer",
+          "scope": "guarded prefix"
+        },
+        "control_flow": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "source transfer observed",
+          "scope": "guarded prefix; no unconditional activation claim"
+        },
+        "coverage": {
+          "status": "FAIL",
+          "passed": false,
+          "reason": "35 expected nodes absent from candidate root reachability",
+          "scope": "global candidate graph, not a local claim that this edge is invalid"
+        },
+        "cycle_checks": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "no cycles in enumerated candidates",
+          "scope": "enumerated graph only; unseen links are unknown"
+        }
+      },
+      "all_diagnostic_checks_pass": false,
+      "unchanged_validator_proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "indirect_prototype_paths": []
+    },
+    {
+      "parent": 664,
+      "child": 379,
+      "descriptor_id": 462,
+      "criteria": {
+        "capture_bounds": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "local indices fit allocation hint, or descriptor empty",
+          "scope": "descriptor and proposed frame only; allocation fit is not ownership"
+        },
+        "upvalue_mappings": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "capture ordinals map to recorded frame cells",
+          "scope": "guarded binding"
+        },
+        "child_headers": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "child header read with path-local key at guarded constructor transfer",
+          "scope": "guarded prefix"
+        },
+        "control_flow": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "source transfer observed",
+          "scope": "guarded prefix; no unconditional activation claim"
+        },
+        "coverage": {
+          "status": "FAIL",
+          "passed": false,
+          "reason": "35 expected nodes absent from candidate root reachability",
+          "scope": "global candidate graph, not a local claim that this edge is invalid"
+        },
+        "cycle_checks": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "no cycles in enumerated candidates",
+          "scope": "enumerated graph only; unseen links are unknown"
+        }
+      },
+      "all_diagnostic_checks_pass": false,
+      "unchanged_validator_proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "indirect_prototype_paths": []
+    },
+    {
+      "parent": 664,
+      "child": 506,
+      "descriptor_id": 251,
+      "criteria": {
+        "capture_bounds": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "local indices fit allocation hint, or descriptor empty",
+          "scope": "descriptor and proposed frame only; allocation fit is not ownership"
+        },
+        "upvalue_mappings": {
+          "status": "UNKNOWN",
+          "passed": false,
+          "reason": "no observed owner-to-capture binding",
+          "scope": "descriptor schema"
+        },
+        "child_headers": {
+          "status": "UNKNOWN",
+          "passed": false,
+          "reason": "layout hypothesis/source mask alone does not prove live selection/cache identity",
+          "scope": "candidate bytes"
+        },
+        "control_flow": {
+          "status": "UNKNOWN",
+          "passed": false,
+          "reason": "site not reached before recorded frontier",
+          "scope": "guarded prefix; no unconditional activation claim"
+        },
+        "coverage": {
+          "status": "FAIL",
+          "passed": false,
+          "reason": "35 expected nodes absent from candidate root reachability",
+          "scope": "global candidate graph, not a local claim that this edge is invalid"
+        },
+        "cycle_checks": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "no cycles in enumerated candidates",
+          "scope": "enumerated graph only; unseen links are unknown"
+        }
+      },
+      "all_diagnostic_checks_pass": false,
+      "unchanged_validator_proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "indirect_prototype_paths": []
+    },
+    {
+      "parent": 664,
+      "child": 567,
+      "descriptor_id": 486,
+      "criteria": {
+        "capture_bounds": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "local indices fit allocation hint, or descriptor empty",
+          "scope": "descriptor and proposed frame only; allocation fit is not ownership"
+        },
+        "upvalue_mappings": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "capture ordinals map to recorded frame cells",
+          "scope": "guarded binding"
+        },
+        "child_headers": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "child header read with path-local key at guarded constructor transfer",
+          "scope": "guarded prefix"
+        },
+        "control_flow": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "source transfer observed",
+          "scope": "guarded prefix; no unconditional activation claim"
+        },
+        "coverage": {
+          "status": "FAIL",
+          "passed": false,
+          "reason": "35 expected nodes absent from candidate root reachability",
+          "scope": "global candidate graph, not a local claim that this edge is invalid"
+        },
+        "cycle_checks": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "no cycles in enumerated candidates",
+          "scope": "enumerated graph only; unseen links are unknown"
+        }
+      },
+      "all_diagnostic_checks_pass": false,
+      "unchanged_validator_proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "indirect_prototype_paths": []
+    },
+    {
+      "parent": 664,
+      "child": 663,
+      "descriptor_id": 722,
+      "criteria": {
+        "capture_bounds": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "local indices fit allocation hint, or descriptor empty",
+          "scope": "descriptor and proposed frame only; allocation fit is not ownership"
+        },
+        "upvalue_mappings": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "capture ordinals map to recorded frame cells",
+          "scope": "guarded binding"
+        },
+        "child_headers": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "child header read with path-local key at guarded constructor transfer",
+          "scope": "guarded prefix"
+        },
+        "control_flow": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "source transfer observed",
+          "scope": "guarded prefix; no unconditional activation claim"
+        },
+        "coverage": {
+          "status": "FAIL",
+          "passed": false,
+          "reason": "35 expected nodes absent from candidate root reachability",
+          "scope": "global candidate graph, not a local claim that this edge is invalid"
+        },
+        "cycle_checks": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "no cycles in enumerated candidates",
+          "scope": "enumerated graph only; unseen links are unknown"
+        }
+      },
+      "all_diagnostic_checks_pass": false,
+      "unchanged_validator_proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "indirect_prototype_paths": []
+    },
+    {
+      "parent": 704,
+      "child": 288,
+      "descriptor_id": 299,
+      "criteria": {
+        "capture_bounds": {
+          "status": "UNKNOWN",
+          "passed": false,
+          "reason": "enclosing capture bounds missing",
+          "scope": "descriptor and proposed frame only; allocation fit is not ownership"
+        },
+        "upvalue_mappings": {
+          "status": "UNKNOWN",
+          "passed": false,
+          "reason": "no observed owner-to-capture binding",
+          "scope": "descriptor schema"
+        },
+        "child_headers": {
+          "status": "UNKNOWN",
+          "passed": false,
+          "reason": "layout hypothesis/source mask alone does not prove live selection/cache identity",
+          "scope": "candidate bytes"
+        },
+        "control_flow": {
+          "status": "UNKNOWN",
+          "passed": false,
+          "reason": "site not reached before recorded frontier",
+          "scope": "guarded prefix; no unconditional activation claim"
+        },
+        "coverage": {
+          "status": "FAIL",
+          "passed": false,
+          "reason": "35 expected nodes absent from candidate root reachability",
+          "scope": "global candidate graph, not a local claim that this edge is invalid"
+        },
+        "cycle_checks": {
+          "status": "PASS",
+          "passed": true,
+          "reason": "no cycles in enumerated candidates",
+          "scope": "enumerated graph only; unseen links are unknown"
+        }
+      },
+      "all_diagnostic_checks_pass": false,
+      "unchanged_validator_proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": false,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "indirect_prototype_paths": []
+    }
+  ],
+  "candidate_graph_checks": {
+    "reachable": [
+      258,
+      379,
+      506,
+      567,
+      663,
+      664
+    ],
+    "missing": [
+      136,
+      137,
+      139,
+      191,
+      232,
+      237,
+      243,
+      262,
+      283,
+      288,
+      307,
+      349,
+      361,
+      392,
+      398,
+      402,
+      434,
+      445,
+      516,
+      544,
+      572,
+      593,
+      609,
+      631,
+      647,
+      670,
+      673,
+      679,
+      692,
+      704,
+      711,
+      728,
+      742,
+      747,
+      748
+    ],
+    "cycles": [],
+    "scope": "enumerated candidate graph; candidate reachability is not verified activation"
+  },
+  "copy_order_correction": {
+    "variant": 163,
+    "opcode": 109,
+    "source_offset": 25174,
+    "source": "else T=A[W];t[T],t[T+1]=t[w[W]],t[H[W]];end;end;end;end;else if o>=87",
+    "correct_order": "r[c],r[c+1] = old(r[a]),old(r[b])"
+  },
+  "verified_hierarchy": null,
+  "network_requests": 0,
+  "factory_invocations": 0,
+  "application_calls_executed": 0,
+  "core_string_equations": [
+    {
+      "reference_id": 74,
+      "selected_key": null,
+      "sites": [
+        {
+          "owner": 664,
+          "pc": 981,
+          "variant": 228,
+          "core_decoder": {
+            "kind": "xor_mixer",
+            "equation": "key=4 XOR mix(V_at_site)",
+            "key_domain_inclusive": [
+              0,
+              255
+            ],
+            "state_domain_size": 2048,
+            "state_input_resolved_at_site": false,
+            "decoded_bytes_hex": null
+          },
+          "activation_predicates": [
+            {
+              "predicate": "owner_activation",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "dispatcher_and_unmodified_slot",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "directory_payload_lifecycle",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "cache_hit_or_miss",
+              "status": "UNKNOWN"
+            }
+          ],
+          "frontier_value_may_be_used_at_site": false
+        },
+        {
+          "owner": 664,
+          "pc": 3238,
+          "variant": 228,
+          "core_decoder": {
+            "kind": "direct_xor",
+            "equation": "key=112",
+            "key": 112,
+            "decoded_bytes_hex": "fcd0d1d1dadccbdadb",
+            "utf8": null,
+            "algebra_solved": true,
+            "activation_proved": false
+          },
+          "activation_predicates": [
+            {
+              "predicate": "owner_activation",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "dispatcher_and_unmodified_slot",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "directory_payload_lifecycle",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "cache_hit_or_miss",
+              "status": "UNKNOWN"
+            }
+          ],
+          "frontier_value_may_be_used_at_site": false
+        },
+        {
+          "owner": 402,
+          "pc": 83,
+          "variant": 163,
+          "core_decoder": {
+            "kind": "xor_mixer",
+            "equation": "key=7 XOR mix(y_at_site)",
+            "key_domain_inclusive": [
+              0,
+              255
+            ],
+            "state_domain_size": 2048,
+            "state_input_resolved_at_site": false,
+            "decoded_bytes_hex": null
+          },
+          "activation_predicates": [
+            {
+              "predicate": "owner_activation",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "dispatcher_and_unmodified_slot",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "directory_payload_lifecycle",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "cache_hit_or_miss",
+              "status": "UNKNOWN"
+            }
+          ],
+          "frontier_value_may_be_used_at_site": false
+        }
+      ]
+    },
+    {
+      "reference_id": 141,
+      "selected_key": null,
+      "sites": [
+        {
+          "owner": 664,
+          "pc": 4319,
+          "variant": 228,
+          "core_decoder": {
+            "kind": "direct_xor",
+            "equation": "key=43",
+            "key": 43,
+            "decoded_bytes_hex": "72656164663634",
+            "utf8": "readf64",
+            "algebra_solved": true,
+            "activation_proved": false
+          },
+          "activation_predicates": [
+            {
+              "predicate": "owner_activation",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "dispatcher_and_unmodified_slot",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "directory_payload_lifecycle",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "cache_hit_or_miss",
+              "status": "UNKNOWN"
+            }
+          ],
+          "frontier_value_may_be_used_at_site": false
+        },
+        {
+          "owner": 711,
+          "pc": 269,
+          "variant": 163,
+          "core_decoder": {
+            "kind": "xor_mixer",
+            "equation": "key=2 XOR mix(V_at_site)",
+            "key_domain_inclusive": [
+              0,
+              255
+            ],
+            "state_domain_size": 2048,
+            "state_input_resolved_at_site": false,
+            "decoded_bytes_hex": null
+          },
+          "activation_predicates": [
+            {
+              "predicate": "owner_activation",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "dispatcher_and_unmodified_slot",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "directory_payload_lifecycle",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "cache_hit_or_miss",
+              "status": "UNKNOWN"
+            }
+          ],
+          "frontier_value_may_be_used_at_site": false
+        },
+        {
+          "owner": 593,
+          "pc": 393,
+          "variant": 157,
+          "core_decoder": {
+            "kind": "xor_mixer",
+            "equation": "key=121 XOR mix(y_at_site)",
+            "key_domain_inclusive": [
+              0,
+              255
+            ],
+            "state_domain_size": 2048,
+            "state_input_resolved_at_site": false,
+            "decoded_bytes_hex": null
+          },
+          "activation_predicates": [
+            {
+              "predicate": "owner_activation",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "dispatcher_and_unmodified_slot",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "directory_payload_lifecycle",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "cache_hit_or_miss",
+              "status": "UNKNOWN"
+            }
+          ],
+          "frontier_value_may_be_used_at_site": false
+        }
+      ]
+    },
+    {
+      "reference_id": 160,
+      "selected_key": null,
+      "sites": []
+    },
+    {
+      "reference_id": 196,
+      "selected_key": null,
+      "sites": []
+    },
+    {
+      "reference_id": 203,
+      "selected_key": null,
+      "sites": [
+        {
+          "owner": 664,
+          "pc": 3921,
+          "variant": 157,
+          "core_decoder": {
+            "kind": "direct_xor",
+            "equation": "key=110",
+            "key": 110,
+            "decoded_bytes_hex": "81",
+            "utf8": null,
+            "algebra_solved": true,
+            "activation_proved": false
+          },
+          "activation_predicates": [
+            {
+              "predicate": "owner_activation",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "dispatcher_and_unmodified_slot",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "directory_payload_lifecycle",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "cache_hit_or_miss",
+              "status": "UNKNOWN"
+            }
+          ],
+          "frontier_value_may_be_used_at_site": false
+        },
+        {
+          "owner": 664,
+          "pc": 718,
+          "variant": 228,
+          "core_decoder": {
+            "kind": "direct_xor",
+            "equation": "key=140",
+            "key": 140,
+            "decoded_bytes_hex": "63",
+            "utf8": "c",
+            "algebra_solved": true,
+            "activation_proved": false
+          },
+          "activation_predicates": [
+            {
+              "predicate": "owner_activation",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "dispatcher_and_unmodified_slot",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "directory_payload_lifecycle",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "cache_hit_or_miss",
+              "status": "UNKNOWN"
+            }
+          ],
+          "frontier_value_may_be_used_at_site": false
+        }
+      ]
+    },
+    {
+      "reference_id": 267,
+      "selected_key": null,
+      "sites": [
+        {
+          "owner": 664,
+          "pc": 7083,
+          "variant": 228,
+          "core_decoder": {
+            "kind": "direct_xor",
+            "equation": "key=242",
+            "key": 242,
+            "decoded_bytes_hex": "6c726f74617465",
+            "utf8": "lrotate",
+            "algebra_solved": true,
+            "activation_proved": false
+          },
+          "activation_predicates": [
+            {
+              "predicate": "owner_activation",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "dispatcher_and_unmodified_slot",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "directory_payload_lifecycle",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "cache_hit_or_miss",
+              "status": "UNKNOWN"
+            }
+          ],
+          "frontier_value_may_be_used_at_site": false
+        }
+      ]
+    },
+    {
+      "reference_id": 269,
+      "selected_key": null,
+      "sites": []
+    },
+    {
+      "reference_id": 432,
+      "selected_key": null,
+      "sites": [
+        {
+          "owner": 664,
+          "pc": 7103,
+          "variant": 228,
+          "core_decoder": {
+            "kind": "direct_xor",
+            "equation": "key=2",
+            "key": 2,
+            "decoded_bytes_hex": "66696c6c",
+            "utf8": "fill",
+            "algebra_solved": true,
+            "activation_proved": false
+          },
+          "activation_predicates": [
+            {
+              "predicate": "owner_activation",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "dispatcher_and_unmodified_slot",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "directory_payload_lifecycle",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "cache_hit_or_miss",
+              "status": "UNKNOWN"
+            }
+          ],
+          "frontier_value_may_be_used_at_site": false
+        }
+      ]
+    },
+    {
+      "reference_id": 457,
+      "selected_key": null,
+      "sites": [
+        {
+          "owner": 664,
+          "pc": 5095,
+          "variant": 228,
+          "core_decoder": {
+            "kind": "direct_xor",
+            "equation": "key=169",
+            "key": 169,
+            "decoded_bytes_hex": "726570",
+            "utf8": "rep",
+            "algebra_solved": true,
+            "activation_proved": false
+          },
+          "activation_predicates": [
+            {
+              "predicate": "owner_activation",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "dispatcher_and_unmodified_slot",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "directory_payload_lifecycle",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "cache_hit_or_miss",
+              "status": "UNKNOWN"
+            }
+          ],
+          "frontier_value_may_be_used_at_site": false
+        }
+      ]
+    },
+    {
+      "reference_id": 476,
+      "selected_key": null,
+      "sites": [
+        {
+          "owner": 664,
+          "pc": 4809,
+          "variant": 228,
+          "core_decoder": {
+            "kind": "direct_xor",
+            "equation": "key=80",
+            "key": 80,
+            "decoded_bytes_hex": "7772697465693332",
+            "utf8": "writei32",
+            "algebra_solved": true,
+            "activation_proved": false
+          },
+          "activation_predicates": [
+            {
+              "predicate": "owner_activation",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "dispatcher_and_unmodified_slot",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "directory_payload_lifecycle",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "cache_hit_or_miss",
+              "status": "UNKNOWN"
+            }
+          ],
+          "frontier_value_may_be_used_at_site": false
+        }
+      ]
+    },
+    {
+      "reference_id": 485,
+      "selected_key": null,
+      "sites": [
+        {
+          "owner": 664,
+          "pc": 4810,
+          "variant": 228,
+          "core_decoder": {
+            "kind": "direct_xor",
+            "equation": "key=146",
+            "key": 146,
+            "decoded_bytes_hex": "e1848fe185a8e186bfe18491e185afe18781e18481e185b4e18782e18485e185b5e186bce1848ae185abe186be",
+            "utf8": "\u110f\u1168\u11bf\u1111\u116f\u11c1\u1101\u1174\u11c2\u1105\u1175\u11bc\u110a\u116b\u11be",
+            "algebra_solved": true,
+            "activation_proved": false
+          },
+          "activation_predicates": [
+            {
+              "predicate": "owner_activation",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "dispatcher_and_unmodified_slot",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "directory_payload_lifecycle",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "cache_hit_or_miss",
+              "status": "UNKNOWN"
+            }
+          ],
+          "frontier_value_may_be_used_at_site": false
+        }
+      ]
+    },
+    {
+      "reference_id": 512,
+      "selected_key": null,
+      "sites": []
+    },
+    {
+      "reference_id": 545,
+      "selected_key": null,
+      "sites": []
+    },
+    {
+      "reference_id": 580,
+      "selected_key": null,
+      "sites": []
+    },
+    {
+      "reference_id": 616,
+      "selected_key": null,
+      "sites": []
+    },
+    {
+      "reference_id": 632,
+      "selected_key": null,
+      "sites": []
+    },
+    {
+      "reference_id": 702,
+      "selected_key": null,
+      "sites": [
+        {
+          "owner": 379,
+          "pc": 686,
+          "variant": 228,
+          "core_decoder": {
+            "kind": "xor_mixer",
+            "equation": "key=52 XOR mix(V_at_site)",
+            "key_domain_inclusive": [
+              0,
+              255
+            ],
+            "state_domain_size": 2048,
+            "state_input_resolved_at_site": false,
+            "decoded_bytes_hex": null
+          },
+          "activation_predicates": [
+            {
+              "predicate": "owner_activation",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "dispatcher_and_unmodified_slot",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "directory_payload_lifecycle",
+              "status": "UNKNOWN"
+            },
+            {
+              "predicate": "cache_hit_or_miss",
+              "status": "UNKNOWN"
+            }
+          ],
+          "frontier_value_may_be_used_at_site": false
+        }
+      ]
+    }
+  ],
+  "proxy_overview": [
+    {
+      "parent": 137,
+      "child": 747,
+      "descriptor_id": 58,
+      "factory_slot": 4890,
+      "factory_family": "VM_constructor",
+      "status": "source_family_hypothesis",
+      "path_scope": "possible cache-miss constructor route; not proof that every hop occurred",
+      "cache_hit_alternative": "reuse cached reader/constructor result only after proving cached value identity/type",
+      "indirect_lexical_owner_proved": false
+    },
+    {
+      "parent": 237,
+      "child": 572,
+      "descriptor_id": 181,
+      "factory_slot": 4916,
+      "factory_family": "native_factory_boundary",
+      "status": "source_family_hypothesis",
+      "path_scope": "possible cache-miss constructor route; not proof that every hop occurred",
+      "cache_hit_alternative": "reuse cached reader/constructor result only after proving cached value identity/type",
+      "indirect_lexical_owner_proved": false
+    },
+    {
+      "parent": 664,
+      "child": 258,
+      "descriptor_id": 486,
+      "factory_slot": 4890,
+      "factory_family": "VM_constructor",
+      "status": "guarded_source_transfer",
+      "path_scope": "possible cache-miss constructor route; not proof that every hop occurred",
+      "cache_hit_alternative": "reuse cached reader/constructor result only after proving cached value identity/type",
+      "indirect_lexical_owner_proved": false
+    },
+    {
+      "parent": 664,
+      "child": 379,
+      "descriptor_id": 462,
+      "factory_slot": 4890,
+      "factory_family": "VM_constructor",
+      "status": "guarded_source_transfer",
+      "path_scope": "possible cache-miss constructor route; not proof that every hop occurred",
+      "cache_hit_alternative": "reuse cached reader/constructor result only after proving cached value identity/type",
+      "indirect_lexical_owner_proved": false
+    },
+    {
+      "parent": 664,
+      "child": 506,
+      "descriptor_id": 251,
+      "factory_slot": 4890,
+      "factory_family": "VM_constructor",
+      "status": "source_family_hypothesis",
+      "path_scope": "possible cache-miss constructor route; not proof that every hop occurred",
+      "cache_hit_alternative": "reuse cached reader/constructor result only after proving cached value identity/type",
+      "indirect_lexical_owner_proved": false
+    },
+    {
+      "parent": 664,
+      "child": 567,
+      "descriptor_id": 486,
+      "factory_slot": 4890,
+      "factory_family": "VM_constructor",
+      "status": "guarded_source_transfer",
+      "path_scope": "possible cache-miss constructor route; not proof that every hop occurred",
+      "cache_hit_alternative": "reuse cached reader/constructor result only after proving cached value identity/type",
+      "indirect_lexical_owner_proved": false
+    },
+    {
+      "parent": 664,
+      "child": 663,
+      "descriptor_id": 722,
+      "factory_slot": 4890,
+      "factory_family": "VM_constructor",
+      "status": "guarded_source_transfer",
+      "path_scope": "possible cache-miss constructor route; not proof that every hop occurred",
+      "cache_hit_alternative": "reuse cached reader/constructor result only after proving cached value identity/type",
+      "indirect_lexical_owner_proved": false
+    },
+    {
+      "parent": 704,
+      "child": 288,
+      "descriptor_id": 299,
+      "factory_slot": 4890,
+      "factory_family": "VM_constructor",
+      "status": "source_family_hypothesis",
+      "path_scope": "possible cache-miss constructor route; not proof that every hop occurred",
+      "cache_hit_alternative": "reuse cached reader/constructor result only after proving cached value identity/type",
+      "indirect_lexical_owner_proved": false
+    }
+  ],
+  "verification": "124 Python tests; luac -p AdnHub.lua Loader.lua; git diff --check. No Roblox/payload runtime tests."
+}
