@@ -69,3 +69,18 @@ require it. Do not treat the local Lua 5.1 CLI as Luau.
 The earlier closed audit/handover remains an immutable historical record.
 This phase was reopened by the user's explicit request for a static parser;
 source 2 fetching and dynamic payload execution remain inactive.
+
+## Phase 2 analyzer
+
+```powershell
+python tools/analyzer.py --source output/stage1-vm-source.lua.txt --data output/stage1-vm-data.bin --output output/phase2
+python -m unittest discover -s tools -p "test_*.py" -v
+```
+
+Reads only the two hash-pinned artifacts. Outputs analysis-report.json,
+source-literals.json, binary-printable-runs.json, source-call-candidates.mmd.
+Lexer removes comments/literals from structural matching; supported Lua literal
+escapes are decoded, unsupported escapes remain marked raw. Values over 4096
+characters are truncated explicitly. This is a survey, not a Luau AST/CFG,
+a constant-table decoder, an XOR solver or an opcode mapper. See
+research/static-analysis-2026-10-21/FINDINGS.md for evidence and unresolved fields.

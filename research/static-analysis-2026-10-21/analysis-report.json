@@ -1,0 +1,2751 @@
+{
+  "phase": "static_structure_survey",
+  "network_used": false,
+  "payload_executed": false,
+  "source": {
+    "bytes": 1261603,
+    "sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+    "token_count": 521419,
+    "keyword_counts": {
+      "return": 4920,
+      "function": 4004,
+      "if": 9239,
+      "while": 212,
+      "repeat": 23
+    },
+    "field_candidates": [
+      {
+        "key": "T",
+        "offset": 53,
+        "candidate_interval_end": 354,
+        "candidate_interval_bytes": 301,
+        "method_call_candidates": []
+      },
+      {
+        "key": "A",
+        "offset": 354,
+        "candidate_interval_end": 808,
+        "candidate_interval_bytes": 454,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[106]",
+        "offset": 808,
+        "candidate_interval_end": 954,
+        "candidate_interval_bytes": 146,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[10967]",
+        "offset": 954,
+        "candidate_interval_end": 5920,
+        "candidate_interval_bytes": 4966,
+        "method_call_candidates": [
+          "CreateSection"
+        ]
+      },
+      {
+        "key": "BW",
+        "offset": 5920,
+        "candidate_interval_end": 6276,
+        "candidate_interval_bytes": 356,
+        "method_call_candidates": []
+      },
+      {
+        "key": "jW",
+        "offset": 6276,
+        "candidate_interval_end": 6721,
+        "candidate_interval_bytes": 445,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[13615]",
+        "offset": 6721,
+        "candidate_interval_end": 7596,
+        "candidate_interval_bytes": 875,
+        "method_call_candidates": []
+      },
+      {
+        "key": "F",
+        "offset": 7596,
+        "candidate_interval_end": 7929,
+        "candidate_interval_bytes": 333,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[4890]",
+        "offset": 7929,
+        "candidate_interval_end": 71878,
+        "candidate_interval_bytes": 63949,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[2247]",
+        "offset": 71878,
+        "candidate_interval_end": 73095,
+        "candidate_interval_bytes": 1217,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[8014]",
+        "offset": 73095,
+        "candidate_interval_end": 73244,
+        "candidate_interval_bytes": 149,
+        "method_call_candidates": []
+      },
+      {
+        "key": "MW",
+        "offset": 73244,
+        "candidate_interval_end": 73317,
+        "candidate_interval_bytes": 73,
+        "method_call_candidates": []
+      },
+      {
+        "key": "m",
+        "offset": 73317,
+        "candidate_interval_end": 73789,
+        "candidate_interval_bytes": 472,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[1098]",
+        "offset": 73789,
+        "candidate_interval_end": 95854,
+        "candidate_interval_bytes": 22065,
+        "method_call_candidates": [
+          "CreateSection",
+          "Destroy"
+        ]
+      },
+      {
+        "key": "[35]",
+        "offset": 95854,
+        "candidate_interval_end": 98135,
+        "candidate_interval_bytes": 2281,
+        "method_call_candidates": [
+          "mW"
+        ]
+      },
+      {
+        "key": "mW",
+        "offset": 98135,
+        "candidate_interval_end": 98177,
+        "candidate_interval_bytes": 42,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[9361]",
+        "offset": 98177,
+        "candidate_interval_end": 99097,
+        "candidate_interval_bytes": 920,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[44]",
+        "offset": 99097,
+        "candidate_interval_end": 99224,
+        "candidate_interval_bytes": 127,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[82]",
+        "offset": 99224,
+        "candidate_interval_end": 99439,
+        "candidate_interval_bytes": 215,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[707]",
+        "offset": 99439,
+        "candidate_interval_end": 108231,
+        "candidate_interval_bytes": 8792,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[12934]",
+        "offset": 108231,
+        "candidate_interval_end": 108541,
+        "candidate_interval_bytes": 310,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[3696]",
+        "offset": 108541,
+        "candidate_interval_end": 109333,
+        "candidate_interval_bytes": 792,
+        "method_call_candidates": []
+      },
+      {
+        "key": "y",
+        "offset": 109333,
+        "candidate_interval_end": 109693,
+        "candidate_interval_bytes": 360,
+        "method_call_candidates": []
+      },
+      {
+        "key": "X",
+        "offset": 109693,
+        "candidate_interval_end": 110205,
+        "candidate_interval_bytes": 512,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[16253]",
+        "offset": 110205,
+        "candidate_interval_end": 110491,
+        "candidate_interval_bytes": 286,
+        "method_call_candidates": []
+      },
+      {
+        "key": "TW",
+        "offset": 110491,
+        "candidate_interval_end": 110843,
+        "candidate_interval_bytes": 352,
+        "method_call_candidates": []
+      },
+      {
+        "key": "UW",
+        "offset": 110843,
+        "candidate_interval_end": 111212,
+        "candidate_interval_bytes": 369,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[16069]",
+        "offset": 111212,
+        "candidate_interval_end": 111702,
+        "candidate_interval_bytes": 490,
+        "method_call_candidates": []
+      },
+      {
+        "key": "d",
+        "offset": 111702,
+        "candidate_interval_end": 112172,
+        "candidate_interval_bytes": 470,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[12140]",
+        "offset": 112172,
+        "candidate_interval_end": 112282,
+        "candidate_interval_bytes": 110,
+        "method_call_candidates": []
+      },
+      {
+        "key": "zW",
+        "offset": 112282,
+        "candidate_interval_end": 112771,
+        "candidate_interval_bytes": 489,
+        "method_call_candidates": [
+          "GW"
+        ]
+      },
+      {
+        "key": "[21]",
+        "offset": 112771,
+        "candidate_interval_end": 113194,
+        "candidate_interval_bytes": 423,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[10935]",
+        "offset": 113194,
+        "candidate_interval_end": 114440,
+        "candidate_interval_bytes": 1246,
+        "method_call_candidates": []
+      },
+      {
+        "key": "q",
+        "offset": 114440,
+        "candidate_interval_end": 114949,
+        "candidate_interval_bytes": 509,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[4362]",
+        "offset": 114949,
+        "candidate_interval_end": 123563,
+        "candidate_interval_bytes": 8614,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[13337]",
+        "offset": 123563,
+        "candidate_interval_end": 124439,
+        "candidate_interval_bytes": 876,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[2319]",
+        "offset": 124439,
+        "candidate_interval_end": 124628,
+        "candidate_interval_bytes": 189,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[7261]",
+        "offset": 124628,
+        "candidate_interval_end": 129035,
+        "candidate_interval_bytes": 4407,
+        "method_call_candidates": []
+      },
+      {
+        "key": "DW",
+        "offset": 129035,
+        "candidate_interval_end": 129418,
+        "candidate_interval_bytes": 383,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[1761]",
+        "offset": 129418,
+        "candidate_interval_end": 137374,
+        "candidate_interval_bytes": 7956,
+        "method_call_candidates": []
+      },
+      {
+        "key": "z",
+        "offset": 137374,
+        "candidate_interval_end": 137646,
+        "candidate_interval_bytes": 272,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[6056]",
+        "offset": 137646,
+        "candidate_interval_end": 137944,
+        "candidate_interval_bytes": 298,
+        "method_call_candidates": []
+      },
+      {
+        "key": "e",
+        "offset": 137944,
+        "candidate_interval_end": 138305,
+        "candidate_interval_bytes": 361,
+        "method_call_candidates": []
+      },
+      {
+        "key": "cW",
+        "offset": 138305,
+        "candidate_interval_end": 138371,
+        "candidate_interval_bytes": 66,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[92]",
+        "offset": 138371,
+        "candidate_interval_end": 138573,
+        "candidate_interval_bytes": 202,
+        "method_call_candidates": []
+      },
+      {
+        "key": "B",
+        "offset": 138573,
+        "candidate_interval_end": 138940,
+        "candidate_interval_bytes": 367,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[5075]",
+        "offset": 138940,
+        "candidate_interval_end": 139196,
+        "candidate_interval_bytes": 256,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[62]",
+        "offset": 139196,
+        "candidate_interval_end": 139311,
+        "candidate_interval_bytes": 115,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[4916]",
+        "offset": 139311,
+        "candidate_interval_end": 139648,
+        "candidate_interval_bytes": 337,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[13030]",
+        "offset": 139648,
+        "candidate_interval_end": 174801,
+        "candidate_interval_bytes": 35153,
+        "method_call_candidates": [
+          "Disconnect",
+          "cW",
+          "mW"
+        ]
+      },
+      {
+        "key": "S",
+        "offset": 174801,
+        "candidate_interval_end": 175146,
+        "candidate_interval_bytes": 345,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[80]",
+        "offset": 175146,
+        "candidate_interval_end": 175261,
+        "candidate_interval_bytes": 115,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[7939]",
+        "offset": 175261,
+        "candidate_interval_end": 176161,
+        "candidate_interval_bytes": 900,
+        "method_call_candidates": []
+      },
+      {
+        "key": "XW",
+        "offset": 176161,
+        "candidate_interval_end": 176393,
+        "candidate_interval_bytes": 232,
+        "method_call_candidates": []
+      },
+      {
+        "key": "w",
+        "offset": 176393,
+        "candidate_interval_end": 176431,
+        "candidate_interval_bytes": 38,
+        "method_call_candidates": []
+      },
+      {
+        "key": "Z",
+        "offset": 176431,
+        "candidate_interval_end": 176823,
+        "candidate_interval_bytes": 392,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[111]",
+        "offset": 176823,
+        "candidate_interval_end": 176945,
+        "candidate_interval_bytes": 122,
+        "method_call_candidates": []
+      },
+      {
+        "key": "M",
+        "offset": 176945,
+        "candidate_interval_end": 177405,
+        "candidate_interval_bytes": 460,
+        "method_call_candidates": []
+      },
+      {
+        "key": "tW",
+        "offset": 177405,
+        "candidate_interval_end": 177483,
+        "candidate_interval_bytes": 78,
+        "method_call_candidates": []
+      },
+      {
+        "key": "u",
+        "offset": 177483,
+        "candidate_interval_end": 177865,
+        "candidate_interval_bytes": 382,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[10130]",
+        "offset": 177865,
+        "candidate_interval_end": 180738,
+        "candidate_interval_bytes": 2873,
+        "method_call_candidates": []
+      },
+      {
+        "key": "xW",
+        "offset": 180738,
+        "candidate_interval_end": 181128,
+        "candidate_interval_bytes": 390,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[7458]",
+        "offset": 181128,
+        "candidate_interval_end": 181439,
+        "candidate_interval_bytes": 311,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[120]",
+        "offset": 181439,
+        "candidate_interval_end": 181566,
+        "candidate_interval_bytes": 127,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[81]",
+        "offset": 181566,
+        "candidate_interval_end": 181974,
+        "candidate_interval_bytes": 408,
+        "method_call_candidates": [
+          "FindFirstChild"
+        ]
+      },
+      {
+        "key": "h",
+        "offset": 181974,
+        "candidate_interval_end": 182442,
+        "candidate_interval_bytes": 468,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[7]",
+        "offset": 182442,
+        "candidate_interval_end": 183241,
+        "candidate_interval_bytes": 799,
+        "method_call_candidates": []
+      },
+      {
+        "key": "aW",
+        "offset": 183241,
+        "candidate_interval_end": 183696,
+        "candidate_interval_bytes": 455,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[6229]",
+        "offset": 183696,
+        "candidate_interval_end": 188767,
+        "candidate_interval_bytes": 5071,
+        "method_call_candidates": [
+          "mW"
+        ]
+      },
+      {
+        "key": "HW",
+        "offset": 188767,
+        "candidate_interval_end": 189093,
+        "candidate_interval_bytes": 326,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[10338]",
+        "offset": 189093,
+        "candidate_interval_end": 189685,
+        "candidate_interval_bytes": 592,
+        "method_call_candidates": []
+      },
+      {
+        "key": "c",
+        "offset": 189685,
+        "candidate_interval_end": 189985,
+        "candidate_interval_bytes": 300,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[6850]",
+        "offset": 189985,
+        "candidate_interval_end": 190313,
+        "candidate_interval_bytes": 328,
+        "method_call_candidates": [
+          "Lerp"
+        ]
+      },
+      {
+        "key": "[5433]",
+        "offset": 190313,
+        "candidate_interval_end": 190416,
+        "candidate_interval_bytes": 103,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[13747]",
+        "offset": 190416,
+        "candidate_interval_end": 205900,
+        "candidate_interval_bytes": 15484,
+        "method_call_candidates": [
+          "IsA"
+        ]
+      },
+      {
+        "key": "sW",
+        "offset": 205900,
+        "candidate_interval_end": 206142,
+        "candidate_interval_bytes": 242,
+        "method_call_candidates": [
+          "v"
+        ]
+      },
+      {
+        "key": "[49]",
+        "offset": 206142,
+        "candidate_interval_end": 206357,
+        "candidate_interval_bytes": 215,
+        "method_call_candidates": []
+      },
+      {
+        "key": "qW",
+        "offset": 206357,
+        "candidate_interval_end": 206424,
+        "candidate_interval_bytes": 67,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[9997]",
+        "offset": 206424,
+        "candidate_interval_end": 219094,
+        "candidate_interval_bytes": 12670,
+        "method_call_candidates": [
+          "cW"
+        ]
+      },
+      {
+        "key": "FW",
+        "offset": 219094,
+        "candidate_interval_end": 219478,
+        "candidate_interval_bytes": 384,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[9]",
+        "offset": 219478,
+        "candidate_interval_end": 219724,
+        "candidate_interval_bytes": 246,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[119]",
+        "offset": 219724,
+        "candidate_interval_end": 219871,
+        "candidate_interval_bytes": 147,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[1625]",
+        "offset": 219871,
+        "candidate_interval_end": 224007,
+        "candidate_interval_bytes": 4136,
+        "method_call_candidates": [
+          "mW"
+        ]
+      },
+      {
+        "key": "[2428]",
+        "offset": 224007,
+        "candidate_interval_end": 224632,
+        "candidate_interval_bytes": 625,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[6001]",
+        "offset": 224632,
+        "candidate_interval_end": 225771,
+        "candidate_interval_bytes": 1139,
+        "method_call_candidates": [
+          "Disconnect"
+        ]
+      },
+      {
+        "key": "[11468]",
+        "offset": 225771,
+        "candidate_interval_end": 233486,
+        "candidate_interval_bytes": 7715,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[2212]",
+        "offset": 233486,
+        "candidate_interval_end": 237114,
+        "candidate_interval_bytes": 3628,
+        "method_call_candidates": [
+          "mW"
+        ]
+      },
+      {
+        "key": "[26]",
+        "offset": 237114,
+        "candidate_interval_end": 240255,
+        "candidate_interval_bytes": 3141,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[2048]",
+        "offset": 240255,
+        "candidate_interval_end": 242737,
+        "candidate_interval_bytes": 2482,
+        "method_call_candidates": [
+          "GW"
+        ]
+      },
+      {
+        "key": "a",
+        "offset": 242737,
+        "candidate_interval_end": 243118,
+        "candidate_interval_bytes": 381,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[2581]",
+        "offset": 243118,
+        "candidate_interval_end": 243233,
+        "candidate_interval_bytes": 115,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[10254]",
+        "offset": 243233,
+        "candidate_interval_end": 337546,
+        "candidate_interval_bytes": 94313,
+        "method_call_candidates": [
+          "FindFirstChild",
+          "HW",
+          "IsA",
+          "cW",
+          "mW",
+          "nW"
+        ]
+      },
+      {
+        "key": "[7113]",
+        "offset": 337546,
+        "candidate_interval_end": 347409,
+        "candidate_interval_bytes": 9863,
+        "method_call_candidates": [
+          "GetTextBoundsAsync"
+        ]
+      },
+      {
+        "key": "v",
+        "offset": 347409,
+        "candidate_interval_end": 363026,
+        "candidate_interval_bytes": 15617,
+        "method_call_candidates": [
+          "DW",
+          "KW",
+          "QW",
+          "UW",
+          "iW",
+          "oW",
+          "rW",
+          "wW",
+          "zW"
+        ]
+      },
+      {
+        "key": "[13182]",
+        "offset": 363026,
+        "candidate_interval_end": 363289,
+        "candidate_interval_bytes": 263,
+        "method_call_candidates": [
+          "FindFirstChild",
+          "FindFirstChildWhichIsA"
+        ]
+      },
+      {
+        "key": "[15291]",
+        "offset": 363289,
+        "candidate_interval_end": 396944,
+        "candidate_interval_bytes": 33655,
+        "method_call_candidates": [
+          "Disconnect",
+          "GetAttribute",
+          "PivotTo",
+          "mW"
+        ]
+      },
+      {
+        "key": "[13796]",
+        "offset": 396944,
+        "candidate_interval_end": 401908,
+        "candidate_interval_bytes": 4964,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[7455]",
+        "offset": 401908,
+        "candidate_interval_end": 408257,
+        "candidate_interval_bytes": 6349,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[117]",
+        "offset": 408257,
+        "candidate_interval_end": 408402,
+        "candidate_interval_bytes": 145,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[124]",
+        "offset": 408402,
+        "candidate_interval_end": 423423,
+        "candidate_interval_bytes": 15021,
+        "method_call_candidates": [
+          "cW"
+        ]
+      },
+      {
+        "key": "[15341]",
+        "offset": 423423,
+        "candidate_interval_end": 427226,
+        "candidate_interval_bytes": 3803,
+        "method_call_candidates": [
+          "FindFirstChildOfClass"
+        ]
+      },
+      {
+        "key": "KW",
+        "offset": 427226,
+        "candidate_interval_end": 427711,
+        "candidate_interval_bytes": 485,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[3772]",
+        "offset": 427711,
+        "candidate_interval_end": 428557,
+        "candidate_interval_bytes": 846,
+        "method_call_candidates": []
+      },
+      {
+        "key": "AW",
+        "offset": 428557,
+        "candidate_interval_end": 428864,
+        "candidate_interval_bytes": 307,
+        "method_call_candidates": []
+      },
+      {
+        "key": "t",
+        "offset": 428864,
+        "candidate_interval_end": 429345,
+        "candidate_interval_bytes": 481,
+        "method_call_candidates": []
+      },
+      {
+        "key": "Q",
+        "offset": 429345,
+        "candidate_interval_end": 429397,
+        "candidate_interval_bytes": 52,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[499]",
+        "offset": 429397,
+        "candidate_interval_end": 431086,
+        "candidate_interval_bytes": 1689,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[7474]",
+        "offset": 431086,
+        "candidate_interval_end": 431414,
+        "candidate_interval_bytes": 328,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[127]",
+        "offset": 431414,
+        "candidate_interval_end": 431765,
+        "candidate_interval_bytes": 351,
+        "method_call_candidates": []
+      },
+      {
+        "key": "p",
+        "offset": 431765,
+        "candidate_interval_end": 432180,
+        "candidate_interval_bytes": 415,
+        "method_call_candidates": []
+      },
+      {
+        "key": "GW",
+        "offset": 432180,
+        "candidate_interval_end": 434794,
+        "candidate_interval_bytes": 2614,
+        "method_call_candidates": [
+          "A",
+          "B",
+          "C",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "L",
+          "M",
+          "N",
+          "P",
+          "R",
+          "S",
+          "T",
+          "X",
+          "Y",
+          "Z",
+          "_",
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "j",
+          "k",
+          "l",
+          "m",
+          "n",
+          "o",
+          "p",
+          "q",
+          "r",
+          "s",
+          "t",
+          "u",
+          "x",
+          "y",
+          "z"
+        ]
+      },
+      {
+        "key": "[77]",
+        "offset": 434794,
+        "candidate_interval_end": 435109,
+        "candidate_interval_bytes": 315,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[32]",
+        "offset": 435109,
+        "candidate_interval_end": 435224,
+        "candidate_interval_bytes": 115,
+        "method_call_candidates": []
+      },
+      {
+        "key": "G",
+        "offset": 435224,
+        "candidate_interval_end": 435703,
+        "candidate_interval_bytes": 479,
+        "method_call_candidates": []
+      },
+      {
+        "key": "k",
+        "offset": 435703,
+        "candidate_interval_end": 436009,
+        "candidate_interval_bytes": 306,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[1968]",
+        "offset": 436009,
+        "candidate_interval_end": 441287,
+        "candidate_interval_bytes": 5278,
+        "method_call_candidates": [
+          "mW"
+        ]
+      },
+      {
+        "key": "g",
+        "offset": 441287,
+        "candidate_interval_end": 441705,
+        "candidate_interval_bytes": 418,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[4058]",
+        "offset": 441705,
+        "candidate_interval_end": 442763,
+        "candidate_interval_bytes": 1058,
+        "method_call_candidates": []
+      },
+      {
+        "key": "CW",
+        "offset": 442763,
+        "candidate_interval_end": 443531,
+        "candidate_interval_bytes": 768,
+        "method_call_candidates": [
+          "AW",
+          "BW",
+          "FW",
+          "MW",
+          "TW",
+          "XW",
+          "aW",
+          "jW",
+          "mW",
+          "sW",
+          "uW",
+          "xW"
+        ]
+      },
+      {
+        "key": "[5605]",
+        "offset": 443531,
+        "candidate_interval_end": 443776,
+        "candidate_interval_bytes": 245,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[10955]",
+        "offset": 443776,
+        "candidate_interval_end": 457254,
+        "candidate_interval_bytes": 13478,
+        "method_call_candidates": [
+          "Disconnect",
+          "cW",
+          "mW"
+        ]
+      },
+      {
+        "key": "[16158]",
+        "offset": 457254,
+        "candidate_interval_end": 459020,
+        "candidate_interval_bytes": 1766,
+        "method_call_candidates": []
+      },
+      {
+        "key": "I",
+        "offset": 459020,
+        "candidate_interval_end": 459327,
+        "candidate_interval_bytes": 307,
+        "method_call_candidates": []
+      },
+      {
+        "key": "j",
+        "offset": 459327,
+        "candidate_interval_end": 459789,
+        "candidate_interval_bytes": 462,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[12969]",
+        "offset": 459789,
+        "candidate_interval_end": 468974,
+        "candidate_interval_bytes": 9185,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[112]",
+        "offset": 468974,
+        "candidate_interval_end": 469123,
+        "candidate_interval_bytes": 149,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[61]",
+        "offset": 469123,
+        "candidate_interval_end": 469475,
+        "candidate_interval_bytes": 352,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[110]",
+        "offset": 469475,
+        "candidate_interval_end": 471035,
+        "candidate_interval_bytes": 1560,
+        "method_call_candidates": [
+          "mW"
+        ]
+      },
+      {
+        "key": "[2]",
+        "offset": 471035,
+        "candidate_interval_end": 471178,
+        "candidate_interval_bytes": 143,
+        "method_call_candidates": []
+      },
+      {
+        "key": "l",
+        "offset": 471178,
+        "candidate_interval_end": 471331,
+        "candidate_interval_bytes": 153,
+        "method_call_candidates": []
+      },
+      {
+        "key": "L",
+        "offset": 471331,
+        "candidate_interval_end": 471839,
+        "candidate_interval_bytes": 508,
+        "method_call_candidates": []
+      },
+      {
+        "key": "x",
+        "offset": 471839,
+        "candidate_interval_end": 472198,
+        "candidate_interval_bytes": 359,
+        "method_call_candidates": []
+      },
+      {
+        "key": "H",
+        "offset": 472198,
+        "candidate_interval_end": 472767,
+        "candidate_interval_bytes": 569,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[38]",
+        "offset": 472767,
+        "candidate_interval_end": 473477,
+        "candidate_interval_bytes": 710,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[86]",
+        "offset": 473477,
+        "candidate_interval_end": 473620,
+        "candidate_interval_bytes": 143,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[27]",
+        "offset": 473620,
+        "candidate_interval_end": 473753,
+        "candidate_interval_bytes": 133,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[11288]",
+        "offset": 473753,
+        "candidate_interval_end": 477196,
+        "candidate_interval_bytes": 3443,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[5353]",
+        "offset": 477196,
+        "candidate_interval_end": 477377,
+        "candidate_interval_bytes": 181,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[11412]",
+        "offset": 477377,
+        "candidate_interval_end": 497001,
+        "candidate_interval_bytes": 19624,
+        "method_call_candidates": [
+          "cW",
+          "mW"
+        ]
+      },
+      {
+        "key": "K",
+        "offset": 497001,
+        "candidate_interval_end": 507861,
+        "candidate_interval_bytes": 10860,
+        "method_call_candidates": []
+      },
+      {
+        "key": "TJ",
+        "offset": 507861,
+        "candidate_interval_end": 509944,
+        "candidate_interval_bytes": 2083,
+        "method_call_candidates": [
+          "GetPropertyChangedSignal",
+          "cW"
+        ]
+      },
+      {
+        "key": "[9832]",
+        "offset": 509944,
+        "candidate_interval_end": 517482,
+        "candidate_interval_bytes": 7538,
+        "method_call_candidates": [
+          "Disconnect",
+          "mW"
+        ]
+      },
+      {
+        "key": "[11]",
+        "offset": 517482,
+        "candidate_interval_end": 592049,
+        "candidate_interval_bytes": 74567,
+        "method_call_candidates": [
+          "cW",
+          "mW",
+          "qW"
+        ]
+      },
+      {
+        "key": "gJ",
+        "offset": 592049,
+        "candidate_interval_end": 594707,
+        "candidate_interval_bytes": 2658,
+        "method_call_candidates": []
+      },
+      {
+        "key": "tJ",
+        "offset": 594707,
+        "candidate_interval_end": 614829,
+        "candidate_interval_bytes": 20122,
+        "method_call_candidates": [
+          "mW"
+        ]
+      },
+      {
+        "key": "b9",
+        "offset": 614829,
+        "candidate_interval_end": 616234,
+        "candidate_interval_bytes": 1405,
+        "method_call_candidates": []
+      },
+      {
+        "key": "x9",
+        "offset": 616234,
+        "candidate_interval_end": 616454,
+        "candidate_interval_bytes": 220,
+        "method_call_candidates": []
+      },
+      {
+        "key": "W9",
+        "offset": 616454,
+        "candidate_interval_end": 830949,
+        "candidate_interval_bytes": 214495,
+        "method_call_candidates": [
+          "cW"
+        ]
+      },
+      {
+        "key": "[3073]",
+        "offset": 830949,
+        "candidate_interval_end": 831462,
+        "candidate_interval_bytes": 513,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[12957]",
+        "offset": 831462,
+        "candidate_interval_end": 834573,
+        "candidate_interval_bytes": 3111,
+        "method_call_candidates": [
+          "CreateToggle"
+        ]
+      },
+      {
+        "key": "[65]",
+        "offset": 834573,
+        "candidate_interval_end": 834699,
+        "candidate_interval_bytes": 126,
+        "method_call_candidates": []
+      },
+      {
+        "key": "rW",
+        "offset": 834699,
+        "candidate_interval_end": 835172,
+        "candidate_interval_bytes": 473,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[784]",
+        "offset": 835172,
+        "candidate_interval_end": 835364,
+        "candidate_interval_bytes": 192,
+        "method_call_candidates": []
+      },
+      {
+        "key": "R",
+        "offset": 835364,
+        "candidate_interval_end": 835881,
+        "candidate_interval_bytes": 517,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[2357]",
+        "offset": 835881,
+        "candidate_interval_end": 836251,
+        "candidate_interval_bytes": 370,
+        "method_call_candidates": []
+      },
+      {
+        "key": "_",
+        "offset": 836251,
+        "candidate_interval_end": 836698,
+        "candidate_interval_bytes": 447,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[14302]",
+        "offset": 836698,
+        "candidate_interval_end": 849956,
+        "candidate_interval_bytes": 13258,
+        "method_call_candidates": [
+          "cW"
+        ]
+      },
+      {
+        "key": "[14999]",
+        "offset": 849956,
+        "candidate_interval_end": 858633,
+        "candidate_interval_bytes": 8677,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[4267]",
+        "offset": 858633,
+        "candidate_interval_end": 873338,
+        "candidate_interval_bytes": 14705,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[838]",
+        "offset": 873338,
+        "candidate_interval_end": 980332,
+        "candidate_interval_bytes": 106994,
+        "method_call_candidates": [
+          "CreateButton",
+          "CreateDropdown",
+          "CreateText",
+          "cW",
+          "mW",
+          "match"
+        ]
+      },
+      {
+        "key": "nW",
+        "offset": 980332,
+        "candidate_interval_end": 980524,
+        "candidate_interval_bytes": 192,
+        "method_call_candidates": []
+      },
+      {
+        "key": "uW",
+        "offset": 980524,
+        "candidate_interval_end": 980881,
+        "candidate_interval_bytes": 357,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[84]",
+        "offset": 980881,
+        "candidate_interval_end": 981035,
+        "candidate_interval_bytes": 154,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[13496]",
+        "offset": 981035,
+        "candidate_interval_end": 981616,
+        "candidate_interval_bytes": 581,
+        "method_call_candidates": []
+      },
+      {
+        "key": "Y",
+        "offset": 981616,
+        "candidate_interval_end": 981867,
+        "candidate_interval_bytes": 251,
+        "method_call_candidates": []
+      },
+      {
+        "key": "s",
+        "offset": 981867,
+        "candidate_interval_end": 982363,
+        "candidate_interval_bytes": 496,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[8749]",
+        "offset": 982363,
+        "candidate_interval_end": 982563,
+        "candidate_interval_bytes": 200,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[5355]",
+        "offset": 982563,
+        "candidate_interval_end": 982897,
+        "candidate_interval_bytes": 334,
+        "method_call_candidates": []
+      },
+      {
+        "key": "fW",
+        "offset": 982897,
+        "candidate_interval_end": 983348,
+        "candidate_interval_bytes": 451,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[58]",
+        "offset": 983348,
+        "candidate_interval_end": 985713,
+        "candidate_interval_bytes": 2365,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[10467]",
+        "offset": 985713,
+        "candidate_interval_end": 991271,
+        "candidate_interval_bytes": 5558,
+        "method_call_candidates": [
+          "FindFirstChild"
+        ]
+      },
+      {
+        "key": "[15278]",
+        "offset": 991271,
+        "candidate_interval_end": 1001739,
+        "candidate_interval_bytes": 10468,
+        "method_call_candidates": [
+          "mW"
+        ]
+      },
+      {
+        "key": "[7008]",
+        "offset": 1001739,
+        "candidate_interval_end": 1001884,
+        "candidate_interval_bytes": 145,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[10618]",
+        "offset": 1001884,
+        "candidate_interval_end": 1002786,
+        "candidate_interval_bytes": 902,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[7643]",
+        "offset": 1002786,
+        "candidate_interval_end": 1003027,
+        "candidate_interval_bytes": 241,
+        "method_call_candidates": [
+          "FindFirstChild"
+        ]
+      },
+      {
+        "key": "iW",
+        "offset": 1003027,
+        "candidate_interval_end": 1003144,
+        "candidate_interval_bytes": 117,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[278]",
+        "offset": 1003144,
+        "candidate_interval_end": 1003374,
+        "candidate_interval_bytes": 230,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[14]",
+        "offset": 1003374,
+        "candidate_interval_end": 1026785,
+        "candidate_interval_bytes": 23411,
+        "method_call_candidates": [
+          "FindFirstChild",
+          "FindFirstChildOfClass",
+          "cW",
+          "mW"
+        ]
+      },
+      {
+        "key": "[4415]",
+        "offset": 1026785,
+        "candidate_interval_end": 1045210,
+        "candidate_interval_bytes": 18425,
+        "method_call_candidates": [
+          "mW"
+        ]
+      },
+      {
+        "key": "E",
+        "offset": 1045210,
+        "candidate_interval_end": 1045453,
+        "candidate_interval_bytes": 243,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[6326]",
+        "offset": 1045453,
+        "candidate_interval_end": 1051107,
+        "candidate_interval_bytes": 5654,
+        "method_call_candidates": []
+      },
+      {
+        "key": "_",
+        "offset": 1051107,
+        "candidate_interval_end": 1085173,
+        "candidate_interval_bytes": 34066,
+        "method_call_candidates": [
+          "Set",
+          "cW",
+          "mW"
+        ]
+      },
+      {
+        "key": "N",
+        "offset": 1085173,
+        "candidate_interval_end": 1085473,
+        "candidate_interval_bytes": 300,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[15]",
+        "offset": 1085473,
+        "candidate_interval_end": 1085949,
+        "candidate_interval_bytes": 476,
+        "method_call_candidates": []
+      },
+      {
+        "key": "P",
+        "offset": 1085949,
+        "candidate_interval_end": 1086109,
+        "candidate_interval_bytes": 160,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[14148]",
+        "offset": 1086109,
+        "candidate_interval_end": 1086316,
+        "candidate_interval_bytes": 207,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[4091]",
+        "offset": 1086316,
+        "candidate_interval_end": 1086682,
+        "candidate_interval_bytes": 366,
+        "method_call_candidates": []
+      },
+      {
+        "key": "oW",
+        "offset": 1086682,
+        "candidate_interval_end": 1086874,
+        "candidate_interval_bytes": 192,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[4263]",
+        "offset": 1086874,
+        "candidate_interval_end": 1091306,
+        "candidate_interval_bytes": 4432,
+        "method_call_candidates": []
+      },
+      {
+        "key": "z",
+        "offset": 1091306,
+        "candidate_interval_end": 1093023,
+        "candidate_interval_bytes": 1717,
+        "method_call_candidates": [
+          "IsA"
+        ]
+      },
+      {
+        "key": "[498]",
+        "offset": 1093023,
+        "candidate_interval_end": 1115005,
+        "candidate_interval_bytes": 21982,
+        "method_call_candidates": [
+          "Disconnect",
+          "mW"
+        ]
+      },
+      {
+        "key": "[524]",
+        "offset": 1115005,
+        "candidate_interval_end": 1115109,
+        "candidate_interval_bytes": 104,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[14245]",
+        "offset": 1115109,
+        "candidate_interval_end": 1129190,
+        "candidate_interval_bytes": 14081,
+        "method_call_candidates": [
+          "CreateText",
+          "CreateToggle"
+        ]
+      },
+      {
+        "key": "[72]",
+        "offset": 1129190,
+        "candidate_interval_end": 1130792,
+        "candidate_interval_bytes": 1602,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[43]",
+        "offset": 1130792,
+        "candidate_interval_end": 1137687,
+        "candidate_interval_bytes": 6895,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[12623]",
+        "offset": 1137687,
+        "candidate_interval_end": 1162516,
+        "candidate_interval_bytes": 24829,
+        "method_call_candidates": [
+          "cW"
+        ]
+      },
+      {
+        "key": "i",
+        "offset": 1162516,
+        "candidate_interval_end": 1162551,
+        "candidate_interval_bytes": 35,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[16064]",
+        "offset": 1162551,
+        "candidate_interval_end": 1178541,
+        "candidate_interval_bytes": 15990,
+        "method_call_candidates": [
+          "CreateToggle"
+        ]
+      },
+      {
+        "key": "[4327]",
+        "offset": 1178541,
+        "candidate_interval_end": 1218941,
+        "candidate_interval_bytes": 40400,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[19]",
+        "offset": 1218941,
+        "candidate_interval_end": 1219079,
+        "candidate_interval_bytes": 138,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[121]",
+        "offset": 1219079,
+        "candidate_interval_end": 1219191,
+        "candidate_interval_bytes": 112,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[14710]",
+        "offset": 1219191,
+        "candidate_interval_end": 1223024,
+        "candidate_interval_bytes": 3833,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[5620]",
+        "offset": 1223024,
+        "candidate_interval_end": 1227304,
+        "candidate_interval_bytes": 4280,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[9244]",
+        "offset": 1227304,
+        "candidate_interval_end": 1230958,
+        "candidate_interval_bytes": 3654,
+        "method_call_candidates": [
+          "mW"
+        ]
+      },
+      {
+        "key": "[5471]",
+        "offset": 1230958,
+        "candidate_interval_end": 1232576,
+        "candidate_interval_bytes": 1618,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[8481]",
+        "offset": 1232576,
+        "candidate_interval_end": 1235975,
+        "candidate_interval_bytes": 3399,
+        "method_call_candidates": []
+      },
+      {
+        "key": "C",
+        "offset": 1235975,
+        "candidate_interval_end": 1236307,
+        "candidate_interval_bytes": 332,
+        "method_call_candidates": []
+      },
+      {
+        "key": "J",
+        "offset": 1236307,
+        "candidate_interval_end": 1236764,
+        "candidate_interval_bytes": 457,
+        "method_call_candidates": []
+      },
+      {
+        "key": "n",
+        "offset": 1236764,
+        "candidate_interval_end": 1237150,
+        "candidate_interval_bytes": 386,
+        "method_call_candidates": []
+      },
+      {
+        "key": "o",
+        "offset": 1237150,
+        "candidate_interval_end": 1237267,
+        "candidate_interval_bytes": 117,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[5]",
+        "offset": 1237267,
+        "candidate_interval_end": 1237401,
+        "candidate_interval_bytes": 134,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[4]",
+        "offset": 1237401,
+        "candidate_interval_end": 1237576,
+        "candidate_interval_bytes": 175,
+        "method_call_candidates": []
+      },
+      {
+        "key": "QW",
+        "offset": 1237576,
+        "candidate_interval_end": 1238010,
+        "candidate_interval_bytes": 434,
+        "method_call_candidates": []
+      },
+      {
+        "key": "wW",
+        "offset": 1238010,
+        "candidate_interval_end": 1238105,
+        "candidate_interval_bytes": 95,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[682]",
+        "offset": 1238105,
+        "candidate_interval_end": 1238377,
+        "candidate_interval_bytes": 272,
+        "method_call_candidates": []
+      },
+      {
+        "key": "r",
+        "offset": 1238377,
+        "candidate_interval_end": 1238652,
+        "candidate_interval_bytes": 275,
+        "method_call_candidates": []
+      },
+      {
+        "key": "b",
+        "offset": 1238652,
+        "candidate_interval_end": 1239005,
+        "candidate_interval_bytes": 353,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[3416]",
+        "offset": 1239005,
+        "candidate_interval_end": 1259564,
+        "candidate_interval_bytes": 20559,
+        "method_call_candidates": [
+          "Disconnect",
+          "cW"
+        ]
+      },
+      {
+        "key": "f",
+        "offset": 1259564,
+        "candidate_interval_end": 1259923,
+        "candidate_interval_bytes": 359,
+        "method_call_candidates": []
+      },
+      {
+        "key": "[5896]",
+        "offset": 1259923,
+        "candidate_interval_end": 1261603,
+        "candidate_interval_bytes": 1680,
+        "method_call_candidates": []
+      }
+    ],
+    "api_alias_candidates": [
+      {
+        "key": "[96]",
+        "api": "buffer.writef32",
+        "offset": 32
+      },
+      {
+        "key": "[24]",
+        "api": "bit32.rshift",
+        "offset": 936
+      },
+      {
+        "key": "[12]",
+        "api": "buffer.writeu16",
+        "offset": 5899
+      },
+      {
+        "key": "[123]",
+        "api": "string.format",
+        "offset": 7909
+      },
+      {
+        "key": "[55]",
+        "api": "buffer.copy",
+        "offset": 73078
+      },
+      {
+        "key": "[68]",
+        "api": "bit32.bnot",
+        "offset": 108504
+      },
+      {
+        "key": "[85]",
+        "api": "buffer.tostring",
+        "offset": 108520
+      },
+      {
+        "key": "[41]",
+        "api": "string.unpack",
+        "offset": 111193
+      },
+      {
+        "key": "[57]",
+        "api": "bit32.countrz",
+        "offset": 112263
+      },
+      {
+        "key": "[29]",
+        "api": "table.insert",
+        "offset": 114422
+      },
+      {
+        "key": "[3]",
+        "api": "coroutine.isyieldable",
+        "offset": 124401
+      },
+      {
+        "key": "[6]",
+        "api": "coroutine.running",
+        "offset": 138551
+      },
+      {
+        "key": "[118]",
+        "api": "coroutine.close",
+        "offset": 139610
+      },
+      {
+        "key": "[54]",
+        "api": "string.rep",
+        "offset": 139632
+      },
+      {
+        "key": "[126]",
+        "api": "buffer.writei32",
+        "offset": 176756
+      },
+      {
+        "key": "[71]",
+        "api": "buffer.readf32",
+        "offset": 176778
+      },
+      {
+        "key": "[75]",
+        "api": "buffer.readi8",
+        "offset": 176804
+      },
+      {
+        "key": "[102]",
+        "api": "bit32.lshift",
+        "offset": 183222
+      },
+      {
+        "key": "[125]",
+        "api": "coroutine.resume",
+        "offset": 189070
+      },
+      {
+        "key": "[42]",
+        "api": "string.gmatch",
+        "offset": 189654
+      },
+      {
+        "key": "[46]",
+        "api": "buffer.readu8",
+        "offset": 206107
+      },
+      {
+        "key": "[88]",
+        "api": "table.pack",
+        "offset": 206126
+      },
+      {
+        "key": "[95]",
+        "api": "string.gsub",
+        "offset": 206340
+      },
+      {
+        "key": "[13]",
+        "api": "buffer.readu16",
+        "offset": 219045
+      },
+      {
+        "key": "[10]",
+        "api": "bit32.lrotate",
+        "offset": 219065
+      },
+      {
+        "key": "[20]",
+        "api": "bit32.bxor",
+        "offset": 233470
+      },
+      {
+        "key": "[34]",
+        "api": "table.create",
+        "offset": 240237
+      },
+      {
+        "key": "[52]",
+        "api": "buffer.writebits",
+        "offset": 401867
+      },
+      {
+        "key": "[8]",
+        "api": "buffer.readu32",
+        "offset": 401889
+      },
+      {
+        "key": "[18]",
+        "api": "table.move",
+        "offset": 429381
+      },
+      {
+        "key": "[33]",
+        "api": "buffer.writei16",
+        "offset": 432159
+      },
+      {
+        "key": "[78]",
+        "api": "buffer.fill",
+        "offset": 435092
+      },
+      {
+        "key": "[69]",
+        "api": "buffer.writeu32",
+        "offset": 441266
+      },
+      {
+        "key": "[101]",
+        "api": "string.find",
+        "offset": 442745
+      },
+      {
+        "key": "[56]",
+        "api": "coroutine.status",
+        "offset": 443754
+      },
+      {
+        "key": "[47]",
+        "api": "buffer.readbits",
+        "offset": 469102
+      },
+      {
+        "key": "[99]",
+        "api": "bit32.band",
+        "offset": 471162
+      },
+      {
+        "key": "[0]",
+        "api": "string.byte",
+        "offset": 473461
+      },
+      {
+        "key": "[60]",
+        "api": "bit32.countlz",
+        "offset": 473734
+      },
+      {
+        "key": "[48]",
+        "api": "buffer.fromstring",
+        "offset": 517459
+      },
+      {
+        "key": "[105]",
+        "api": "string.char",
+        "offset": 836233
+      },
+      {
+        "key": "[28]",
+        "api": "buffer.writestring",
+        "offset": 836674
+      },
+      {
+        "key": "[73]",
+        "api": "bit32.bor",
+        "offset": 873276
+      },
+      {
+        "key": "[22]",
+        "api": "coroutine.create",
+        "offset": 873291
+      },
+      {
+        "key": "[67]",
+        "api": "buffer.create",
+        "offset": 982544
+      },
+      {
+        "key": "[74]",
+        "api": "buffer.writeu8",
+        "offset": 982877
+      },
+      {
+        "key": "[93]",
+        "api": "buffer.readi16",
+        "offset": 983328
+      },
+      {
+        "key": "[39]",
+        "api": "buffer.readi32",
+        "offset": 1003295
+      },
+      {
+        "key": "[113]",
+        "api": "coroutine.wrap",
+        "offset": 1003315
+      },
+      {
+        "key": "[45]",
+        "api": "coroutine.yield",
+        "offset": 1003336
+      },
+      {
+        "key": "[107]",
+        "api": "buffer.len",
+        "offset": 1003357
+      },
+      {
+        "key": "[30]",
+        "api": "string.match",
+        "offset": 1086298
+      },
+      {
+        "key": "[23]",
+        "api": "bit32.rrotate",
+        "offset": 1162497
+      },
+      {
+        "key": "[79]",
+        "api": "buffer.readstring",
+        "offset": 1178504
+      },
+      {
+        "key": "[50]",
+        "api": "string.sub",
+        "offset": 1227288
+      },
+      {
+        "key": "[87]",
+        "api": "table.clear",
+        "offset": 1237127
+      },
+      {
+        "key": "[17]",
+        "api": "buffer.writei8",
+        "offset": 1237517
+      },
+      {
+        "key": "[16]",
+        "api": "buffer.writef64",
+        "offset": 1237537
+      },
+      {
+        "key": "[63]",
+        "api": "table.concat",
+        "offset": 1237558
+      },
+      {
+        "key": "[116]",
+        "api": "string.pack",
+        "offset": 1237992
+      },
+      {
+        "key": "[122]",
+        "api": "buffer.readf64",
+        "offset": 1238984
+      }
+    ],
+    "dispatch_candidates": [
+      {
+        "offset": 8367,
+        "candidate_owner": "[4890]",
+        "opcode_variable": "xJ",
+        "instruction_table": "A",
+        "pc_variable": "W",
+        "status": "interpreter_candidate_not_opcode_mapping"
+      },
+      {
+        "offset": 23729,
+        "candidate_owner": "[4890]",
+        "opcode_variable": "o",
+        "instruction_table": "i",
+        "pc_variable": "W",
+        "status": "interpreter_candidate_not_opcode_mapping"
+      },
+      {
+        "offset": 57003,
+        "candidate_owner": "[4890]",
+        "opcode_variable": "h",
+        "instruction_table": "i",
+        "pc_variable": "W",
+        "status": "interpreter_candidate_not_opcode_mapping"
+      },
+      {
+        "offset": 1179126,
+        "candidate_owner": "[4327]",
+        "opcode_variable": "xJ",
+        "instruction_table": "w",
+        "pc_variable": "I",
+        "status": "interpreter_candidate_not_opcode_mapping"
+      },
+      {
+        "offset": 1188485,
+        "candidate_owner": "[4327]",
+        "opcode_variable": "xJ",
+        "instruction_table": "w",
+        "pc_variable": "I",
+        "status": "interpreter_candidate_not_opcode_mapping"
+      },
+      {
+        "offset": 1198063,
+        "candidate_owner": "[4327]",
+        "opcode_variable": "xJ",
+        "instruction_table": "w",
+        "pc_variable": "I",
+        "status": "interpreter_candidate_not_opcode_mapping"
+      },
+      {
+        "offset": 1207885,
+        "candidate_owner": "[4327]",
+        "opcode_variable": "O",
+        "instruction_table": "A",
+        "pc_variable": "I",
+        "status": "interpreter_candidate_not_opcode_mapping"
+      }
+    ],
+    "entrypoint": {
+      "method": "CW",
+      "evidence": true
+    },
+    "limitations": "Lexical candidates, not an AST, validated CFG or resolved call graph. Field intervals may include non-function entries. Method calls are unresolved.",
+    "literal_count": 9224
+  },
+  "binary": {
+    "bytes": 373666,
+    "sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+    "entropy_bits_per_byte": 7.999308183261895,
+    "prefix_64_bytes_hex": "87856a009805a8883c23c78762cb8819d585708a8819b5872498823b9082419f8724858844aa876292d994aebb862c868570c18761fa823afa8762bf8626f688",
+    "printable_run_count": 569,
+    "u32_le_prefix_probe": [
+      {
+        "offset": 0,
+        "value": 6980999
+      },
+      {
+        "offset": 4,
+        "value": 2292712856
+      },
+      {
+        "offset": 8,
+        "value": 2277974844
+      },
+      {
+        "offset": 12,
+        "value": 428395362
+      },
+      {
+        "offset": 16,
+        "value": 2322630101
+      },
+      {
+        "offset": 20,
+        "value": 2276792712
+      },
+      {
+        "offset": 24,
+        "value": 998414372
+      },
+      {
+        "offset": 28,
+        "value": 2671870608
+      },
+      {
+        "offset": 32,
+        "value": 2290427015
+      },
+      {
+        "offset": 36,
+        "value": 1653058116
+      },
+      {
+        "offset": 40,
+        "value": 2928990610
+      },
+      {
+        "offset": 44,
+        "value": 2251065019
+      },
+      {
+        "offset": 48,
+        "value": 2277601413
+      },
+      {
+        "offset": 52,
+        "value": 981662305
+      },
+      {
+        "offset": 56,
+        "value": 3210905594
+      },
+      {
+        "offset": 60,
+        "value": 2297833094
+      }
+    ],
+    "uleb128_prefix_probe": {
+      "status": "hypothesis_only",
+      "stop": "exceeds_five_bytes",
+      "offset": 40,
+      "values": [
+        {
+          "offset": 0,
+          "bytes": 3,
+          "value": 1737351
+        },
+        {
+          "offset": 3,
+          "bytes": 1,
+          "value": 0
+        },
+        {
+          "offset": 4,
+          "bytes": 2,
+          "value": 664
+        },
+        {
+          "offset": 6,
+          "bytes": 3,
+          "value": 984104
+        },
+        {
+          "offset": 9,
+          "bytes": 1,
+          "value": 35
+        },
+        {
+          "offset": 10,
+          "bytes": 3,
+          "value": 1606599
+        },
+        {
+          "offset": 13,
+          "bytes": 3,
+          "value": 410699
+        },
+        {
+          "offset": 16,
+          "bytes": 3,
+          "value": 1835733
+        },
+        {
+          "offset": 19,
+          "bytes": 3,
+          "value": 410634
+        },
+        {
+          "offset": 22,
+          "bytes": 3,
+          "value": 590773
+        },
+        {
+          "offset": 25,
+          "bytes": 3,
+          "value": 966936
+        },
+        {
+          "offset": 28,
+          "bytes": 3,
+          "value": 1065232
+        },
+        {
+          "offset": 31,
+          "bytes": 3,
+          "value": 590751
+        },
+        {
+          "offset": 34,
+          "bytes": 3,
+          "value": 1115141
+        },
+        {
+          "offset": 37,
+          "bytes": 3,
+          "value": 1606570
+        }
+      ]
+    },
+    "entropy_windows": [
+      {
+        "offset": 0,
+        "bytes": 4096,
+        "entropy": 7.513395843984786
+      },
+      {
+        "offset": 4096,
+        "bytes": 4096,
+        "entropy": 7.95178682794813
+      },
+      {
+        "offset": 8192,
+        "bytes": 4096,
+        "entropy": 7.958399518281775
+      },
+      {
+        "offset": 12288,
+        "bytes": 4096,
+        "entropy": 7.955625000742248
+      },
+      {
+        "offset": 16384,
+        "bytes": 4096,
+        "entropy": 7.952506468994956
+      },
+      {
+        "offset": 20480,
+        "bytes": 4096,
+        "entropy": 7.953769144180177
+      },
+      {
+        "offset": 24576,
+        "bytes": 4096,
+        "entropy": 7.956573949619166
+      },
+      {
+        "offset": 28672,
+        "bytes": 4096,
+        "entropy": 7.952510866423434
+      },
+      {
+        "offset": 32768,
+        "bytes": 4096,
+        "entropy": 7.956067794980766
+      },
+      {
+        "offset": 36864,
+        "bytes": 4096,
+        "entropy": 7.948840965974906
+      },
+      {
+        "offset": 40960,
+        "bytes": 4096,
+        "entropy": 7.945752131077065
+      },
+      {
+        "offset": 45056,
+        "bytes": 4096,
+        "entropy": 7.959958608031552
+      },
+      {
+        "offset": 49152,
+        "bytes": 4096,
+        "entropy": 7.952670459900385
+      },
+      {
+        "offset": 53248,
+        "bytes": 4096,
+        "entropy": 7.955969149919218
+      },
+      {
+        "offset": 57344,
+        "bytes": 4096,
+        "entropy": 7.947191542406477
+      },
+      {
+        "offset": 61440,
+        "bytes": 4096,
+        "entropy": 7.957103567063101
+      },
+      {
+        "offset": 65536,
+        "bytes": 4096,
+        "entropy": 7.953855025026149
+      },
+      {
+        "offset": 69632,
+        "bytes": 4096,
+        "entropy": 7.955457080056514
+      },
+      {
+        "offset": 73728,
+        "bytes": 4096,
+        "entropy": 7.95244218025629
+      },
+      {
+        "offset": 77824,
+        "bytes": 4096,
+        "entropy": 7.9552473986292975
+      },
+      {
+        "offset": 81920,
+        "bytes": 4096,
+        "entropy": 7.960274249522894
+      },
+      {
+        "offset": 86016,
+        "bytes": 4096,
+        "entropy": 7.954621617711992
+      },
+      {
+        "offset": 90112,
+        "bytes": 4096,
+        "entropy": 7.956833781862061
+      },
+      {
+        "offset": 94208,
+        "bytes": 4096,
+        "entropy": 7.95543306926222
+      },
+      {
+        "offset": 98304,
+        "bytes": 4096,
+        "entropy": 7.951459368979158
+      },
+      {
+        "offset": 102400,
+        "bytes": 4096,
+        "entropy": 7.937814655438763
+      },
+      {
+        "offset": 106496,
+        "bytes": 4096,
+        "entropy": 7.957384448453458
+      },
+      {
+        "offset": 110592,
+        "bytes": 4096,
+        "entropy": 7.94818385472836
+      },
+      {
+        "offset": 114688,
+        "bytes": 4096,
+        "entropy": 7.954658157502878
+      },
+      {
+        "offset": 118784,
+        "bytes": 4096,
+        "entropy": 7.952858348334242
+      },
+      {
+        "offset": 122880,
+        "bytes": 4096,
+        "entropy": 7.957357050240505
+      },
+      {
+        "offset": 126976,
+        "bytes": 4096,
+        "entropy": 7.94296856033813
+      },
+      {
+        "offset": 131072,
+        "bytes": 4096,
+        "entropy": 7.960271768123347
+      },
+      {
+        "offset": 135168,
+        "bytes": 4096,
+        "entropy": 7.9478268706963044
+      },
+      {
+        "offset": 139264,
+        "bytes": 4096,
+        "entropy": 7.962053146920613
+      },
+      {
+        "offset": 143360,
+        "bytes": 4096,
+        "entropy": 7.954840433397219
+      },
+      {
+        "offset": 147456,
+        "bytes": 4096,
+        "entropy": 7.956711942113782
+      },
+      {
+        "offset": 151552,
+        "bytes": 4096,
+        "entropy": 7.955695596476257
+      },
+      {
+        "offset": 155648,
+        "bytes": 4096,
+        "entropy": 7.95803114982808
+      },
+      {
+        "offset": 159744,
+        "bytes": 4096,
+        "entropy": 7.9560033663994005
+      },
+      {
+        "offset": 163840,
+        "bytes": 4096,
+        "entropy": 7.958326811834655
+      },
+      {
+        "offset": 167936,
+        "bytes": 4096,
+        "entropy": 7.956000799830979
+      },
+      {
+        "offset": 172032,
+        "bytes": 4096,
+        "entropy": 7.953789181985999
+      },
+      {
+        "offset": 176128,
+        "bytes": 4096,
+        "entropy": 7.956593178832324
+      },
+      {
+        "offset": 180224,
+        "bytes": 4096,
+        "entropy": 7.9584319214620685
+      },
+      {
+        "offset": 184320,
+        "bytes": 4096,
+        "entropy": 7.942110059462137
+      },
+      {
+        "offset": 188416,
+        "bytes": 4096,
+        "entropy": 7.956549178892787
+      },
+      {
+        "offset": 192512,
+        "bytes": 4096,
+        "entropy": 7.9554308477384605
+      },
+      {
+        "offset": 196608,
+        "bytes": 4096,
+        "entropy": 7.952459159237632
+      },
+      {
+        "offset": 200704,
+        "bytes": 4096,
+        "entropy": 7.951763679439433
+      },
+      {
+        "offset": 204800,
+        "bytes": 4096,
+        "entropy": 7.9496423709420405
+      },
+      {
+        "offset": 208896,
+        "bytes": 4096,
+        "entropy": 7.949918199885302
+      },
+      {
+        "offset": 212992,
+        "bytes": 4096,
+        "entropy": 7.952594702519227
+      },
+      {
+        "offset": 217088,
+        "bytes": 4096,
+        "entropy": 7.957297554963738
+      },
+      {
+        "offset": 221184,
+        "bytes": 4096,
+        "entropy": 7.957673668491864
+      },
+      {
+        "offset": 225280,
+        "bytes": 4096,
+        "entropy": 7.948638377972268
+      },
+      {
+        "offset": 229376,
+        "bytes": 4096,
+        "entropy": 7.954734789597369
+      },
+      {
+        "offset": 233472,
+        "bytes": 4096,
+        "entropy": 7.953347692176628
+      },
+      {
+        "offset": 237568,
+        "bytes": 4096,
+        "entropy": 7.955775907763955
+      },
+      {
+        "offset": 241664,
+        "bytes": 4096,
+        "entropy": 7.9537206244509555
+      },
+      {
+        "offset": 245760,
+        "bytes": 4096,
+        "entropy": 7.955110967484079
+      },
+      {
+        "offset": 249856,
+        "bytes": 4096,
+        "entropy": 7.956019862287993
+      },
+      {
+        "offset": 253952,
+        "bytes": 4096,
+        "entropy": 7.9495854198849445
+      },
+      {
+        "offset": 258048,
+        "bytes": 4096,
+        "entropy": 7.959370094746833
+      },
+      {
+        "offset": 262144,
+        "bytes": 4096,
+        "entropy": 7.949875746417323
+      },
+      {
+        "offset": 266240,
+        "bytes": 4096,
+        "entropy": 7.951614711446563
+      },
+      {
+        "offset": 270336,
+        "bytes": 4096,
+        "entropy": 7.959901223816117
+      },
+      {
+        "offset": 274432,
+        "bytes": 4096,
+        "entropy": 7.960975821259512
+      },
+      {
+        "offset": 278528,
+        "bytes": 4096,
+        "entropy": 7.954334599743469
+      },
+      {
+        "offset": 282624,
+        "bytes": 4096,
+        "entropy": 7.9528068435921755
+      },
+      {
+        "offset": 286720,
+        "bytes": 4096,
+        "entropy": 7.951988867961353
+      },
+      {
+        "offset": 290816,
+        "bytes": 4096,
+        "entropy": 7.954837769886213
+      },
+      {
+        "offset": 294912,
+        "bytes": 4096,
+        "entropy": 7.95399561160398
+      },
+      {
+        "offset": 299008,
+        "bytes": 4096,
+        "entropy": 7.952472989543075
+      },
+      {
+        "offset": 303104,
+        "bytes": 4096,
+        "entropy": 7.955814994336998
+      },
+      {
+        "offset": 307200,
+        "bytes": 4096,
+        "entropy": 7.966728969856578
+      },
+      {
+        "offset": 311296,
+        "bytes": 4096,
+        "entropy": 7.953204509383614
+      },
+      {
+        "offset": 315392,
+        "bytes": 4096,
+        "entropy": 7.959152041265877
+      },
+      {
+        "offset": 319488,
+        "bytes": 4096,
+        "entropy": 7.946499643112377
+      },
+      {
+        "offset": 323584,
+        "bytes": 4096,
+        "entropy": 7.9596824396956976
+      },
+      {
+        "offset": 327680,
+        "bytes": 4096,
+        "entropy": 7.948142294228366
+      },
+      {
+        "offset": 331776,
+        "bytes": 4096,
+        "entropy": 7.953826501981601
+      },
+      {
+        "offset": 335872,
+        "bytes": 4096,
+        "entropy": 7.957629455574733
+      },
+      {
+        "offset": 339968,
+        "bytes": 4096,
+        "entropy": 7.945389965738413
+      },
+      {
+        "offset": 344064,
+        "bytes": 4096,
+        "entropy": 7.960623521993382
+      },
+      {
+        "offset": 348160,
+        "bytes": 4096,
+        "entropy": 7.954411036486159
+      },
+      {
+        "offset": 352256,
+        "bytes": 4096,
+        "entropy": 7.95615367541907
+      },
+      {
+        "offset": 356352,
+        "bytes": 4096,
+        "entropy": 7.956868416881593
+      },
+      {
+        "offset": 360448,
+        "bytes": 4096,
+        "entropy": 7.951662570196496
+      },
+      {
+        "offset": 364544,
+        "bytes": 4096,
+        "entropy": 7.952078523552786
+      },
+      {
+        "offset": 368640,
+        "bytes": 4096,
+        "entropy": 7.951984929690621
+      },
+      {
+        "offset": 372736,
+        "bytes": 930,
+        "entropy": 7.8093835410467864
+      }
+    ],
+    "verified_fields": [],
+    "constant_table": "unresolved",
+    "prototype_table": "unresolved",
+    "opcode_map": "unresolved",
+    "decryption": "not_inferred",
+    "limitations": "High entropy and printable runs do not establish encryption, compression, constant boundaries or opcode semantics. Integer probes are not a schema."
+  },
+  "evidence_notes": [
+    "CW calls MW and delegates state transitions to named methods; MW returns true and initial state 33.",
+    "jW assigns varargs to x.U; readu8 alias [46] and cursor [104] occur in loader helpers.",
+    "sW contains buffer allocation/copy, x[104] cursor update and x:v(...) invocation.",
+    "Numeric function fields include readable application functions as well as interpreter code.",
+    "No complete binary schema is established by these lexical observations."
+  ]
+}

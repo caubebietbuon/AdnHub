@@ -76,3 +76,13 @@ See tools/README.md and research/static-unpack-2026-10-21/parser-report.json.
 5 tests pass, including malformed input and snapshot hashes. Python 3.13 present;
 Luau CLI absent and not needed for static parsing. input/ and output/ are ignored;
 never execute extracted source. Source 2 and dynamic tracing remain inactive.
+
+## Phase 2 static survey — 2026-10-21
+User requested tools/analyzer.py; implemented without Lua execution or fetching.
+9224 g literal occurrences, 7 indexed dispatch-loop candidates, 569 binary
+printable runs; d entropy 7.999308 bits/byte. CW/MW loader and v reader handoff
+identified; binary constant/prototype/opcode schema still UNRESOLVED.
+See research/static-analysis-2026-10-21/FINDINGS.md and analysis-report.json.
+Run python -m unittest discover -s tools -p "test_*.py" -v (11 tests passed).
+Generated string dumps stay in ignored output/phase2. Graph is lexical candidate
+calls, not verified CFG. Never claim arbitrary printable runs are constants.
