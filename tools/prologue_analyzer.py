@@ -12,11 +12,13 @@ def mix(word):
     return (word ^ ((word >> 29) & 7)) & MASK29
 
 
-def analyze(streams, entry, first_word, second_word, budget=10000, numeric_constant=None, text_constant=None):
+def analyze(streams, entry, first_word, second_word, budget=10000, numeric_constant=None, text_constant=None,
+            symbolic_environment=False, branch_decisions=None, snapshot_pcs=()):
     arrays = deepcopy(streams)
     registers, trace, patches = {}, [], []
     pc = entry
     variant = 157
+    branch_decisions = branch_decisions or {}
     limit = min(len(values) for values in arrays.values())
     for _ in range(budget):
         if not 1 <= pc <= limit:
@@ -28,12 +30,19 @@ def analyze(streams, entry, first_word, second_word, budget=10000, numeric_const
             return {"trace": trace, "patches": patches, "stop": "unreviewed dispatch variant", "pc": pc, "arrays": arrays}
         op, a, b, c = [arrays[k][ix] for k in names]
         event = {"pc": pc, "variant": variant, "opcode": op, "operand1": a, "H": b, "operand3": c}
+        if pc in snapshot_pcs:
+            event["registers_before"] = dict(registers)
+            event["state_words_before"] = [first_word, second_word]
         trace.append(event)
         if variant == 228:
             if op == 111:
                 event["application_boundary"] = {"operation": "environment_read",
                                                  "global_name": text_constant(c) if text_constant else None}
-                break
+                if not symbolic_environment: break
+                name = event["application_boundary"]["global_name"]
+                if name is None: break
+                registers[a] = {"symbol": "global." + name}
+                event["symbolic_result"] = registers[a]
             elif op == 86:
                 # Source x[Z[PC]]=O[PC]. Only the pinned decorative V field may
                 # be abstracted away; no actual table write or API replacement.
@@ -202,6 +211,40 @@ def analyze(streams, entry, first_word, second_word, budget=10000, numeric_const
             event["normal_completion_assumption"] = "opaque lazy operands have not been materialized or type-checked"
         elif op == 138:
             registers[a] = None  # local register-span packing, contents unknown
+        elif symbolic_environment and op == 73:
+            if not 0 <= a <= 10000: break
+            for offset in range(a):
+                registers[c + offset] = {"symbol": f"argument[{offset + 1}]"}
+        elif symbolic_environment and op == 44:
+            registers[a] = {"symbol": f"enclosing_capture_cell[{b}]"}
+        elif symbolic_environment and op == 149:
+            value = registers.get(c)
+            registers[a] = not value if type(value) is bool else {"not": value}
+        elif symbolic_environment and op in (71, 139, 99, 118):
+            register = b if op in (71, 99, 118) else c
+            value = registers.get(register)
+            if op == 99:
+                other = registers.get(a)
+                condition = value < other if type(value) is int and type(other) is int else None
+                true_pc, false_pc = pc + 1, c + 1
+                expression = f"register[{b}] < register[{a}]"
+            elif op == 118:
+                condition = value != a if type(value) is int else None
+                true_pc, false_pc = c + 1, pc + 1
+                expression = f"register[{b}] != {a}"
+            else:
+                true_pc, false_pc = (pc + 1, c + 1) if op == 71 else (a + 1, b + 1)
+                condition = value <= a if op == 71 and type(value) is int else value if op == 139 and type(value) is bool else None
+                expression = f"register[{register}] <= {a}" if op == 71 else f"truthy(register[{register}])"
+            if type(condition) is not bool:
+                event["unresolved_condition"] = {"expression": expression, "value": value,
+                                                  "true_pc": true_pc, "false_pc": false_pc}
+                if pc not in branch_decisions: break
+                condition = branch_decisions[pc]
+                if type(condition) is not bool: raise ValueError("Branch decisions must be boolean constraints")
+                event["assumed_branch_constraint"] = {"expression": expression, "truth": condition}
+            pc = true_pc if condition else false_pc
+            continue
         elif op == 80:
             # Arguments remain unknown; initialization neither calls nor inspects them.
             for reg in list(registers):
@@ -210,7 +253,7 @@ def analyze(streams, entry, first_word, second_word, budget=10000, numeric_const
             pc = a + 1
             continue
         elif op == 20:
-            if b != 163: break
+            if b not in (163, 228, 82): break
             variant, pc = b, a + 1
             continue
         elif op == 22:

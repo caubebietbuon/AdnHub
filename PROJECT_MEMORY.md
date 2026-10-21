@@ -247,3 +247,25 @@ and ignored output/phase11/payload-analysis.json. No demo/ESP changes or push.
 Verification:76 Python tests passed (68previous+8new); phase11 tests rerun after
 task-global boundary refinement. luac syntax checks and git diff --check passed.
 No Roblox/payload runtime validation; fulldecompilation remains incomplete.
+
+## Phase 12 symbolic context / proof-gated ownership — 2026-10-22
+Added symbolic_resolver.py; optional prologue_analyzer symbolicenv names unknown
+globals (task at9063), not dummydefaults. Passes9063, stops9251 unresolved fused
+call. Snapshots9062/9063/9251 preserve unknownregisters. No callbacks or APIcalls.
+Selected branches preserve constraints;31VM records emit37path/frontier summaries,
+2records hit4pathcap;7native factory declarations remain unexecuted metadata.
+All29 unresolvedstrings searched256masks=7424; entropy unchanged bysinglebyteXOR,
+printabilitynotproof.10IDs have guarded entrytrace equations (13,62,190,230,294,
+375,605,613,661,674), ID119 onlyinitialstate hypothesis,18noequations. ID13 initial
+guesskey13garbled vsupdatedtracekey76 Unit: neverpromote initialstate heuristics.
+Capture-owner candidates664->506/desc251,137->747/58,237->572/181,704->288/299.
+Guards required:correctdispatcher,unmodifiedsource slot,path/parentheader/masks.
+506format0factory4890,572format2factory4916 newstructuralheader hypotheses;
+40functiontargets totalcandidateinventory, notverifiedfunctions. Registerbounds
+alone notownership; enclosingcapturebounds unverified. Treevalidator requires
+source,descriptor,capture,childheader,path,unconditionalancestry pluscoverage,
+uniqueparents andnocycle. Currentdata fails; verified_hierarchy=null retained.
+No Lua/__index/factory/applicationcall/network/inputwrites. Demo/ESP untouched.
+See research/symbolic-resolution-2026-10-22/FINDINGS.md; output/phase12 ignored.
+Verification:83 Python tests passed (76previous+7new); luac checks on AdnHub.lua/
+Loader.lua and git diff --check passed. No payload/runtime validation or push.

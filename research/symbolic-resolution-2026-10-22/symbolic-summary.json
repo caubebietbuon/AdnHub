@@ -1,0 +1,244 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "symbolic_environment": "named unknowns; no dummy defaults, no API dispatch",
+  "application_calls_executed": 0,
+  "factory_invocations": 0,
+  "network_requests": 0,
+  "limits": "Conditional equations/structural edges are not verified lexical ownership. Path caps and opaque calls remain explicit. No 1:1 script or OS air gap claimed.",
+  "verified_hierarchy": null,
+  "root_stop_pc": 9251,
+  "vm_records": 31,
+  "bounded_path_frontiers": 37,
+  "records_at_path_cap": 2,
+  "native_references": 7,
+  "string_targets": 29,
+  "byte_masks_tested": 7424,
+  "entry_trace_string_ids": [
+    13,
+    62,
+    190,
+    230,
+    294,
+    375,
+    605,
+    613,
+    661,
+    674
+  ],
+  "conditional_mask_ids": [
+    13,
+    62,
+    119,
+    190,
+    230,
+    294,
+    375,
+    605,
+    613,
+    661,
+    674
+  ],
+  "candidate_capture_ownership": [
+    {
+      "parent": 664,
+      "child": 506,
+      "pc": 9554,
+      "variant_guard": 228,
+      "descriptor_id": 251,
+      "capture_count": 7,
+      "local_register_ranges_fit": true,
+      "unvalidated_enclosing_capture_indices": [],
+      "proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      }
+    },
+    {
+      "parent": 137,
+      "child": 747,
+      "pc": 33,
+      "variant_guard": 163,
+      "descriptor_id": 58,
+      "capture_count": 0,
+      "local_register_ranges_fit": true,
+      "unvalidated_enclosing_capture_indices": [],
+      "proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      }
+    },
+    {
+      "parent": 237,
+      "child": 572,
+      "pc": 257,
+      "variant_guard": 163,
+      "descriptor_id": 181,
+      "capture_count": 5,
+      "local_register_ranges_fit": true,
+      "unvalidated_enclosing_capture_indices": [
+        8,
+        9,
+        10
+      ],
+      "proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": false,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      }
+    },
+    {
+      "parent": 704,
+      "child": 288,
+      "pc": 10,
+      "variant_guard": 163,
+      "descriptor_id": 299,
+      "capture_count": 11,
+      "local_register_ranges_fit": true,
+      "unvalidated_enclosing_capture_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": false,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      }
+    }
+  ],
+  "additional_header_hypotheses": [
+    {
+      "id": 506,
+      "candidates": [
+        {
+          "format": 0,
+          "factory_slot": 4890,
+          "verification": "header-constrained structural hypothesis; runtime mask unproven"
+        }
+      ]
+    },
+    {
+      "id": 572,
+      "candidates": [
+        {
+          "format": 2,
+          "factory_slot": 4916,
+          "verification": "header-constrained structural hypothesis; runtime mask unproven"
+        }
+      ]
+    }
+  ],
+  "tree_validation_issues": [
+    {
+      "edge": [
+        664,
+        506
+      ],
+      "missing_proofs": [
+        "child_header_verified",
+        "control_flow_verified",
+        "ancestry_unconditional"
+      ]
+    },
+    {
+      "edge": [
+        137,
+        747
+      ],
+      "missing_proofs": [
+        "child_header_verified",
+        "control_flow_verified",
+        "ancestry_unconditional"
+      ]
+    },
+    {
+      "edge": [
+        237,
+        572
+      ],
+      "missing_proofs": [
+        "capture_indices_fit_owner",
+        "child_header_verified",
+        "control_flow_verified",
+        "ancestry_unconditional"
+      ]
+    },
+    {
+      "edge": [
+        704,
+        288
+      ],
+      "missing_proofs": [
+        "capture_indices_fit_owner",
+        "child_header_verified",
+        "control_flow_verified",
+        "ancestry_unconditional"
+      ]
+    },
+    {
+      "error": "unreachable or unassigned nodes",
+      "nodes": [
+        136,
+        137,
+        139,
+        191,
+        232,
+        237,
+        243,
+        258,
+        262,
+        283,
+        288,
+        307,
+        349,
+        361,
+        379,
+        392,
+        398,
+        402,
+        434,
+        445,
+        516,
+        544,
+        567,
+        572,
+        593,
+        609,
+        631,
+        647,
+        663,
+        670,
+        673,
+        679,
+        692,
+        704,
+        711,
+        728,
+        742,
+        747,
+        748
+      ]
+    }
+  ]
+}

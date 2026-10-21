@@ -214,3 +214,20 @@ EnumType string, not format85 function data. No factory/__index/application call
 or network. Hierarchy remains null. See research/payload-masks-2026-10-22/FINDINGS.md
 for normal-continuation assumptions and limitations. Full output stays ignored
 in output/phase11/payload-analysis.json.
+
+## Phase 12 symbolic environment and ownership validation
+
+```powershell
+python tools/symbolic_resolver.py
+```
+
+Uses named environment symbols, not dummy defaults: passes task read9063, stops
+at unresolved fused call9251. Analyzes31 VM records/7 native declarations with
+bounded branch constraints. Exhaustive7424 XOR candidates for29 strings; ten
+strings have entry-trace equations, one further initial-state-only hypothesis,
+18noequations. All guards remain explicit; entropy/printability not key proof.
+Four capture-owner candidate edges and two new structural function targets506/572.
+Tree validator checks source/path/capture/header/ancestry evidence and graph
+coverage; current verified_hierarchy staysnull. No Lua/API/factory/network calls.
+See research/symbolic-resolution-2026-10-22/FINDINGS.md and ignored
+output/phase12/symbolic-resolution.json.
