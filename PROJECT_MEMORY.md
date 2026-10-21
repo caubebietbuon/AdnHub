@@ -1,6 +1,8 @@
 # AdnHub — project memory
 
 ## Purpose and current state
+Current user priority: deep Chilli static decryption only; demo/ESP feature work
+temporarily paused. Do not resume those feature changes without user direction.
 Roblox client UI written in Lua/Luau, for the Steal an Egg project.
 Repository: https://github.com/caubebietbuon/AdnHub ; branch: main.
 The UI and local graphics toggle work independently of game mechanics.
@@ -222,3 +224,26 @@ and capture-owner/reachability proof before verified prototype tree claims.
 Verification:68 Python tests passed (61previous+7new), luac syntax checks for
 AdnHub.lua/Loader.lua and git diff --check passed. No payload/runtime validation.
 Local commit only; no push/network per current constraint.
+
+## Phase 11 payload masks / initialization abstraction — 2026-10-22
+Added payload_decoder.py + prologue_analyzer.py. mix(n)=(n^((n>>29)&7))&0x1fffffff;
+variant157 patch11 uses H^mix(y),patch76 H^mix(V),patch14 direct H. InitialV
+4179906283,y1947447901. Restricted numeric init model variants157/163/228 copies
+arrays; bounded jumps, PRNG shifts13/13/14, packedinstruction normalization,
+one-based rewrite starts operand+1. No application/Lua/factory/__index/network.
+236abstractsteps,38conditional patch equations; unknown lazy operands assumed
+normal continuation (not runtime/type proof). Stops PC9063 variant228/op111,
+task-global environment read (source dispatcher context checked). Only decorative
+x.V key assignment abstracted, no actual VM-table writes. Added7refs from decodedinit:4functions+3strings.
+38functioncandidates:31format0/7format2;17source-mask equations underguards,
+21header-constrained mask hypotheses. Validate arrays,PC,factoryexists,fullfooter;
+nativeGW model stops BEFORE factory. Not proven full semantic decompilation.
+21new source-equation string candidates =193combined;29maskedstrings unresolved.
+PrintableUTF8 hints never key proof. Hierarchy stillnull; descriptorowner unknown.
+CRITICAL correction: directoryID1 tag218 isuint32 2503038408; ID2 tag174 is
+EnumType string. Old format85/length failure were wrong-type function probe
+artifacts, not new function schema. See research/payload-masks-2026-10-22/FINDINGS.md
+and ignored output/phase11/payload-analysis.json. No demo/ESP changes or push.
+Verification:76 Python tests passed (68previous+8new); phase11 tests rerun after
+task-global boundary refinement. luac syntax checks and git diff --check passed.
+No Roblox/payload runtime validation; fulldecompilation remains incomplete.

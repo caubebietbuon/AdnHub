@@ -198,3 +198,19 @@ references, not a verified child hierarchy. Unified output/phase10/static-synthe
 contains281 primitives,172 strings, wrapper uses, captures, register capacity181,
 entryPC9942 and link provenance. Factory/__index/opcodes remain unexecuted; no
 network/input mutation. See research/prototype-synthesis-2026-10-22/FINDINGS.md.
+
+## Phase 11 payload masks and restricted initialization model
+
+```powershell
+python tools/payload_decoder.py
+```
+
+Uses prologue_analyzer.py for bounded numeric initialization abstraction across
+variants157/163/228.236 abstract steps yield38 conditional mask equations; stop
+at PC9063 task-global environment dependency. Outputs38 structurally consistent function
+candidates (17 source equations/21 header hypotheses),21 new string candidates
+(193combined) and29 unresolved string masks. Record1 is uint32; Record2 is
+EnumType string, not format85 function data. No factory/__index/application calls
+or network. Hierarchy remains null. See research/payload-masks-2026-10-22/FINDINGS.md
+for normal-continuation assumptions and limitations. Full output stays ignored
+in output/phase11/payload-analysis.json.

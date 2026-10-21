@@ -1,0 +1,82 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "root_metadata": {
+    "record_id": 664,
+    "factory_slot": 4890,
+    "register_capacity": 181,
+    "entry_pc": 9942,
+    "transformed_sha256": "662f0f35fe18e7a992c0f0db81f186c4dd314b6e0c346c779153782b178901d3"
+  },
+  "record_probe_correction": "IDs1/2 are uint32/string, not function records. Format85 was an invalid aux91 function-probe artifact.",
+  "verified_hierarchy": null,
+  "control_flow_limit": "Restricted numeric initialization abstract interpretation only; unknown application/table effects stop. Not a general VM or runtime trace.",
+  "lua_executed": false,
+  "factory_invocations": 0,
+  "index_invocations": 0,
+  "application_opcodes_executed": 0,
+  "network_requests": 0,
+  "limits": "Structural hypotheses do not prove runtime keys or lexical ownership. No complete decompilation or OS-enforced air gap claimed.",
+  "abstract_steps": 236,
+  "stop_pc": 9063,
+  "stop_boundary": {
+    "operation": "environment_read",
+    "global_name": "task"
+  },
+  "mask_equations": 38,
+  "function_targets": 38,
+  "function_formats": {
+    "0": 31,
+    "2": 7
+  },
+  "functions_with_source_equations": 17,
+  "header_hypothesis_functions": 21,
+  "additional_string_targets": 50,
+  "new_source_equation_string_candidates": 21,
+  "unresolved_string_masks": 29,
+  "combined_string_candidates": 193,
+  "new_reference_targets": [
+    {
+      "reference_id": 593,
+      "leaf_state": 24,
+      "candidate_offset": 128975,
+      "origin": "restricted decoded initialization trace"
+    },
+    {
+      "reference_id": 647,
+      "leaf_state": 24,
+      "candidate_offset": 33293,
+      "origin": "restricted decoded initialization trace"
+    },
+    {
+      "reference_id": 393,
+      "leaf_state": 98,
+      "candidate_offset": 119614,
+      "origin": "restricted decoded initialization trace"
+    },
+    {
+      "reference_id": 728,
+      "leaf_state": 24,
+      "candidate_offset": 788,
+      "origin": "restricted decoded initialization trace"
+    },
+    {
+      "reference_id": 692,
+      "leaf_state": 24,
+      "candidate_offset": 113816,
+      "origin": "restricted decoded initialization trace"
+    },
+    {
+      "reference_id": 401,
+      "leaf_state": 98,
+      "candidate_offset": 1209,
+      "origin": "restricted decoded initialization trace"
+    },
+    {
+      "reference_id": 597,
+      "leaf_state": 98,
+      "candidate_offset": 408,
+      "origin": "restricted decoded initialization trace"
+    }
+  ]
+}
