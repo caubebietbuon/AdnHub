@@ -146,3 +146,23 @@ See research/gw-alignment-2026-10-21/FINDINGS.md.41 tests passed (33+8).
 Raw arrays/transformed records stay ignored in output/phase6. GW is a reader
 method name, not proof of a separate global-data buffer. Next: lazy tag readers,
 leading descriptors and5 unread bytes; keep factory/opcode execution blocked.
+
+## Phase 7 lazy metadata — 2026-10-21
+Added lazy_tracer.py: hash-pinned Python-only tag comparison tree (all256 tags),
+four wrapper -1 streams / -2 shared cache, bounded primitive/raw-string readers.
+No Lua/__index/factory/opcode/vector constructor/buffer writes/network invoked.
+Cap748 covers503 distinct potential references acrossroot664 streams:281 numeric/
+boolean observations, others unresolved or constructor boundaries;1 invalid raw
+string length rejected. Not proven reachable constants; no recursive-v candidates
+sampled does NOT mean no child functions. Leading descriptorcount0 @3..7; its
+factory4890 arg12 shadowed by later formalB. HW has capture-like tripletconsumer,
+but direct leadinglist->HW edge unproven; verified upvaluecount remains unknown.
+Resolved footer53881..53886=05ed8324dd: offset5,length53869,fillbyte0xdd. Source
+zW32->oW25->zW34->QW2->oW26->iW11->DW19->KW13 consumesall53886 bytes; DW19
+would buffer.fill backingcipher slice[41177,95046), absolute d[43419,97288).
+Tool only reports; never applies overwrite. Not padding/checksum; purpose unknown.
+See research/lazy-analysis-2026-10-21/FINDINGS.md; localdump output/phase7 ignored.
+Verification:47 Python tests passed (41 previous+6 new); luac syntax checks for
+AdnHub.lua/Loader.lua and git diff --check passed. No Roblox/payload runtime test.
+Next: encodedbuffer/string readers and nonempty descriptor->consumer edges,
+without factories or dynamic metamethod evaluation.

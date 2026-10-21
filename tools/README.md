@@ -136,3 +136,20 @@ Constant/prototype/upvalue counts remain unresolved. IDs1/2 are unvalidated
 structural comparisons, not accepted prototypes. Source callsites passaux91;
 seed depends on ID modulo256, not fixed243. See research/gw-alignment-2026-10-21/
 FINDINGS.md; dumps stay in ignored output/phase6.
+
+## Phase 7 lazy tags and footer
+
+```powershell
+python tools/lazy_tracer.py --sample-limit 748
+```
+
+Maps the four wrappers' -1 backing streams / -2 shared cache from factory4890;
+translates only reviewed tag predicates and bounded primitive/raw-string readers
+to Python. No Lua, __index, factory, vector constructor, opcode or buffer write
+is invoked. Default cap64; cap748 covers503 potential references in root664.
+Potential references are not proven runtime constants or reachable prototypes.
+Leading descriptor count0 remains semantically unresolved. The5-byte footer is
+a source-buffer fill directive (offset5,length53869,byte0xdd), reported without
+applying it. See research/lazy-analysis-2026-10-21/FINDINGS.md. Full local output
+is ignored output/phase7/lazy-analysis.json. No network API is used; OS air-gap
+enforcement is outside this tool.

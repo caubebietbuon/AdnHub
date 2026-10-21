@@ -1,0 +1,123 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "record_id": 664,
+  "method": "pinned source predicates + explicit bounded Python data readers",
+  "network_requests": 0,
+  "lua_executed": false,
+  "index_metamethod_invocations": 0,
+  "factory_invocations": 0,
+  "opcode_executions": 0,
+  "buffer_writes": 0,
+  "leading_descriptors": {
+    "word_count": 0,
+    "count_range": [
+      3,
+      7
+    ],
+    "root_factory_binding": "argument12 is shadowed by later duplicate formal B in factory4890",
+    "triplet_producer": "lazy state69 writes three fields; state156 allocates3*n",
+    "HW_consumer": {
+      "stride": 3,
+      "kind_3": "{[5]=B,[6]=h[B]}",
+      "kind_0": "h[B][B]",
+      "kind_1": "j[B]"
+    },
+    "conclusion": "capture-like triplet consumer exists; direct edge from root leading list to HW not established",
+    "verified_upvalue_count": null
+  },
+  "tail": {
+    "offset": 53881,
+    "hex": "05ed8324dd",
+    "source_state_path": [
+      "zW32",
+      "oW25",
+      "zW34",
+      "QW2",
+      "oW26",
+      "iW11",
+      "DW19",
+      "KW13"
+    ],
+    "relative_source_offset": 5,
+    "length": 53869,
+    "fill_byte": 221,
+    "backing_slice_range": [
+      41177,
+      95046
+    ],
+    "reader_end": 53886,
+    "remaining_bytes": 0,
+    "meaning": "post-GW source-buffer fill directive, not applied",
+    "scope": "backing ciphertext slice, not transformed plaintext",
+    "purpose": "overwrite is source-supported; motivation not established"
+  },
+  "limits": "No reachable constant count or complete child-prototype graph inferred. Compound readers remain unresolved. No OS air gap asserted; this tool has no network API.",
+  "wrappers": [
+    {
+      "factory_parameter": "j",
+      "raw_stream_ordinal": 1,
+      "raw_slots": 9963,
+      "metadata": {
+        "-1": "raw_stream_1",
+        "-2": "shared_cache"
+      },
+      "directory_in_bounds_slots": 6316
+    },
+    {
+      "factory_parameter": "O",
+      "raw_stream_ordinal": 2,
+      "raw_slots": 9965,
+      "metadata": {
+        "-1": "raw_stream_2",
+        "-2": "shared_cache"
+      },
+      "directory_in_bounds_slots": 7049
+    },
+    {
+      "factory_parameter": "Z",
+      "raw_stream_ordinal": 3,
+      "raw_slots": 9962,
+      "metadata": {
+        "-1": "raw_stream_3",
+        "-2": "shared_cache"
+      },
+      "directory_in_bounds_slots": 7558
+    },
+    {
+      "factory_parameter": "B",
+      "raw_stream_ordinal": 4,
+      "raw_slots": 9962,
+      "metadata": {
+        "-1": "raw_stream_4",
+        "-2": "shared_cache"
+      },
+      "directory_in_bounds_slots": 8479
+    }
+  ],
+  "sample_limit": 748,
+  "distinct_potential_references": 503,
+  "observation_statuses": {
+    "shared_cache_then_encoded_buffer_unresolved": 172,
+    "explicit_python_primitive_reader": 281,
+    "encoded_string_reader_unresolved": 32,
+    "Vector2_constructor_blocked": 1,
+    "Vector3_constructor_blocked": 4,
+    "fill_buffer_reader_unresolved": 6,
+    "compound_reader_unresolved": 2,
+    "table_create_reader_unresolved": 2,
+    "triplet_table_reader_unresolved": 2,
+    "raw_string_out_of_bounds": 1
+  },
+  "primitive_kinds": {
+    "uint8": 29,
+    "int32": 94,
+    "negative_uint8": 11,
+    "uint32": 84,
+    "float32": 21,
+    "boolean_not_206": 2,
+    "float64": 36,
+    "uint16": 1,
+    "int16": 3
+  }
+}
