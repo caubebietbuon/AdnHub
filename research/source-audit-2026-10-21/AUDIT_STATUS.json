@@ -1,0 +1,18 @@
+{
+  "audit": "source-audit-2026-10-21",
+  "audit_status": "CLOSED",
+  "analysis_status": "PAUSED_PENDING_AUTHORIZED_INPUT",
+  "closed_date_local": "2026-10-21",
+  "timezone": "Asia/Saigon",
+  "fetch_enabled": false,
+  "payload_execution_performed": false,
+  "bypass_performed": false,
+  "source1_deobfuscated": false,
+  "source2_payload_obtained": false,
+  "reopen_requires": [
+    "explicit user instruction",
+    "authorized input and scope",
+    "isolated analysis environment before dynamic work"
+  ],
+  "archive_scope": "documentation_and_verified_metadata_only"
+}
