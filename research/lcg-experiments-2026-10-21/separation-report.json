@@ -1,0 +1,215 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "payload_executed": false,
+  "network_used": false,
+  "status": "view_only_text_extraction_not_standalone_decoder",
+  "regions": [
+    {
+      "field": "MW",
+      "offset": 73244,
+      "end_offset_exclusive": 73316,
+      "bytes": 72,
+      "sha256": "6cae2795ceb84cfee5ded2edb551872dcb2b9aab473b046cafa74ddebc289fc1",
+      "scalar_metadata_trimmed": ",",
+      "method_calls_unresolved": []
+    },
+    {
+      "field": "CW",
+      "offset": 442763,
+      "end_offset_exclusive": 443519,
+      "bytes": 756,
+      "sha256": "f02d25ea1cbd3eeace7d8129ab9ef23b122b7264aa00cd67bcc92aaf31248a2f",
+      "scalar_metadata_trimmed": ",[51]=pcall,",
+      "method_calls_unresolved": [
+        "AW",
+        "BW",
+        "FW",
+        "MW",
+        "TW",
+        "XW",
+        "aW",
+        "jW",
+        "mW",
+        "sW",
+        "uW",
+        "xW"
+      ]
+    },
+    {
+      "field": "xW",
+      "offset": 180738,
+      "end_offset_exclusive": 181127,
+      "bytes": 389,
+      "sha256": "6c62ec32e8bf5ce0d8c5cb6e95043999bef3e6f46da7a37f5667cf4df067045c",
+      "scalar_metadata_trimmed": ",",
+      "method_calls_unresolved": []
+    },
+    {
+      "field": "aW",
+      "offset": 183241,
+      "end_offset_exclusive": 183695,
+      "bytes": 454,
+      "sha256": "f5a768f9fa40636b9ea2520968acb6557704dbafa940ff50f6b795b2639fdd54",
+      "scalar_metadata_trimmed": ",",
+      "method_calls_unresolved": []
+    },
+    {
+      "field": "TW",
+      "offset": 110491,
+      "end_offset_exclusive": 110842,
+      "bytes": 351,
+      "sha256": "517b3f5deacd3f63623f0de249bf0375686b3de7be33597dc5bc24d645c95c34",
+      "scalar_metadata_trimmed": ",",
+      "method_calls_unresolved": []
+    },
+    {
+      "field": "jW",
+      "offset": 6276,
+      "end_offset_exclusive": 6720,
+      "bytes": 444,
+      "sha256": "d18080a5eea628565ed1675ecf92268854b8aa16399a6fb706a3cef99ddf131d",
+      "scalar_metadata_trimmed": ",",
+      "method_calls_unresolved": []
+    },
+    {
+      "field": "sW",
+      "offset": 205900,
+      "end_offset_exclusive": 206106,
+      "bytes": 206,
+      "sha256": "9737d63835dc64769d83959d1e725dce2e6c2b83169ebe9d22e42abadccf1bd1",
+      "scalar_metadata_trimmed": ",[46]=buffer.readu8,[88]=table.pack,",
+      "method_calls_unresolved": [
+        "v"
+      ]
+    },
+    {
+      "field": "v",
+      "offset": 347409,
+      "end_offset_exclusive": 363025,
+      "bytes": 15616,
+      "sha256": "1661d5ad8c9f30f875663ad29548b0578ea3cbd5afd6bb45cc97bdb8be48d9cc",
+      "scalar_metadata_trimmed": ",",
+      "method_calls_unresolved": [
+        "DW",
+        "KW",
+        "QW",
+        "UW",
+        "iW",
+        "oW",
+        "rW",
+        "wW",
+        "zW"
+      ]
+    },
+    {
+      "field": "zW",
+      "offset": 112282,
+      "end_offset_exclusive": 112770,
+      "bytes": 488,
+      "sha256": "ca67204c127c43555501321c29cb66b67a71fe053af37a164beb2554078614a2",
+      "scalar_metadata_trimmed": ",",
+      "method_calls_unresolved": [
+        "GW"
+      ]
+    },
+    {
+      "field": "rW",
+      "offset": 834699,
+      "end_offset_exclusive": 835171,
+      "bytes": 472,
+      "sha256": "506b797868e761c6e02b21853b9188e9686ee0efb9baaad8dfcf0a3833215591",
+      "scalar_metadata_trimmed": ",",
+      "method_calls_unresolved": []
+    },
+    {
+      "field": "GW",
+      "offset": 432180,
+      "end_offset_exclusive": 434793,
+      "bytes": 2613,
+      "sha256": "f01602e3d89cb76b75a0af69c8324640696824d693619cd00ea3a12934d1dd3d",
+      "scalar_metadata_trimmed": ",",
+      "method_calls_unresolved": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "L",
+        "M",
+        "N",
+        "P",
+        "R",
+        "S",
+        "T",
+        "X",
+        "Y",
+        "Z",
+        "_",
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "x",
+        "y",
+        "z"
+      ]
+    }
+  ],
+  "removed_invocation": {
+    "offset": 206016,
+    "bytes": 24,
+    "view_behavior": "returns a descriptor BEFORE v, neither v nor its returned closure is called"
+  },
+  "sW_observed_operations": [
+    {
+      "operation": "allocate",
+      "size_expression": "O"
+    },
+    {
+      "operation": "copy",
+      "source": "j",
+      "source_offset": "W",
+      "bytes": "O",
+      "target_offset": "0"
+    },
+    {
+      "operation": "store_slice",
+      "target": "h[b]"
+    },
+    {
+      "operation": "advance_cursor",
+      "expression": "x[104]=W+O"
+    },
+    {
+      "operation": "parse",
+      "expression": "v(h,S,91)",
+      "executed": false
+    },
+    {
+      "operation": "invoke_returned_closure",
+      "arguments": "x.K,nil,nil",
+      "executed": false
+    }
+  ],
+  "limitations": "Lexically extracted definitions may contain lazy closures and unreviewed operations. No dependency closure, semantic equivalence, live state extraction or safe execution adapter is claimed. Never execute text outputs."
+}

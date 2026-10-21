@@ -1,0 +1,226 @@
+{
+  "input_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "input_bytes": 373666,
+  "full_input_entropy": 7.999308183261895,
+  "payload_executed": false,
+  "network_used": false,
+  "verified_decryption": false,
+  "mode": "hypothesis_only",
+  "lcg": {
+    "multiplier": 61,
+    "increment": 123,
+    "modulus": 256,
+    "inverse_multiplier": 21,
+    "OW0_hex": "e49dca7b",
+    "VW0": 228
+  },
+  "assumptions": [
+    "continuous post-update LCG keystream inside each window",
+    "each window seed is independent; offset is not known record alignment",
+    "word and byte versions use identical keystream, not independent evidence",
+    "reader extra XOR mask assumed as supplied; real state schedule unresolved"
+  ],
+  "seed_ambiguity": "Seeds differing by 128 produce streams differing by fixed XOR 0x80; entropy cannot distinguish them.",
+  "extra_word_mask_assumption_hex": "00000000",
+  "limitations": "A minimum over 256 seeds is selection-biased. Entropy/signatures/runs do not validate schema or decrypt constants. No decompression or candidate execution is attempted.",
+  "windows": [
+    {
+      "input_offset": 0,
+      "window_bytes": 4096,
+      "baseline": {
+        "bytes": 4096,
+        "entropy_bits_per_byte": 7.513395843984786,
+        "ascii_printable_ratio": 0.2578125,
+        "ascii_runs_min6": 3,
+        "longest_ascii_run_min6": 7,
+        "prefix_signature_candidates": [],
+        "zlib_header_candidate_only": false
+      },
+      "fixed_xor_control_entropy": 7.513395843984786,
+      "negative_random_control": {
+        "generator": "random.Random deterministic, not cryptographic",
+        "input_entropy": 7.957585828342308,
+        "best_entropy_after_same_256_seed_search": 7.9468778698719404
+      },
+      "ranking": "ascending empirical entropy, then descending printable ratio; no candidate accepted",
+      "top_candidates": [
+        {
+          "seed_before_first_byte": 9,
+          "final_state": 9,
+          "bytes": 4096,
+          "entropy_bits_per_byte": 7.937451424903456,
+          "ascii_printable_ratio": 0.412841796875,
+          "ascii_runs_min6": 18,
+          "longest_ascii_run_min6": 10,
+          "prefix_signature_candidates": [],
+          "zlib_header_candidate_only": false,
+          "entropy_drop_vs_input": -0.4240555809186697,
+          "output_sha256": "1246439acb6fac1ab051a59d160aef3fe58c5845f71ad3d1233f2544274fd684",
+          "output_file": "offset-0-seed-009.hypothesis.bin"
+        },
+        {
+          "seed_before_first_byte": 137,
+          "final_state": 137,
+          "bytes": 4096,
+          "entropy_bits_per_byte": 7.937451424903456,
+          "ascii_printable_ratio": 0.337646484375,
+          "ascii_runs_min6": 4,
+          "longest_ascii_run_min6": 7,
+          "prefix_signature_candidates": [],
+          "zlib_header_candidate_only": false,
+          "entropy_drop_vs_input": -0.4240555809186697,
+          "output_sha256": "4e4ba110fc6776c588f5ad63dac68595f93665d1dac770f31e50834d693660c1",
+          "output_file": "offset-0-seed-137.hypothesis.bin"
+        },
+        {
+          "seed_before_first_byte": 157,
+          "final_state": 157,
+          "bytes": 4096,
+          "entropy_bits_per_byte": 7.94113584695854,
+          "ascii_printable_ratio": 0.38720703125,
+          "ascii_runs_min6": 5,
+          "longest_ascii_run_min6": 10,
+          "prefix_signature_candidates": [],
+          "zlib_header_candidate_only": false,
+          "entropy_drop_vs_input": -0.4277400029737537,
+          "output_sha256": "eb2bb39a061ad5857d2983113d41a53052047232cb3c5a3eb15750a6742ad57e",
+          "output_file": "offset-0-seed-157.hypothesis.bin"
+        }
+      ],
+      "validated_constant_records": 0,
+      "verified_decryption": false
+    },
+    {
+      "input_offset": 4096,
+      "window_bytes": 4096,
+      "baseline": {
+        "bytes": 4096,
+        "entropy_bits_per_byte": 7.95178682794813,
+        "ascii_printable_ratio": 0.371337890625,
+        "ascii_runs_min6": 9,
+        "longest_ascii_run_min6": 10,
+        "prefix_signature_candidates": [],
+        "zlib_header_candidate_only": false
+      },
+      "fixed_xor_control_entropy": 7.95178682794813,
+      "negative_random_control": {
+        "generator": "random.Random deterministic, not cryptographic",
+        "input_entropy": 7.959431502411538,
+        "best_entropy_after_same_256_seed_search": 7.9424309655304235
+      },
+      "ranking": "ascending empirical entropy, then descending printable ratio; no candidate accepted",
+      "top_candidates": [
+        {
+          "seed_before_first_byte": 9,
+          "final_state": 9,
+          "bytes": 4096,
+          "entropy_bits_per_byte": 7.459914151382238,
+          "ascii_printable_ratio": 0.6279296875,
+          "ascii_runs_min6": 72,
+          "longest_ascii_run_min6": 14,
+          "prefix_signature_candidates": [],
+          "zlib_header_candidate_only": false,
+          "entropy_drop_vs_input": 0.49187267656589206,
+          "output_sha256": "4ab981f34a6b1611e8adc44414f84a2e48a3d45a42e77e3cdd2bad1cd267265b",
+          "output_file": "offset-4096-seed-009.hypothesis.bin"
+        },
+        {
+          "seed_before_first_byte": 137,
+          "final_state": 137,
+          "bytes": 4096,
+          "entropy_bits_per_byte": 7.459914151382238,
+          "ascii_printable_ratio": 0.148193359375,
+          "ascii_runs_min6": 0,
+          "longest_ascii_run_min6": 0,
+          "prefix_signature_candidates": [],
+          "zlib_header_candidate_only": false,
+          "entropy_drop_vs_input": 0.49187267656589206,
+          "output_sha256": "3211fb842ea228bf1c8b8b7ac7a0595c7a355b1058e5fd5e28182d3cf14044a3",
+          "output_file": "offset-4096-seed-137.hypothesis.bin"
+        },
+        {
+          "seed_before_first_byte": 73,
+          "final_state": 73,
+          "bytes": 4096,
+          "entropy_bits_per_byte": 7.766837504452104,
+          "ascii_printable_ratio": 0.386962890625,
+          "ascii_runs_min6": 8,
+          "longest_ascii_run_min6": 9,
+          "prefix_signature_candidates": [],
+          "zlib_header_candidate_only": false,
+          "entropy_drop_vs_input": 0.184949323496026,
+          "output_sha256": "ee9bc7bf3258612ef5ac4e2e6dd92dc34316109635d4bccbbcedf9011855556d",
+          "output_file": "offset-4096-seed-073.hypothesis.bin"
+        }
+      ],
+      "validated_constant_records": 0,
+      "verified_decryption": false
+    },
+    {
+      "input_offset": 8192,
+      "window_bytes": 4096,
+      "baseline": {
+        "bytes": 4096,
+        "entropy_bits_per_byte": 7.958399518281775,
+        "ascii_printable_ratio": 0.385498046875,
+        "ascii_runs_min6": 6,
+        "longest_ascii_run_min6": 8,
+        "prefix_signature_candidates": [],
+        "zlib_header_candidate_only": false
+      },
+      "fixed_xor_control_entropy": 7.958399518281775,
+      "negative_random_control": {
+        "generator": "random.Random deterministic, not cryptographic",
+        "input_entropy": 7.950846013543475,
+        "best_entropy_after_same_256_seed_search": 7.9418691988306485
+      },
+      "ranking": "ascending empirical entropy, then descending printable ratio; no candidate accepted",
+      "top_candidates": [
+        {
+          "seed_before_first_byte": 9,
+          "final_state": 9,
+          "bytes": 4096,
+          "entropy_bits_per_byte": 7.320235327278275,
+          "ascii_printable_ratio": 0.6455078125,
+          "ascii_runs_min6": 83,
+          "longest_ascii_run_min6": 15,
+          "prefix_signature_candidates": [],
+          "zlib_header_candidate_only": false,
+          "entropy_drop_vs_input": 0.6381641910034999,
+          "output_sha256": "90313344b75db56f342afc5c9dc79157f31e2ff3face45cdf9d2a3051081b8e8",
+          "output_file": "offset-8192-seed-009.hypothesis.bin"
+        },
+        {
+          "seed_before_first_byte": 137,
+          "final_state": 137,
+          "bytes": 4096,
+          "entropy_bits_per_byte": 7.320235327278275,
+          "ascii_printable_ratio": 0.128173828125,
+          "ascii_runs_min6": 1,
+          "longest_ascii_run_min6": 7,
+          "prefix_signature_candidates": [],
+          "zlib_header_candidate_only": false,
+          "entropy_drop_vs_input": 0.6381641910034999,
+          "output_sha256": "03ea9f136b35b516cff6312f1622fe41c8c03f22f4820eef4f7311cdca96b838",
+          "output_file": "offset-8192-seed-137.hypothesis.bin"
+        },
+        {
+          "seed_before_first_byte": 201,
+          "final_state": 201,
+          "bytes": 4096,
+          "entropy_bits_per_byte": 7.672079097739598,
+          "ascii_printable_ratio": 0.392578125,
+          "ascii_runs_min6": 4,
+          "longest_ascii_run_min6": 7,
+          "prefix_signature_candidates": [],
+          "zlib_header_candidate_only": false,
+          "entropy_drop_vs_input": 0.286320420542177,
+          "output_sha256": "bae92e3c4620760a1d90ce7a6caf340c688afc2fed1a78d49d82705c3aef725c",
+          "output_file": "offset-8192-seed-201.hypothesis.bin"
+        }
+      ],
+      "validated_constant_records": 0,
+      "verified_decryption": false
+    }
+  ]
+}

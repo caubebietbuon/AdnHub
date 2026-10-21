@@ -91,3 +91,19 @@ requirements. Run python tools/decryption_finder.py for static findings. Run
 python tools/run_tracer.py --demo to PREPARE a synthetic bundle only. Runtime
 requires an independently provisioned, pinned local Luau image and OS isolation.
 No full-g tracing or complete constant-table checkpoint has been validated.
+
+## Phase 4 LCG mock / state separation
+
+```powershell
+python tools/lcg_decoder.py --offsets 0,4096,8192 --size 4096 --top 3
+python tools/state_separator.py
+```
+
+LCG tests are hypotheses with independent per-window seeds and an assumed extra
+word mask (default0, configurable --word-mask). Inverse multiplier is21; this
+reverses PRNG state, not a whole record. Results/candidate binaries are local in
+output/phase4; empirical entropy does not verify decryption. Seed pairs differing
+by128 cannot be distinguished by entropy. See research/lcg-experiments-2026-10-21/
+FINDINGS.md and experiment-summary.json for measured results and controls.
+state_separator emits view-only source excerpts, a cut BEFORE v, region hashes
+and operation metadata. It does not produce a runnable or proven-safe decoder.

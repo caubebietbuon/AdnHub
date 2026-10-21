@@ -1,0 +1,13 @@
+flowchart TD
+  CW --> MW
+  CW --> xW
+  xW --> aW
+  aW --> TW
+  TW --> aW
+  CW --> jW
+  CW --> sW
+  sW --> slice["allocate / copy / cursor update"]
+  slice --> cut["VIEW CUT: before calling v"]
+  cut -. "original only" .-> v
+  v --> lazy["lazy reader closures; unresolved dependencies"]
+  v -. "original sW invokes returned value" .-> dispatch["VM execution: not entered"]

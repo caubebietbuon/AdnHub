@@ -101,3 +101,16 @@ See tools/PHASE3.md and research/reader-discovery-2026-10-21/decryption-findings
 no Luau/Docker installed, no decoder or payload runtime test and no actual
 constant-table snapshot. Source2 fetching remains inactive. Air gap cannot be
 claimed from environment hooks; runtime needs OS isolation / disconnected VM.
+
+## Phase 4 LCG mock / separation — 2026-10-21
+Added lcg_decoder.py: reuse OW/VW, inverse61=21 mod256, XOR windows with optional
+extra word mask. Default tests256 seeds in each of3 windows4096 bytes, mask0.
+Lowest entropy seed9: offsets0 7.513396->7.937451 (worse),4096 7.951787->7.459914,
+8192 7.958400->7.320235. Seed137 ties because keystream differs by XOR0x80;
+entropy cannot identify a unique key. No candidate accepted / no constants parsed.
+Added state_separator.py:11 pinned view-only reader excerpts, scalar aliases
+trimmed; sW view stops BEFORE v (neither parser nor closure invoked). Not a safe
+standalone decoder or validated CFG. Raw excerpts/candidate bytes stay ignored.
+See research/lcg-experiments-2026-10-21/FINDINGS.md. 27 tests passed; no Lua or
+payload runtime, no network. Next: source-derived cursor/seed/extra-mask schedule,
+then bounded record parsing; never infer a second encryption layer from entropy.
