@@ -303,3 +303,12 @@ Four mismatches have no justified relocation in the current exported code.
 Closure567's cell107 binding and prefix direct-write stability are verified
 under guards; activation/lifetime and hierarchy remain unproved. See
 research/predecessor-audit-2026-10-22/FINDINGS.md; output/phase18 stays ignored.
+
+## Phase 19: numeric lineage and activation/lifetime
+
+Run `python tools/lineage_auditor.py`. Exports r9's prefix provenance, proves
+the conditional relation k74=k101 XOR49, and checks the directory guard at978.
+The unchanged directory fails that local path contract; no numeric default or
+site V is invented. Audits567 creation, activation witnesses and shared cells
+with258/379. Promotion remains non-applicable. See
+research/lineage-audit-2026-10-22/FINDINGS.md; output/phase19 is ignored.

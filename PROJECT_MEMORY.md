@@ -463,3 +463,26 @@ Nohierarchypromotion; verified_hierarchy=null. See research/predecessor-audit-
 ignored. Run python tools/predecessor_auditor.py; unittestdiscovertools.
 148tests(142+6),latest6rerunforlocalpredicates;Lua syntax/diffchecks passed.
 No Lua/payload/factory/API/network/runtimeexecution; no push;demo/ESPunchanged.
+
+## Phase 19 numeric lineage / activation ledger — 2026-10-22
+Added lineage_auditor.py,test_phase19.py, offline pinned Phase14 replay.
+r9 onlyrecordeddefinition9910(163/op109) copiesr35; backwardleafabsentframe35,
+notnumericproofat980. Sourceargumenttransfer9942T1I7 copiesnofixedargs and
+packs tailintor7, not35. PrefixNone/nil never substituted at unvisited980.
+Normalized numericbit32r9/r13 domainuint32; uniqueinput stillunknown.
+Validated978..981window:patch101key53^mix(V),979numericr88<66 else113,
+980xor r13=r9^38,981patch74key4^mix(V). SameVunderlocalcontracts =>k74=k101^49.
+Enumerates2048Vstates/256keypairs, no unique selection. FrontierV4179906283
+fails byte-keymodel; widerword-masklayersnotruledout. Directory101134543 XOR
+306486104=306616023 outside152177 backing; no prefix101patch. Refutesstraight
+978pathinunchangeddirectoryonly; futuremutations/otherincomingpathsremainopen.
+Fourmismatchedowner402/711/593/379sameIDsearchstillnone; nofakerealignment.
+567body constructedroot108at8390, noactivationwitness; currentfrontier8398
+assert/debugcall. Root107cellshared567/258/379; no directwrites isnotwhole
+lifetimeproof. Activationorder,aliasescapes,siblingeffects unproved.
+Formalpromotionobjectapplicablefalse,operations[];verified_hierarchy=null.
+See research/lineage-audit-2026-10-22/FINDINGS.md,summary.json; ignored
+output/phase19/lineage-proofs.json via python tools/lineage_auditor.py.
+155tests(148+7),latest7rerunafterbyte-modelmetadata;Lua syntax/diffcheckspass.
+No Lua/payload/factory/API/network execution or runtimechecks;no push;demos
+untouched. Keep localpathpremises and globalactivation proofs separate.

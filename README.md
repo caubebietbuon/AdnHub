@@ -6,9 +6,9 @@
 >
 > Hướng dẫn bảo trì và lịch sử lỗi: [PROJECT_MEMORY.md](PROJECT_MEMORY.md).
 
-Phân tích tĩnh Chilli: [báo cáo Phase 18](research/predecessor-audit-2026-10-22/FINDINGS.md).
-Phân loại dispatcher 14842, đối chiếu phiên bản lệnh và proof binding closure567.
-Công cụ: `python tools/predecessor_auditor.py`
+Phân tích tĩnh Chilli: [báo cáo Phase 19](research/lineage-audit-2026-10-22/FINDINGS.md).
+Provenance r9/V, ràng buộc mask và kiểm tra activation/lifetime closure567.
+Công cụ: `python tools/lineage_auditor.py`
 (cần các tệp g/d đã bóc tách cục bộ; không thực thi payload hay gọi mạng).
 
 ---

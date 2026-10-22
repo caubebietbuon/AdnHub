@@ -1,0 +1,1286 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "source_evidence": [
+    {
+      "offset": 20149,
+      "text": "T,d,I=i[W],{...},H[W];K(d,1,T-1,I,t);t[I+T-1]=e(f(T,...));"
+    },
+    {
+      "offset": 44993,
+      "text": "if o==172 then W=if t[i[W]]<A[W]then W else H[W];"
+    }
+  ],
+  "numeric_r9_proof": {
+    "slice_at_prefix_frontier": {
+      "owner": 664,
+      "root_node": 103,
+      "register": 9,
+      "word": null,
+      "before_trace_step": null,
+      "constant": null,
+      "nodes": [
+        {
+          "id": 102,
+          "op": "absent_frame_entry",
+          "deps": [],
+          "register": 35,
+          "type_contract": "nil in reviewed fresh frame; never numeric zero"
+        },
+        {
+          "id": 103,
+          "op": "copy",
+          "deps": [
+            102
+          ],
+          "step": 86,
+          "pc": 9910,
+          "register": 9
+        }
+      ],
+      "unresolved_leaves": [
+        102
+      ],
+      "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+    },
+    "recorded_definitions": [
+      {
+        "pc": 9910,
+        "variant": 163,
+        "opcode": 109,
+        "write": {
+          "register": 9,
+          "value": null
+        }
+      }
+    ],
+    "argument_transfer_effects": [
+      {
+        "pc": 9942,
+        "copied_argument_range_half_open": [
+          7,
+          7
+        ],
+        "packed_tail_register": 7,
+        "source_contract": "T,d,I=i[W],{...},H[W];K(d,1,T-1,I,t);t[I+T-1]=e(f(T,...));"
+      }
+    ],
+    "numeric_value_proved_at980": false,
+    "required_type_at980": "numeric bit32 operand; uint32 conversion required",
+    "normalized_r9_domain_inclusive": [
+      0,
+      4294967295
+    ],
+    "r13_normal_return_domain_inclusive": [
+      0,
+      4294967295
+    ],
+    "missing": "reaching numeric definition of r9 on an entry-to-980 path; frontier None is not numeric zero"
+  },
+  "state_V_proof": {
+    "prefix_slice": {
+      "owner": 664,
+      "root_node": 0,
+      "register": null,
+      "word": "V",
+      "before_trace_step": null,
+      "constant": 4179906283,
+      "nodes": [
+        {
+          "id": 0,
+          "op": "header_word",
+          "deps": [],
+          "value": 4179906283,
+          "word": "V",
+          "constant": 4179906283
+        }
+      ],
+      "unresolved_leaves": [],
+      "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+    },
+    "at_site_value": null,
+    "frozen_frontier_V_keys": {
+      "key101": 421809881,
+      "key74": 421809896
+    },
+    "frozen_frontier_V_satisfies_byte_key_model": false,
+    "byte_key_model_scope": "does not rule out an unmodeled wider word-mask layer",
+    "local_window": {
+      "978": [
+        125,
+        101,
+        53,
+        109
+      ],
+      "979": [
+        172,
+        88,
+        112,
+        66
+      ],
+      "980": [
+        14842,
+        13,
+        9,
+        38
+      ],
+      "981": [
+        125,
+        74,
+        4,
+        47
+      ]
+    },
+    "conditional_relation": {
+      "same_state_required": true,
+      "state_contract": "same uint32 V at both sites",
+      "xor_delta": 49,
+      "state_domain_count": 2048,
+      "key_pairs": [
+        [
+          0,
+          49
+        ],
+        [
+          1,
+          48
+        ],
+        [
+          2,
+          51
+        ],
+        [
+          3,
+          50
+        ],
+        [
+          4,
+          53
+        ],
+        [
+          5,
+          52
+        ],
+        [
+          6,
+          55
+        ],
+        [
+          7,
+          54
+        ],
+        [
+          8,
+          57
+        ],
+        [
+          9,
+          56
+        ],
+        [
+          10,
+          59
+        ],
+        [
+          11,
+          58
+        ],
+        [
+          12,
+          61
+        ],
+        [
+          13,
+          60
+        ],
+        [
+          14,
+          63
+        ],
+        [
+          15,
+          62
+        ],
+        [
+          16,
+          33
+        ],
+        [
+          17,
+          32
+        ],
+        [
+          18,
+          35
+        ],
+        [
+          19,
+          34
+        ],
+        [
+          20,
+          37
+        ],
+        [
+          21,
+          36
+        ],
+        [
+          22,
+          39
+        ],
+        [
+          23,
+          38
+        ],
+        [
+          24,
+          41
+        ],
+        [
+          25,
+          40
+        ],
+        [
+          26,
+          43
+        ],
+        [
+          27,
+          42
+        ],
+        [
+          28,
+          45
+        ],
+        [
+          29,
+          44
+        ],
+        [
+          30,
+          47
+        ],
+        [
+          31,
+          46
+        ],
+        [
+          32,
+          17
+        ],
+        [
+          33,
+          16
+        ],
+        [
+          34,
+          19
+        ],
+        [
+          35,
+          18
+        ],
+        [
+          36,
+          21
+        ],
+        [
+          37,
+          20
+        ],
+        [
+          38,
+          23
+        ],
+        [
+          39,
+          22
+        ],
+        [
+          40,
+          25
+        ],
+        [
+          41,
+          24
+        ],
+        [
+          42,
+          27
+        ],
+        [
+          43,
+          26
+        ],
+        [
+          44,
+          29
+        ],
+        [
+          45,
+          28
+        ],
+        [
+          46,
+          31
+        ],
+        [
+          47,
+          30
+        ],
+        [
+          48,
+          1
+        ],
+        [
+          49,
+          0
+        ],
+        [
+          50,
+          3
+        ],
+        [
+          51,
+          2
+        ],
+        [
+          52,
+          5
+        ],
+        [
+          53,
+          4
+        ],
+        [
+          54,
+          7
+        ],
+        [
+          55,
+          6
+        ],
+        [
+          56,
+          9
+        ],
+        [
+          57,
+          8
+        ],
+        [
+          58,
+          11
+        ],
+        [
+          59,
+          10
+        ],
+        [
+          60,
+          13
+        ],
+        [
+          61,
+          12
+        ],
+        [
+          62,
+          15
+        ],
+        [
+          63,
+          14
+        ],
+        [
+          64,
+          113
+        ],
+        [
+          65,
+          112
+        ],
+        [
+          66,
+          115
+        ],
+        [
+          67,
+          114
+        ],
+        [
+          68,
+          117
+        ],
+        [
+          69,
+          116
+        ],
+        [
+          70,
+          119
+        ],
+        [
+          71,
+          118
+        ],
+        [
+          72,
+          121
+        ],
+        [
+          73,
+          120
+        ],
+        [
+          74,
+          123
+        ],
+        [
+          75,
+          122
+        ],
+        [
+          76,
+          125
+        ],
+        [
+          77,
+          124
+        ],
+        [
+          78,
+          127
+        ],
+        [
+          79,
+          126
+        ],
+        [
+          80,
+          97
+        ],
+        [
+          81,
+          96
+        ],
+        [
+          82,
+          99
+        ],
+        [
+          83,
+          98
+        ],
+        [
+          84,
+          101
+        ],
+        [
+          85,
+          100
+        ],
+        [
+          86,
+          103
+        ],
+        [
+          87,
+          102
+        ],
+        [
+          88,
+          105
+        ],
+        [
+          89,
+          104
+        ],
+        [
+          90,
+          107
+        ],
+        [
+          91,
+          106
+        ],
+        [
+          92,
+          109
+        ],
+        [
+          93,
+          108
+        ],
+        [
+          94,
+          111
+        ],
+        [
+          95,
+          110
+        ],
+        [
+          96,
+          81
+        ],
+        [
+          97,
+          80
+        ],
+        [
+          98,
+          83
+        ],
+        [
+          99,
+          82
+        ],
+        [
+          100,
+          85
+        ],
+        [
+          101,
+          84
+        ],
+        [
+          102,
+          87
+        ],
+        [
+          103,
+          86
+        ],
+        [
+          104,
+          89
+        ],
+        [
+          105,
+          88
+        ],
+        [
+          106,
+          91
+        ],
+        [
+          107,
+          90
+        ],
+        [
+          108,
+          93
+        ],
+        [
+          109,
+          92
+        ],
+        [
+          110,
+          95
+        ],
+        [
+          111,
+          94
+        ],
+        [
+          112,
+          65
+        ],
+        [
+          113,
+          64
+        ],
+        [
+          114,
+          67
+        ],
+        [
+          115,
+          66
+        ],
+        [
+          116,
+          69
+        ],
+        [
+          117,
+          68
+        ],
+        [
+          118,
+          71
+        ],
+        [
+          119,
+          70
+        ],
+        [
+          120,
+          73
+        ],
+        [
+          121,
+          72
+        ],
+        [
+          122,
+          75
+        ],
+        [
+          123,
+          74
+        ],
+        [
+          124,
+          77
+        ],
+        [
+          125,
+          76
+        ],
+        [
+          126,
+          79
+        ],
+        [
+          127,
+          78
+        ],
+        [
+          128,
+          177
+        ],
+        [
+          129,
+          176
+        ],
+        [
+          130,
+          179
+        ],
+        [
+          131,
+          178
+        ],
+        [
+          132,
+          181
+        ],
+        [
+          133,
+          180
+        ],
+        [
+          134,
+          183
+        ],
+        [
+          135,
+          182
+        ],
+        [
+          136,
+          185
+        ],
+        [
+          137,
+          184
+        ],
+        [
+          138,
+          187
+        ],
+        [
+          139,
+          186
+        ],
+        [
+          140,
+          189
+        ],
+        [
+          141,
+          188
+        ],
+        [
+          142,
+          191
+        ],
+        [
+          143,
+          190
+        ],
+        [
+          144,
+          161
+        ],
+        [
+          145,
+          160
+        ],
+        [
+          146,
+          163
+        ],
+        [
+          147,
+          162
+        ],
+        [
+          148,
+          165
+        ],
+        [
+          149,
+          164
+        ],
+        [
+          150,
+          167
+        ],
+        [
+          151,
+          166
+        ],
+        [
+          152,
+          169
+        ],
+        [
+          153,
+          168
+        ],
+        [
+          154,
+          171
+        ],
+        [
+          155,
+          170
+        ],
+        [
+          156,
+          173
+        ],
+        [
+          157,
+          172
+        ],
+        [
+          158,
+          175
+        ],
+        [
+          159,
+          174
+        ],
+        [
+          160,
+          145
+        ],
+        [
+          161,
+          144
+        ],
+        [
+          162,
+          147
+        ],
+        [
+          163,
+          146
+        ],
+        [
+          164,
+          149
+        ],
+        [
+          165,
+          148
+        ],
+        [
+          166,
+          151
+        ],
+        [
+          167,
+          150
+        ],
+        [
+          168,
+          153
+        ],
+        [
+          169,
+          152
+        ],
+        [
+          170,
+          155
+        ],
+        [
+          171,
+          154
+        ],
+        [
+          172,
+          157
+        ],
+        [
+          173,
+          156
+        ],
+        [
+          174,
+          159
+        ],
+        [
+          175,
+          158
+        ],
+        [
+          176,
+          129
+        ],
+        [
+          177,
+          128
+        ],
+        [
+          178,
+          131
+        ],
+        [
+          179,
+          130
+        ],
+        [
+          180,
+          133
+        ],
+        [
+          181,
+          132
+        ],
+        [
+          182,
+          135
+        ],
+        [
+          183,
+          134
+        ],
+        [
+          184,
+          137
+        ],
+        [
+          185,
+          136
+        ],
+        [
+          186,
+          139
+        ],
+        [
+          187,
+          138
+        ],
+        [
+          188,
+          141
+        ],
+        [
+          189,
+          140
+        ],
+        [
+          190,
+          143
+        ],
+        [
+          191,
+          142
+        ],
+        [
+          192,
+          241
+        ],
+        [
+          193,
+          240
+        ],
+        [
+          194,
+          243
+        ],
+        [
+          195,
+          242
+        ],
+        [
+          196,
+          245
+        ],
+        [
+          197,
+          244
+        ],
+        [
+          198,
+          247
+        ],
+        [
+          199,
+          246
+        ],
+        [
+          200,
+          249
+        ],
+        [
+          201,
+          248
+        ],
+        [
+          202,
+          251
+        ],
+        [
+          203,
+          250
+        ],
+        [
+          204,
+          253
+        ],
+        [
+          205,
+          252
+        ],
+        [
+          206,
+          255
+        ],
+        [
+          207,
+          254
+        ],
+        [
+          208,
+          225
+        ],
+        [
+          209,
+          224
+        ],
+        [
+          210,
+          227
+        ],
+        [
+          211,
+          226
+        ],
+        [
+          212,
+          229
+        ],
+        [
+          213,
+          228
+        ],
+        [
+          214,
+          231
+        ],
+        [
+          215,
+          230
+        ],
+        [
+          216,
+          233
+        ],
+        [
+          217,
+          232
+        ],
+        [
+          218,
+          235
+        ],
+        [
+          219,
+          234
+        ],
+        [
+          220,
+          237
+        ],
+        [
+          221,
+          236
+        ],
+        [
+          222,
+          239
+        ],
+        [
+          223,
+          238
+        ],
+        [
+          224,
+          209
+        ],
+        [
+          225,
+          208
+        ],
+        [
+          226,
+          211
+        ],
+        [
+          227,
+          210
+        ],
+        [
+          228,
+          213
+        ],
+        [
+          229,
+          212
+        ],
+        [
+          230,
+          215
+        ],
+        [
+          231,
+          214
+        ],
+        [
+          232,
+          217
+        ],
+        [
+          233,
+          216
+        ],
+        [
+          234,
+          219
+        ],
+        [
+          235,
+          218
+        ],
+        [
+          236,
+          221
+        ],
+        [
+          237,
+          220
+        ],
+        [
+          238,
+          223
+        ],
+        [
+          239,
+          222
+        ],
+        [
+          240,
+          193
+        ],
+        [
+          241,
+          192
+        ],
+        [
+          242,
+          195
+        ],
+        [
+          243,
+          194
+        ],
+        [
+          244,
+          197
+        ],
+        [
+          245,
+          196
+        ],
+        [
+          246,
+          199
+        ],
+        [
+          247,
+          198
+        ],
+        [
+          248,
+          201
+        ],
+        [
+          249,
+          200
+        ],
+        [
+          250,
+          203
+        ],
+        [
+          251,
+          202
+        ],
+        [
+          252,
+          205
+        ],
+        [
+          253,
+          204
+        ],
+        [
+          254,
+          207
+        ],
+        [
+          255,
+          206
+        ]
+      ],
+      "unique_key_proved": false
+    },
+    "branch_guard_at979": "r88 < 66 for fall-through to980; otherwise successor113",
+    "path_contract": "normal patch978; numeric r88<66; numeric bit32 operand r9; stable code and reader context",
+    "local_V_writes": [],
+    "directory_guard_at978": {
+      "reference_id": 101,
+      "before": 134543,
+      "after": 306616023,
+      "backing_length": 152177,
+      "bounded_after": false,
+      "scope": "unchanged exported directory; not a proof about every future mutation history"
+    },
+    "straight_line_978_path_valid_in_unchanged_directory": false,
+    "other_incoming_paths_excluded": false
+  },
+  "rewritten_equation_audit": [
+    {
+      "owner": 402,
+      "old_pc": 83,
+      "reference_id": 74,
+      "same_reference_sites": [],
+      "lineage_verified": false
+    },
+    {
+      "owner": 711,
+      "old_pc": 269,
+      "reference_id": 141,
+      "same_reference_sites": [],
+      "lineage_verified": false
+    },
+    {
+      "owner": 593,
+      "old_pc": 393,
+      "reference_id": 141,
+      "same_reference_sites": [],
+      "lineage_verified": false
+    },
+    {
+      "owner": 379,
+      "old_pc": 686,
+      "reference_id": 702,
+      "same_reference_sites": [],
+      "lineage_verified": false
+    }
+  ],
+  "closure567_activation_lifetime": {
+    "child": 567,
+    "binding_pc": 8390,
+    "capture_cell": "frame:664:register:107",
+    "body_value_register_definitions": [
+      {
+        "pc": 8390,
+        "register": 108
+      }
+    ],
+    "sibling_closures_sharing_cell": [
+      258,
+      379
+    ],
+    "creation_implies_activation": false,
+    "activation_witness": null,
+    "whole_lifetime_stable": false,
+    "required_effect_summaries": [
+      "callee invocation/order",
+      "alias escapes",
+      "shared sibling capture effects"
+    ],
+    "formal_promotion_patch": {
+      "applicable": false,
+      "operations": [],
+      "reason": "activation, lifetime, ancestry and coverage obligations remain unproved"
+    }
+  },
+  "frontier_call": {
+    "pc": 8398,
+    "opcode": 93,
+    "pre_call_copy": {
+      "destination": 2,
+      "source": 5
+    },
+    "callee_register": 2,
+    "callee_expression": {
+      "decoder_context_slot": 109
+    },
+    "argument_count": 2,
+    "argument_range_half_open": [
+      3,
+      5
+    ],
+    "requested_results": 1,
+    "result_range_half_open": [
+      2,
+      3
+    ],
+    "pack": "table.pack retains actual result count in n, including nil positions",
+    "move": "copy requested results1..I to t[T..T+I-1], pad missing values with nil",
+    "normal_return_pc": 8400,
+    "exception_or_nonreturn_pc": null,
+    "callee_invoked": false,
+    "effects": "unknown until callee and alias effects are proven",
+    "argument_expressions": [
+      {
+        "symbol": "global.debug"
+      },
+      {
+        "string_literal": "The debug library is required on Luau platforms. Please open a support ticket.",
+        "reference_id": 444
+      }
+    ],
+    "context_slot109_source_binding": "assert",
+    "pending_contracts": [
+      "context slot109 still denotes the reviewed standard assertion",
+      "global.debug is truthy for normal assertion return"
+    ]
+  },
+  "verified_hierarchy": null,
+  "network_requests": 0,
+  "application_calls_executed": 0,
+  "factory_invocations": 0,
+  "verification": "155 Python tests passed; latest7 tests rerun after final byte-model metadata. Lua syntax and git diff checks passed. No Roblox/payload runtime checks."
+}
