@@ -715,3 +715,40 @@ Roblox runtime checks, demo/ESP changes or push. Commit locally after checks.
 Validation:222 Python tests passed (207 prior +15 Phase24), full suite292.830s.
 Standalone Phase24 regeneration, Lua entry-script syntax, Python compilation,
 and working/staged Git diff checks passed. No runtime verification performed.
+
+### Phase 25: qualified checkpoint constraints and closure663 obligations
+
+Base55affbe. tools/checkpoint_filter.py adds project_constraints (qualified
+frame/point/storage equality projection, explicit guards), argument_certificate
+(forward/backward arithmetic, state-word provenance and parallel packing),
+lifetime_ledger (criterion coverage and conditional call-outcome obligations),
+analyze/run (fresh Phase24 reconstruction and proof synthesis). New regressions
+are tools/test_phase25.py; older analysis defaults and demo/ESP code unchanged.
+
+Exact local byte-key domain proof: V=h*2^29+l, mix(V)=l XOR h. For operand4
+and byte keys, bits8..28 must be zero; low8 and high3 bits are free. Independent
+enumeration agrees with inverse_mix:2048 states. No further state is pruned.
+Closure663 PC546 computes y663(871012737)-primitive735(664522614)=206490123,
+then PC547 packs it into r7. This qualified argument identity is not root664
+PC981 V. No source-proven transfer connecting them exists in reviewed evidence.
+Even discharging the checkpoint activation/cache guard leaves all2048 states.
+Counterfactual V=206490123 gives key206490127 and no byte-key candidates; it is
+explicitly unproved and never applied. Existing patch978 scoped path rejection
+is retained separately, not interpreted as an empty global key domain.
+
+Closure663 ledger has4 established criteria and18 unproved conditions across
+structural/activation/lifetime/tree gates. Root captures159/105; outgoing663
+capture1 call does not prove incoming663 activation or lexical663->379 ancestry.
+Normal return continues549 conditionally, with r6/r7 results/alias effects
+unknown. Error/unwind and nonreturn cases are separate universal obligations,
+not concrete runtime witnesses. Exit candidates47/431/536 remain unreached in
+the analyzed prefix; complete lifetime/activation proof is absent. No key or
+hierarchy promotion: verified_hierarchy=null, patchapplicable=false,operations[].
+
+Run python tools/checkpoint_filter.py; output/phase25/checkpoint-filter.json
+is ignored. Tracked findings and compact summary live under research/
+checkpoint-filter-2026-10-22/. Python static parsers only; no payload/Lua VM,
+factory/__index/application/network execution, input edits, Roblox runtime
+verification or push. Standalone analysis and13 focused tests passed. Full
+suite:235 tests passed (222 prior +13 Phase25),259.479s. Lua entry-script
+syntax, Python compilation and working/staged Git diff checks passed.

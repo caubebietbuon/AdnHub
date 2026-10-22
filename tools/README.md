@@ -368,3 +368,15 @@ on root159 lifetime/cache identity. No key or hierarchy promotion is inferred.
 See research/checkpoint-alignment-2026-10-22/FINDINGS.md and summary.json;
 full generated evidence is ignored under output/phase24. Older defaults stay
 unchanged; obligation_resolver accepts an optional context-bound transfer factory.
+
+## Phase 25: qualified checkpoint filters and closure663 proof ledger
+
+Run `python tools/checkpoint_filter.py`. Rebuilds Phase24 evidence and checks
+the forward/backward206490123 argument certificate. Exact frame/point/storage
+identities prevent applying closure663 arithmetic to root664 V without a
+dataflow connection. The byte-key mixer domain is independently verified as
+eight high-bit choices times256 low-byte choices; all2048 remain. The rejected
+counterfactual V=206490123 is diagnostic only. A criterion ledger and normal,
+error/nonreturn call-outcome obligations keep hierarchy promotion blocked.
+See research/checkpoint-filter-2026-10-22/FINDINGS.md and summary.json; full
+generated evidence is ignored under output/phase25. No earlier defaults change.
