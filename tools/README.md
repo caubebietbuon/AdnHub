@@ -501,3 +501,17 @@ never source proofs or guessed aliases. All2048 candidates/19 gates remain,
 hierarchy null. Findings/summary:research/epoch-mapping-2026-10-23/.
 Full regenerated evidence:ignored output/phase33. Tests:test_phase33.py.
 No target or network execution; demo/ESP unchanged.
+
+## Phase34: control-flow branch and callee-entry guard audit
+
+Run `python tools/path_reachability.py`. It regenerates Phase33 evidence,
+re-evaluates24 root numeric branch successors, records18 prefix/environment
+premises and checks guarded seams9942..8398 ->8400..8481 ->8521. Root PC981
+is absent; numeric PC order is not temporal order. The8521/516 guard query and
+five downstream544/258 entry queries are SAT but OPEN, not runtime witnesses.
+Call162's finite+7 map does not constrain V; it is not reused for call126.
+Normal-return refutations are separate from callee-entry reachability. No
+absolute global barrier or positive V981 path is proved. All2048 candidates/
+19 gates remain; hierarchy null. Findings, branch ledger and summary:
+research/path-reachability-2026-10-23/. Full evidence:ignored output/phase34.
+Tests:test_phase34.py. Everything remains offline/static; no target execution.

@@ -1,0 +1,3049 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "source_evidence": [
+    {
+      "offset": 53052,
+      "text": "W=if o~=14 then if t[i[W]]<=A[W]then W else H[W]else if t[A[W]]<t[H[W]]then W else i[W];end;"
+    },
+    {
+      "offset": 32811,
+      "text": "else W=if t[A[W]]then w[W]else H[W];"
+    },
+    {
+      "offset": 47988,
+      "text": "else W=if t[i[W]]then A[W]else H[W];"
+    }
+  ],
+  "interprocedural_queries": [
+    {
+      "caller_pc": 162,
+      "callee": 544,
+      "local_branch_sequence": [
+        {
+          "step": 4,
+          "pc": 210,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "210:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@117:1:0",
+              "value": 9
+            },
+            {
+              "immediate": 6
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 211,
+          "false_pc": 17,
+          "operator": "<=",
+          "recorded_successor": 17,
+          "successor_verified": true
+        },
+        {
+          "step": 5,
+          "pc": 17,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "17:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@117:1:0",
+              "value": 9
+            },
+            {
+              "immediate": 7
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 18,
+          "false_pc": 175,
+          "operator": "<=",
+          "recorded_successor": 175,
+          "successor_verified": true
+        },
+        {
+          "step": 6,
+          "pc": 175,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "175:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@117:1:0",
+              "value": 9
+            },
+            {
+              "immediate": 8
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 176,
+          "false_pc": 47,
+          "operator": "<=",
+          "recorded_successor": 47,
+          "successor_verified": true
+        },
+        {
+          "step": 9,
+          "pc": 49,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "49:1",
+          "expression": {
+            "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+          },
+          "truth": true,
+          "kind": "source_path_predicate",
+          "true_pc": 156,
+          "false_pc": 172,
+          "recorded_successor": 156,
+          "successor_verified": true
+        },
+        {
+          "step": 11,
+          "pc": 157,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "157:1",
+          "expression": true,
+          "truth": true,
+          "kind": "source_path_predicate",
+          "true_pc": 1,
+          "false_pc": 177,
+          "recorded_successor": 1,
+          "successor_verified": true
+        },
+        {
+          "step": 12,
+          "pc": 1,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "1:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@156:10:0",
+              "value": 8
+            },
+            {
+              "immediate": 4
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 2,
+          "false_pc": 210,
+          "operator": "<=",
+          "recorded_successor": 210,
+          "successor_verified": true
+        },
+        {
+          "step": 13,
+          "pc": 210,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "210:2",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@156:10:0",
+              "value": 8
+            },
+            {
+              "immediate": 6
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 211,
+          "false_pc": 17,
+          "operator": "<=",
+          "recorded_successor": 17,
+          "successor_verified": true
+        },
+        {
+          "step": 14,
+          "pc": 17,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "17:2",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@156:10:0",
+              "value": 8
+            },
+            {
+              "immediate": 7
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 18,
+          "false_pc": 175,
+          "operator": "<=",
+          "recorded_successor": 175,
+          "successor_verified": true
+        },
+        {
+          "step": 15,
+          "pc": 175,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "175:2",
+          "expression": true,
+          "truth": true,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@156:10:0",
+              "value": 8
+            },
+            {
+              "immediate": 8
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 176,
+          "false_pc": 47,
+          "operator": "<=",
+          "recorded_successor": 176,
+          "successor_verified": true
+        }
+      ],
+      "entry_query": {
+        "constraint_status": "SAT",
+        "path_status": "OPEN",
+        "open_obligations": [
+          "V@981 occurrence/arrival and temporal order to8521",
+          "same activation and reaching definition of V@981",
+          "all native, field, lazy/cache/code-epoch and no-reflection premises",
+          "actual516 invocation, source target/cache and call-frame identity"
+        ],
+        "absolute_barrier_proved": false,
+        "unconditional_reachability_proved": false,
+        "numeric_filters_admitted": []
+      },
+      "local_arithmetic": [
+        {
+          "source_interval": [
+            24,
+            26
+          ],
+          "target_interval": [
+            31,
+            33
+          ],
+          "offset": 7,
+          "pairs": [
+            [
+              24,
+              31
+            ],
+            [
+              25,
+              32
+            ]
+          ],
+          "symbolic_proof": "r=source_start+k; q=target_start+k; q=r+(target_start-source_start), 0<=k<count",
+          "scope": "argument slots in one source-checked call, not global register identities",
+          "caller": 516,
+          "callee": 544,
+          "call_pc": 162,
+          "bindings": [
+            {
+              "from": "frame516:r24@161:23:0",
+              "to": "frame544:r31@49:0:0"
+            },
+            {
+              "from": "frame516:r25@159:21:0",
+              "to": "frame544:r32@49:0:1"
+            }
+          ],
+          "proof": "pinned source93 argument window and source157/73 parameter move",
+          "sample_model_checks": {
+            "affine_uint32": {
+              "status": "UNIQUE_FIT",
+              "coefficient_residue": 1,
+              "coefficient_period": 4294967296,
+              "coefficient_count": 1,
+              "offset_expression": {
+                "op": "mod",
+                "args": [
+                  {
+                    "op": "subtract",
+                    "args": [
+                      31,
+                      {
+                        "op": "multiply",
+                        "args": [
+                          "a",
+                          24
+                        ]
+                      }
+                    ]
+                  },
+                  4294967296
+                ]
+              },
+              "offset_for_residue": 7,
+              "symbolic_rule": "target = (a * source + b) mod 2**width",
+              "source_transfer_proved": false
+            },
+            "rotate_xor_uint32": {
+              "status": "INCONSISTENT",
+              "models": [],
+              "source_transfer_proved": false,
+              "symbolic_rule": "target = rotate_left(source,s,width) XOR k"
+            }
+          },
+          "already_represented_as_data_edges": true
+        }
+      ],
+      "normal_return_claimed": false,
+      "entry_vs_return": "SAT entry is not a normal-return proof"
+    },
+    {
+      "caller_pc": 131,
+      "callee": 258,
+      "local_branch_sequence": [
+        {
+          "step": 4,
+          "pc": 210,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "210:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@117:1:0",
+              "value": 9
+            },
+            {
+              "immediate": 6
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 211,
+          "false_pc": 17,
+          "operator": "<=",
+          "recorded_successor": 17,
+          "successor_verified": true
+        },
+        {
+          "step": 5,
+          "pc": 17,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "17:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@117:1:0",
+              "value": 9
+            },
+            {
+              "immediate": 7
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 18,
+          "false_pc": 175,
+          "operator": "<=",
+          "recorded_successor": 175,
+          "successor_verified": true
+        },
+        {
+          "step": 6,
+          "pc": 175,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "175:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@117:1:0",
+              "value": 9
+            },
+            {
+              "immediate": 8
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 176,
+          "false_pc": 47,
+          "operator": "<=",
+          "recorded_successor": 47,
+          "successor_verified": true
+        },
+        {
+          "step": 9,
+          "pc": 49,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "49:1",
+          "expression": {
+            "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+          },
+          "truth": false,
+          "kind": "source_path_predicate",
+          "true_pc": 156,
+          "false_pc": 172,
+          "recorded_successor": 172,
+          "successor_verified": true
+        },
+        {
+          "step": 10,
+          "pc": 172,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "172:1",
+          "expression": {
+            "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+          },
+          "truth": false,
+          "kind": "source_path_predicate",
+          "true_pc": 1,
+          "false_pc": 177,
+          "recorded_successor": 177,
+          "successor_verified": true
+        },
+        {
+          "step": 12,
+          "pc": 178,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "178:1",
+          "expression": true,
+          "truth": true,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@177:11:0",
+              "value": 2
+            },
+            {
+              "immediate": 4
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 179,
+          "false_pc": 210,
+          "operator": "<=",
+          "recorded_successor": 179,
+          "successor_verified": true
+        },
+        {
+          "step": 18,
+          "pc": 25,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "25:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@177:11:0",
+              "value": 2
+            },
+            {
+              "immediate": 1
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 26,
+          "false_pc": 185,
+          "operator": "<=",
+          "recorded_successor": 185,
+          "successor_verified": true
+        },
+        {
+          "step": 19,
+          "pc": 185,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "185:1",
+          "expression": true,
+          "truth": true,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@177:11:0",
+              "value": 2
+            },
+            {
+              "immediate": 2
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 186,
+          "false_pc": 168,
+          "operator": "<=",
+          "recorded_successor": 186,
+          "successor_verified": true
+        }
+      ],
+      "entry_query": {
+        "constraint_status": "SAT",
+        "path_status": "OPEN",
+        "open_obligations": [
+          "V@981 occurrence/arrival and temporal order to8521",
+          "same activation and reaching definition of V@981",
+          "all native, field, lazy/cache/code-epoch and no-reflection premises",
+          "actual516 invocation, source target/cache and call-frame identity"
+        ],
+        "absolute_barrier_proved": false,
+        "unconditional_reachability_proved": false,
+        "numeric_filters_admitted": []
+      },
+      "local_arithmetic": {
+        "kind": "immediate/lazy arguments to parameters20..21"
+      },
+      "normal_return_claimed": false,
+      "entry_vs_return": "SAT entry is not a normal-return proof"
+    },
+    {
+      "caller_pc": 126,
+      "callee": 544,
+      "local_branch_sequence": [
+        {
+          "step": 4,
+          "pc": 210,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "210:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@117:1:0",
+              "value": 9
+            },
+            {
+              "immediate": 6
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 211,
+          "false_pc": 17,
+          "operator": "<=",
+          "recorded_successor": 17,
+          "successor_verified": true
+        },
+        {
+          "step": 5,
+          "pc": 17,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "17:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@117:1:0",
+              "value": 9
+            },
+            {
+              "immediate": 7
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 18,
+          "false_pc": 175,
+          "operator": "<=",
+          "recorded_successor": 175,
+          "successor_verified": true
+        },
+        {
+          "step": 6,
+          "pc": 175,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "175:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@117:1:0",
+              "value": 9
+            },
+            {
+              "immediate": 8
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 176,
+          "false_pc": 47,
+          "operator": "<=",
+          "recorded_successor": 47,
+          "successor_verified": true
+        },
+        {
+          "step": 9,
+          "pc": 49,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "49:1",
+          "expression": {
+            "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+          },
+          "truth": true,
+          "kind": "source_path_predicate",
+          "true_pc": 156,
+          "false_pc": 172,
+          "recorded_successor": 156,
+          "successor_verified": true
+        },
+        {
+          "step": 11,
+          "pc": 157,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "157:1",
+          "expression": true,
+          "truth": true,
+          "kind": "source_path_predicate",
+          "true_pc": 1,
+          "false_pc": 177,
+          "recorded_successor": 1,
+          "successor_verified": true
+        },
+        {
+          "step": 12,
+          "pc": 1,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "1:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@156:10:0",
+              "value": 8
+            },
+            {
+              "immediate": 4
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 2,
+          "false_pc": 210,
+          "operator": "<=",
+          "recorded_successor": 210,
+          "successor_verified": true
+        },
+        {
+          "step": 13,
+          "pc": 210,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "210:2",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@156:10:0",
+              "value": 8
+            },
+            {
+              "immediate": 6
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 211,
+          "false_pc": 17,
+          "operator": "<=",
+          "recorded_successor": 17,
+          "successor_verified": true
+        },
+        {
+          "step": 14,
+          "pc": 17,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "17:2",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@156:10:0",
+              "value": 8
+            },
+            {
+              "immediate": 7
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 18,
+          "false_pc": 175,
+          "operator": "<=",
+          "recorded_successor": 175,
+          "successor_verified": true
+        },
+        {
+          "step": 15,
+          "pc": 175,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "175:2",
+          "expression": true,
+          "truth": true,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@156:10:0",
+              "value": 8
+            },
+            {
+              "immediate": 8
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 176,
+          "false_pc": 47,
+          "operator": "<=",
+          "recorded_successor": 176,
+          "successor_verified": true
+        },
+        {
+          "step": 28,
+          "pc": 167,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "167:1",
+          "expression": {
+            "any": [
+              {
+                "typed_equal": [
+                  {
+                    "builtin_type_of": {
+                      "symbol": "global.Instance"
+                    }
+                  },
+                  "table"
+                ]
+              }
+            ]
+          },
+          "truth": true,
+          "kind": "source_path_predicate",
+          "true_pc": 150,
+          "false_pc": 83,
+          "recorded_successor": 150,
+          "successor_verified": true
+        },
+        {
+          "step": 30,
+          "pc": 151,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "151:1",
+          "expression": true,
+          "truth": true,
+          "kind": "source_path_predicate",
+          "true_pc": 1,
+          "false_pc": 73,
+          "recorded_successor": 1,
+          "successor_verified": true
+        },
+        {
+          "step": 31,
+          "pc": 1,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "1:2",
+          "expression": true,
+          "truth": true,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@150:29:0",
+              "value": 3
+            },
+            {
+              "immediate": 4
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 2,
+          "false_pc": 210,
+          "operator": "<=",
+          "recorded_successor": 2,
+          "successor_verified": true
+        },
+        {
+          "step": 36,
+          "pc": 65,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "65:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@150:29:0",
+              "value": 3
+            },
+            {
+              "immediate": 1
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 66,
+          "false_pc": 185,
+          "operator": "<=",
+          "recorded_successor": 185,
+          "successor_verified": true
+        },
+        {
+          "step": 37,
+          "pc": 185,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "185:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@150:29:0",
+              "value": 3
+            },
+            {
+              "immediate": 2
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 186,
+          "false_pc": 168,
+          "operator": "<=",
+          "recorded_successor": 168,
+          "successor_verified": true
+        },
+        {
+          "step": 38,
+          "pc": 168,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "168:1",
+          "expression": true,
+          "truth": true,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@150:29:0",
+              "value": 3
+            },
+            {
+              "immediate": 3
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 169,
+          "false_pc": 144,
+          "operator": "<=",
+          "recorded_successor": 169,
+          "successor_verified": true
+        }
+      ],
+      "entry_query": {
+        "constraint_status": "SAT",
+        "path_status": "OPEN",
+        "open_obligations": [
+          "V@981 occurrence/arrival and temporal order to8521",
+          "same activation and reaching definition of V@981",
+          "all native, field, lazy/cache/code-epoch and no-reflection premises",
+          "actual516 invocation, source target/cache and call-frame identity"
+        ],
+        "absolute_barrier_proved": false,
+        "unconditional_reachability_proved": false,
+        "numeric_filters_admitted": []
+      },
+      "local_arithmetic": {
+        "kind": "separate invocation; call162 affine proof not reused"
+      },
+      "normal_return_claimed": false,
+      "entry_vs_return": "SAT entry is not a normal-return proof"
+    },
+    {
+      "caller_pc": 102,
+      "callee": 258,
+      "local_branch_sequence": [
+        {
+          "step": 4,
+          "pc": 210,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "210:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@117:1:0",
+              "value": 9
+            },
+            {
+              "immediate": 6
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 211,
+          "false_pc": 17,
+          "operator": "<=",
+          "recorded_successor": 17,
+          "successor_verified": true
+        },
+        {
+          "step": 5,
+          "pc": 17,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "17:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@117:1:0",
+              "value": 9
+            },
+            {
+              "immediate": 7
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 18,
+          "false_pc": 175,
+          "operator": "<=",
+          "recorded_successor": 175,
+          "successor_verified": true
+        },
+        {
+          "step": 6,
+          "pc": 175,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "175:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@117:1:0",
+              "value": 9
+            },
+            {
+              "immediate": 8
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 176,
+          "false_pc": 47,
+          "operator": "<=",
+          "recorded_successor": 47,
+          "successor_verified": true
+        },
+        {
+          "step": 9,
+          "pc": 49,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "49:1",
+          "expression": {
+            "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+          },
+          "truth": true,
+          "kind": "source_path_predicate",
+          "true_pc": 156,
+          "false_pc": 172,
+          "recorded_successor": 156,
+          "successor_verified": true
+        },
+        {
+          "step": 11,
+          "pc": 157,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "157:1",
+          "expression": true,
+          "truth": true,
+          "kind": "source_path_predicate",
+          "true_pc": 1,
+          "false_pc": 177,
+          "recorded_successor": 1,
+          "successor_verified": true
+        },
+        {
+          "step": 12,
+          "pc": 1,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "1:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@156:10:0",
+              "value": 8
+            },
+            {
+              "immediate": 4
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 2,
+          "false_pc": 210,
+          "operator": "<=",
+          "recorded_successor": 210,
+          "successor_verified": true
+        },
+        {
+          "step": 13,
+          "pc": 210,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "210:2",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@156:10:0",
+              "value": 8
+            },
+            {
+              "immediate": 6
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 211,
+          "false_pc": 17,
+          "operator": "<=",
+          "recorded_successor": 17,
+          "successor_verified": true
+        },
+        {
+          "step": 14,
+          "pc": 17,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "17:2",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@156:10:0",
+              "value": 8
+            },
+            {
+              "immediate": 7
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 18,
+          "false_pc": 175,
+          "operator": "<=",
+          "recorded_successor": 175,
+          "successor_verified": true
+        },
+        {
+          "step": 15,
+          "pc": 175,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "175:2",
+          "expression": true,
+          "truth": true,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@156:10:0",
+              "value": 8
+            },
+            {
+              "immediate": 8
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 176,
+          "false_pc": 47,
+          "operator": "<=",
+          "recorded_successor": 176,
+          "successor_verified": true
+        },
+        {
+          "step": 28,
+          "pc": 167,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "167:1",
+          "expression": {
+            "any": [
+              {
+                "typed_equal": [
+                  {
+                    "builtin_type_of": {
+                      "symbol": "global.Instance"
+                    }
+                  },
+                  "table"
+                ]
+              }
+            ]
+          },
+          "truth": false,
+          "kind": "source_path_predicate",
+          "true_pc": 150,
+          "false_pc": 83,
+          "recorded_successor": 83,
+          "successor_verified": true
+        },
+        {
+          "step": 29,
+          "pc": 83,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "83:1",
+          "expression": {
+            "any": [
+              {
+                "typed_equal": [
+                  {
+                    "builtin_type_of": {
+                      "symbol": "global.Instance"
+                    }
+                  },
+                  "table"
+                ]
+              }
+            ]
+          },
+          "truth": false,
+          "kind": "source_path_predicate",
+          "true_pc": 1,
+          "false_pc": 73,
+          "recorded_successor": 73,
+          "successor_verified": true
+        },
+        {
+          "step": 32,
+          "pc": 75,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "75:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@73:30:0",
+              "value": 7
+            },
+            {
+              "immediate": 4
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 76,
+          "false_pc": 210,
+          "operator": "<=",
+          "recorded_successor": 210,
+          "successor_verified": true
+        },
+        {
+          "step": 33,
+          "pc": 210,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "210:3",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@73:30:0",
+              "value": 7
+            },
+            {
+              "immediate": 6
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 211,
+          "false_pc": 17,
+          "operator": "<=",
+          "recorded_successor": 17,
+          "successor_verified": true
+        },
+        {
+          "step": 34,
+          "pc": 17,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "17:3",
+          "expression": true,
+          "truth": true,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@73:30:0",
+              "value": 7
+            },
+            {
+              "immediate": 7
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 18,
+          "false_pc": 175,
+          "operator": "<=",
+          "recorded_successor": 18,
+          "successor_verified": true
+        }
+      ],
+      "entry_query": {
+        "constraint_status": "SAT",
+        "path_status": "OPEN",
+        "open_obligations": [
+          "V@981 occurrence/arrival and temporal order to8521",
+          "same activation and reaching definition of V@981",
+          "all native, field, lazy/cache/code-epoch and no-reflection premises",
+          "actual516 invocation, source target/cache and call-frame identity"
+        ],
+        "absolute_barrier_proved": false,
+        "unconditional_reachability_proved": false,
+        "numeric_filters_admitted": []
+      },
+      "local_arithmetic": {
+        "kind": "immediate/lazy arguments to parameters20..21"
+      },
+      "normal_return_claimed": false,
+      "entry_vs_return": "SAT entry is not a normal-return proof"
+    },
+    {
+      "caller_pc": 213,
+      "callee": 258,
+      "local_branch_sequence": [
+        {
+          "step": 4,
+          "pc": 210,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "210:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@117:1:0",
+              "value": 9
+            },
+            {
+              "immediate": 6
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 211,
+          "false_pc": 17,
+          "operator": "<=",
+          "recorded_successor": 17,
+          "successor_verified": true
+        },
+        {
+          "step": 5,
+          "pc": 17,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "17:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@117:1:0",
+              "value": 9
+            },
+            {
+              "immediate": 7
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 18,
+          "false_pc": 175,
+          "operator": "<=",
+          "recorded_successor": 175,
+          "successor_verified": true
+        },
+        {
+          "step": 6,
+          "pc": 175,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "175:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@117:1:0",
+              "value": 9
+            },
+            {
+              "immediate": 8
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 176,
+          "false_pc": 47,
+          "operator": "<=",
+          "recorded_successor": 47,
+          "successor_verified": true
+        },
+        {
+          "step": 9,
+          "pc": 49,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "49:1",
+          "expression": {
+            "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+          },
+          "truth": true,
+          "kind": "source_path_predicate",
+          "true_pc": 156,
+          "false_pc": 172,
+          "recorded_successor": 156,
+          "successor_verified": true
+        },
+        {
+          "step": 11,
+          "pc": 157,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "157:1",
+          "expression": true,
+          "truth": true,
+          "kind": "source_path_predicate",
+          "true_pc": 1,
+          "false_pc": 177,
+          "recorded_successor": 1,
+          "successor_verified": true
+        },
+        {
+          "step": 12,
+          "pc": 1,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "1:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@156:10:0",
+              "value": 8
+            },
+            {
+              "immediate": 4
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 2,
+          "false_pc": 210,
+          "operator": "<=",
+          "recorded_successor": 210,
+          "successor_verified": true
+        },
+        {
+          "step": 13,
+          "pc": 210,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "210:2",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@156:10:0",
+              "value": 8
+            },
+            {
+              "immediate": 6
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 211,
+          "false_pc": 17,
+          "operator": "<=",
+          "recorded_successor": 17,
+          "successor_verified": true
+        },
+        {
+          "step": 14,
+          "pc": 17,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "17:2",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@156:10:0",
+              "value": 8
+            },
+            {
+              "immediate": 7
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 18,
+          "false_pc": 175,
+          "operator": "<=",
+          "recorded_successor": 175,
+          "successor_verified": true
+        },
+        {
+          "step": 15,
+          "pc": 175,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "175:2",
+          "expression": true,
+          "truth": true,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@156:10:0",
+              "value": 8
+            },
+            {
+              "immediate": 8
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 176,
+          "false_pc": 47,
+          "operator": "<=",
+          "recorded_successor": 176,
+          "successor_verified": true
+        },
+        {
+          "step": 28,
+          "pc": 167,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "167:1",
+          "expression": {
+            "any": [
+              {
+                "typed_equal": [
+                  {
+                    "builtin_type_of": {
+                      "symbol": "global.Instance"
+                    }
+                  },
+                  "table"
+                ]
+              }
+            ]
+          },
+          "truth": true,
+          "kind": "source_path_predicate",
+          "true_pc": 150,
+          "false_pc": 83,
+          "recorded_successor": 150,
+          "successor_verified": true
+        },
+        {
+          "step": 30,
+          "pc": 151,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "151:1",
+          "expression": true,
+          "truth": true,
+          "kind": "source_path_predicate",
+          "true_pc": 1,
+          "false_pc": 73,
+          "recorded_successor": 1,
+          "successor_verified": true
+        },
+        {
+          "step": 31,
+          "pc": 1,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "1:2",
+          "expression": true,
+          "truth": true,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@150:29:0",
+              "value": 3
+            },
+            {
+              "immediate": 4
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 2,
+          "false_pc": 210,
+          "operator": "<=",
+          "recorded_successor": 2,
+          "successor_verified": true
+        },
+        {
+          "step": 36,
+          "pc": 65,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "65:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@150:29:0",
+              "value": 3
+            },
+            {
+              "immediate": 1
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 66,
+          "false_pc": 185,
+          "operator": "<=",
+          "recorded_successor": 185,
+          "successor_verified": true
+        },
+        {
+          "step": 37,
+          "pc": 185,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "185:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@150:29:0",
+              "value": 3
+            },
+            {
+              "immediate": 2
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 186,
+          "false_pc": 168,
+          "operator": "<=",
+          "recorded_successor": 168,
+          "successor_verified": true
+        },
+        {
+          "step": 38,
+          "pc": 168,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "168:1",
+          "expression": true,
+          "truth": true,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@150:29:0",
+              "value": 3
+            },
+            {
+              "immediate": 3
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 169,
+          "false_pc": 144,
+          "operator": "<=",
+          "recorded_successor": 169,
+          "successor_verified": true
+        },
+        {
+          "step": 52,
+          "pc": 204,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "204:1",
+          "expression": {
+            "typed_equal": [
+              {
+                "builtin_getmetatable_of": {
+                  "symbol": "global.Instance"
+                },
+                "protected_value_possible": true
+              },
+              null
+            ]
+          },
+          "truth": false,
+          "kind": "source_path_predicate",
+          "true_pc": 39,
+          "false_pc": 121,
+          "recorded_successor": 121,
+          "successor_verified": true
+        },
+        {
+          "step": 53,
+          "pc": 121,
+          "variant": 228,
+          "opcode": 181,
+          "occurrence": "121:1",
+          "expression": {
+            "typed_equal": [
+              {
+                "builtin_getmetatable_of": {
+                  "symbol": "global.Instance"
+                },
+                "protected_value_possible": true
+              },
+              null
+            ]
+          },
+          "truth": false,
+          "kind": "source_path_predicate",
+          "true_pc": 1,
+          "false_pc": 139,
+          "recorded_successor": 139,
+          "successor_verified": true
+        },
+        {
+          "step": 55,
+          "pc": 140,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "140:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@139:54:0",
+              "value": 6
+            },
+            {
+              "immediate": 4
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 141,
+          "false_pc": 210,
+          "operator": "<=",
+          "recorded_successor": 210,
+          "successor_verified": true
+        },
+        {
+          "step": 56,
+          "pc": 210,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "210:3",
+          "expression": true,
+          "truth": true,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@139:54:0",
+              "value": 6
+            },
+            {
+              "immediate": 6
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 211,
+          "false_pc": 17,
+          "operator": "<=",
+          "recorded_successor": 211,
+          "successor_verified": true
+        },
+        {
+          "step": 62,
+          "pc": 20,
+          "variant": 228,
+          "opcode": 13,
+          "occurrence": "20:1",
+          "expression": false,
+          "truth": false,
+          "operands": [
+            {
+              "register": 1,
+              "definition": "caller516:guarded-invocation:r1@139:54:0",
+              "value": 6
+            },
+            {
+              "immediate": 5
+            }
+          ],
+          "kind": "exact_integer_branch",
+          "true_pc": 21,
+          "false_pc": 213,
+          "operator": "<=",
+          "recorded_successor": 213,
+          "successor_verified": true
+        }
+      ],
+      "entry_query": {
+        "constraint_status": "SAT",
+        "path_status": "OPEN",
+        "open_obligations": [
+          "V@981 occurrence/arrival and temporal order to8521",
+          "same activation and reaching definition of V@981",
+          "all native, field, lazy/cache/code-epoch and no-reflection premises",
+          "actual516 invocation, source target/cache and call-frame identity"
+        ],
+        "absolute_barrier_proved": false,
+        "unconditional_reachability_proved": false,
+        "numeric_filters_admitted": []
+      },
+      "local_arithmetic": {
+        "kind": "immediate/lazy arguments to parameters20..21"
+      },
+      "normal_return_claimed": false,
+      "entry_vs_return": "SAT entry is not a normal-return proof"
+    }
+  ],
+  "guarded_normal_return_certificates": [
+    {
+      "coverage_proved": true,
+      "coverage_query": {
+        "status": "ENTAILED",
+        "value": true
+      },
+      "leaf_refutations": [
+        {
+          "pc": 131,
+          "reason": "same258 ordering failure",
+          "guards": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "172:1"
+            }
+          ],
+          "normal_return_refuted": true
+        },
+        {
+          "pc": 102,
+          "reason": "same258 ordering failure",
+          "guards": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "157:1"
+            },
+            {
+              "expression": {
+                "any": [
+                  {
+                    "typed_equal": [
+                      {
+                        "builtin_type_of": {
+                          "symbol": "global.Instance"
+                        }
+                      },
+                      "table"
+                    ]
+                  }
+                ]
+              },
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "167:1"
+            },
+            {
+              "expression": {
+                "any": [
+                  {
+                    "typed_equal": [
+                      {
+                        "builtin_type_of": {
+                          "symbol": "global.Instance"
+                        }
+                      },
+                      "table"
+                    ]
+                  }
+                ]
+              },
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "83:1"
+            }
+          ],
+          "normal_return_refuted": true
+        },
+        {
+          "pc": 30,
+          "reason": "fresh516 nil register ordering",
+          "guards": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "157:1"
+            },
+            {
+              "expression": {
+                "any": [
+                  {
+                    "typed_equal": [
+                      {
+                        "builtin_type_of": {
+                          "symbol": "global.Instance"
+                        }
+                      },
+                      "table"
+                    ]
+                  }
+                ]
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "167:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "151:1"
+            },
+            {
+              "expression": {
+                "typed_equal": [
+                  {
+                    "builtin_getmetatable_of": {
+                      "symbol": "global.Instance"
+                    },
+                    "protected_value_possible": true
+                  },
+                  null
+                ]
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "204:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "40:1"
+            }
+          ],
+          "normal_return_refuted": true
+        },
+        {
+          "pc": 213,
+          "reason": "same258 ordering failure",
+          "guards": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "157:1"
+            },
+            {
+              "expression": {
+                "any": [
+                  {
+                    "typed_equal": [
+                      {
+                        "builtin_type_of": {
+                          "symbol": "global.Instance"
+                        }
+                      },
+                      "table"
+                    ]
+                  }
+                ]
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "167:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "151:1"
+            },
+            {
+              "expression": {
+                "typed_equal": [
+                  {
+                    "builtin_getmetatable_of": {
+                      "symbol": "global.Instance"
+                    },
+                    "protected_value_possible": true
+                  },
+                  null
+                ]
+              },
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "204:1"
+            },
+            {
+              "expression": {
+                "typed_equal": [
+                  {
+                    "builtin_getmetatable_of": {
+                      "symbol": "global.Instance"
+                    },
+                    "protected_value_possible": true
+                  },
+                  null
+                ]
+              },
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "121:1"
+            }
+          ],
+          "normal_return_refuted": true
+        }
+      ],
+      "conditional_normal_return_excluded": true,
+      "scope": "only the reviewed prefix/cache/alias/native-builtin/no-reflection assumptions; not all program entries",
+      "global_V_constraints_admitted": false
+    }
+  ],
+  "global_gate_matrix": [
+    {
+      "gate": "activation:arguments_valid/incoming_arity_and_values",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "incoming-argument-values"
+      ]
+    },
+    {
+      "gate": "activation:arguments_valid/incoming_type_predicates",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "incoming-argument-values",
+        "incoming-type-proof"
+      ]
+    },
+    {
+      "gate": "activation:callee_identity/call_time_callee_value",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "call-target-identity"
+      ]
+    },
+    {
+      "gate": "activation:capture_cells_at_call/call_time_storage_and_values",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "capture-reaching-definitions"
+      ]
+    },
+    {
+      "gate": "activation:live_template_cache_identity/live_shared_cache_identity",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "live-template-identity",
+        "complete-cache-effects"
+      ]
+    },
+    {
+      "gate": "activation:normal_constructor_continuation/plain_context_binding",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "live-context-identity"
+      ]
+    },
+    {
+      "gate": "activation:reachable_call/incoming_call_witness",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "call-target-identity"
+      ]
+    },
+    {
+      "gate": "activation:reachable_call/incoming_path_predicates",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "entry-control-predicates"
+      ]
+    },
+    {
+      "gate": "lifetime:all_alias_writes_covered/escaping_and_future_alias_writes",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-alias-effects",
+        "complete-path-coverage"
+      ]
+    },
+    {
+      "gate": "lifetime:call_time_capture_values_accounted_for/all_reaching_call_definitions",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "capture-reaching-definitions",
+        "complete-path-coverage"
+      ]
+    },
+    {
+      "gate": "lifetime:close_or_rebind_paths_covered/all_exit_reachability",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-path-coverage",
+        "exit-outcome-proof"
+      ]
+    },
+    {
+      "gate": "lifetime:escape_effects_covered/all_call_outcomes",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-path-coverage",
+        "callee-results-and-effects"
+      ]
+    },
+    {
+      "gate": "lifetime:storage_identity_at_call/close_rebase_at_call",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "all-close-rebind-effects"
+      ]
+    },
+    {
+      "gate": "structural:ancestry_unconditional/all_lexical_owners",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-owner-inventory",
+        "unique-owner-proof"
+      ]
+    },
+    {
+      "gate": "structural:child_header_verified/template_at_invocation",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "live-template-identity"
+      ]
+    },
+    {
+      "gate": "structural:control_flow_verified/entry_call_path",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "entry-control-predicates"
+      ]
+    },
+    {
+      "gate": "tree:complete_node_coverage/full_reachable_inventory",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-owner-inventory",
+        "complete-path-coverage"
+      ]
+    },
+    {
+      "gate": "tree:cycle_free_verified_edges/all_verified_edges_complete",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-owner-inventory",
+        "complete-path-coverage",
+        "verified-edge-inventory"
+      ]
+    },
+    {
+      "gate": "tree:unique_incoming_owner/all_owners_excluded",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-owner-inventory",
+        "unique-owner-proof"
+      ]
+    }
+  ],
+  "numeric_filters_admitted": [],
+  "verified_hierarchy": null,
+  "formal_promotion_patch": {
+    "applicable": false,
+    "operations": []
+  },
+  "positive_bridge_proved": false,
+  "network_requests": 0,
+  "factory_invocations": 0,
+  "application_calls_executed": 0,
+  "baseline": "bfa6ece",
+  "candidate_count": 2048,
+  "root_path_audit": {
+    "entry_pc": 9942,
+    "root_branches": [
+      {
+        "step": 199,
+        "pc": 7755,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "7755:1",
+        "expression": true,
+        "truth": true,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@9904:80:0",
+            "value": 28
+          },
+          {
+            "immediate": 141
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 7756,
+        "false_pc": 7789,
+        "operator": "<=",
+        "recorded_successor": 7756,
+        "successor_verified": true
+      },
+      {
+        "step": 204,
+        "pc": 9066,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "9066:1",
+        "expression": true,
+        "truth": true,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@9904:80:0",
+            "value": 28
+          },
+          {
+            "immediate": 70
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 9067,
+        "false_pc": 9030,
+        "operator": "<=",
+        "recorded_successor": 9067,
+        "successor_verified": true
+      },
+      {
+        "step": 214,
+        "pc": 4364,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "4364:1",
+        "expression": true,
+        "truth": true,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@9904:80:0",
+            "value": 28
+          },
+          {
+            "immediate": 34
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 4365,
+        "false_pc": 7919,
+        "operator": "<=",
+        "recorded_successor": 4365,
+        "successor_verified": true
+      },
+      {
+        "step": 219,
+        "pc": 4961,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "4961:1",
+        "expression": false,
+        "truth": false,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@9904:80:0",
+            "value": 28
+          },
+          {
+            "immediate": 16
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 4962,
+        "false_pc": 4078,
+        "operator": "<=",
+        "recorded_successor": 4078,
+        "successor_verified": true
+      },
+      {
+        "step": 220,
+        "pc": 4078,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "4078:1",
+        "expression": false,
+        "truth": false,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@9904:80:0",
+            "value": 28
+          },
+          {
+            "immediate": 25
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 4079,
+        "false_pc": 7819,
+        "operator": "<=",
+        "recorded_successor": 7819,
+        "successor_verified": true
+      },
+      {
+        "step": 221,
+        "pc": 7819,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "7819:1",
+        "expression": true,
+        "truth": true,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@9904:80:0",
+            "value": 28
+          },
+          {
+            "immediate": 29
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 7820,
+        "false_pc": 4945,
+        "operator": "<=",
+        "recorded_successor": 7820,
+        "successor_verified": true
+      },
+      {
+        "step": 226,
+        "pc": 5860,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "5860:1",
+        "expression": false,
+        "truth": false,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@9904:80:0",
+            "value": 28
+          },
+          {
+            "immediate": 27
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 5861,
+        "false_pc": 9041,
+        "operator": "<=",
+        "recorded_successor": 9041,
+        "successor_verified": true
+      },
+      {
+        "step": 228,
+        "pc": 9042,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "9042:1",
+        "expression": true,
+        "truth": true,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@9904:80:0",
+            "value": 28
+          },
+          {
+            "immediate": 28
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 9043,
+        "false_pc": 8133,
+        "operator": "<=",
+        "recorded_successor": 9043,
+        "successor_verified": true
+      },
+      {
+        "step": 267,
+        "pc": 8048,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "8048:1",
+        "expression": false,
+        "truth": false,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@8044:263:0",
+            "value": 165
+          },
+          {
+            "immediate": 141
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 8049,
+        "false_pc": 7789,
+        "operator": "<=",
+        "recorded_successor": 7789,
+        "successor_verified": true
+      },
+      {
+        "step": 269,
+        "pc": 7790,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "7790:1",
+        "expression": true,
+        "truth": true,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@8044:263:0",
+            "value": 165
+          },
+          {
+            "immediate": 212
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 7791,
+        "false_pc": 9261,
+        "operator": "<=",
+        "recorded_successor": 7791,
+        "successor_verified": true
+      },
+      {
+        "step": 276,
+        "pc": 9794,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "9794:1",
+        "expression": true,
+        "truth": true,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@8044:263:0",
+            "value": 165
+          },
+          {
+            "immediate": 176
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 9795,
+        "false_pc": 7082,
+        "operator": "<=",
+        "recorded_successor": 9795,
+        "successor_verified": true
+      },
+      {
+        "step": 281,
+        "pc": 1390,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "1390:1",
+        "expression": false,
+        "truth": false,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@8044:263:0",
+            "value": 165
+          },
+          {
+            "immediate": 158
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 1391,
+        "false_pc": 1076,
+        "operator": "<=",
+        "recorded_successor": 1076,
+        "successor_verified": true
+      },
+      {
+        "step": 282,
+        "pc": 1076,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "1076:1",
+        "expression": true,
+        "truth": true,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@8044:263:0",
+            "value": 165
+          },
+          {
+            "immediate": 167
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 1077,
+        "false_pc": 544,
+        "operator": "<=",
+        "recorded_successor": 1077,
+        "successor_verified": true
+      },
+      {
+        "step": 287,
+        "pc": 808,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "808:1",
+        "expression": false,
+        "truth": false,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@8044:263:0",
+            "value": 165
+          },
+          {
+            "immediate": 162
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 809,
+        "false_pc": 1255,
+        "operator": "<=",
+        "recorded_successor": 1255,
+        "successor_verified": true
+      },
+      {
+        "step": 288,
+        "pc": 1255,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "1255:1",
+        "expression": false,
+        "truth": false,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@8044:263:0",
+            "value": 165
+          },
+          {
+            "immediate": 164
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 1256,
+        "false_pc": 696,
+        "operator": "<=",
+        "recorded_successor": 696,
+        "successor_verified": true
+      },
+      {
+        "step": 289,
+        "pc": 696,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "696:1",
+        "expression": true,
+        "truth": true,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@8044:263:0",
+            "value": 165
+          },
+          {
+            "immediate": 165
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 697,
+        "false_pc": 1439,
+        "operator": "<=",
+        "recorded_successor": 697,
+        "successor_verified": true
+      },
+      {
+        "step": 330,
+        "pc": 1010,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "1010:1",
+        "expression": true,
+        "truth": true,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@1009:329:0",
+            "value": 130
+          },
+          {
+            "immediate": 141
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 1011,
+        "false_pc": 7789,
+        "operator": "<=",
+        "recorded_successor": 1011,
+        "successor_verified": true
+      },
+      {
+        "step": 335,
+        "pc": 862,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "862:1",
+        "expression": false,
+        "truth": false,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@1009:329:0",
+            "value": 130
+          },
+          {
+            "immediate": 70
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 863,
+        "false_pc": 9030,
+        "operator": "<=",
+        "recorded_successor": 9030,
+        "successor_verified": true
+      },
+      {
+        "step": 337,
+        "pc": 9031,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "9031:1",
+        "expression": false,
+        "truth": false,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@1009:329:0",
+            "value": 130
+          },
+          {
+            "immediate": 105
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 9032,
+        "false_pc": 8837,
+        "operator": "<=",
+        "recorded_successor": 8837,
+        "successor_verified": true
+      },
+      {
+        "step": 338,
+        "pc": 8837,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "8837:1",
+        "expression": false,
+        "truth": false,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@1009:329:0",
+            "value": 130
+          },
+          {
+            "immediate": 123
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 8838,
+        "false_pc": 4332,
+        "operator": "<=",
+        "recorded_successor": 4332,
+        "successor_verified": true
+      },
+      {
+        "step": 339,
+        "pc": 4332,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "4332:1",
+        "expression": true,
+        "truth": true,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@1009:329:0",
+            "value": 130
+          },
+          {
+            "immediate": 132
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 4333,
+        "false_pc": 9249,
+        "operator": "<=",
+        "recorded_successor": 4333,
+        "successor_verified": true
+      },
+      {
+        "step": 345,
+        "pc": 5680,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "5680:1",
+        "expression": false,
+        "truth": false,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@1009:329:0",
+            "value": 130
+          },
+          {
+            "immediate": 127
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 5681,
+        "false_pc": 8313,
+        "operator": "<=",
+        "recorded_successor": 8313,
+        "successor_verified": true
+      },
+      {
+        "step": 348,
+        "pc": 8315,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "8315:1",
+        "expression": false,
+        "truth": false,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@1009:329:0",
+            "value": 130
+          },
+          {
+            "immediate": 129
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 8316,
+        "false_pc": 8352,
+        "operator": "<=",
+        "recorded_successor": 8352,
+        "successor_verified": true
+      },
+      {
+        "step": 349,
+        "pc": 8352,
+        "variant": 228,
+        "opcode": 13,
+        "occurrence": "8352:1",
+        "expression": true,
+        "truth": true,
+        "operands": [
+          {
+            "register": 87,
+            "definition": "root664:pinned-prefix:r87@1009:329:0",
+            "value": 130
+          },
+          {
+            "immediate": 130
+          }
+        ],
+        "kind": "exact_integer_branch",
+        "true_pc": 8353,
+        "false_pc": 8344,
+        "operator": "<=",
+        "recorded_successor": 8353,
+        "successor_verified": true
+      }
+    ],
+    "root_environment_assumptions": [
+      {
+        "step": 234,
+        "pc": 9062,
+        "kind": "ignored_metadata_assignment",
+        "condition": "V"
+      },
+      {
+        "step": 235,
+        "pc": 9063,
+        "kind": "application_boundary",
+        "condition": {
+          "operation": "environment_read",
+          "global_name": "task"
+        }
+      },
+      {
+        "step": 239,
+        "pc": 9251,
+        "kind": "normal_completion_assumption",
+        "condition": "symbolic field read succeeds; no actual table or metamethod accessed"
+      },
+      {
+        "step": 241,
+        "pc": 9253,
+        "kind": "normal_completion_assumption",
+        "condition": "symbolic field read succeeds; no actual table or metamethod accessed"
+      },
+      {
+        "step": 242,
+        "pc": 9254,
+        "kind": "normal_completion_assumption",
+        "condition": "symbolic field read succeeds; no actual table or metamethod accessed"
+      },
+      {
+        "step": 243,
+        "pc": 9255,
+        "kind": "normal_completion_assumption",
+        "condition": "symbolic field read succeeds; no actual table or metamethod accessed"
+      },
+      {
+        "step": 244,
+        "pc": 9256,
+        "kind": "normal_completion_assumption",
+        "condition": "symbolic field read succeeds; no actual table or metamethod accessed"
+      },
+      {
+        "step": 248,
+        "pc": 9386,
+        "kind": "application_boundary",
+        "condition": {
+          "operation": "environment_read",
+          "global_name": "Instance"
+        }
+      },
+      {
+        "step": 249,
+        "pc": 9387,
+        "kind": "application_boundary",
+        "condition": {
+          "operation": "environment_read",
+          "global_name": "Vector3"
+        }
+      },
+      {
+        "step": 250,
+        "pc": 9388,
+        "kind": "application_boundary",
+        "condition": {
+          "operation": "environment_read",
+          "global_name": "Vector2"
+        }
+      },
+      {
+        "step": 251,
+        "pc": 9389,
+        "kind": "application_boundary",
+        "condition": {
+          "operation": "environment_read",
+          "global_name": "CFrame"
+        }
+      },
+      {
+        "step": 252,
+        "pc": 9390,
+        "kind": "application_boundary",
+        "condition": {
+          "operation": "environment_read",
+          "global_name": "Random"
+        }
+      },
+      {
+        "step": 254,
+        "pc": 9392,
+        "kind": "application_boundary",
+        "condition": {
+          "operation": "environment_read",
+          "global_name": "identifyexecutor"
+        }
+      },
+      {
+        "step": 255,
+        "pc": 9393,
+        "kind": "application_boundary",
+        "condition": {
+          "operation": "environment_read",
+          "global_name": "islclosure"
+        }
+      },
+      {
+        "step": 257,
+        "pc": 9395,
+        "kind": "application_boundary",
+        "condition": {
+          "operation": "environment_read",
+          "global_name": "iscclosure"
+        }
+      },
+      {
+        "step": 258,
+        "pc": 9396,
+        "kind": "application_boundary",
+        "condition": {
+          "operation": "environment_read",
+          "global_name": "loadstring"
+        }
+      },
+      {
+        "step": 359,
+        "pc": 8395,
+        "kind": "normal_completion_assumption",
+        "condition": "reviewed plain decoder-context table identity"
+      },
+      {
+        "step": 360,
+        "pc": 8396,
+        "kind": "application_boundary",
+        "condition": {
+          "operation": "environment_read",
+          "global_name": "debug"
+        }
+      }
+    ],
+    "source981_snapshot": {
+      "pc": 981,
+      "arrays": {
+        "j": 74,
+        "O": 47,
+        "Z": 4,
+        "B": 125
+      },
+      "visited": false,
+      "interpretation": "epoch-specific stream tuple only; do not infer an outgoing edge with missing V/cache state"
+    },
+    "complete_981_to_516_branch_sequence_available": false,
+    "absolute_barrier_proved": false,
+    "positive_bridge_proved": false,
+    "caller_paths": [
+      {
+        "path_index": 0,
+        "call_pc": 8521,
+        "callee": 516,
+        "nonboolean_conditions": [],
+        "continuity": {
+          "segments": [
+            {
+              "name": "pinned root prefix",
+              "start_pc": 9942,
+              "end_pc": 8398
+            },
+            {
+              "name": "guarded assertion continuation",
+              "start_pc": 8400,
+              "end_pc": 8481
+            },
+            {
+              "name": "advanced guarded projection",
+              "start_pc": 8481,
+              "end_pc": 8521
+            }
+          ],
+          "seams": [
+            {
+              "from_pc": 8398,
+              "to_pc": 8400,
+              "kind": "guarded_call_return",
+              "guard": [
+                "context slot109 still denotes the reviewed standard assertion",
+                "global.debug is truthy for normal assertion return"
+              ],
+              "source": "reviewed source93 normal-return frame; no actual assertion call",
+              "unconditional_edge_proved": false
+            },
+            {
+              "from_pc": 8481,
+              "to_pc": 8481,
+              "kind": "same_boundary_snapshot",
+              "guard": [
+                "same code/metadata snapshot and path conditions",
+                "capture havoc retained"
+              ],
+              "source": "guarded_continuation boundary and advanced explorer input",
+              "unconditional_edge_proved": false
+            }
+          ],
+          "global_continuity_proved": false
+        },
+        "query": {
+          "constraint_status": "SAT",
+          "path_status": "OPEN",
+          "open_obligations": [
+            "V@981 occurrence/arrival and temporal order to8521",
+            "same activation and reaching definition of V@981",
+            "all native, field, lazy/cache/code-epoch and no-reflection premises"
+          ],
+          "absolute_barrier_proved": false,
+          "unconditional_reachability_proved": false,
+          "numeric_filters_admitted": []
+        },
+        "start981_to_call": {
+          "start_pc": 981,
+          "target_pc": 8521,
+          "start_occurrences": [],
+          "target_occurrences": [
+            389
+          ],
+          "recorded_forward_order": false,
+          "status": "missing_endpoint",
+          "global_order_proved": false
+        }
+      }
+    ]
+  },
+  "root_branch_integer_domains": [
+    {
+      "definition": "root664:pinned-prefix:r87@9904:80:0",
+      "lower": 28,
+      "upper": 28,
+      "branch_steps": [
+        199,
+        204,
+        214,
+        219,
+        220,
+        221,
+        226,
+        228
+      ],
+      "observed_value": 28,
+      "scope": "necessary integer constraint under this guarded SSA path; no V@981 relation proved"
+    },
+    {
+      "definition": "root664:pinned-prefix:r87@8044:263:0",
+      "lower": 165,
+      "upper": 165,
+      "branch_steps": [
+        267,
+        269,
+        276,
+        281,
+        282,
+        287,
+        288,
+        289
+      ],
+      "observed_value": 165,
+      "scope": "necessary integer constraint under this guarded SSA path; no V@981 relation proved"
+    },
+    {
+      "definition": "root664:pinned-prefix:r87@1009:329:0",
+      "lower": 130,
+      "upper": 130,
+      "branch_steps": [
+        330,
+        335,
+        337,
+        338,
+        339,
+        345,
+        348,
+        349
+      ],
+      "observed_value": 130,
+      "scope": "necessary integer constraint under this guarded SSA path; no V@981 relation proved"
+    }
+  ]
+}

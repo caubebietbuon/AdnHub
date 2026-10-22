@@ -1,5 +1,32 @@
 # AdnHub — project memory
 
+## Phase34 handover — 2026-10-23
+
+Baseline bfa6ece. New tools/path_reachability.py and tools/test_phase34.py.
+Run `python tools/path_reachability.py`; ignored output/phase34/path-reachability.json.
+Tracked handover:research/path-reachability-2026-10-23/{FINDINGS.md,BRANCH_LEDGER.md,summary.json}.
+Pinned root entry9942..8398 has363 observations/24 concrete branches with checked
+successors.18 root environment/normal-completion premises remain explicit.
+Conditional assertion seam8398->8400, continuation to8481, advanced projection
+to8521/516; no assertion, field, closure or application function is invoked.
+LuaTruth(global.debug) is necessary under standard-assert context-slot109;
+do not confuse that slot with root register109/closure258. Prefix/epoch/cache/
+alias/native premises remain open. No PC981 visit or temporal order to8521 is
+proved; its snapshot125 tuple is not an outgoing edge with unproved V/cache state.
+Root64-guard query and five544/258 callee-entry queries are SAT but OPEN.
+All24 branch successor checks pass under the source model. Positive V981 bridge
+and absolute global barrier both unproved. Callee entry is distinct from normal
+return: retain Phase31's guarded return failures without declaring entry impossible.
+Call162's finite+7 arithmetic adds no V constraint and is not reused at126.
+All2048 candidates/19 gates retained; verified_hierarchy null; promotionfalse/empty.
+Offline/static only, demos/ESP untouched. Run full unittest discovery, Python
+compile, Lua entry syntax and working/staged diff checks; commit locally, no push.
+Verification:400 tests (378 retained+22 new) passed in401.019s. Fresh standalone
+regeneration,24 successor checks, Python compilation, both Lua entry syntax
+checks and working/staged diff checks passed. Independent root-branch integer
+intersections give r87 SSA values28,165,130; they are not V981 values. No runtime
+or network checks; commit locally only, no push.
+
 ## Phase33 handover — 2026-10-23
 
 Baseline4a7ba56. New tools/epoch_mapper.py and tools/test_phase33.py. Run
