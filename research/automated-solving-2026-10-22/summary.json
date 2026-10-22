@@ -1,0 +1,2243 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "source_evidence": [
+    {
+      "offset": 44128,
+      "text": "else if o~=150 then t[A[f]]={};"
+    },
+    {
+      "offset": 44433,
+      "text": "else if o<155 then t[A[f]][Z[f]]=j[f];"
+    },
+    {
+      "offset": 42262,
+      "text": "i[W]=74;A[W]=144;H[W]=178;w[W]=68;"
+    },
+    {
+      "offset": 51561,
+      "text": "if o<68 then t[H[W]](t[i[W]],t[A[W]]);else if o==69 then T=g[i[W]];T[6][T[5]][O[W]]=Z[W];else end;end;"
+    },
+    {
+      "offset": 56169,
+      "text": "elseif o>=43 then if o==44 then t[i[W]](O[W],t[H[W]]);"
+    }
+  ],
+  "constraints": [
+    {
+      "name": "current-byte-key-equation",
+      "expression": {
+        "op": "ule",
+        "args": [
+          {
+            "op": "xor",
+            "args": [
+              4,
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "xor",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "V"
+                      },
+                      {
+                        "op": "lshr",
+                        "args": [
+                          {
+                            "op": "var",
+                            "name": "V"
+                          },
+                          29
+                        ]
+                      }
+                    ]
+                  },
+                  536870911
+                ]
+              }
+            ]
+          },
+          255
+        ]
+      },
+      "guard_proved": true,
+      "scope": "necessary local current PC981 byte-mask model"
+    },
+    {
+      "name": "derived-hamming-bounds",
+      "expression": {
+        "op": "all",
+        "args": [
+          {
+            "op": "uge",
+            "args": [
+              {
+                "op": "popcount",
+                "args": [
+                  {
+                    "op": "xor",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "V"
+                      },
+                      4179906283
+                    ]
+                  }
+                ]
+              },
+              9
+            ]
+          },
+          {
+            "op": "ule",
+            "args": [
+              {
+                "op": "popcount",
+                "args": [
+                  {
+                    "op": "xor",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "V"
+                      },
+                      4179906283
+                    ]
+                  }
+                ]
+              },
+              20
+            ]
+          }
+        ]
+      },
+      "guard_proved": true,
+      "scope": "Phase27 entry-to-site bounds in the same local model"
+    }
+  ],
+  "conditional_constructor_observations": [
+    {
+      "parent": 664,
+      "child": 137,
+      "descriptor_id": 58,
+      "pc": 8481,
+      "variant": 228,
+      "capture_bounds": [],
+      "captures": [],
+      "child_factory": 4890,
+      "scope": "source transfer established on guarded abstract path; unconditional ancestry not proved",
+      "constructor_alias_guard": "decoder context is the reviewed plain table; alias reads do not invoke metamethods",
+      "template_evidence": {
+        "key": 117,
+        "format": 0,
+        "factory_slot": 4890,
+        "plain_sha256": "153cc0fb8cf79942fc40844b32b54e20b6985d393eeafc3cdd167ce4627cd1ed",
+        "footer_consumed": true
+      }
+    },
+    {
+      "parent": 664,
+      "child": 672,
+      "descriptor_id": 212,
+      "pc": 8482,
+      "variant": 228,
+      "capture_bounds": [
+        {
+          "kind": 3,
+          "index_range": [
+            109,
+            110
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            95,
+            96
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            110,
+            111
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        }
+      ],
+      "captures": [
+        {
+          "cell_identity": "frame:664:register:109",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:95",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:110",
+          "span": 1
+        }
+      ],
+      "child_factory": 4890,
+      "scope": "source transfer established on guarded abstract path; unconditional ancestry not proved",
+      "constructor_alias_guard": "decoder context is the reviewed plain table; alias reads do not invoke metamethods",
+      "template_evidence": {
+        "key": 121,
+        "format": 0,
+        "factory_slot": 4890,
+        "plain_sha256": "7736f5abdae06ceaf8785231caefb068c0f1c90fd9b06ca2053dbb9030d248db",
+        "footer_consumed": true
+      }
+    },
+    {
+      "parent": 664,
+      "child": 544,
+      "descriptor_id": 495,
+      "pc": 8361,
+      "variant": 228,
+      "capture_bounds": [
+        {
+          "kind": 3,
+          "index_range": [
+            160,
+            161
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            111,
+            112
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        }
+      ],
+      "captures": [
+        {
+          "cell_identity": "frame:664:register:160",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:111",
+          "span": 1
+        }
+      ],
+      "child_factory": 4890,
+      "scope": "source transfer established on guarded abstract path; unconditional ancestry not proved",
+      "constructor_alias_guard": "decoder context is the reviewed plain table; alias reads do not invoke metamethods",
+      "template_evidence": {
+        "key": 83,
+        "format": 0,
+        "factory_slot": 4890,
+        "plain_sha256": "41aa10c573c922e9db9a389cc4995d241c9757f8de14e50c34c8e6211e0051b4",
+        "footer_consumed": true
+      }
+    },
+    {
+      "parent": 664,
+      "child": 516,
+      "descriptor_id": 579,
+      "pc": 8362,
+      "variant": 228,
+      "capture_bounds": [
+        {
+          "kind": 3,
+          "index_range": [
+            111,
+            112
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            109,
+            110
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            95,
+            96
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            110,
+            111
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            54,
+            55
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        }
+      ],
+      "captures": [
+        {
+          "cell_identity": "frame:664:register:111",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:109",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:95",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:110",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:54",
+          "span": 1
+        }
+      ],
+      "child_factory": 4890,
+      "scope": "source transfer established on guarded abstract path; unconditional ancestry not proved",
+      "constructor_alias_guard": "decoder context is the reviewed plain table; alias reads do not invoke metamethods",
+      "template_evidence": {
+        "key": 111,
+        "format": 0,
+        "factory_slot": 4890,
+        "plain_sha256": "531a23e3614d3da4a980f269f833faf0893bea623de8fd4dc4d53bafd5ca8156",
+        "footer_consumed": true
+      }
+    },
+    {
+      "parent": 664,
+      "child": 455,
+      "descriptor_id": 58,
+      "pc": 8363,
+      "variant": 228,
+      "capture_bounds": [],
+      "captures": [],
+      "child_factory": 4890,
+      "scope": "source transfer established on guarded abstract path; unconditional ancestry not proved",
+      "constructor_alias_guard": "decoder context is the reviewed plain table; alias reads do not invoke metamethods",
+      "template_evidence": {
+        "key": 92,
+        "format": 0,
+        "factory_slot": 4890,
+        "plain_sha256": "b3e46b62f2e3f0ab589285aacdc863e72f5e516aeb7807400b56015aacf09d9b",
+        "footer_consumed": true
+      }
+    },
+    {
+      "parent": 664,
+      "child": 728,
+      "descriptor_id": 424,
+      "pc": 8520,
+      "variant": 228,
+      "capture_bounds": [
+        {
+          "kind": 3,
+          "index_range": [
+            69,
+            70
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            109,
+            110
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            95,
+            96
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        },
+        {
+          "kind": 3,
+          "index_range": [
+            110,
+            111
+          ],
+          "advertised_allocation": 181,
+          "fits": true
+        }
+      ],
+      "captures": [
+        {
+          "cell_identity": "frame:664:register:69",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:109",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:95",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:110",
+          "span": 1
+        }
+      ],
+      "child_factory": 4890,
+      "scope": "source transfer established on guarded abstract path; unconditional ancestry not proved",
+      "constructor_alias_guard": "decoder context is the reviewed plain table; alias reads do not invoke metamethods",
+      "template_evidence": {
+        "key": 100,
+        "format": 0,
+        "factory_slot": 4890,
+        "plain_sha256": "5c37f58f391a0925d74a572867a80ac57b03c5ba2659cc548298b58d83f63bc5",
+        "footer_consumed": true
+      }
+    }
+  ],
+  "gate_queries": [
+    {
+      "gate": "activation:arguments_valid/incoming_arity_and_values",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "actual663-invocation",
+        "incoming-argument-values"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": true,
+          "2": true,
+          "3": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": false,
+          "2": true,
+          "3": false
+        },
+        "search_nodes": 2
+      },
+      "variable_ids": {
+        "activation:arguments_valid/incoming_arity_and_values": 1,
+        "actual663-invocation": 2,
+        "incoming-argument-values": 3,
+        "header-bytes-agree": 4,
+        "constructor-prefix-alias-only": 5
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "activation:arguments_valid/incoming_type_predicates",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "incoming-argument-values",
+        "incoming-type-proof"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": true,
+          "2": true,
+          "3": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": false,
+          "2": true,
+          "3": false
+        },
+        "search_nodes": 2
+      },
+      "variable_ids": {
+        "activation:arguments_valid/incoming_type_predicates": 1,
+        "incoming-argument-values": 2,
+        "incoming-type-proof": 3,
+        "header-bytes-agree": 4,
+        "constructor-prefix-alias-only": 5
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "activation:callee_identity/call_time_callee_value",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "actual663-invocation",
+        "call-target-identity"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": true,
+          "2": true,
+          "3": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": false,
+          "2": true,
+          "3": false
+        },
+        "search_nodes": 2
+      },
+      "variable_ids": {
+        "activation:callee_identity/call_time_callee_value": 1,
+        "actual663-invocation": 2,
+        "call-target-identity": 3,
+        "header-bytes-agree": 4,
+        "constructor-prefix-alias-only": 5
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "activation:capture_cells_at_call/call_time_storage_and_values",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "actual663-invocation",
+        "capture-reaching-definitions"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": true,
+          "2": true,
+          "3": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": false,
+          "2": true,
+          "3": false
+        },
+        "search_nodes": 2
+      },
+      "variable_ids": {
+        "activation:capture_cells_at_call/call_time_storage_and_values": 1,
+        "actual663-invocation": 2,
+        "capture-reaching-definitions": 3,
+        "header-bytes-agree": 4,
+        "constructor-prefix-alias-only": 5
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "activation:live_template_cache_identity/live_shared_cache_identity",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "actual663-invocation",
+        "live-template-identity",
+        "complete-cache-effects"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "5": true,
+          "6": true,
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "5": true,
+          "6": true,
+          "1": false,
+          "2": true,
+          "3": true,
+          "4": false
+        },
+        "search_nodes": 3
+      },
+      "variable_ids": {
+        "activation:live_template_cache_identity/live_shared_cache_identity": 1,
+        "actual663-invocation": 2,
+        "live-template-identity": 3,
+        "complete-cache-effects": 4,
+        "header-bytes-agree": 5,
+        "constructor-prefix-alias-only": 6
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "activation:normal_constructor_continuation/plain_context_binding",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "constructor-prefix-alias-only",
+        "live-context-identity"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "2": true,
+          "1": true,
+          "3": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "2": true,
+          "1": false,
+          "3": false
+        },
+        "search_nodes": 1
+      },
+      "variable_ids": {
+        "activation:normal_constructor_continuation/plain_context_binding": 1,
+        "constructor-prefix-alias-only": 2,
+        "live-context-identity": 3,
+        "header-bytes-agree": 4
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "activation:reachable_call/incoming_call_witness",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "actual663-invocation",
+        "call-target-identity"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": true,
+          "2": true,
+          "3": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": false,
+          "2": true,
+          "3": false
+        },
+        "search_nodes": 2
+      },
+      "variable_ids": {
+        "activation:reachable_call/incoming_call_witness": 1,
+        "actual663-invocation": 2,
+        "call-target-identity": 3,
+        "header-bytes-agree": 4,
+        "constructor-prefix-alias-only": 5
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "activation:reachable_call/incoming_path_predicates",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "actual663-invocation",
+        "entry-control-predicates"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": true,
+          "2": true,
+          "3": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": false,
+          "2": true,
+          "3": false
+        },
+        "search_nodes": 2
+      },
+      "variable_ids": {
+        "activation:reachable_call/incoming_path_predicates": 1,
+        "actual663-invocation": 2,
+        "entry-control-predicates": 3,
+        "header-bytes-agree": 4,
+        "constructor-prefix-alias-only": 5
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "lifetime:all_alias_writes_covered/escaping_and_future_alias_writes",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "complete-alias-effects",
+        "complete-path-coverage"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": true,
+          "2": true,
+          "3": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": false,
+          "2": true,
+          "3": false
+        },
+        "search_nodes": 2
+      },
+      "variable_ids": {
+        "lifetime:all_alias_writes_covered/escaping_and_future_alias_writes": 1,
+        "complete-alias-effects": 2,
+        "complete-path-coverage": 3,
+        "header-bytes-agree": 4,
+        "constructor-prefix-alias-only": 5
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "lifetime:call_time_capture_values_accounted_for/all_reaching_call_definitions",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "actual663-invocation",
+        "capture-reaching-definitions",
+        "complete-path-coverage"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "5": true,
+          "6": true,
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "5": true,
+          "6": true,
+          "1": false,
+          "2": true,
+          "3": true,
+          "4": false
+        },
+        "search_nodes": 3
+      },
+      "variable_ids": {
+        "lifetime:call_time_capture_values_accounted_for/all_reaching_call_definitions": 1,
+        "actual663-invocation": 2,
+        "capture-reaching-definitions": 3,
+        "complete-path-coverage": 4,
+        "header-bytes-agree": 5,
+        "constructor-prefix-alias-only": 6
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "lifetime:close_or_rebind_paths_covered/all_exit_reachability",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "complete-path-coverage",
+        "exit-outcome-proof"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": true,
+          "2": true,
+          "3": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": false,
+          "2": true,
+          "3": false
+        },
+        "search_nodes": 2
+      },
+      "variable_ids": {
+        "lifetime:close_or_rebind_paths_covered/all_exit_reachability": 1,
+        "complete-path-coverage": 2,
+        "exit-outcome-proof": 3,
+        "header-bytes-agree": 4,
+        "constructor-prefix-alias-only": 5
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "lifetime:escape_effects_covered/all_call_outcomes",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "complete-path-coverage",
+        "callee-results-and-effects"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": true,
+          "2": true,
+          "3": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": false,
+          "2": true,
+          "3": false
+        },
+        "search_nodes": 2
+      },
+      "variable_ids": {
+        "lifetime:escape_effects_covered/all_call_outcomes": 1,
+        "complete-path-coverage": 2,
+        "callee-results-and-effects": 3,
+        "header-bytes-agree": 4,
+        "constructor-prefix-alias-only": 5
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "lifetime:storage_identity_at_call/close_rebase_at_call",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "actual663-invocation",
+        "all-close-rebind-effects"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": true,
+          "2": true,
+          "3": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": false,
+          "2": true,
+          "3": false
+        },
+        "search_nodes": 2
+      },
+      "variable_ids": {
+        "lifetime:storage_identity_at_call/close_rebase_at_call": 1,
+        "actual663-invocation": 2,
+        "all-close-rebind-effects": 3,
+        "header-bytes-agree": 4,
+        "constructor-prefix-alias-only": 5
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "structural:ancestry_unconditional/all_lexical_owners",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "complete-owner-inventory",
+        "unique-owner-proof"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": true,
+          "2": true,
+          "3": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": false,
+          "2": true,
+          "3": false
+        },
+        "search_nodes": 2
+      },
+      "variable_ids": {
+        "structural:ancestry_unconditional/all_lexical_owners": 1,
+        "complete-owner-inventory": 2,
+        "unique-owner-proof": 3,
+        "header-bytes-agree": 4,
+        "constructor-prefix-alias-only": 5
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "structural:child_header_verified/template_at_invocation",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "header-bytes-agree",
+        "actual663-invocation",
+        "live-template-identity"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "2": true,
+          "5": true,
+          "1": true,
+          "3": true,
+          "4": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "2": true,
+          "5": true,
+          "1": false,
+          "3": true,
+          "4": false
+        },
+        "search_nodes": 2
+      },
+      "variable_ids": {
+        "structural:child_header_verified/template_at_invocation": 1,
+        "header-bytes-agree": 2,
+        "actual663-invocation": 3,
+        "live-template-identity": 4,
+        "constructor-prefix-alias-only": 5
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "structural:control_flow_verified/entry_call_path",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "actual663-invocation",
+        "entry-control-predicates"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": true,
+          "2": true,
+          "3": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": false,
+          "2": true,
+          "3": false
+        },
+        "search_nodes": 2
+      },
+      "variable_ids": {
+        "structural:control_flow_verified/entry_call_path": 1,
+        "actual663-invocation": 2,
+        "entry-control-predicates": 3,
+        "header-bytes-agree": 4,
+        "constructor-prefix-alias-only": 5
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "tree:complete_node_coverage/full_reachable_inventory",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "complete-owner-inventory",
+        "complete-path-coverage"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": true,
+          "2": true,
+          "3": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": false,
+          "2": true,
+          "3": false
+        },
+        "search_nodes": 2
+      },
+      "variable_ids": {
+        "tree:complete_node_coverage/full_reachable_inventory": 1,
+        "complete-owner-inventory": 2,
+        "complete-path-coverage": 3,
+        "header-bytes-agree": 4,
+        "constructor-prefix-alias-only": 5
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "tree:cycle_free_verified_edges/all_verified_edges_complete",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "complete-owner-inventory",
+        "complete-path-coverage",
+        "verified-edge-inventory"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "5": true,
+          "6": true,
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "5": true,
+          "6": true,
+          "1": false,
+          "2": true,
+          "3": true,
+          "4": false
+        },
+        "search_nodes": 3
+      },
+      "variable_ids": {
+        "tree:cycle_free_verified_edges/all_verified_edges_complete": 1,
+        "complete-owner-inventory": 2,
+        "complete-path-coverage": 3,
+        "verified-edge-inventory": 4,
+        "header-bytes-agree": 5,
+        "constructor-prefix-alias-only": 6
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    },
+    {
+      "gate": "tree:unique_incoming_owner/all_owners_excluded",
+      "status": "UNDERCONSTRAINED",
+      "requirements": [
+        "complete-owner-inventory",
+        "unique-owner-proof"
+      ],
+      "known_facts": {
+        "header-bytes-agree": true,
+        "constructor-prefix-alias-only": true
+      },
+      "positive_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": true,
+          "2": true,
+          "3": true
+        },
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "4": true,
+          "5": true,
+          "1": false,
+          "2": true,
+          "3": false
+        },
+        "search_nodes": 2
+      },
+      "variable_ids": {
+        "tree:unique_incoming_owner/all_owners_excluded": 1,
+        "complete-owner-inventory": 2,
+        "unique-owner-proof": 3,
+        "header-bytes-agree": 4,
+        "constructor-prefix-alias-only": 5
+      },
+      "scope": "certificate evidence formula only; logical valuations are not runtime witnesses"
+    }
+  ],
+  "activation_candidate_queries": [
+    {
+      "gate": "call:8521:activates:663",
+      "status": "REFUTED_CERTIFICATE",
+      "requirements": [
+        "callee-body-matches"
+      ],
+      "known_facts": {
+        "callee-body-matches": false
+      },
+      "positive_query": {
+        "status": "UNSAT",
+        "model": null,
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "2": false,
+          "1": false
+        },
+        "search_nodes": 1
+      },
+      "variable_ids": {
+        "call:8521:activates:663": 1,
+        "callee-body-matches": 2
+      },
+      "scope": "candidate call in the guarded metadata projection only; not all future activations",
+      "guarded_path_conditions": [
+        {
+          "kind": "atom",
+          "name": "context109 is the reviewed standard assertion",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "first argument is truthy",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "unchanged root snapshot/dispatcher along this projection",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "no-reflective-frame-code-cache-mutation",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "lazy key/cache binding agrees with this epoch:at:8401",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "field read succeeds:at:8401",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "lazy key/cache binding agrees with this epoch:at:8478",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "field read succeeds:at:8478",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "lazy key/cache binding agrees with this epoch:at:8479",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "field read succeeds:at:8479",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "constructor-cache-and-context-agreement:8481",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "constructor-cache-and-context-agreement:8482",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "non-nil-non-NaN-lazy-key:111:at:8357",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "lazy-reader-cache-agreement-and-no-hidden-writes",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "lazy-reader-cache-agreement-and-no-hidden-writes",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "non-nil-non-NaN-lazy-key:16:at:8359",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "lazy-reader-cache-agreement-and-no-hidden-writes",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "constructor-cache-and-context-agreement:8361",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "constructor-cache-and-context-agreement:8362",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "constructor-cache-and-context-agreement:8363",
+          "truth": true
+        },
+        {
+          "kind": "atom",
+          "name": "constructor-cache-and-context-agreement:8520",
+          "truth": true
+        }
+      ],
+      "observed_callee_body": 516
+    }
+  ],
+  "unconditionally_resolved_gates": [],
+  "verified_hierarchy": null,
+  "formal_promotion_patch": {
+    "applicable": false,
+    "operations": []
+  },
+  "solver_scope": "complete finite necessary-condition model, not complete program reachability",
+  "network_requests": 0,
+  "factory_invocations": 0,
+  "application_calls_executed": 0,
+  "input_byte_edits": 0,
+  "candidate_solution": {
+    "backend": "exact finite bit-vector CSP/bitset propagation",
+    "domain_count": 2048,
+    "status": "SAT_IN_FINITE_MODEL",
+    "model_count": 2048,
+    "pruned_count": 0,
+    "domain_sha256": "f99b65fa7b26c9ef125246342d6e990f4c536a79241e9a6fb81381e88cd4f190",
+    "models_sha256": "f99b65fa7b26c9ef125246342d6e990f4c536a79241e9a6fb81381e88cd4f190",
+    "proof_steps": [
+      {
+        "name": "derived-hamming-bounds",
+        "active": true,
+        "unknown_count": 0,
+        "entailed_by_domain": true,
+        "rejected_count": 0,
+        "rejected_indices": []
+      },
+      {
+        "name": "current-byte-key-equation",
+        "active": true,
+        "unknown_count": 0,
+        "entailed_by_domain": true,
+        "rejected_count": 0,
+        "rejected_indices": []
+      }
+    ],
+    "certificate_replayed": true,
+    "global_reachability_proved": false
+  },
+  "symbolic_exploration": {
+    "refuted_conditions": [],
+    "explored_instructions": 18,
+    "unexplored_worklist": 0,
+    "path_budget_exhausted": false,
+    "dropped_worklist_branches": 0,
+    "state_budget": 512,
+    "all_application_paths_covered": false,
+    "factory_invocations": 0,
+    "application_calls_executed": 0,
+    "terminal_paths": [
+      {
+        "pc": 8521,
+        "conditions": [
+          {
+            "kind": "atom",
+            "name": "context109 is the reviewed standard assertion",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "first argument is truthy",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "unchanged root snapshot/dispatcher along this projection",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "no-reflective-frame-code-cache-mutation",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "lazy key/cache binding agrees with this epoch:at:8401",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "field read succeeds:at:8401",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "lazy key/cache binding agrees with this epoch:at:8478",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "field read succeeds:at:8478",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "lazy key/cache binding agrees with this epoch:at:8479",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "field read succeeds:at:8479",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "constructor-cache-and-context-agreement:8481",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "constructor-cache-and-context-agreement:8482",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "non-nil-non-NaN-lazy-key:111:at:8357",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "lazy-reader-cache-agreement-and-no-hidden-writes",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "lazy-reader-cache-agreement-and-no-hidden-writes",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "non-nil-non-NaN-lazy-key:16:at:8359",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "lazy-reader-cache-agreement-and-no-hidden-writes",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "constructor-cache-and-context-agreement:8361",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "constructor-cache-and-context-agreement:8362",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "constructor-cache-and-context-agreement:8363",
+            "truth": true
+          },
+          {
+            "kind": "atom",
+            "name": "constructor-cache-and-context-agreement:8520",
+            "truth": true
+          }
+        ],
+        "trace": [
+          {
+            "pc": 8481,
+            "instruction": [
+              82,
+              110,
+              137,
+              58
+            ],
+            "writes": [
+              {
+                "register": 110,
+                "value": {
+                  "symbolic_closure": 137,
+                  "owner": 664,
+                  "creation_pc": 8481,
+                  "captures": [],
+                  "capture_argument_is_nil": true,
+                  "symbolic_instance": "constructor:8481:step:1"
+                }
+              }
+            ],
+            "constructor_metadata": {
+              "parent": 664,
+              "child": 137,
+              "descriptor_id": 58,
+              "pc": 8481,
+              "variant": 228,
+              "capture_bounds": [],
+              "captures": [],
+              "child_factory": 4890,
+              "scope": "source transfer established on guarded abstract path; unconditional ancestry not proved",
+              "constructor_alias_guard": "decoder context is the reviewed plain table; alias reads do not invoke metamethods",
+              "template_evidence": {
+                "key": 117,
+                "format": 0,
+                "factory_slot": 4890,
+                "plain_sha256": "153cc0fb8cf79942fc40844b32b54e20b6985d393eeafc3cdd167ce4627cd1ed",
+                "footer_consumed": true
+              }
+            }
+          },
+          {
+            "pc": 8482,
+            "instruction": [
+              82,
+              84,
+              672,
+              212
+            ],
+            "writes": [
+              {
+                "register": 84,
+                "value": {
+                  "symbolic_closure": 672,
+                  "owner": 664,
+                  "creation_pc": 8482,
+                  "captures": [
+                    {
+                      "cell_identity": "frame:664:register:109",
+                      "span": 1
+                    },
+                    {
+                      "cell_identity": "frame:664:register:95",
+                      "span": 1
+                    },
+                    {
+                      "cell_identity": "frame:664:register:110",
+                      "span": 1
+                    }
+                  ],
+                  "capture_argument_is_nil": false,
+                  "symbolic_instance": "constructor:8482:step:2"
+                }
+              }
+            ],
+            "constructor_metadata": {
+              "parent": 664,
+              "child": 672,
+              "descriptor_id": 212,
+              "pc": 8482,
+              "variant": 228,
+              "capture_bounds": [
+                {
+                  "kind": 3,
+                  "index_range": [
+                    109,
+                    110
+                  ],
+                  "advertised_allocation": 181,
+                  "fits": true
+                },
+                {
+                  "kind": 3,
+                  "index_range": [
+                    95,
+                    96
+                  ],
+                  "advertised_allocation": 181,
+                  "fits": true
+                },
+                {
+                  "kind": 3,
+                  "index_range": [
+                    110,
+                    111
+                  ],
+                  "advertised_allocation": 181,
+                  "fits": true
+                }
+              ],
+              "captures": [
+                {
+                  "cell_identity": "frame:664:register:109",
+                  "span": 1
+                },
+                {
+                  "cell_identity": "frame:664:register:95",
+                  "span": 1
+                },
+                {
+                  "cell_identity": "frame:664:register:110",
+                  "span": 1
+                }
+              ],
+              "child_factory": 4890,
+              "scope": "source transfer established on guarded abstract path; unconditional ancestry not proved",
+              "constructor_alias_guard": "decoder context is the reviewed plain table; alias reads do not invoke metamethods",
+              "template_evidence": {
+                "key": 121,
+                "format": 0,
+                "factory_slot": 4890,
+                "plain_sha256": "7736f5abdae06ceaf8785231caefb068c0f1c90fd9b06ca2053dbb9030d248db",
+                "footer_consumed": true
+              }
+            }
+          },
+          {
+            "pc": 8483,
+            "instruction": [
+              139,
+              126,
+              0,
+              8355
+            ],
+            "writes": [
+              {
+                "register": 126,
+                "value": 8355
+              }
+            ]
+          },
+          {
+            "pc": 8484,
+            "instruction": [
+              32,
+              9957,
+              0,
+              0
+            ],
+            "writes": []
+          },
+          {
+            "pc": 9958,
+            "instruction": [
+              89,
+              126,
+              0,
+              0
+            ],
+            "writes": []
+          },
+          {
+            "pc": 8356,
+            "instruction": [
+              149,
+              0,
+              0,
+              111
+            ],
+            "writes": [
+              {
+                "register": 111,
+                "value": {
+                  "fresh_plain_table": "fresh-table:8356:6"
+                }
+              }
+            ]
+          },
+          {
+            "pc": 8357,
+            "instruction": [
+              154,
+              16,
+              111,
+              111
+            ],
+            "writes": [],
+            "private_table_write": {
+              "table": "fresh-table:8356:6",
+              "key_reference": 111,
+              "value_reference": 16
+            }
+          },
+          {
+            "pc": 8358,
+            "instruction": [
+              100,
+              544,
+              0,
+              83
+            ],
+            "writes": [],
+            "code_rewrite": {
+              "j": 74,
+              "O": 144,
+              "Z": 178,
+              "B": 68
+            }
+          },
+          {
+            "pc": 8359,
+            "instruction": [
+              154,
+              111,
+              16,
+              111
+            ],
+            "writes": [],
+            "private_table_write": {
+              "table": "fresh-table:8356:6",
+              "key_reference": 16,
+              "value_reference": 111
+            }
+          },
+          {
+            "pc": 8360,
+            "instruction": [
+              149,
+              0,
+              0,
+              160
+            ],
+            "writes": [
+              {
+                "register": 160,
+                "value": {
+                  "fresh_plain_table": "fresh-table:8360:10"
+                }
+              }
+            ]
+          },
+          {
+            "pc": 8361,
+            "instruction": [
+              82,
+              54,
+              544,
+              495
+            ],
+            "writes": [
+              {
+                "register": 54,
+                "value": {
+                  "symbolic_closure": 544,
+                  "owner": 664,
+                  "creation_pc": 8361,
+                  "captures": [
+                    {
+                      "cell_identity": "frame:664:register:160",
+                      "span": 1
+                    },
+                    {
+                      "cell_identity": "frame:664:register:111",
+                      "span": 1
+                    }
+                  ],
+                  "capture_argument_is_nil": false,
+                  "symbolic_instance": "constructor:8361:step:11"
+                }
+              }
+            ],
+            "constructor_metadata": {
+              "parent": 664,
+              "child": 544,
+              "descriptor_id": 495,
+              "pc": 8361,
+              "variant": 228,
+              "capture_bounds": [
+                {
+                  "kind": 3,
+                  "index_range": [
+                    160,
+                    161
+                  ],
+                  "advertised_allocation": 181,
+                  "fits": true
+                },
+                {
+                  "kind": 3,
+                  "index_range": [
+                    111,
+                    112
+                  ],
+                  "advertised_allocation": 181,
+                  "fits": true
+                }
+              ],
+              "captures": [
+                {
+                  "cell_identity": "frame:664:register:160",
+                  "span": 1
+                },
+                {
+                  "cell_identity": "frame:664:register:111",
+                  "span": 1
+                }
+              ],
+              "child_factory": 4890,
+              "scope": "source transfer established on guarded abstract path; unconditional ancestry not proved",
+              "constructor_alias_guard": "decoder context is the reviewed plain table; alias reads do not invoke metamethods",
+              "template_evidence": {
+                "key": 83,
+                "format": 0,
+                "factory_slot": 4890,
+                "plain_sha256": "41aa10c573c922e9db9a389cc4995d241c9757f8de14e50c34c8e6211e0051b4",
+                "footer_consumed": true
+              }
+            }
+          },
+          {
+            "pc": 8362,
+            "instruction": [
+              82,
+              127,
+              516,
+              579
+            ],
+            "writes": [
+              {
+                "register": 127,
+                "value": {
+                  "symbolic_closure": 516,
+                  "owner": 664,
+                  "creation_pc": 8362,
+                  "captures": [
+                    {
+                      "cell_identity": "frame:664:register:111",
+                      "span": 1
+                    },
+                    {
+                      "cell_identity": "frame:664:register:109",
+                      "span": 1
+                    },
+                    {
+                      "cell_identity": "frame:664:register:95",
+                      "span": 1
+                    },
+                    {
+                      "cell_identity": "frame:664:register:110",
+                      "span": 1
+                    },
+                    {
+                      "cell_identity": "frame:664:register:54",
+                      "span": 1
+                    }
+                  ],
+                  "capture_argument_is_nil": false,
+                  "symbolic_instance": "constructor:8362:step:12"
+                }
+              }
+            ],
+            "constructor_metadata": {
+              "parent": 664,
+              "child": 516,
+              "descriptor_id": 579,
+              "pc": 8362,
+              "variant": 228,
+              "capture_bounds": [
+                {
+                  "kind": 3,
+                  "index_range": [
+                    111,
+                    112
+                  ],
+                  "advertised_allocation": 181,
+                  "fits": true
+                },
+                {
+                  "kind": 3,
+                  "index_range": [
+                    109,
+                    110
+                  ],
+                  "advertised_allocation": 181,
+                  "fits": true
+                },
+                {
+                  "kind": 3,
+                  "index_range": [
+                    95,
+                    96
+                  ],
+                  "advertised_allocation": 181,
+                  "fits": true
+                },
+                {
+                  "kind": 3,
+                  "index_range": [
+                    110,
+                    111
+                  ],
+                  "advertised_allocation": 181,
+                  "fits": true
+                },
+                {
+                  "kind": 3,
+                  "index_range": [
+                    54,
+                    55
+                  ],
+                  "advertised_allocation": 181,
+                  "fits": true
+                }
+              ],
+              "captures": [
+                {
+                  "cell_identity": "frame:664:register:111",
+                  "span": 1
+                },
+                {
+                  "cell_identity": "frame:664:register:109",
+                  "span": 1
+                },
+                {
+                  "cell_identity": "frame:664:register:95",
+                  "span": 1
+                },
+                {
+                  "cell_identity": "frame:664:register:110",
+                  "span": 1
+                },
+                {
+                  "cell_identity": "frame:664:register:54",
+                  "span": 1
+                }
+              ],
+              "child_factory": 4890,
+              "scope": "source transfer established on guarded abstract path; unconditional ancestry not proved",
+              "constructor_alias_guard": "decoder context is the reviewed plain table; alias reads do not invoke metamethods",
+              "template_evidence": {
+                "key": 111,
+                "format": 0,
+                "factory_slot": 4890,
+                "plain_sha256": "531a23e3614d3da4a980f269f833faf0893bea623de8fd4dc4d53bafd5ca8156",
+                "footer_consumed": true
+              }
+            }
+          },
+          {
+            "pc": 8363,
+            "instruction": [
+              82,
+              69,
+              455,
+              58
+            ],
+            "writes": [
+              {
+                "register": 69,
+                "value": {
+                  "symbolic_closure": 455,
+                  "owner": 664,
+                  "creation_pc": 8363,
+                  "captures": [],
+                  "capture_argument_is_nil": true,
+                  "symbolic_instance": "constructor:8363:step:13"
+                }
+              }
+            ],
+            "constructor_metadata": {
+              "parent": 664,
+              "child": 455,
+              "descriptor_id": 58,
+              "pc": 8363,
+              "variant": 228,
+              "capture_bounds": [],
+              "captures": [],
+              "child_factory": 4890,
+              "scope": "source transfer established on guarded abstract path; unconditional ancestry not proved",
+              "constructor_alias_guard": "decoder context is the reviewed plain table; alias reads do not invoke metamethods",
+              "template_evidence": {
+                "key": 92,
+                "format": 0,
+                "factory_slot": 4890,
+                "plain_sha256": "b3e46b62f2e3f0ab589285aacdc863e72f5e516aeb7807400b56015aacf09d9b",
+                "footer_consumed": true
+              }
+            }
+          },
+          {
+            "pc": 8364,
+            "instruction": [
+              139,
+              126,
+              0,
+              8519
+            ],
+            "writes": [
+              {
+                "register": 126,
+                "value": 8519
+              }
+            ]
+          },
+          {
+            "pc": 8365,
+            "instruction": [
+              32,
+              9957,
+              0,
+              0
+            ],
+            "writes": []
+          },
+          {
+            "pc": 9958,
+            "instruction": [
+              89,
+              126,
+              0,
+              0
+            ],
+            "writes": []
+          },
+          {
+            "pc": 8520,
+            "instruction": [
+              82,
+              70,
+              728,
+              424
+            ],
+            "writes": [
+              {
+                "register": 70,
+                "value": {
+                  "symbolic_closure": 728,
+                  "owner": 664,
+                  "creation_pc": 8520,
+                  "captures": [
+                    {
+                      "cell_identity": "frame:664:register:69",
+                      "span": 1
+                    },
+                    {
+                      "cell_identity": "frame:664:register:109",
+                      "span": 1
+                    },
+                    {
+                      "cell_identity": "frame:664:register:95",
+                      "span": 1
+                    },
+                    {
+                      "cell_identity": "frame:664:register:110",
+                      "span": 1
+                    }
+                  ],
+                  "capture_argument_is_nil": false,
+                  "symbolic_instance": "constructor:8520:step:17"
+                }
+              }
+            ],
+            "constructor_metadata": {
+              "parent": 664,
+              "child": 728,
+              "descriptor_id": 424,
+              "pc": 8520,
+              "variant": 228,
+              "capture_bounds": [
+                {
+                  "kind": 3,
+                  "index_range": [
+                    69,
+                    70
+                  ],
+                  "advertised_allocation": 181,
+                  "fits": true
+                },
+                {
+                  "kind": 3,
+                  "index_range": [
+                    109,
+                    110
+                  ],
+                  "advertised_allocation": 181,
+                  "fits": true
+                },
+                {
+                  "kind": 3,
+                  "index_range": [
+                    95,
+                    96
+                  ],
+                  "advertised_allocation": 181,
+                  "fits": true
+                },
+                {
+                  "kind": 3,
+                  "index_range": [
+                    110,
+                    111
+                  ],
+                  "advertised_allocation": 181,
+                  "fits": true
+                }
+              ],
+              "captures": [
+                {
+                  "cell_identity": "frame:664:register:69",
+                  "span": 1
+                },
+                {
+                  "cell_identity": "frame:664:register:109",
+                  "span": 1
+                },
+                {
+                  "cell_identity": "frame:664:register:95",
+                  "span": 1
+                },
+                {
+                  "cell_identity": "frame:664:register:110",
+                  "span": 1
+                }
+              ],
+              "child_factory": 4890,
+              "scope": "source transfer established on guarded abstract path; unconditional ancestry not proved",
+              "constructor_alias_guard": "decoder context is the reviewed plain table; alias reads do not invoke metamethods",
+              "template_evidence": {
+                "key": 100,
+                "format": 0,
+                "factory_slot": 4890,
+                "plain_sha256": "5c37f58f391a0925d74a572867a80ac57b03c5ba2659cc548298b58d83f63bc5",
+                "footer_consumed": true
+              }
+            }
+          },
+          {
+            "pc": 8521,
+            "instruction": [
+              44,
+              127,
+              74,
+              112
+            ],
+            "writes": [],
+            "call_metadata": {
+              "callee_register": 127,
+              "callee_expression": {
+                "symbolic_closure": 516,
+                "owner": 664,
+                "creation_pc": 8362,
+                "captures": [
+                  {
+                    "cell_identity": "frame:664:register:111",
+                    "span": 1
+                  },
+                  {
+                    "cell_identity": "frame:664:register:109",
+                    "span": 1
+                  },
+                  {
+                    "cell_identity": "frame:664:register:95",
+                    "span": 1
+                  },
+                  {
+                    "cell_identity": "frame:664:register:110",
+                    "span": 1
+                  },
+                  {
+                    "cell_identity": "frame:664:register:54",
+                    "span": 1
+                  }
+                ],
+                "capture_argument_is_nil": false,
+                "symbolic_instance": "constructor:8362:step:12"
+              },
+              "argument_expressions": [
+                {
+                  "lazy_constant_reference": 112
+                },
+                {
+                  "symbol": "global.Instance"
+                }
+              ],
+              "normal_return_pc": 8522,
+              "effects": "unknown",
+              "callee_invoked": false
+            }
+          }
+        ],
+        "effects_epoch": 0,
+        "reason": "opaque_call_boundary",
+        "actual_activation_proved": false
+      }
+    ]
+  }
+}

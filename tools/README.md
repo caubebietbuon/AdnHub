@@ -407,3 +407,18 @@ A guarded assertion-return projection stops at constructor8481, retaining field/
 cache and alias-effect obligations. No actual function or field lookup runs.
 See research/subgate-resolution-2026-10-22/{FINDINGS.md,SUBGATE_AUDIT.md,summary.json};
 full evidence is ignored under output/phase27. Older tools/defaults are unchanged.
+
+## Phase 28: automated finite constraints and symbolic worklist
+
+Run `python tools/automated_solver.py`. finite_solver.py provides exact uint32
+constraints, heuristic bitset propagation, independent certificate replay and
+QF_BV export; gate_solver.py provides bounded DPLL certificate queries.
+automated_explorer.py rebuilds private metadata state and performs guarded
+worklist exploration with forks, condition reduction, capture havoc and budgets.
+Actual result:2048 models retained (Hamming bound redundant); six conditional
+constructors137/672/544/516/455/728; call boundary8521 resolves to516;19 global
+gate formulas underconstrained, candidate8521->663 refuted in its guarded model.
+No native SMT package is required or installed; no factory/body runs. See
+research/automated-solving-2026-10-22/{FINDINGS.md,GATE_QUERIES.md,summary.json,
+constraints.smt2}. Full output stays ignored under output/phase28. Older tools
+and promotion rules remain unchanged.

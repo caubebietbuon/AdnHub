@@ -844,3 +844,55 @@ summary.json}.12 focused tests passed. Full suite260 tests passed (248 prior
 compilation and working/staged diff checks pass. No Lua/payload/factory/__index/
 assertion/field/application/network execution, original input edits, Roblox
 runtime checks, demo/ESP edits or push. Commit locally after final checks.
+
+### Phase 28: exact finite constraints, DPLL gates and automated worklist
+
+Base6438cc8. New tools/finite_solver.py: uint32/Boolean AST evaluator, bitset
+propagation ordered by exact rejection count, residual unknowns, independent
+model-certificate replay, SMT-LIB/QF_BV export. No Z3 installed/downloaded; actual
+backend is exact finite CSP, not a claimed external SMT-engine run. Derived
+Hamming bounds are entry-specific and validated, not universal constants.
+tools/gate_solver.py implements bounded DPLL/unit propagation/partial logical
+valuations and gate-certificate positive/negative queries. Unknown!=False.
+tools/automated_explorer.py adds MetadataState (checked patch/fill replay and
+path-local metadata forks), Boolean/typed uint32 interval condition reduction,
+guarded worklist transfers, source100 private rewrite, capture havoc, strict
+step/path/worklist/state budgets. tools/automated_solver.py orchestrates fresh
+pinned reconstruction, candidate solving, constructor exploration and gate/
+activation queries. New tests:tools/test_phase28.py. Old analyzers unchanged.
+
+Finite model: all2048 current PC981 byte-key states satisfy both the source
+equation and9..20 Hamming constraint. Both predicates are entailed by domain;
+no actual candidates pruned. SAT_IN_FINITE_MODEL means only local necessary
+conditions, not runtime reachability. Portable constraints.smt2 exported for
+independent offline checks; no native SMT invocation. Model/domain hashes,
+per-rule rejection/unknown counts and replayed certificate recorded.
+
+Automated guarded suffix passes8481 to8521 through18 instructions. Conditional
+metadata constructors:137@8481(desc58,key117),672@8482(desc212,key121),544@8361
+(desc495,key83),516@8362(desc579,key111),455@8363(desc58,key92),728@8520(desc424,
+key100). Allformat0; factory/header hashes/captures/footer consumption recorded.
+No factory or closure invoked. At8358 source patch544/direct83 uses exact
+source continuationj74/O144/Z178/B68 on private arrays, not old noop70 literal
+substitution. Unknown field effects clear heap facts and havoc existing/newly
+captured registers; context/cache/no-reflection premises remain conditional.
+Lazy table keys/values remain unresolved references; no actual key-equality or
+table-content identity proof is inferred from distinct reference IDs.
+
+8521/22844 is an opaque call:callee r127 is the newly modeled516 closure;
+arguments lazy-reference112 andr74 remain symbolic. No callee effects/results
+or continuation assumed. Automatic candidate-specific DPLL query refutes
+8521->663 only in this guarded context. All19 global gate formulas remain
+UNDERCONSTRAINED (positive and negative queries SAT). Logical certificate
+valuations are not real runtime environments or path witnesses. No unconditional
+gate/hierarchy promotion: verified_hierarchy=null, patchfalse/empty.
+
+Run python tools/automated_solver.py. Ignored output/phase28/automated-analysis.json
+and constraints.smt2; tracked research/automated-solving-2026-10-22/{FINDINGS.md,
+GATE_QUERIES.md,summary.json,constraints.smt2}. Next static boundary is516 call
+results/capture effects at8521, plus V-reaching-definition proof at981 and
+complete live context/cache/alias coverage.20 focused tests passed; full suite
+280 tests passed (260 prior +20 Phase28),396.623s. Standalone Phase28 regeneration,
+Lua syntax, Python compilation and working/staged diff checks pass. No payload/
+LuaVM/factory/__index/application/network execution, package installs, input
+edits, Roblox runtime checks, demo/ESP changes or push. Commit locally after checks.
