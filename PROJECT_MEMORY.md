@@ -1,5 +1,28 @@
 # AdnHub — project memory
 
+## Phase32 handover — 2026-10-23
+
+Baseline ac10bc3. tools/constraint_inverter.py regenerates pinned Phase31 and
+forward checkpoint evidence; tools/upstream_solver.py adds bounded path-sensitive
+reaching_meet; path_refiner.run accepts an isolated optional boundary observer.
+Research: research/constraint-inversion-2026-10-23/{FINDINGS.md,summary.json}.
+Ignored full report: output/phase32/constraint-inversion.json.
+18 branch inversions:9 SAT/9 UNSAT prefixes, all18 avoid-all-failures queries
+UNSAT under Phase31 premises G. NormalReturn -> !G does not prove its converse.
+Four downstream sinks have no V@981 meeting in the finite exported graph.
+Advanced8481..8521 traces have register writes but no V/y words; use the earlier
+pinned root SSA separately (frontier8398,V header4179906283). Never fabricate
+state observations or treat resumed-frame incoming registers as fresh nil.
+Positive bridge still unproved;2048 candidates and19 global gates retained,
+verified_hierarchy null, promotion false/empty. Next: reconcile root prefix/
+continuation reaching definitions and audit cache/code epochs at516/30,258/71.
+No target code, Lua, factory, __index, application or network calls. Demos/ESP
+untouched. Focused tests:tools/test_phase32.py; full check:unittest discover -s
+tools -p 'test_*.py'. Lua syntax checks remain separate from Roblox runtime tests.
+Verification: all355 tests (337 existing+18 new) passed in323.394s. Fresh pinned
+Phase32 standalone regeneration, Python compilation, both entry Lua syntax checks
+and working/staged diff checks passed. Local commit only; no push in this phase.
+
 ## Purpose and current state
 Current user priority: deep Chilli static decryption only; demo/ESP feature work
 temporarily paused. Do not resume those feature changes without user direction.

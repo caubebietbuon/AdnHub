@@ -7,6 +7,7 @@ import argparse
 from copy import deepcopy
 import json
 from pathlib import Path
+from collections import deque
 
 from automated_solver import run as caller_run
 from gate_solver import sat
@@ -256,6 +257,62 @@ def backward_slice(graph,sink,budget=4096):
         else:pending.extend(record['dependencies'])
     return {'sink':sink,'visited':sorted(seen),'leaves':sorted(leaves),
             'budget_exhausted':bool(pending),'scope':'recorded guarded prefix only'}
+
+
+def reaching_meet(nodes,edges,source,sink,budget=4096):
+    """Bounded, path-sensitive bidirectional dependency search on qualified SSA IDs.
+
+    Caller supplies source-reviewed edges, never guessed aliases. Only data/copy
+    edges participate; address/control coincidence is not a value definition.
+    SAT means a compatible abstract path, not feasible program execution. All
+    alternative paths are retained; UNKNOWN and truncation cannot prove absence.
+    """
+    from path_domain import Predicates
+    if type(budget)is not int or not 1<=budget<=16384:
+        raise ValueError('Invalid meet budget')
+    if source not in nodes or sink not in nodes:raise ValueError('Missing endpoint')
+    forward={n:[] for n in nodes};reverse={n:[] for n in nodes}
+    for edge in edges:
+        a,b=edge['source'],edge['target']
+        if a not in nodes or b not in nodes:raise ValueError('Dangling edge')
+        if edge['kind'] not in ('data','copy'):continue
+        forward[a].append(edge);reverse[b].append(edge)
+    def explore(start,adj,backward):
+        queue=deque([(start,[],[start])]);found={};expanded=0;unknown=False
+        while queue and expanded<budget:
+            current,path,seen=queue.popleft();expanded+=1
+            domain=Predicates()
+            for edge in path:domain.assume(edge.get('predicate',True))
+            status=domain.check()['status']
+            if status!='SAT':
+                unknown |= status!='UNSAT'
+                continue
+            found.setdefault(current,[]).append(path)
+            for edge in adj[current]:
+                child=edge['source' if backward else 'target']
+                if child not in seen:queue.append((child,path+[edge],seen+[child]))
+        return found,bool(queue),unknown
+    left,lbound,lunknown=explore(source,forward,False)
+    right,rbound,runknown=explore(sink,reverse,True)
+    meetings=[];checks=0;limited=False
+    for node in sorted(set(left)&set(right)):
+        for prefix in left[node]:
+            for suffix in right[node]:
+                if checks>=budget:limited=True;break
+                checks+=1;domain=Predicates();path=prefix+list(reversed(suffix))
+                for edge in path:domain.assume(edge.get('predicate',True))
+                status=domain.check()['status']
+                if status=='SAT':meetings.append({'node':node,'edges':path,'status':status})
+                elif status!='UNSAT':lunknown=True
+            if limited:break
+        if limited:break
+    exhausted=lbound or rbound or limited
+    return {'source':source,'sink':sink,'meetings':meetings,
+        'status':'compatible_abstract_path' if meetings else 'UNKNOWN' if exhausted or lunknown or runknown
+                 else 'no_meeting_in_recorded_graph',
+        'forward_nodes':sorted(left),'backward_nodes':sorted(right),
+        'budget_exhausted':exhausted,'global_absence_proved':False,
+        'positive_bridge_proved':False}
 
 
 def returned_summary(analysis):

@@ -472,3 +472,18 @@ root107 havoc values are retained. Fresh metadata callback in upstream_solver
 is optional/isolated; numeric constraints are exported additively. Findings:
 research/path-sensitive-refinement-2026-10-23/{FINDINGS.md,GLOBAL_GATES.md,summary.json}.
 Full evidence:ignored output/phase31. Tests:test_phase31.py. No target code runs.
+
+## Phase32: predicate inversion and bounded SSA meeting
+
+Run `python tools/constraint_inverter.py`. It regenerates pinned Phase31 and
+forward checkpoint evidence, flips each branch with its prefix retained and
+suffix dropped, and checks alternate source-backed failure leaves. All18
+avoid-all-failures queries are UNSAT under the reviewed premises; !G does not
+entail normal return. There are9 SAT and9 UNSAT inverted-prefix queries.
+upstream_solver.reaching_meet keeps guarded paths separate and uses qualified
+SSA data/copy edges; no address/control coincidence becomes a value bridge.
+Earlier root V SSA and the advanced explorer's register-only trace are kept
+distinct. V@981 remains unvisited: no positive meeting or numeric filter proved.
+All2048 candidates/19 gates remain; hierarchy null. Findings/summary:
+research/constraint-inversion-2026-10-23/. Full evidence:output/phase32 (ignored).
+Tests:test_phase32.py. Everything remains offline, static Python metadata.

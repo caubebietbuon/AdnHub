@@ -1,0 +1,1473 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "inversion_audits": [
+    {
+      "status": "reviewed_guarded_partition",
+      "coverage": {
+        "status": "ENTAILED",
+        "value": true
+      },
+      "queries": [
+        {
+          "from_leaf_pc": 131,
+          "occurrence": "49:1",
+          "original_predicate": {
+            "expression": {
+              "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+            },
+            "truth": false,
+            "status": "SAT",
+            "occurrence": "49:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "49:1"
+            }
+          ],
+          "boolean_query": "SAT",
+          "compatible_blocked_leaf_pcs": [
+            102,
+            30,
+            213
+          ],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        },
+        {
+          "from_leaf_pc": 131,
+          "occurrence": "172:1",
+          "original_predicate": {
+            "expression": {
+              "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+            },
+            "truth": false,
+            "status": "SAT",
+            "occurrence": "172:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "172:1"
+            }
+          ],
+          "boolean_query": "UNSAT",
+          "compatible_blocked_leaf_pcs": [],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        },
+        {
+          "from_leaf_pc": 102,
+          "occurrence": "49:1",
+          "original_predicate": {
+            "expression": {
+              "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+            },
+            "truth": true,
+            "status": "SAT",
+            "occurrence": "49:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "49:1"
+            }
+          ],
+          "boolean_query": "SAT",
+          "compatible_blocked_leaf_pcs": [
+            131
+          ],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        },
+        {
+          "from_leaf_pc": 102,
+          "occurrence": "157:1",
+          "original_predicate": {
+            "expression": true,
+            "truth": true,
+            "status": "SAT",
+            "occurrence": "157:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": true,
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "157:1"
+            }
+          ],
+          "boolean_query": "UNSAT",
+          "compatible_blocked_leaf_pcs": [],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        },
+        {
+          "from_leaf_pc": 102,
+          "occurrence": "167:1",
+          "original_predicate": {
+            "expression": {
+              "any": [
+                {
+                  "typed_equal": [
+                    {
+                      "builtin_type_of": {
+                        "symbol": "global.Instance"
+                      }
+                    },
+                    "table"
+                  ]
+                }
+              ]
+            },
+            "truth": false,
+            "status": "SAT",
+            "occurrence": "167:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "157:1"
+            },
+            {
+              "expression": {
+                "any": [
+                  {
+                    "typed_equal": [
+                      {
+                        "builtin_type_of": {
+                          "symbol": "global.Instance"
+                        }
+                      },
+                      "table"
+                    ]
+                  }
+                ]
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "167:1"
+            }
+          ],
+          "boolean_query": "SAT",
+          "compatible_blocked_leaf_pcs": [
+            30,
+            213
+          ],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        },
+        {
+          "from_leaf_pc": 102,
+          "occurrence": "83:1",
+          "original_predicate": {
+            "expression": {
+              "any": [
+                {
+                  "typed_equal": [
+                    {
+                      "builtin_type_of": {
+                        "symbol": "global.Instance"
+                      }
+                    },
+                    "table"
+                  ]
+                }
+              ]
+            },
+            "truth": false,
+            "status": "SAT",
+            "occurrence": "83:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "157:1"
+            },
+            {
+              "expression": {
+                "any": [
+                  {
+                    "typed_equal": [
+                      {
+                        "builtin_type_of": {
+                          "symbol": "global.Instance"
+                        }
+                      },
+                      "table"
+                    ]
+                  }
+                ]
+              },
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "167:1"
+            },
+            {
+              "expression": {
+                "any": [
+                  {
+                    "typed_equal": [
+                      {
+                        "builtin_type_of": {
+                          "symbol": "global.Instance"
+                        }
+                      },
+                      "table"
+                    ]
+                  }
+                ]
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "83:1"
+            }
+          ],
+          "boolean_query": "UNSAT",
+          "compatible_blocked_leaf_pcs": [],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        },
+        {
+          "from_leaf_pc": 30,
+          "occurrence": "49:1",
+          "original_predicate": {
+            "expression": {
+              "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+            },
+            "truth": true,
+            "status": "SAT",
+            "occurrence": "49:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "49:1"
+            }
+          ],
+          "boolean_query": "SAT",
+          "compatible_blocked_leaf_pcs": [
+            131
+          ],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        },
+        {
+          "from_leaf_pc": 30,
+          "occurrence": "157:1",
+          "original_predicate": {
+            "expression": true,
+            "truth": true,
+            "status": "SAT",
+            "occurrence": "157:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": true,
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "157:1"
+            }
+          ],
+          "boolean_query": "UNSAT",
+          "compatible_blocked_leaf_pcs": [],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        },
+        {
+          "from_leaf_pc": 30,
+          "occurrence": "167:1",
+          "original_predicate": {
+            "expression": {
+              "any": [
+                {
+                  "typed_equal": [
+                    {
+                      "builtin_type_of": {
+                        "symbol": "global.Instance"
+                      }
+                    },
+                    "table"
+                  ]
+                }
+              ]
+            },
+            "truth": true,
+            "status": "SAT",
+            "occurrence": "167:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "157:1"
+            },
+            {
+              "expression": {
+                "any": [
+                  {
+                    "typed_equal": [
+                      {
+                        "builtin_type_of": {
+                          "symbol": "global.Instance"
+                        }
+                      },
+                      "table"
+                    ]
+                  }
+                ]
+              },
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "167:1"
+            }
+          ],
+          "boolean_query": "SAT",
+          "compatible_blocked_leaf_pcs": [
+            102
+          ],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        },
+        {
+          "from_leaf_pc": 30,
+          "occurrence": "151:1",
+          "original_predicate": {
+            "expression": true,
+            "truth": true,
+            "status": "SAT",
+            "occurrence": "151:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "157:1"
+            },
+            {
+              "expression": {
+                "any": [
+                  {
+                    "typed_equal": [
+                      {
+                        "builtin_type_of": {
+                          "symbol": "global.Instance"
+                        }
+                      },
+                      "table"
+                    ]
+                  }
+                ]
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "167:1"
+            },
+            {
+              "expression": true,
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "151:1"
+            }
+          ],
+          "boolean_query": "UNSAT",
+          "compatible_blocked_leaf_pcs": [],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        },
+        {
+          "from_leaf_pc": 30,
+          "occurrence": "204:1",
+          "original_predicate": {
+            "expression": {
+              "typed_equal": [
+                {
+                  "builtin_getmetatable_of": {
+                    "symbol": "global.Instance"
+                  },
+                  "protected_value_possible": true
+                },
+                null
+              ]
+            },
+            "truth": true,
+            "status": "SAT",
+            "occurrence": "204:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "157:1"
+            },
+            {
+              "expression": {
+                "any": [
+                  {
+                    "typed_equal": [
+                      {
+                        "builtin_type_of": {
+                          "symbol": "global.Instance"
+                        }
+                      },
+                      "table"
+                    ]
+                  }
+                ]
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "167:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "151:1"
+            },
+            {
+              "expression": {
+                "typed_equal": [
+                  {
+                    "builtin_getmetatable_of": {
+                      "symbol": "global.Instance"
+                    },
+                    "protected_value_possible": true
+                  },
+                  null
+                ]
+              },
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "204:1"
+            }
+          ],
+          "boolean_query": "SAT",
+          "compatible_blocked_leaf_pcs": [
+            213
+          ],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        },
+        {
+          "from_leaf_pc": 30,
+          "occurrence": "40:1",
+          "original_predicate": {
+            "expression": true,
+            "truth": true,
+            "status": "SAT",
+            "occurrence": "40:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "157:1"
+            },
+            {
+              "expression": {
+                "any": [
+                  {
+                    "typed_equal": [
+                      {
+                        "builtin_type_of": {
+                          "symbol": "global.Instance"
+                        }
+                      },
+                      "table"
+                    ]
+                  }
+                ]
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "167:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "151:1"
+            },
+            {
+              "expression": {
+                "typed_equal": [
+                  {
+                    "builtin_getmetatable_of": {
+                      "symbol": "global.Instance"
+                    },
+                    "protected_value_possible": true
+                  },
+                  null
+                ]
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "204:1"
+            },
+            {
+              "expression": true,
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "40:1"
+            }
+          ],
+          "boolean_query": "UNSAT",
+          "compatible_blocked_leaf_pcs": [],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        },
+        {
+          "from_leaf_pc": 213,
+          "occurrence": "49:1",
+          "original_predicate": {
+            "expression": {
+              "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+            },
+            "truth": true,
+            "status": "SAT",
+            "occurrence": "49:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "49:1"
+            }
+          ],
+          "boolean_query": "SAT",
+          "compatible_blocked_leaf_pcs": [
+            131
+          ],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        },
+        {
+          "from_leaf_pc": 213,
+          "occurrence": "157:1",
+          "original_predicate": {
+            "expression": true,
+            "truth": true,
+            "status": "SAT",
+            "occurrence": "157:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": true,
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "157:1"
+            }
+          ],
+          "boolean_query": "UNSAT",
+          "compatible_blocked_leaf_pcs": [],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        },
+        {
+          "from_leaf_pc": 213,
+          "occurrence": "167:1",
+          "original_predicate": {
+            "expression": {
+              "any": [
+                {
+                  "typed_equal": [
+                    {
+                      "builtin_type_of": {
+                        "symbol": "global.Instance"
+                      }
+                    },
+                    "table"
+                  ]
+                }
+              ]
+            },
+            "truth": true,
+            "status": "SAT",
+            "occurrence": "167:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "157:1"
+            },
+            {
+              "expression": {
+                "any": [
+                  {
+                    "typed_equal": [
+                      {
+                        "builtin_type_of": {
+                          "symbol": "global.Instance"
+                        }
+                      },
+                      "table"
+                    ]
+                  }
+                ]
+              },
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "167:1"
+            }
+          ],
+          "boolean_query": "SAT",
+          "compatible_blocked_leaf_pcs": [
+            102
+          ],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        },
+        {
+          "from_leaf_pc": 213,
+          "occurrence": "151:1",
+          "original_predicate": {
+            "expression": true,
+            "truth": true,
+            "status": "SAT",
+            "occurrence": "151:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "157:1"
+            },
+            {
+              "expression": {
+                "any": [
+                  {
+                    "typed_equal": [
+                      {
+                        "builtin_type_of": {
+                          "symbol": "global.Instance"
+                        }
+                      },
+                      "table"
+                    ]
+                  }
+                ]
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "167:1"
+            },
+            {
+              "expression": true,
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "151:1"
+            }
+          ],
+          "boolean_query": "UNSAT",
+          "compatible_blocked_leaf_pcs": [],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        },
+        {
+          "from_leaf_pc": 213,
+          "occurrence": "204:1",
+          "original_predicate": {
+            "expression": {
+              "typed_equal": [
+                {
+                  "builtin_getmetatable_of": {
+                    "symbol": "global.Instance"
+                  },
+                  "protected_value_possible": true
+                },
+                null
+              ]
+            },
+            "truth": false,
+            "status": "SAT",
+            "occurrence": "204:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "157:1"
+            },
+            {
+              "expression": {
+                "any": [
+                  {
+                    "typed_equal": [
+                      {
+                        "builtin_type_of": {
+                          "symbol": "global.Instance"
+                        }
+                      },
+                      "table"
+                    ]
+                  }
+                ]
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "167:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "151:1"
+            },
+            {
+              "expression": {
+                "typed_equal": [
+                  {
+                    "builtin_getmetatable_of": {
+                      "symbol": "global.Instance"
+                    },
+                    "protected_value_possible": true
+                  },
+                  null
+                ]
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "204:1"
+            }
+          ],
+          "boolean_query": "SAT",
+          "compatible_blocked_leaf_pcs": [
+            30
+          ],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        },
+        {
+          "from_leaf_pc": 213,
+          "occurrence": "121:1",
+          "original_predicate": {
+            "expression": {
+              "typed_equal": [
+                {
+                  "builtin_getmetatable_of": {
+                    "symbol": "global.Instance"
+                  },
+                  "protected_value_possible": true
+                },
+                null
+              ]
+            },
+            "truth": false,
+            "status": "SAT",
+            "occurrence": "121:1"
+          },
+          "inverted_prefix": [
+            {
+              "expression": {
+                "atom": "LuaTruth:{\"symbol\":\"global.Instance\"}"
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "49:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "157:1"
+            },
+            {
+              "expression": {
+                "any": [
+                  {
+                    "typed_equal": [
+                      {
+                        "builtin_type_of": {
+                          "symbol": "global.Instance"
+                        }
+                      },
+                      "table"
+                    ]
+                  }
+                ]
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "167:1"
+            },
+            {
+              "expression": true,
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "151:1"
+            },
+            {
+              "expression": {
+                "typed_equal": [
+                  {
+                    "builtin_getmetatable_of": {
+                      "symbol": "global.Instance"
+                    },
+                    "protected_value_possible": true
+                  },
+                  null
+                ]
+              },
+              "truth": false,
+              "status": "SAT",
+              "occurrence": "204:1"
+            },
+            {
+              "expression": {
+                "typed_equal": [
+                  {
+                    "builtin_getmetatable_of": {
+                      "symbol": "global.Instance"
+                    },
+                    "protected_value_possible": true
+                  },
+                  null
+                ]
+              },
+              "truth": true,
+              "status": "SAT",
+              "occurrence": "121:1"
+            }
+          ],
+          "boolean_query": "UNSAT",
+          "compatible_blocked_leaf_pcs": [],
+          "avoid_all_certified_failures_under_G": "UNSAT",
+          "positive_bridge_proved": false
+        }
+      ],
+      "not_G_entails_normal_return": {
+        "status": "OPEN",
+        "value": null
+      },
+      "scope": "G retained for failure queries; escaping G requires new source evidence",
+      "positive_bridge_proved": false
+    }
+  ],
+  "global_gate_matrix": [
+    {
+      "gate": "activation:arguments_valid/incoming_arity_and_values",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "incoming-argument-values"
+      ]
+    },
+    {
+      "gate": "activation:arguments_valid/incoming_type_predicates",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "incoming-argument-values",
+        "incoming-type-proof"
+      ]
+    },
+    {
+      "gate": "activation:callee_identity/call_time_callee_value",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "call-target-identity"
+      ]
+    },
+    {
+      "gate": "activation:capture_cells_at_call/call_time_storage_and_values",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "capture-reaching-definitions"
+      ]
+    },
+    {
+      "gate": "activation:live_template_cache_identity/live_shared_cache_identity",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "live-template-identity",
+        "complete-cache-effects"
+      ]
+    },
+    {
+      "gate": "activation:normal_constructor_continuation/plain_context_binding",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "live-context-identity"
+      ]
+    },
+    {
+      "gate": "activation:reachable_call/incoming_call_witness",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "call-target-identity"
+      ]
+    },
+    {
+      "gate": "activation:reachable_call/incoming_path_predicates",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "entry-control-predicates"
+      ]
+    },
+    {
+      "gate": "lifetime:all_alias_writes_covered/escaping_and_future_alias_writes",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-alias-effects",
+        "complete-path-coverage"
+      ]
+    },
+    {
+      "gate": "lifetime:call_time_capture_values_accounted_for/all_reaching_call_definitions",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "capture-reaching-definitions",
+        "complete-path-coverage"
+      ]
+    },
+    {
+      "gate": "lifetime:close_or_rebind_paths_covered/all_exit_reachability",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-path-coverage",
+        "exit-outcome-proof"
+      ]
+    },
+    {
+      "gate": "lifetime:escape_effects_covered/all_call_outcomes",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-path-coverage",
+        "callee-results-and-effects"
+      ]
+    },
+    {
+      "gate": "lifetime:storage_identity_at_call/close_rebase_at_call",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "all-close-rebind-effects"
+      ]
+    },
+    {
+      "gate": "structural:ancestry_unconditional/all_lexical_owners",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-owner-inventory",
+        "unique-owner-proof"
+      ]
+    },
+    {
+      "gate": "structural:child_header_verified/template_at_invocation",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "live-template-identity"
+      ]
+    },
+    {
+      "gate": "structural:control_flow_verified/entry_call_path",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "entry-control-predicates"
+      ]
+    },
+    {
+      "gate": "tree:complete_node_coverage/full_reachable_inventory",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-owner-inventory",
+        "complete-path-coverage"
+      ]
+    },
+    {
+      "gate": "tree:cycle_free_verified_edges/all_verified_edges_complete",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-owner-inventory",
+        "complete-path-coverage",
+        "verified-edge-inventory"
+      ]
+    },
+    {
+      "gate": "tree:unique_incoming_owner/all_owners_excluded",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-owner-inventory",
+        "unique-owner-proof"
+      ]
+    }
+  ],
+  "numeric_filters_admitted": [],
+  "verified_hierarchy": null,
+  "formal_promotion_patch": {
+    "applicable": false,
+    "operations": []
+  },
+  "positive_bridge_proved": false,
+  "network_requests": 0,
+  "application_calls_executed": 0,
+  "factory_invocations": 0,
+  "baseline": "ac10bc3",
+  "candidate_count": 2048,
+  "ssa_transfer_mapping_count": 86,
+  "meeting_audits": [
+    {
+      "root981_observed": false,
+      "root981_definition_available": false,
+      "frontier_V_definition_available": false,
+      "earlier_forward_V_ssa": {
+        "id": 0,
+        "op": "header_word",
+        "deps": [],
+        "value": 4179906283,
+        "word": "V",
+        "constant": 4179906283
+      },
+      "earlier_forward_frontier_pc": 8398,
+      "unproved_projection_obligations": [
+        "normal return from reviewed8521 route",
+        "root981 arrival in same activation",
+        "all intervening V writes and code/cache epochs"
+      ],
+      "queries": [
+        {
+          "owner": 544,
+          "root981": {
+            "source": "root664:guarded8521:V@981:unvisited",
+            "sink": "call0:path0:frame544:capture1.table-write@17:34",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "root664:guarded8521:V@981:unvisited"
+            ],
+            "backward_nodes": [
+              "call0:path0:cell:frame:664:register:160",
+              "call0:path0:constant:16",
+              "call0:path0:constant:28",
+              "call0:path0:frame516:r24@161:23:0",
+              "call0:path0:frame544:capture1",
+              "call0:path0:frame544:capture1.table-write@17:34",
+              "call0:path0:frame544:r31@49:0:0"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          },
+          "frontier_only_diagnostic": {
+            "source": "root664:guarded8521:V@8521:unobserved",
+            "sink": "call0:path0:frame544:capture1.table-write@17:34",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "root664:guarded8521:V@8521:unobserved"
+            ],
+            "backward_nodes": [
+              "call0:path0:cell:frame:664:register:160",
+              "call0:path0:constant:16",
+              "call0:path0:constant:28",
+              "call0:path0:frame516:r24@161:23:0",
+              "call0:path0:frame544:capture1",
+              "call0:path0:frame544:capture1.table-write@17:34",
+              "call0:path0:frame544:r31@49:0:0"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          },
+          "earlier_forward_V_diagnostic": {
+            "source": "root664:guarded-prefix:0",
+            "sink": "call0:path0:frame544:capture1.table-write@17:34",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "root664:guarded-prefix:0"
+            ],
+            "backward_nodes": [
+              "call0:path0:cell:frame:664:register:160",
+              "call0:path0:constant:16",
+              "call0:path0:constant:28",
+              "call0:path0:frame516:r24@161:23:0",
+              "call0:path0:frame544:capture1",
+              "call0:path0:frame544:capture1.table-write@17:34",
+              "call0:path0:frame544:r31@49:0:0"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          }
+        },
+        {
+          "owner": 544,
+          "root981": {
+            "source": "root664:guarded8521:V@981:unvisited",
+            "sink": "call0:path0:frame544:capture1.table-write@19:36",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "root664:guarded8521:V@981:unvisited"
+            ],
+            "backward_nodes": [
+              "call0:path0:cell:frame:664:register:160",
+              "call0:path0:constant:16",
+              "call0:path0:constant:28",
+              "call0:path0:frame516:r24@161:23:0",
+              "call0:path0:frame544:capture1",
+              "call0:path0:frame544:capture1.table-write@17:34",
+              "call0:path0:frame544:capture1.table-write@19:36",
+              "call0:path0:frame544:initial-nil:r18",
+              "call0:path0:frame544:r31@49:0:0"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          },
+          "frontier_only_diagnostic": {
+            "source": "root664:guarded8521:V@8521:unobserved",
+            "sink": "call0:path0:frame544:capture1.table-write@19:36",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "root664:guarded8521:V@8521:unobserved"
+            ],
+            "backward_nodes": [
+              "call0:path0:cell:frame:664:register:160",
+              "call0:path0:constant:16",
+              "call0:path0:constant:28",
+              "call0:path0:frame516:r24@161:23:0",
+              "call0:path0:frame544:capture1",
+              "call0:path0:frame544:capture1.table-write@17:34",
+              "call0:path0:frame544:capture1.table-write@19:36",
+              "call0:path0:frame544:initial-nil:r18",
+              "call0:path0:frame544:r31@49:0:0"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          },
+          "earlier_forward_V_diagnostic": {
+            "source": "root664:guarded-prefix:0",
+            "sink": "call0:path0:frame544:capture1.table-write@19:36",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "root664:guarded-prefix:0"
+            ],
+            "backward_nodes": [
+              "call0:path0:cell:frame:664:register:160",
+              "call0:path0:constant:16",
+              "call0:path0:constant:28",
+              "call0:path0:frame516:r24@161:23:0",
+              "call0:path0:frame544:capture1",
+              "call0:path0:frame544:capture1.table-write@17:34",
+              "call0:path0:frame544:capture1.table-write@19:36",
+              "call0:path0:frame544:initial-nil:r18",
+              "call0:path0:frame544:r31@49:0:0"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          }
+        },
+        {
+          "owner": 544,
+          "root981": {
+            "source": "root664:guarded8521:V@981:unvisited",
+            "sink": "call0:path0:frame544:return@44",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "root664:guarded8521:V@981:unvisited"
+            ],
+            "backward_nodes": [
+              "call0:path0:cell:frame:664:register:160",
+              "call0:path0:constant:16",
+              "call0:path0:constant:28",
+              "call0:path0:frame516:r21@116:0:1",
+              "call0:path0:frame516:r24@161:23:0",
+              "call0:path0:frame516:r25@159:21:0",
+              "call0:path0:frame544:capture1",
+              "call0:path0:frame544:capture1.table-write@17:34",
+              "call0:path0:frame544:r2@18:35:0",
+              "call0:path0:frame544:r31@21:38:0",
+              "call0:path0:frame544:r31@49:0:0",
+              "call0:path0:frame544:r32@49:0:1",
+              "call0:path0:frame544:return@44",
+              "call0:path0:root664.r74@8521"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          },
+          "frontier_only_diagnostic": {
+            "source": "root664:guarded8521:V@8521:unobserved",
+            "sink": "call0:path0:frame544:return@44",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "root664:guarded8521:V@8521:unobserved"
+            ],
+            "backward_nodes": [
+              "call0:path0:cell:frame:664:register:160",
+              "call0:path0:constant:16",
+              "call0:path0:constant:28",
+              "call0:path0:frame516:r21@116:0:1",
+              "call0:path0:frame516:r24@161:23:0",
+              "call0:path0:frame516:r25@159:21:0",
+              "call0:path0:frame544:capture1",
+              "call0:path0:frame544:capture1.table-write@17:34",
+              "call0:path0:frame544:r2@18:35:0",
+              "call0:path0:frame544:r31@21:38:0",
+              "call0:path0:frame544:r31@49:0:0",
+              "call0:path0:frame544:r32@49:0:1",
+              "call0:path0:frame544:return@44",
+              "call0:path0:root664.r74@8521"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          },
+          "earlier_forward_V_diagnostic": {
+            "source": "root664:guarded-prefix:0",
+            "sink": "call0:path0:frame544:return@44",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "root664:guarded-prefix:0"
+            ],
+            "backward_nodes": [
+              "call0:path0:cell:frame:664:register:160",
+              "call0:path0:constant:16",
+              "call0:path0:constant:28",
+              "call0:path0:frame516:r21@116:0:1",
+              "call0:path0:frame516:r24@161:23:0",
+              "call0:path0:frame516:r25@159:21:0",
+              "call0:path0:frame544:capture1",
+              "call0:path0:frame544:capture1.table-write@17:34",
+              "call0:path0:frame544:r2@18:35:0",
+              "call0:path0:frame544:r31@21:38:0",
+              "call0:path0:frame544:r31@49:0:0",
+              "call0:path0:frame544:r32@49:0:1",
+              "call0:path0:frame544:return@44",
+              "call0:path0:root664.r74@8521"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          }
+        },
+        {
+          "owner": 258,
+          "root981": {
+            "source": "root664:guarded8521:V@981:unvisited",
+            "sink": "call1:path0:frame258:type-error@71",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "root664:guarded8521:V@981:unvisited"
+            ],
+            "backward_nodes": [
+              "call1:path0:constant:3",
+              "call1:path0:constant:45",
+              "call1:path0:frame258:r1@115:37:1",
+              "call1:path0:frame258:r21@105:0:1",
+              "call1:path0:frame258:r2@113:36:1",
+              "call1:path0:frame258:r4@115:37:0",
+              "call1:path0:frame258:r4@39:13:0",
+              "call1:path0:frame258:type-error@71"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          },
+          "frontier_only_diagnostic": {
+            "source": "root664:guarded8521:V@8521:unobserved",
+            "sink": "call1:path0:frame258:type-error@71",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "root664:guarded8521:V@8521:unobserved"
+            ],
+            "backward_nodes": [
+              "call1:path0:constant:3",
+              "call1:path0:constant:45",
+              "call1:path0:frame258:r1@115:37:1",
+              "call1:path0:frame258:r21@105:0:1",
+              "call1:path0:frame258:r2@113:36:1",
+              "call1:path0:frame258:r4@115:37:0",
+              "call1:path0:frame258:r4@39:13:0",
+              "call1:path0:frame258:type-error@71"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          },
+          "earlier_forward_V_diagnostic": {
+            "source": "root664:guarded-prefix:0",
+            "sink": "call1:path0:frame258:type-error@71",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "root664:guarded-prefix:0"
+            ],
+            "backward_nodes": [
+              "call1:path0:constant:3",
+              "call1:path0:constant:45",
+              "call1:path0:frame258:r1@115:37:1",
+              "call1:path0:frame258:r21@105:0:1",
+              "call1:path0:frame258:r2@113:36:1",
+              "call1:path0:frame258:r4@115:37:0",
+              "call1:path0:frame258:r4@39:13:0",
+              "call1:path0:frame258:type-error@71"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          }
+        }
+      ],
+      "node_count": 446,
+      "edge_count": 228,
+      "positive_bridge_proved": false,
+      "scope": "finite exported guarded SSA graph, not global absence"
+    }
+  ]
+}

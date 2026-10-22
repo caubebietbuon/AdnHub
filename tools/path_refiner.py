@@ -194,13 +194,15 @@ def certify_route(analysis,writer_error_proved):
         'global_V_constraints_admitted':False}
 
 
-def run(source,data,output):
+def run(source,data,output,boundary_observer=None):
     if any(p.resolve()in {source.resolve(),data.resolve()} for p in (output,output/'path-refinement.json')):
         raise ValueError('Output aliases input')
     text=source.read_text(encoding='ascii')
     anchors=[{'text':s,'offset':text.index(s)} for s in ANCHORS]
     analyses=[];aliases=[];parents=[];continuations=[]
     def observer(state,reason):
+        if boundary_observer is not None:
+            boundary_observer(deepcopy(state),reason)
         metadata=state['metadata'];context=metadata.constants
         aliases.append(alias_audit(state))
         heap,_=materialize_heap(state['heap'],context)
