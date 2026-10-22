@@ -1,0 +1,698 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "source_evidence": [
+    {
+      "offset": 8297,
+      "text": "local V,m,k=W[1];local y,t=W[2],D(h);"
+    },
+    {
+      "offset": 37448,
+      "text": "if jJ==3 then bJ=bJ or{};local oJ=bJ[OJ];if oJ then else oJ={[6]=t,[5]=OJ};bJ[OJ]=oJ;end;f[wJ]=oJ;"
+    },
+    {
+      "offset": 32498,
+      "text": "xJ[6]=xJ;xJ[4]=t[f];xJ[5]=4;k[f]=nil;"
+    }
+  ],
+  "capture_plan": {
+    "events": [
+      {
+        "child": 567,
+        "pc": 8390,
+        "ordinal": 1,
+        "register": 107,
+        "action": "create",
+        "object": "cell:107:created-at:8390"
+      },
+      {
+        "child": 567,
+        "pc": 8390,
+        "ordinal": 2,
+        "register": 106,
+        "action": "create",
+        "object": "cell:106:created-at:8390"
+      },
+      {
+        "child": 258,
+        "pc": 8391,
+        "ordinal": 1,
+        "register": 107,
+        "action": "reuse",
+        "object": "cell:107:created-at:8390"
+      },
+      {
+        "child": 258,
+        "pc": 8391,
+        "ordinal": 2,
+        "register": 106,
+        "action": "reuse",
+        "object": "cell:106:created-at:8390"
+      },
+      {
+        "child": 379,
+        "pc": 8393,
+        "ordinal": 1,
+        "register": 107,
+        "action": "reuse",
+        "object": "cell:107:created-at:8390"
+      },
+      {
+        "child": 379,
+        "pc": 8393,
+        "ordinal": 2,
+        "register": 106,
+        "action": "reuse",
+        "object": "cell:106:created-at:8390"
+      },
+      {
+        "child": 379,
+        "pc": 8393,
+        "ordinal": 3,
+        "register": 103,
+        "action": "create",
+        "object": "cell:103:created-at:8393"
+      },
+      {
+        "child": 379,
+        "pc": 8393,
+        "ordinal": 4,
+        "register": 92,
+        "action": "create",
+        "object": "cell:92:created-at:8393"
+      },
+      {
+        "child": 379,
+        "pc": 8393,
+        "ordinal": 5,
+        "register": 104,
+        "action": "create",
+        "object": "cell:104:created-at:8393"
+      },
+      {
+        "child": 379,
+        "pc": 8393,
+        "ordinal": 6,
+        "register": 93,
+        "action": "create",
+        "object": "cell:93:created-at:8393"
+      },
+      {
+        "child": 663,
+        "pc": 8394,
+        "ordinal": 1,
+        "register": 159,
+        "action": "create",
+        "object": "cell:159:created-at:8394"
+      },
+      {
+        "child": 663,
+        "pc": 8394,
+        "ordinal": 2,
+        "register": 105,
+        "action": "create",
+        "object": "cell:105:created-at:8394"
+      }
+    ],
+    "final_open_cells": {
+      "107": "cell:107:created-at:8390",
+      "106": "cell:106:created-at:8390",
+      "103": "cell:103:created-at:8393",
+      "92": "cell:92:created-at:8393",
+      "104": "cell:104:created-at:8393",
+      "93": "cell:93:created-at:8393",
+      "159": "cell:159:created-at:8394",
+      "105": "cell:105:created-at:8394"
+    },
+    "conditional_proof": true,
+    "premises": [
+      "same guarded root invocation and descriptor observations",
+      "fresh local k at entry",
+      "no unmodeled close/rebind/map mutation before these constructions"
+    ],
+    "unconditional_lifetime_proof": false,
+    "actual_cell_objects_inspected": false
+  },
+  "subgate_audits": [
+    {
+      "identity": "activation:arguments_valid/incoming_arity_and_values",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "actual incoming argument tuple",
+      "invalid_inference_rejected": "the outgoing206490123 tuple belongs to a different call",
+      "evidence_refs": [
+        "conditional_continuation"
+      ]
+    },
+    {
+      "identity": "activation:arguments_valid/incoming_type_predicates",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "source requirements for the incoming values",
+      "invalid_inference_rejected": "symbolic argument copies are not numeric/default-value proofs",
+      "evidence_refs": [
+        "conditional_continuation"
+      ]
+    },
+    {
+      "identity": "activation:callee_identity/call_time_callee_value",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "callee reaching definition at a663 invocation",
+      "invalid_inference_rejected": "under the reviewed assertion binding, context109 is not the root85 closure value",
+      "evidence_refs": [
+        "conditional_continuation"
+      ]
+    },
+    {
+      "identity": "activation:capture_cells_at_call/call_time_storage_and_values",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "all capture storage/value definitions reaching that invocation",
+      "invalid_inference_rejected": "frontier159/105 snapshots cannot freeze future alias values",
+      "evidence_refs": [
+        "previous_register_contexts"
+      ]
+    },
+    {
+      "identity": "activation:live_template_cache_identity/live_shared_cache_identity",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "object identity and cache effects through invocation",
+      "invalid_inference_rejected": "post-fill backing is not the saved pre-fill template",
+      "evidence_refs": [
+        "previous_register_contexts"
+      ]
+    },
+    {
+      "identity": "activation:normal_constructor_continuation/plain_context_binding",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "actual constructor decoder-context binding",
+      "invalid_inference_rejected": "alias-only source does not prove an arbitrary context object plain",
+      "evidence_refs": [
+        "previous_register_contexts"
+      ]
+    },
+    {
+      "identity": "activation:reachable_call/incoming_call_witness",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "a reachable callee resolved to663",
+      "invalid_inference_rejected": "the root assertion frontier is not a663 call under the reviewed binding",
+      "evidence_refs": [
+        "conditional_continuation"
+      ]
+    },
+    {
+      "identity": "activation:reachable_call/incoming_path_predicates",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "all predicates for that incoming call",
+      "invalid_inference_rejected": "falsey standard-assert case has no normal successor",
+      "evidence_refs": [
+        "conditional_continuation"
+      ]
+    },
+    {
+      "identity": "lifetime:all_alias_writes_covered/escaping_and_future_alias_writes",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "complete escaping writer/path coverage",
+      "invalid_inference_rejected": "zero direct prefix writes does not exclude alias writes",
+      "evidence_refs": [
+        "previous_register_contexts"
+      ]
+    },
+    {
+      "identity": "lifetime:call_time_capture_values_accounted_for/all_reaching_call_definitions",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "all incoming-call definitions and epoch conditions",
+      "invalid_inference_rejected": "a sampled prefix is not the all-path reaching-definition set",
+      "evidence_refs": [
+        "previous_register_contexts"
+      ]
+    },
+    {
+      "identity": "lifetime:cell_creation_order_verified/open_cell_reuse_and_order",
+      "status": "conditionally_proved_in_construction_model",
+      "unconditional_proof": false,
+      "required_evidence": "guarded construction prefix without hidden map effects",
+      "invalid_inference_rejected": "allocation order can be proved locally without proving the full lifetime",
+      "evidence_refs": [
+        "capture_plan",
+        "source_evidence"
+      ]
+    },
+    {
+      "identity": "lifetime:close_or_rebind_paths_covered/all_exit_reachability",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "all normal/error/nonreturn exit paths",
+      "invalid_inference_rejected": "candidate return sites are not reached-exit witnesses",
+      "evidence_refs": [
+        "previous_register_contexts"
+      ]
+    },
+    {
+      "identity": "lifetime:escape_effects_covered/all_call_outcomes",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "callee results/effects for all reachable outcomes",
+      "invalid_inference_rejected": "a normal continuation alone does not cover errors or nonreturn",
+      "evidence_refs": [
+        "previous_register_contexts"
+      ]
+    },
+    {
+      "identity": "lifetime:storage_identity_at_call/close_rebase_at_call",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "close/rebind history up to invocation",
+      "invalid_inference_rejected": "source closing preserves the same cell object and changes storage",
+      "evidence_refs": [
+        "source_evidence",
+        "previous_register_contexts"
+      ]
+    },
+    {
+      "identity": "structural:ancestry_unconditional/all_lexical_owners",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "complete lexical owner inventory",
+      "invalid_inference_rejected": "one observed owner cannot exclude all others",
+      "evidence_refs": [
+        "previous_register_contexts"
+      ]
+    },
+    {
+      "identity": "structural:child_header_verified/template_at_invocation",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "incoming invocation and template/cache identity",
+      "invalid_inference_rejected": "byte hash equality does not identify a live cache object",
+      "evidence_refs": [
+        "previous_register_contexts"
+      ]
+    },
+    {
+      "identity": "structural:control_flow_verified/entry_call_path",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "entry-reaching path in the same code epoch",
+      "invalid_inference_rejected": "constructor visitation is not invocation",
+      "evidence_refs": [
+        "conditional_continuation"
+      ]
+    },
+    {
+      "identity": "tree:complete_node_coverage/full_reachable_inventory",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "complete reachable prototype inventory",
+      "invalid_inference_rejected": "hypothetical frame samples are not coverage proof",
+      "evidence_refs": [
+        "previous_register_contexts"
+      ]
+    },
+    {
+      "identity": "tree:cycle_free_verified_edges/all_verified_edges_complete",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "complete verified-edge graph",
+      "invalid_inference_rejected": "acyclic sampled edges do not prove completeness",
+      "evidence_refs": [
+        "previous_register_contexts"
+      ]
+    },
+    {
+      "identity": "tree:unique_incoming_owner/all_owners_excluded",
+      "status": "open_with_diagnostics",
+      "unconditional_proof": false,
+      "required_evidence": "global unique-parent evidence",
+      "invalid_inference_rejected": "shared descriptors/factories do not exclude competing ownership",
+      "evidence_refs": [
+        "previous_register_contexts"
+      ]
+    }
+  ],
+  "rejected_models": [
+    {
+      "model": "unchanged V across both mask equations",
+      "refuted": true,
+      "scope": "conditional equation/epoch model; does not individually refute arrival or an unobserved V write",
+      "evidence_ref": "numeric_handoff"
+    },
+    {
+      "model": "falsey standard assertion returns normally",
+      "refuted": true,
+      "scope": "standard assertion binding plus falsey input; actual branch remains unknown",
+      "evidence_ref": "conditional_continuation/assertion_cases"
+    },
+    {
+      "model": "663 reuses already allocated159/105 in the guarded construction plan",
+      "refuted": true,
+      "scope": [
+        "same guarded root invocation and descriptor observations",
+        "fresh local k at entry",
+        "no unmodeled close/rebind/map mutation before these constructions"
+      ],
+      "evidence_ref": "capture_plan"
+    },
+    {
+      "model": "the projected direct-instruction suffix invokes663 before its constructor boundary",
+      "refuted": true,
+      "scope": "reviewed projection only; hidden field/metamethod effects and future code remain open",
+      "evidence_ref": "conditional_continuation/trace"
+    }
+  ],
+  "open_inventory_count": 20,
+  "conditionally_resolved_count": 1,
+  "unconditionally_resolved_count": 0,
+  "remaining_without_conditional_proof": 19,
+  "verified_hierarchy": null,
+  "formal_promotion_patch": {
+    "applicable": false,
+    "operations": []
+  },
+  "network_requests": 0,
+  "factory_invocations": 0,
+  "application_calls_executed": 0,
+  "input_byte_edits": 0,
+  "numeric_handoff": {
+    "observed_operand": 421809843,
+    "observed_key": 95,
+    "entry_V": 4179906283,
+    "mixer_image": 421809900,
+    "entry_mask_preimages": [
+      421809900,
+      958680813,
+      1495551726,
+      2032422639,
+      2569293544,
+      3106164457,
+      3643035370,
+      4179906283
+    ],
+    "entry_mask_preimage_count": 8,
+    "site_operand": 4,
+    "site_candidate_count": 2048,
+    "unchanged_handoff_intersection": [],
+    "unchanged_handoff_refuted": true,
+    "required_changed_bits": [
+      9,
+      10,
+      11,
+      14,
+      18,
+      21,
+      24,
+      27,
+      28
+    ],
+    "required_unchanged_bits": [
+      8,
+      12,
+      13,
+      15,
+      16,
+      17,
+      19,
+      20,
+      22,
+      23,
+      25,
+      26
+    ],
+    "entry_to_site_hamming_bounds": [
+      9,
+      20
+    ],
+    "site_candidates_pruned": 0,
+    "implication": "if the same invocation reaches the current byte-key site model, its V differs from the entry state",
+    "rejected_combination": [
+      "recorded entry mask equation",
+      "unchanged V to981",
+      "arrival at the current PC981 byte-key equation"
+    ],
+    "scope": "conditional equation/epoch model; does not individually refute arrival or an unobserved V write",
+    "route_patch_evidence": {
+      "trace_step": 160,
+      "event": {
+        "pc": 9840,
+        "variant": 163,
+        "opcode": 96,
+        "operand1": 231,
+        "H": 421809843,
+        "operand3": 0,
+        "state_words_before": [
+          4179906283,
+          1947447901
+        ]
+      },
+      "accepted_patch": {
+        "reference_id": 231,
+        "key": 95,
+        "pc": 9840,
+        "variant": 163,
+        "confidence": "restricted initialization data-flow equation",
+        "directory_before": 306515764,
+        "directory_after": 103532,
+        "cumulative_payload_xor": 95
+      }
+    }
+  },
+  "conditional_continuation": {
+    "assertion_cases": {
+      "normal": {
+        "guard": [
+          "context109 is the reviewed standard assertion",
+          "first argument is truthy"
+        ],
+        "first_result": {
+          "symbol": "global.debug"
+        },
+        "exception_taken": false,
+        "normal_return_possible_under_binding": null
+      },
+      "falsey": {
+        "guard": [
+          "context109 is the reviewed standard assertion",
+          "first argument is nil or false"
+        ],
+        "normal_return_possible": false,
+        "actual_branch_proved": false
+      },
+      "different_binding": {
+        "normal_return_possible": null,
+        "effects": "opaque"
+      },
+      "actual_branch_proved": false,
+      "assertion_invoked": false
+    },
+    "trace": [
+      {
+        "pc": 8400,
+        "variant": 228,
+        "instruction": [
+          31,
+          0,
+          2,
+          71
+        ],
+        "writes": [
+          {
+            "register": 71,
+            "value": {
+              "symbol": "global.debug"
+            }
+          }
+        ],
+        "conditions": [],
+        "application_call_executed": false,
+        "successor": 8401
+      },
+      {
+        "pc": 8401,
+        "variant": 228,
+        "instruction": [
+          95,
+          10,
+          66,
+          71
+        ],
+        "writes": [
+          {
+            "register": 66,
+            "value": {
+              "symbolic_field": {
+                "base": {
+                  "symbol": "global.debug"
+                },
+                "key_reference": 10
+              }
+            }
+          }
+        ],
+        "conditions": [
+          "lazy key/cache binding agrees with this epoch",
+          "field read succeeds"
+        ],
+        "application_call_executed": false,
+        "escaping_alias_effects": "unmodeled; no capture-value preservation is inferred",
+        "successor": 8402
+      },
+      {
+        "pc": 8402,
+        "variant": 228,
+        "instruction": [
+          139,
+          126,
+          0,
+          8477
+        ],
+        "writes": [
+          {
+            "register": 126,
+            "value": 8477
+          }
+        ],
+        "conditions": [],
+        "application_call_executed": false,
+        "successor": 8403
+      },
+      {
+        "pc": 8403,
+        "variant": 228,
+        "instruction": [
+          32,
+          9957,
+          0,
+          0
+        ],
+        "writes": [],
+        "conditions": [],
+        "application_call_executed": false,
+        "successor": 9958
+      },
+      {
+        "pc": 9958,
+        "variant": 228,
+        "instruction": [
+          89,
+          126,
+          0,
+          0
+        ],
+        "writes": [],
+        "conditions": [],
+        "application_call_executed": false,
+        "successor": 8478
+      },
+      {
+        "pc": 8478,
+        "variant": 228,
+        "instruction": [
+          95,
+          15,
+          67,
+          71
+        ],
+        "writes": [
+          {
+            "register": 67,
+            "value": {
+              "symbolic_field": {
+                "base": {
+                  "symbol": "global.debug"
+                },
+                "key_reference": 15
+              }
+            }
+          }
+        ],
+        "conditions": [
+          "lazy key/cache binding agrees with this epoch",
+          "field read succeeds"
+        ],
+        "application_call_executed": false,
+        "escaping_alias_effects": "unmodeled; no capture-value preservation is inferred",
+        "successor": 8479
+      },
+      {
+        "pc": 8479,
+        "variant": 228,
+        "instruction": [
+          95,
+          617,
+          2,
+          71
+        ],
+        "writes": [
+          {
+            "register": 2,
+            "value": {
+              "symbolic_field": {
+                "base": {
+                  "symbol": "global.debug"
+                },
+                "key_reference": 617
+              }
+            }
+          }
+        ],
+        "conditions": [
+          "lazy key/cache binding agrees with this epoch",
+          "field read succeeds"
+        ],
+        "application_call_executed": false,
+        "escaping_alias_effects": "unmodeled; no capture-value preservation is inferred",
+        "successor": 8480
+      },
+      {
+        "pc": 8480,
+        "variant": 228,
+        "instruction": [
+          139,
+          95,
+          0,
+          474124151
+        ],
+        "writes": [
+          {
+            "register": 95,
+            "value": 474124151
+          }
+        ],
+        "conditions": [],
+        "application_call_executed": false,
+        "successor": 8481
+      },
+      {
+        "pc": 8481,
+        "variant": 228,
+        "instruction": [
+          82,
+          110,
+          137,
+          58
+        ],
+        "writes": [],
+        "conditions": [],
+        "application_call_executed": false
+      }
+    ],
+    "frontier_pc": 8481,
+    "stop": "unreviewed_instruction_boundary",
+    "assumed_variant": 228,
+    "normal_prefix_proved_unconditionally": false,
+    "conditions": [
+      "context109 is the reviewed standard assertion",
+      "first argument is truthy",
+      "unchanged root snapshot/dispatcher along this projection"
+    ],
+    "capture_values_preserved": false,
+    "actual_activation_proved": false
+  }
+}

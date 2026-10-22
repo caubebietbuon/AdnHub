@@ -395,3 +395,15 @@ FINDINGS.md, SUBGATE_MATRIX.md and summary.json. Full output is ignored under
 output/phase26. checkpoint_aligner.run optionally exports provenance_inputs;
 obligation_resolver's array export includes guarded template evidence and entry
 rows identify candidate plaintext hashes. Legacy transfer behavior is unchanged.
+
+## Phase 27: scoped sub-gate resolution and numeric handoff
+
+Run `python tools/subgate_resolver.py`. Checks the historical20-predicate matrix
+against fresh evidence; models kind3 allocation/reuse in trace order and records
+one conditional construction proof (19 other sub-gates remain open; none closes
+unconditionally). Exact inversion of root9840's mask rejects unchanged-V transport
+to981 and proves9..20 changed bits relative to entry V; all2048 site states remain.
+A guarded assertion-return projection stops at constructor8481, retaining field/
+cache and alias-effect obligations. No actual function or field lookup runs.
+See research/subgate-resolution-2026-10-22/{FINDINGS.md,SUBGATE_AUDIT.md,summary.json};
+full evidence is ignored under output/phase27. Older tools/defaults are unchanged.

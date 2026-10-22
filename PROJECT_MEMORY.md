@@ -799,3 +799,48 @@ Roblox runtime verification, demo/ESP edits or push.13 focused tests passed;
 full suite248 tests passed (235 prior +13 Phase26),293.740s. Standalone Phase26
 regeneration, Lua entry-script syntax, Python compilation and working/staged
 Git diff checks passed. No Roblox/payload runtime checks performed.
+
+### Phase 27: scoped gate resolution, state handoff and conditional continuation
+
+Basec67bb98. New tools/subgate_resolver.py: numeric_handoff (exact inverse,
+cross-epoch stability contradiction, per-bit delta/Hamming bounds), capture_plan
+(source-pinned fresh-kind3 map/order), assertion_cases/guarded_continuation
+(conditional source summaries, symbolic fields and bounded snapshot path),
+parse_open_matrix (historical inventory validation), analyze/run (20 named
+audits, four separately scoped rejected models). New tests:test_phase27.py.
+Existing analyzers, runtime boundaries, promotion rules and demos stay unchanged.
+
+Mixed-route root9840 variant163/op96/ref231 has operand421809843,observedkey95,
+mix(V)=421809900. Eight exact preimages include the known entry4179906283 and
+have no intersection with981's2048-state operand4/byte-key domain. Refutes the
+combined unchanged-V/same-invocation/current-site-arrival model, not all arrival
+paths. Required entry-to-site XOR delta bits9,10,11,14,18,21,24,27,28 mustchange;
+bits8,12,13,15,16,17,19,20,22,23,25,26 remainzero. ExactHamming bounds9..20.
+No current site candidate pruned; unobserved V writes/epochs/mask models remain
+open. Do not equate initialization V with V at unvisited981.
+
+Source local V,m,k=W[1] initializes k nil;22882 scalar kind3 reuses per-register
+cells. Under guarded descriptors/no hidden map effects:567creates107/106,
+258reuses107/106,379reuses107/106 andcreates103/92/104/93,663creates159/105.
+12 ordered allocation/reuse observations prove open_cell_reuse_and_order only
+conditionally. Of20 original open sub-gates:1conditional construction proof,
+19 without conditional resolution,0 unconditional resolutions. No parent gate
+or hierarchy promotion: verified_hierarchy=null, patchfalse/empty.
+
+Baseline rootfrontier remains8398. Separate static projection assumes reviewed
+context109 assertion binding and truthy symbolic global.debug; result1=r3 into
+r2. Falsey standard-assert case cannot return normally; changed binding opaque.
+Zero/emptystring truthy; unknown None observation never becomes nil/default.
+Projection8400,8401,8402,8403,9958,8478,8479,8480 stops8481/22882, prospective
+destination110/body137/descriptor58. No construction/call performed. Symbolic
+field successes/cache predicates retained; unknown alias effects invalidate
+capture preservation. No direct663 call in this suffix; hidden callbacks/other
+epochs/future calls remain open. Actual assertion branch is unproved.
+
+Run python tools/subgate_resolver.py. Ignored output/phase27/subgate-resolution.json;
+tracked research/subgate-resolution-2026-10-22/{FINDINGS.md,SUBGATE_AUDIT.md,
+summary.json}.12 focused tests passed. Full suite260 tests passed (248 prior
++12 Phase27),325.845s. Standalone Phase27 regeneration, Lua syntax, Python
+compilation and working/staged diff checks pass. No Lua/payload/factory/__index/
+assertion/field/application/network execution, original input edits, Roblox
+runtime checks, demo/ESP edits or push. Commit locally after final checks.
