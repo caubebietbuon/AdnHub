@@ -946,3 +946,62 @@ Phase28/29 tests passed again in44.389s. Standalone regenerated analysis, Python
 compilation, Lua entry syntax and working/staged diff checks pass.
 No payload/LuaVM/factory/__index/application/network
 execution, installs, input edits, Roblox runtime tests, demo/ESP edits or push.
+
+## Phase30: upstream backward propagation (2026-10-23)
+
+Baseline7ada2ba. tools/upstream_solver.py regenerates the pinned caller, analyzes
+544/258 with call-time captures/arguments, builds frame-qualified trace-order
+SSA/table-memory graphs and backwards slices, derives typed weakest truth
+predicates, and binds a validated544 return into516. tools/test_phase30.py has
+18 new tests. tools/README.md maps invocation. Tracked handover:
+research/upstream-propagation-2026-10-23/{FINDINGS.md,summary.json}; full ignored
+evidence:output/phase30/upstream-analysis.json plus caller/. Earlier output files
+are not trusted as proof inputs.
+
+prologue_analyzer.analyze has optional instruction_window0..5 (current rewritten
+arrays) and enable_variant82=False. Opt-in82 maps j/B/Z/O and is extension-only:
+unknown82 instructions stop before legacy157 fallback. interprocedural_solver
+trace_body adds optional owner, per-path extension_factory, instruction_window
+and enable_variant82; old defaults stay unchanged. No Lua interpreter runs.
+
+Reviewed544 invocation("table",symbolic type(Instance)) enters49. Source163/50
+at17 sets capture1[r31]=true (ref16);18/12 reads it at r32;19/91 deletes the
+scratch key via fresh r18=nil. It returns the earlier lookup value from31 at
+44/82/81. Incoming/root160 and outgoing scratch tables must both be empty;
+root111 complement table must also match before/after. Thus this invocation
+returns true iff type(Instance)=="table", otherwise nil, under retained plain-
+context/cache/activation conditions. No blanket claim for all helper inputs.
+The return adapter checks exact516/162 source93 operands, rewritten lookahead
+(requested results1,target23,argc2), callee identity and arguments. It writes the
+symbolic result to23 and resumes at164. The compatible path reaches opaque
+getmetatable/context59 call123; no builtin result or following effects assumed.
+
+258(520442978,4) enters105. After bounded local allocation/move,113/173 loads
+ref5=1953789044 then copies4 into2.115/173 loads string ref3="slnaf" into4 then
+copies2 into1.117/55 and70/96 retain the relevant operands;71/51 compares4>=
+"slnaf". Standard Luau number/string ordering fails under reviewed primitive/
+lazy/cache bindings. Unknown operand types stop without an error proof. No
+captured root107/root106 reads/writes precede this audited failure. Its SSA
+backward slice ends at refs3/45 (arg2), not arg1, root107 or either frame's V.
+Fused173 copies are sequential; ordinary parallel register copies use pre-state.
+Table reads retain pre-cleanup memory versions. Equal numbers/indexes across
+frames never create edges; unmodeled definitions are explicit unknown leaves.
+
+Same258 arguments/template at516 calls131 and102 refute their normal-return
+paths conditionally; fused post-call capture effects stay blocked. DPLL proves
+normal8521 return requires Instance truthy and type(Instance)=="table" within
+this guarded necessary-condition model. Compatible SAT is not a runtime witness.
+These are2 local path exclusions, not a global activation or numeric bridge.
+No same-activation caller V@981 reaching definition follows:2048 candidates,
+19 UNDERCONSTRAINED global gates retained; zero new numeric filters admitted;
+verified_hierarchy=null and promotion patchfalse/empty. Remaining obligations:
+getmetatable123/later516 effects, root8521->981 continuation, actual V reaching
+definition, complete cache/context/alias/close/lifetime coverage for663.
+
+18 focused tests pass. Full314 tests passed in301.791s (296 prior +18 new).
+After final exact-frame/initial-table return-binding hardening, all18 Phase30
+tests passed again in21.146s; additional Phase20/29/30 regression subset46 tests
+also passed. Standalone regeneration, Python compilation, Lua entry syntax and
+working/staged diff checks pass. No payload/LuaVM/factory/__index/application/
+network execution, installs, input edits, Roblox runtime tests, demo/ESP edits
+or Git push. Commit locally after checks.

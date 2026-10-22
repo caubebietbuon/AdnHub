@@ -110,7 +110,7 @@ def capture_inputs(callee,registers,heap):
     return captures,evidence
 
 
-def trace_body(header,arguments,captures,context,max_paths=8,budget=512):
+def trace_body(header,arguments,captures,context,max_paths=8,budget=512,owner=516,extension_factory=None,instruction_window=0,enable_variant82=False):
     """Replay a bounded initializer with explicit Boolean path forks.
 
     Capture values are call-time projections, not immutable cell contents.
@@ -123,8 +123,12 @@ def trace_body(header,arguments,captures,context,max_paths=8,budget=512):
     while queue and len(results)<max_paths:
         decisions=queue.pop(0); frontier={}; branch={}; truth_facts={}
         local_context=deepcopy(context)
+        extension=extension_factory(local_context,captures,decisions,frontier,branch) if extension_factory else None
         def transfer(variant,op,a,b,c,regs,event):
             pc=event['pc']
+            if extension is not None:
+                handled=extension(variant,op,a,b,c,regs,event)
+                if handled is not None: return handled
             if (variant,op)==(157,73):
                 if not 0<=a<=10000: return False
                 for offset in range(a): regs[c+offset]=deepcopy(arguments[offset] if offset<len(arguments) else None)
@@ -181,7 +185,8 @@ def trace_body(header,arguments,captures,context,max_paths=8,budget=512):
             text_constant=local_context.text if local_context is not None else None,
             symbolic_environment=True,symbolic_field_reads=True,
             patch_observer=local_context.observe if local_context is not None else None,
-            track_register_writes=True,source_transfer=transfer)
+            track_register_writes=True,source_transfer=transfer,instruction_window=instruction_window,
+            enable_variant82=enable_variant82)
         if frontier.get('kind')=='opaque_call':
             event=state['trace'][-1]; pc=event['pc']; regs=frontier['registers']
             if event['opcode']==93:
@@ -212,7 +217,7 @@ def trace_body(header,arguments,captures,context,max_paths=8,budget=512):
         if branch:
             queue.extend([{**decisions,branch['pc']:v} for v in (True,False)])
     return {'paths':results,'unexplored_worklist':len(queue),'all_paths_covered':False,
-            'callee_header_words':list(words),'frame':'callee516, distinct from caller664.V'}
+            'callee_header_words':list(words),'frame':f'callee{owner}, distinct from caller664.V'}
 
 
 def propagate(domain,constraints,invariants):

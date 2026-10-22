@@ -437,3 +437,19 @@ reaching-definition, value-flow and complete-effects certificate to caller V@981
 Actual result:2048 models retained,19 global gates underconstrained, no hierarchy
 promotion. See research/interprocedural-solving-2026-10-22/{FINDINGS.md,summary.json};
 full regenerated evidence stays in ignored output/phase29. Tests:test_phase29.py.
+
+## Phase 30: upstream backward constraints
+
+Run `python tools/upstream_solver.py`. Regenerates544/258 call-time metadata,
+tracks captured table memory, computes typed weakest truth predicates and
+trace-order SSA backward slices, and substitutes the proved544 return into516.
+prologue_analyzer has opt-in bounded instruction windows/dispatch82; unsupported
+82 operations stop before legacy157 fallback. interprocedural_solver.trace_body
+accepts optional owner/extension/window/82 settings; old defaults are unchanged.
+Actual result:544's lookup return/restored scratch table is proved conditionally;
+258(520442978,4) reaches a guarded number/string order error at71. Two516 normal-
+return paths (131/102) are refuted locally; the compatible path stops at opaque
+getmetatable123. No root V@981 bridge:2048 numeric models/19 global open gates
+retained; hierarchy/promotion untouched. Findings and compact summary:
+research/upstream-propagation-2026-10-23/. Full evidence:ignored output/phase30.
+Tests:test_phase30.py. No Lua, factory, metatable or application function runs.

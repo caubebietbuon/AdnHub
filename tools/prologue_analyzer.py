@@ -15,7 +15,10 @@ def mix(word):
 def analyze(streams, entry, first_word, second_word, budget=10000, numeric_constant=None, text_constant=None,
             symbolic_environment=False, branch_decisions=None, snapshot_pcs=(), symbolic_field_reads=False,
             patch_observer=None, track_register_writes=False, closure_builder=None, source_transfer=None,
-            watch_code_slots=()):
+            watch_code_slots=(), instruction_window=0, enable_variant82=False):
+    if type(instruction_window) is not int or not 0<=instruction_window<=5:
+        raise ValueError('Instruction window must be0..5')
+    if type(enable_variant82)is not bool:raise ValueError('Variant82 flag must be Boolean')
     arrays = deepcopy(streams)
     limit = min(len(values) for values in arrays.values())
     requested_slots = tuple(watch_code_slots)
@@ -55,10 +58,13 @@ def analyze(streams, entry, first_word, second_word, budget=10000, numeric_const
         ix = pc - 1
         names = {157: ("O", "j", "Z", "B"), 163: ("j", "B", "Z", "O"),
                  228: ("B", "j", "Z", "O")}.get(variant)
+        if variant==82 and enable_variant82:names=("j","B","Z","O")
         if names is None:
             return {"trace": trace, "patches": patches, "stop": "unreviewed dispatch variant", "pc": pc, "arrays": arrays, "heap": heap}
         op, a, b, c = [arrays[k][ix] for k in names]
         event = {"pc": pc, "variant": variant, "opcode": op, "operand1": a, "H": b, "operand3": c}
+        if instruction_window:
+            event['instruction_window']={name:list(values[ix:ix+instruction_window]) for name,values in arrays.items()}
         registers.event = event
         if watched:
             for array in arrays.values(): array.event=event
@@ -82,6 +88,9 @@ def analyze(streams, entry, first_word, second_word, budget=10000, numeric_const
                     raise ValueError("Source transfer advance outside reviewed range")
                 pc += advance
                 continue
+        # Variant82 is opt-in and extension-only. Never interpret its unknown
+        # opcodes with the legacy variant157 fallback below.
+        if variant==82:break
         closure_patterns = {157: (132, c, b, a), 163: (38, b, a, c), 228: (82, b, c, a)}
         if symbolic_environment and symbolic_field_reads and closure_builder and variant in closure_patterns:
             expected, child, descriptor, destination = closure_patterns[variant]

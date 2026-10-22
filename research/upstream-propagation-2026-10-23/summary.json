@@ -1,0 +1,314 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "invariants": [
+    {
+      "name": "body544-return-truth",
+      "target": "callee516.call162.result1",
+      "predicate": {
+        "any": [
+          {
+            "typed_equal": [
+              {
+                "builtin_type_of": {
+                  "symbol": "global.Instance"
+                }
+              },
+              "table"
+            ]
+          }
+        ]
+      },
+      "guard": "reviewed path has no calls or local capture allocations; source close loops are empty"
+    }
+  ],
+  "caller_path_refutations": [
+    {
+      "caller": 516,
+      "pc": 131,
+      "decisions": {
+        "49": false
+      },
+      "normal_return_refuted_in_guarded_model": true,
+      "source_summary": "258.pc71",
+      "guard": "same cached258 template, lazy/cache identities and no hidden context effects"
+    },
+    {
+      "caller": 516,
+      "pc": 102,
+      "decisions": {
+        "49": true,
+        "167": false
+      },
+      "normal_return_refuted_in_guarded_model": true,
+      "source_summary": "258.pc71",
+      "guard": "same cached258 template, lazy/cache identities and no hidden context effects"
+    }
+  ],
+  "backward_normal_return_query": {
+    "variable_ids": {
+      "normal_root8521_return": 1,
+      "Instance_truthy": 2,
+      "type_Instance_is_table": 3
+    },
+    "clauses": [
+      [
+        -1,
+        2
+      ],
+      [
+        -1,
+        3
+      ]
+    ],
+    "normal_and_false": {
+      "status": "UNSAT",
+      "model": null,
+      "search_nodes": 1
+    },
+    "normal_and_non_table": {
+      "status": "UNSAT",
+      "model": null,
+      "search_nodes": 1
+    },
+    "normal_and_true": {
+      "status": "SAT",
+      "model": {
+        "1": true,
+        "2": true,
+        "3": true
+      },
+      "search_nodes": 1
+    },
+    "scope": "necessary guarded path condition only, SAT is not a runtime witness"
+  },
+  "bridge_obligations": [
+    "remaining caller516 outcomes/effects",
+    "root664 return/continuation to981",
+    "root V@981 same-activation reaching definition",
+    "complete context/cache/alias coverage"
+  ],
+  "verified_hierarchy": null,
+  "formal_promotion_patch": {
+    "applicable": false,
+    "operations": []
+  },
+  "network_requests": 0,
+  "factory_invocations": 0,
+  "application_calls_executed": 0,
+  "summaries": [
+    {
+      "owner": 544,
+      "caller": 516,
+      "caller_pc": 162,
+      "caller_decisions": {
+        "49": true
+      },
+      "arguments": [
+        {
+          "string_literal": "table",
+          "reference_id": 28
+        },
+        {
+          "builtin_type_of": {
+            "symbol": "global.Instance"
+          }
+        }
+      ],
+      "frontiers": [
+        {
+          "kind": "return",
+          "pc": 44,
+          "results": [
+            {
+              "table_select": {
+                "table": "capture:544:1",
+                "entries": [
+                  {
+                    "key": "table",
+                    "value": true
+                  }
+                ],
+                "key": {
+                  "builtin_type_of": {
+                    "symbol": "global.Instance"
+                  }
+                }
+              }
+            }
+          ],
+          "guard": "reviewed path has no calls or local capture allocations; source close loops are empty",
+          "tables": {
+            "capture:544:1": [],
+            "capture:544:2": [
+              {
+                "key": false,
+                "value": true
+              },
+              {
+                "key": true,
+                "value": false
+              }
+            ]
+          }
+        }
+      ],
+      "backward_leaves": [
+        {
+          "sink": "frame544:capture1.table-write@17:34",
+          "leaves": [
+            "cell:frame:664:register:160",
+            "constant:16",
+            "constant:28"
+          ]
+        },
+        {
+          "sink": "frame544:capture1.table-write@19:36",
+          "leaves": [
+            "cell:frame:664:register:160",
+            "constant:16",
+            "constant:28",
+            "frame544:initial-nil:r18"
+          ]
+        },
+        {
+          "sink": "frame544:return@44",
+          "leaves": [
+            "cell:frame:664:register:160",
+            "constant:16",
+            "constant:28",
+            "root664.r74@8521"
+          ]
+        }
+      ],
+      "truth_precondition": {
+        "any": [
+          {
+            "typed_equal": [
+              {
+                "builtin_type_of": {
+                  "symbol": "global.Instance"
+                }
+              },
+              "table"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "owner": 258,
+      "caller": 516,
+      "caller_pc": 131,
+      "caller_decisions": {
+        "49": false
+      },
+      "arguments": [
+        520442978,
+        4
+      ],
+      "frontiers": [
+        {
+          "kind": "primitive_order_type_error",
+          "normal_return_refuted_in_guarded_model": true,
+          "pc": 71,
+          "left_register": 1,
+          "right_register": 4,
+          "left": 4,
+          "right": "slnaf",
+          "operator": ">=",
+          "guard": "standard Luau primitive ordering and reviewed lazy/cache identities"
+        }
+      ],
+      "backward_leaves": [
+        {
+          "sink": "frame258:type-error@71",
+          "leaves": [
+            "constant:3",
+            "constant:45"
+          ]
+        }
+      ]
+    }
+  ],
+  "numeric_candidates_remaining": 2048,
+  "numeric_filters_admitted": 0,
+  "global_gates": [
+    {
+      "gate": "activation:arguments_valid/incoming_arity_and_values",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "activation:arguments_valid/incoming_type_predicates",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "activation:callee_identity/call_time_callee_value",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "activation:capture_cells_at_call/call_time_storage_and_values",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "activation:live_template_cache_identity/live_shared_cache_identity",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "activation:normal_constructor_continuation/plain_context_binding",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "activation:reachable_call/incoming_call_witness",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "activation:reachable_call/incoming_path_predicates",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "lifetime:all_alias_writes_covered/escaping_and_future_alias_writes",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "lifetime:call_time_capture_values_accounted_for/all_reaching_call_definitions",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "lifetime:close_or_rebind_paths_covered/all_exit_reachability",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "lifetime:escape_effects_covered/all_call_outcomes",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "lifetime:storage_identity_at_call/close_rebase_at_call",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "structural:ancestry_unconditional/all_lexical_owners",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "structural:child_header_verified/template_at_invocation",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "structural:control_flow_verified/entry_call_path",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "tree:complete_node_coverage/full_reachable_inventory",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "tree:cycle_free_verified_edges/all_verified_edges_complete",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "tree:unique_incoming_owner/all_owners_excluded",
+      "status": "UNDERCONSTRAINED"
+    }
+  ]
+}
