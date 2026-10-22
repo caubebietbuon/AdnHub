@@ -1005,3 +1005,67 @@ also passed. Standalone regeneration, Python compilation, Lua entry syntax and
 working/staged diff checks pass. No payload/LuaVM/factory/__index/application/
 network execution, installs, input edits, Roblox runtime tests, demo/ESP edits
 or Git push. Commit locally after checks.
+
+## Phase31: path-sensitive alias/predicate bridge audit (2026-10-23)
+
+Baseline b5711da. tools/path_domain.py implements frame/activation-qualified
+register cells, typed heap slots, copied/offset pointer alternatives, guarded
+may-alias updates, unknown-store havoc, read snapshots and explicit guarded
+joins. Predicates uses bounded Tseitin CNF/DPLL with typed constants, mutually
+exclusive literal equalities and type/truth implications. No complete runtime
+type enum, NaN-reflexivity assumption, numeric default or actual call is used.
+tools/path_refiner.py integrates source transfers and per-occurrence predicate
+correlation; tools/test_phase31.py adds23 tests. tools/README.md maps invocation.
+upstream_solver.run gains an optional fully copied boundary observer and exports
+existing numeric constraints additively. Existing tool defaults stay unchanged.
+The prior worklist had no join/widen operator; do not blame prior boundaries on
+an observed widening event or remove the proven byte-key/Hamming constraints.
+
+Fresh evidence:ignored output/phase31/path-refinement.json and rebuilt upstream/
+caller reports. Tracked handover:research/path-sensitive-refinement-2026-10-23/
+{FINDINGS.md,GLOBAL_GATES.md,summary.json}. No prior output is a proof input.
+
+At guarded8521, known567 and258 captures share the same root107 storage. Only2
+live closure pointers are established here: root159/379 is havoc, so its earlier
+construction cannot be promoted into a current identity/lifetime proof.
+Root107 remains havoc too, not recovered as its earlier zero. Root160 register
+cell and its fresh table's scratch property have separate addresses; source544
+scratch true/read/nil cleanup preserves the earlier read and leaves the register
+cell unchanged. Offsets preserve pointer-choice guards; frames and recursive
+activation identities do not alias by matching indexes. Unknown writes stay weak.
+
+On the compatible516 path, source slot59 getmetatable is summarized symbolically
+at123 with the table-argument/builtin-identity guard. Result M remains unknown,
+including protected false; no metatable, __index or native function is invoked.
+At126,544(nil,M) is traced under refined Boolean complement and nil-equality
+rules. Three helper leaves:93/22899 ref111=false when M truthy;96/22899 ref16=true
+when M falsy and nil;127/82/111 ref111=false when M falsy and nonnil. Exact
+leaf-wise proofs and an ENTAILED partition coverage query establish return M==nil
+for this invocation. The guarded summary is bound to516 r23, resuming at128.
+Potential unknown-table equality/metamethods and unreviewed returns stay blocked.
+
+This advances to516/30 or213. At30, rewritten228 tuple(123,1,504247841,2) tests
+2<frame516[504247841]. The register is unassigned in the reviewed fresh frame;
+known helper captures point to root664, not that parent516 frame. Under the
+retained fresh-allocator/native/cache/no-reflection premises its value is nil,
+giving a primitive-ordering failure. This is NOT an allocation-capacity rejection:
+large Lua table indexes are valid. A reaching unknown write disables this proof.
+At213 the same258(520442978,4) error summary applies with unchanged epoch/caches.
+
+Final guarded516 leaves131/102/213 -> same258 failure, and30 -> nil ordering,
+partition the invocation. The ENTAILED coverage proof is a CONDITIONAL NEGATIVE
+route certificate: reviewed premises imply no normal return through8521 here.
+It is not a positive root V@981 bridge, a proof of actual loader failure, or a
+global reachability exclusion. Audit live cache/reader/code-epoch premises at
+258/71 and516/30 before extending this route; do not force dummy return values.
+No same-activation V reaching-definition relation to these predicates is proved.
+All2048 numeric models survive;0 numeric filters;19 global gates UNDERCONSTRAINED
+with exact missing requirements in GLOBAL_GATES.md. verified_hierarchy=null;
+promotionfalse/empty. No global condition is discharged by local coverage.
+
+23 focused tests passed in15.200s. Full337 distinct tests passed in301.330s:
+314 previous tests (already including the18 Phase30 focused tests) +23 new.
+Standalone regeneration, Python compilation, Lua entry syntax and working/
+staged diff checks pass. No target payload/LuaVM/factory/__index/application/
+network execution, installs, input edits, demo/ESP changes, Roblox runtime checks
+or Git push. Commit locally after checks.

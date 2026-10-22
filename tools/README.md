@@ -453,3 +453,22 @@ getmetatable123. No root V@981 bridge:2048 numeric models/19 global open gates
 retained; hierarchy/promotion untouched. Findings and compact summary:
 research/upstream-propagation-2026-10-23/. Full evidence:ignored output/phase30.
 Tests:test_phase30.py. No Lua, factory, metatable or application function runs.
+
+## Phase 31: path-sensitive alias/predicate and bridge audit
+
+Run `python tools/path_refiner.py`. path_domain.py provides guarded pointer
+alternatives, frame/activation-qualified stack cells, distinct typed heap slots,
+exact offsets, weak/unknown stores, explicit guarded joins and bounded typed
+Boolean CNF/DPLL. path_refiner.py audits current root107 aliases, symbolically
+summarizes the source getmetatable builtin, proves544(nil,M) returns M==nil,
+and binds that partitioned return into516. Branch occurrences and predicates
+remain correlated. Earlier worklists had no join/widen operator to remove.
+
+Result: the guarded8521 continuation has four covered nonreturn leaves:258 calls
+at131/102/213 and nil-register comparison516/30. This is a conditional negative
+route certificate, not a positive V@981 reaching-definition bridge. All2048
+numeric models and19 global open gates remain; no promotion. Root159/379 and
+root107 havoc values are retained. Fresh metadata callback in upstream_solver
+is optional/isolated; numeric constraints are exported additively. Findings:
+research/path-sensitive-refinement-2026-10-23/{FINDINGS.md,GLOBAL_GATES.md,summary.json}.
+Full evidence:ignored output/phase31. Tests:test_phase31.py. No target code runs.

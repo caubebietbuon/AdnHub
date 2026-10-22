@@ -291,7 +291,7 @@ def resume_factory(summary):
     return factory
 
 
-def run(source,data,output):
+def run(source,data,output,boundary_observer=None):
     protected={source.resolve(),data.resolve()}
     if any(p.resolve()in protected for p in (output,output/'upstream-analysis.json')):
         raise ValueError('Output aliases input')
@@ -339,6 +339,8 @@ def run(source,data,output):
                 invariants.append({'name':'body544-return-truth','target':'callee516.call162.result1',
                     'predicate':summary['truth_precondition'],'guard':returned['guard']})
             summaries.append(summary)
+        if boundary_observer is not None:
+            boundary_observer(deepcopy(state),reason)
     base=caller_run(source,data,output/'caller',boundary_observer=observer)
     propagation=propagate(base['candidate_solution']['models'],base['constraints'],invariants)
     normal_false_refuted=any(s['owner']==258 and len(s['analysis']['paths'])==1 and
@@ -365,6 +367,7 @@ def run(source,data,output):
         'scope':'necessary guarded path condition only, SAT is not a runtime witness'}
     gates=propagate_gates(base['gate_queries'],{'guarded8521.false-branch-normal-return-refuted':True} if normal_false_refuted else {})
     result={'source_sha256':base['source_sha256'],'data_sha256':base['data_sha256'],
+        'constraints':base['constraints'],
         'source_evidence':anchors,'summaries':summaries,'parent_resumptions':parent_resumptions,
         'invariants':invariants,'constraint_propagation':propagation,'candidate_solution':propagation['solution'],
         'caller_path_refutations':refutations,
