@@ -290,6 +290,7 @@ def scan_candidate_entries(baseline, root_context, source, defs, watch_code_slot
                     "unknown_branch_constraints_before_patch": [event for event in state["trace"][:end_prefix]
                         if "assumed_branch_constraint" in event]})
             results.append({"owner": owner, "state": state, "bindings": closures.bindings,
+                "candidate_plain_sha256": candidate['plain_sha256'],
                 "live_header_matches_root_context": live_header_matches,
                 "new_guarded_strings": strings, "path_local_patch_events": context.events,
                 "patch_violations": context.violations, "header_confidence": candidate["verification"],
@@ -376,6 +377,7 @@ def run(source_path, data_path, output, include_analysis_arrays=False, watch_cod
     if include_analysis_arrays:
         report['analysis_arrays'] = {str(entry['owner']): entry['state']['arrays'] for entry in entries_analysis}
         report['analysis_arrays']['664'] = root['arrays']
+        report['guarded_template_evidence'] = closures.templates
     if watch_code_slots:
         report['initial_watched_slots']={str(entry['owner']):entry['initial_watched_slots'] for entry in entries_analysis}
         report['initial_watched_slots']['664']={str(pc):{name:values[pc-1] for name,values in streams.items()}

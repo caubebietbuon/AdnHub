@@ -380,3 +380,18 @@ counterfactual V=206490123 is diagnostic only. A criterion ledger and normal,
 error/nonreturn call-outcome obligations keep hierarchy promotion blocked.
 See research/checkpoint-filter-2026-10-22/FINDINGS.md and summary.json; full
 generated evidence is ignored under output/phase25. No earlier defaults change.
+
+## Phase 26: typed provenance paths and closure663 sub-gates
+
+Run `python tools/provenance_bridge.py`. Builds a bounded SSA/control/payload/
+captured-address graph and searches guarded paths without equating dependencies
+with numeric values. The root-entry-to-checkpoint mixed route is conditional;
+root V at981 has no established copy/equation bridge and retains2048 candidates.
+Records the pre-fill663 template matching the checkpoint, independently of the
+failed post-fill backing reread. Decomposes18 gates into36 sub-gates (16 local
+evidence items/20 open); no hierarchy promotion. Includes a source-version-aware
+228 fused-call source-register scan. See research/provenance-bridge-2026-10-22/
+FINDINGS.md, SUBGATE_MATRIX.md and summary.json. Full output is ignored under
+output/phase26. checkpoint_aligner.run optionally exports provenance_inputs;
+obligation_resolver's array export includes guarded template evidence and entry
+rows identify candidate plaintext hashes. Legacy transfer behavior is unchanged.

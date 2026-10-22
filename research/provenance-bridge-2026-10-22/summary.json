@@ -1,0 +1,426 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "endpoints": {
+    "root_site": "664:pc981:V",
+    "root_entry": "664:ssa:0",
+    "checkpoint_argument": "663:pc547:r7",
+    "checkpoint_y": "663:ssa:1"
+  },
+  "path_queries": {
+    "root_site_to_argument_data": {
+      "source": "664:pc981:V",
+      "target": "663:pc547:r7",
+      "status": "no_path_in_recorded_graph",
+      "edge_indices": [],
+      "unmet_guards": [],
+      "expanded_nodes": 1,
+      "copy_only_relation": false,
+      "numeric_equality": false,
+      "global_absence_proved": false
+    },
+    "root_entry_to_argument_mixed": {
+      "source": "664:ssa:0",
+      "target": "663:pc547:r7",
+      "status": "conditional_path",
+      "edge_indices": [
+        473,
+        474,
+        475,
+        477,
+        478,
+        479,
+        482,
+        484,
+        487,
+        1013,
+        1015,
+        920,
+        921,
+        1019
+      ],
+      "unmet_guards": [
+        "guarded-prefix:663",
+        "guarded-prefix:664",
+        "primitive735-cache-binding"
+      ],
+      "expanded_nodes": 195,
+      "copy_only_relation": false,
+      "numeric_equality": false,
+      "global_absence_proved": false
+    },
+    "checkpoint_y_to_argument": {
+      "source": "663:ssa:1",
+      "target": "663:pc547:r7",
+      "status": "conditional_path",
+      "edge_indices": [
+        920,
+        921,
+        1019
+      ],
+      "unmet_guards": [
+        "guarded-prefix:663",
+        "primitive735-cache-binding"
+      ],
+      "expanded_nodes": 3,
+      "copy_only_relation": false,
+      "numeric_equality": false,
+      "global_absence_proved": false
+    }
+  },
+  "discharged_local_guards": [
+    "cached-header-matches:663",
+    "template-read-before-fill:663"
+  ],
+  "cached_template_audit": {
+    "cached_plain_sha256": "e234c9c4ac2f7bca7c526e126939c1f137a97843a0192f1761e332ec4bf11309",
+    "mask": 227,
+    "checkpoint_plain_sha256": "e234c9c4ac2f7bca7c526e126939c1f137a97843a0192f1761e332ec4bf11309",
+    "cached_and_checkpoint_plain_hash_match": true,
+    "cached_header_words": [
+      2811776362,
+      871012737
+    ],
+    "checkpoint_header_words": [
+      2811776362,
+      871012737
+    ],
+    "header_words_match": true,
+    "entry_pc_matches": true,
+    "cached_initial_arrays": {
+      "j": 743,
+      "O": 745,
+      "Z": 743,
+      "B": 743
+    },
+    "factory_matches": true,
+    "cleanup_applied_after_template_read": true,
+    "backing_reread_matches_after_cleanup": false,
+    "root_mask_patches": [
+      {
+        "reference_id": 663,
+        "key": 227,
+        "pc": 9828,
+        "variant": 228,
+        "confidence": "restricted initialization data-flow equation",
+        "directory_before": 306569851,
+        "directory_after": 96547,
+        "cumulative_payload_xor": 227
+      }
+    ],
+    "constructor_contract": {
+      "factory_slot": 4890,
+      "source_offset": 7929,
+      "outer_alias_prefix": "local R,N,z,E,Q,I,T,l,a,U,q,s,c,d,V,m,k,y,t=x[34],x[88],x[66],x[18],x[90],x[24],x[99],x[20],x[46],x[69],x[8],x[74],x.EW,x[102],x[73],x[113],x.tW,x[115],x[68];",
+      "capture_alias_prefix": "local D,e,P,K,X,v,Y,_,J,M,r,L,F,G,p,C,u,f,n=R,N,z,E,Q,I,T,l,a,U,q,s,c,d,V,m,k,y,t;",
+      "proof": "both prefixes contain only local alias assignments and return a function literal",
+      "body_executed": false
+    },
+    "mask_input_kind": "direct operand, not a V/y read at this instruction",
+    "mask_instruction": {
+      "pc": 9828,
+      "variant": 228,
+      "opcode": 100,
+      "operand1": 663,
+      "H": 0,
+      "operand3": 227,
+      "state_words_before": [
+        4179906283,
+        1947447901
+      ]
+    },
+    "cache_identity_at_invocation_proved": false,
+    "scope": "guarded Python template observation before fill; no live VM/cache object was inspected"
+  },
+  "verified_hierarchy": null,
+  "formal_promotion_patch": {
+    "applicable": false,
+    "operations": []
+  },
+  "network_requests": 0,
+  "factory_invocations": 0,
+  "application_calls_executed": 0,
+  "input_byte_edits": 0,
+  "candidate_filter": {
+    "bridge": {
+      "source": "664:pc981:V",
+      "target": "663:pc547:r7",
+      "status": "no_path_in_recorded_graph",
+      "edge_indices": [],
+      "unmet_guards": [],
+      "expanded_nodes": 1,
+      "copy_only_relation": false,
+      "numeric_equality": false,
+      "global_absence_proved": false
+    },
+    "observation_guards_unmet": [
+      "actual-invocation:663",
+      "primitive735-cache-binding"
+    ],
+    "filter_applied": false,
+    "initial_count": 2048,
+    "remaining_count": 2048,
+    "pruned_count": 0
+  },
+  "subgates": {
+    "parent_gate_count": 18,
+    "subgate_count": 36,
+    "locally_established_count": 16,
+    "open_subgate_count": 20,
+    "discharged_parent_gates": [],
+    "incoming_call_witness": null,
+    "incoming_snapshot_call_candidates": []
+  },
+  "graph_counts": {
+    "nodes": 886,
+    "edges": 1021
+  },
+  "paths": {
+    "root_site_to_argument_data": [],
+    "root_entry_to_argument_mixed": [
+      {
+        "source": "664:ssa:0",
+        "target": "664:event:160",
+        "kind": "data",
+        "guards": [
+          "guarded-prefix:664"
+        ],
+        "source_operation": "header_word",
+        "target_event": {
+          "pc": 9840,
+          "variant": 163,
+          "opcode": 96
+        }
+      },
+      {
+        "source": "664:event:160",
+        "target": "664:event:161",
+        "kind": "control",
+        "guards": [
+          "guarded-prefix:664"
+        ],
+        "source_event": {
+          "pc": 9840,
+          "variant": 163,
+          "opcode": 96
+        },
+        "target_event": {
+          "pc": 9841,
+          "variant": 163,
+          "opcode": 45
+        }
+      },
+      {
+        "source": "664:event:161",
+        "target": "664:event:162",
+        "kind": "control",
+        "guards": [
+          "guarded-prefix:664"
+        ],
+        "source_event": {
+          "pc": 9841,
+          "variant": 163,
+          "opcode": 45
+        },
+        "target_event": {
+          "pc": 9841,
+          "variant": 163,
+          "opcode": 147
+        }
+      },
+      {
+        "source": "664:event:162",
+        "target": "664:event:163",
+        "kind": "control",
+        "guards": [
+          "guarded-prefix:664"
+        ],
+        "source_event": {
+          "pc": 9841,
+          "variant": 163,
+          "opcode": 147
+        },
+        "target_event": {
+          "pc": 9842,
+          "variant": 163,
+          "opcode": 52
+        }
+      },
+      {
+        "source": "664:event:163",
+        "target": "664:event:164",
+        "kind": "control",
+        "guards": [
+          "guarded-prefix:664"
+        ],
+        "source_event": {
+          "pc": 9842,
+          "variant": 163,
+          "opcode": 52
+        },
+        "target_event": {
+          "pc": 9843,
+          "variant": 163,
+          "opcode": 144
+        }
+      },
+      {
+        "source": "664:event:164",
+        "target": "664:event:165",
+        "kind": "control",
+        "guards": [
+          "guarded-prefix:664"
+        ],
+        "source_event": {
+          "pc": 9843,
+          "variant": 163,
+          "opcode": 144
+        },
+        "target_event": {
+          "pc": 9825,
+          "variant": 228,
+          "opcode": 23
+        }
+      },
+      {
+        "source": "664:event:165",
+        "target": "664:event:166",
+        "kind": "control",
+        "guards": [
+          "guarded-prefix:664"
+        ],
+        "source_event": {
+          "pc": 9825,
+          "variant": 228,
+          "opcode": 23
+        },
+        "target_event": {
+          "pc": 9826,
+          "variant": 228,
+          "opcode": 31
+        }
+      },
+      {
+        "source": "664:event:166",
+        "target": "664:event:167",
+        "kind": "control",
+        "guards": [
+          "guarded-prefix:664"
+        ],
+        "source_event": {
+          "pc": 9826,
+          "variant": 228,
+          "opcode": 31
+        },
+        "target_event": {
+          "pc": 9827,
+          "variant": 228,
+          "opcode": 23
+        }
+      },
+      {
+        "source": "664:event:167",
+        "target": "664:event:168",
+        "kind": "control",
+        "guards": [
+          "guarded-prefix:664"
+        ],
+        "source_event": {
+          "pc": 9827,
+          "variant": 228,
+          "opcode": 23
+        },
+        "target_event": {
+          "pc": 9828,
+          "variant": 228,
+          "opcode": 100
+        }
+      },
+      {
+        "source": "664:event:168",
+        "target": "template:663",
+        "kind": "payload",
+        "guards": [
+          "guarded-prefix:664",
+          "template-read-before-fill:663"
+        ],
+        "source_event": {
+          "pc": 9828,
+          "variant": 228,
+          "opcode": 100
+        }
+      },
+      {
+        "source": "template:663",
+        "target": "663:ssa:1",
+        "kind": "payload",
+        "guards": [
+          "cached-header-matches:663"
+        ],
+        "target_operation": "header_word"
+      },
+      {
+        "source": "663:ssa:1",
+        "target": "663:ssa:23",
+        "kind": "copy",
+        "guards": [
+          "guarded-prefix:663"
+        ],
+        "source_operation": "header_word",
+        "target_operation": "copy"
+      },
+      {
+        "source": "663:ssa:23",
+        "target": "663:ssa:25",
+        "kind": "data",
+        "guards": [
+          "guarded-prefix:663"
+        ],
+        "source_operation": "copy",
+        "target_operation": "subtract"
+      },
+      {
+        "source": "663:ssa:25",
+        "target": "663:pc547:r7",
+        "kind": "copy",
+        "guards": [
+          "guarded-prefix:663",
+          "primitive735-cache-binding"
+        ],
+        "source_operation": "subtract"
+      }
+    ],
+    "checkpoint_y_to_argument": [
+      {
+        "source": "663:ssa:1",
+        "target": "663:ssa:23",
+        "kind": "copy",
+        "guards": [
+          "guarded-prefix:663"
+        ],
+        "source_operation": "header_word",
+        "target_operation": "copy"
+      },
+      {
+        "source": "663:ssa:23",
+        "target": "663:ssa:25",
+        "kind": "data",
+        "guards": [
+          "guarded-prefix:663"
+        ],
+        "source_operation": "copy",
+        "target_operation": "subtract"
+      },
+      {
+        "source": "663:ssa:25",
+        "target": "663:pc547:r7",
+        "kind": "copy",
+        "guards": [
+          "guarded-prefix:663",
+          "primitive735-cache-binding"
+        ],
+        "source_operation": "subtract"
+      }
+    ]
+  }
+}

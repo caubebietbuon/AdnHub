@@ -752,3 +752,50 @@ factory/__index/application/network execution, input edits, Roblox runtime
 verification or push. Standalone analysis and13 focused tests passed. Full
 suite:235 tests passed (222 prior +13 Phase25),259.479s. Lua entry-script
 syntax, Python compilation and working/staged Git diff checks passed.
+
+### Phase 26: typed provenance bridges and closure663 sub-gates
+
+Basea1ef3ca. tools/provenance_bridge.py adds EvidenceGraph (bounded typed BFS,
+SSA/context identities, explicit guards), filter_through_bridge (copy equality
+only after all guards), build_graph (five guarded prefixes/control/capture/
+payload relations), snapshot_call_sites (228/4,93 precopy callee origins),
+template_audit (prefill cached header vs postfill backing), subgate_audit and
+analyze/run. checkpoint_aligner.run adds include_provenance=False opt-in;
+obligation_resolver's array export includes guarded_template_evidence and
+candidate entry rows include candidate_plain_sha256. Existing transfers stay
+unchanged. New tests: tools/test_phase26.py.
+
+Graph886nodes/1021edges: guarded root-entry V -> patch9840/16396 -> chronological
+control through9841(two versions),9842,9843,9825..9828 -> direct663 payload mask
+227 -> cached663 header y -> PC545/546 subtraction -> PC547 argument206490123.
+This14edge mixed dependency/control route is NOT numeric equality, invocation,
+or provenance for unvisited root981 V. No bridge from that site is established
+in the recorded graph; all2048 local byte-key states remain, filterappliedfalse.
+No-path results are graph-scoped, not global impossibility. Captured addresses
+never silently become values; unknown guards and out-of-budget paths stay open.
+
+NEW cache diagnosis: root patch9828/op100 is direct227, directory306569851->96547.
+Cached663 plaintext SHAe234c9c4ac2f7bca7c526e126939c1f137a97843a0192f1761e332ec4bf11309
+matches the hypothetical checkpoint candidate exactly. HeaderV2811776362/
+y871012737,entry606,initial j743/O745/Z743/B743. Existing live_header_matches_
+root_context=false is a post-cleanup backing reread, not a refutation of the
+prefill template. Two local hash/read-before-fill guards discharged; actual
+VM shared-cache/template identity at invocation remains unknown.
+
+18 parent gates split into36 named sub-gates:16 local evidence items,20 open
+obligations; zero parent gates discharged. Source contexts/slices attached:
+root85=guarded663 at8394;159=body379 from8393;105=10054 from1006. No later direct
+159/105writes on recorded prefix; alias/future/call-time writes remain open.
+663 entry606 arguments1..3 remain symbolic registers1..3. Source228 fused-call
+scan finds no direct precopy callee source85 in the current root snapshot;
+aliases/other call forms/dispatchers/epochs remain open, not proof663 neverruns.
+Root8398 stillassert/debug boundary. verified_hierarchy=null, patchfalse/empty.
+
+Run python tools/provenance_bridge.py; ignored output/phase26/provenance-bridge.json.
+Tracked research/provenance-bridge-2026-10-22/{FINDINGS.md,SUBGATE_MATRIX.md,
+summary.json} provides paths, gate inventory and compact evidence. No payload/
+LuaVM/factory/__index/application/network execution, original input edits,
+Roblox runtime verification, demo/ESP edits or push.13 focused tests passed;
+full suite248 tests passed (235 prior +13 Phase26),293.740s. Standalone Phase26
+regeneration, Lua entry-script syntax, Python compilation and working/staged
+Git diff checks passed. No Roblox/payload runtime checks performed.

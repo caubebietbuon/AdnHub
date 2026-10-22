@@ -209,7 +209,7 @@ def conditional_activation(report, checkpoints):
             'normal call return and all escaping effects before claiming exit/lifetime']}
 
 
-def run(source,data,output):
+def run(source,data,output,include_provenance=False):
     target=output/'checkpoint-alignment.json'
     if target.resolve() in (source.resolve(),data.resolve()) or output.resolve() in (source.resolve(),data.resolve()):
         raise ValueError('Output aliases input')
@@ -240,6 +240,13 @@ def run(source,data,output):
             report['candidate_entry_analyses'],report['structural_hierarchy_candidates']),
         'verified_hierarchy':None,'formal_promotion_patch':{'applicable':False,'operations':[]},
         'network_requests':0,'factory_invocations':0,'application_calls_executed':0,'input_byte_edits':0}
+    if include_provenance:
+        # Opt-in static evidence for downstream path finding; legacy callers
+        # retain their compact report and no extra application transfer runs.
+        result['provenance_inputs']={name:report[name] for name in (
+            'root_analysis','candidate_entry_analyses','capture_frame_constraints',
+            'guarded_closure_bindings','fused_call_frontier','analysis_arrays',
+            'path_local_patch_events','guarded_template_evidence')}
     output.mkdir(parents=True,exist_ok=True)
     target.write_text(json.dumps(result,indent=2,allow_nan=False)+'\n',encoding='utf-8')
     return result
