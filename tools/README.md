@@ -293,3 +293,13 @@ numeric/state paths remain guarded and bounded. Audits eight capture bindings
 and31 prefixes against known environment shapes without inferring ancestry
 from capacity. See research/scope-tracing-2026-10-22/FINDINGS.md. No payload or
 network execution; outputs remain ignored under output/phase17.
+
+## Phase 18: dispatcher fallback and closure567 proof
+
+Run `python tools/predecessor_auditor.py`. Source predicates classify root980
+opcode14842 as the variant228 XOR fallback: r13=bxor(r9,38);197 is excluded.
+Rechecks all five equation signatures and same-reference candidate locations.
+Four mismatches have no justified relocation in the current exported code.
+Closure567's cell107 binding and prefix direct-write stability are verified
+under guards; activation/lifetime and hierarchy remain unproved. See
+research/predecessor-audit-2026-10-22/FINDINGS.md; output/phase18 stays ignored.

@@ -22,7 +22,7 @@ def successors(pc, inst, variant):
     op,a,b,c = inst
     pure = {157: {69,34,84,140}, 163: {62,147,109,83,30},
             228: {139,31,23,134,21,122,56,132,70}}
-    if op in pure[variant]: return [pc+1]
+    if op in pure[variant] or (variant==228 and (op==78 or (op>=196 and op!=197))): return [pc+1]
     if (variant,op) == (157,129): return [a+1]
     if (variant,op) == (163,24): return [b+1]
     if (variant,op) == (228,32): return [a+1]
@@ -56,6 +56,12 @@ def symbolic_path(arrays, variant, path, word):
             value=read(b)
             if type(value) is not int: predicates.append({'pc':pc,'requires':'register value is a numeric state', 'value':value})
             states['y']=value
+        elif (variant,op) == (228,78):
+            states['V']=read(a)
+            predicates.append({'pc':pc,'requires':'assigned V is a numeric state','value':states['V']})
+        elif variant==228 and op>=196 and op!=197:
+            value=read(b)
+            writes[a]=value^c if type(value) is int and 0<=value<=0xffffffff and 0<=c<=0xffffffff else {'bit32_bxor':[value,c],'predicate':'numeric operands and uint32 conversion'}
         elif (variant,op) in ((163,78),(228,13)):
             left,right = (read(b),a) if variant==163 else (read(a),c)
             truth = left<=right if type(left) is int else None
@@ -65,8 +71,11 @@ def symbolic_path(arrays, variant, path, word):
             possible = [value for value in possible if (true_pc if value else false_pc)==next_pc]
             if not possible: return {'path':path,'status':'refuted_numeric_branch','pc':pc}
             predicates.append({'pc':pc,'operator':'<=','left':left,'right':right,'allowed_truth_values':possible})
+        for value in writes.values():
+            if type(value) is dict and 'predicate' in value:
+                predicates.append({'pc':pc,'requires':value['predicate'],'expression':value})
         regs.update(writes)
-        if writes or (variant,op)==(228,132): mutations.append({'pc':pc,'register_writes':writes,'state_y':states['y']})
+        if writes or (variant,op) in ((228,132),(228,78)): mutations.append({'pc':pc,'register_writes':writes,'state_y':states['y'],'state_V':states['V']})
     return {'path':path,'status':'conditional_local_path','state_at_site':states[word],
             'mutations':mutations,'predicates':predicates}
 

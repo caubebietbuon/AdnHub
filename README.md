@@ -6,9 +6,9 @@
 >
 > Hướng dẫn bảo trì và lịch sử lỗi: [PROJECT_MEMORY.md](PROJECT_MEMORY.md).
 
-Phân tích tĩnh Chilli: [báo cáo Phase 17](research/scope-tracing-2026-10-22/FINDINGS.md).
-Truy vết symbolic cục bộ, kiểm tra phiên bản lệnh và phạm vi upvalue.
-Công cụ: `python tools/scope_tracer.py`
+Phân tích tĩnh Chilli: [báo cáo Phase 18](research/predecessor-audit-2026-10-22/FINDINGS.md).
+Phân loại dispatcher 14842, đối chiếu phiên bản lệnh và proof binding closure567.
+Công cụ: `python tools/predecessor_auditor.py`
 (cần các tệp g/d đã bóc tách cục bộ; không thực thi payload hay gọi mạng).
 
 ---

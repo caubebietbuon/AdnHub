@@ -1,0 +1,442 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "dispatcher_evidence": [
+    {
+      "offset": 46318,
+      "text": "else if o==197 then d,T=H[W],i[W]+1;"
+    },
+    {
+      "offset": 46577,
+      "text": "w[W]=68;else t[i[W]]=_(t[H[W]],A[W]);end;end;end;else if o<188"
+    },
+    {
+      "offset": 233470,
+      "text": "[20]=bit32.bxor"
+    }
+  ],
+  "factory_alias_evidence": {
+    "factory_slot": 4890,
+    "source_offset": 7929,
+    "outer_alias_prefix": "local R,N,z,E,Q,I,T,l,a,U,q,s,c,d,V,m,k,y,t=x[34],x[88],x[66],x[18],x[90],x[24],x[99],x[20],x[46],x[69],x[8],x[74],x.EW,x[102],x[73],x[113],x.tW,x[115],x[68];",
+    "capture_alias_prefix": "local D,e,P,K,X,v,Y,_,J,M,r,L,F,G,p,C,u,f,n=R,N,z,E,Q,I,T,l,a,U,q,s,c,d,V,m,k,y,t;",
+    "proof": "both prefixes contain only local alias assignments and return a function literal",
+    "body_executed": false
+  },
+  "predecessor_decode": {
+    "pc": 980,
+    "instruction": [
+      14842,
+      13,
+      9,
+      38
+    ],
+    "opcode": 14842,
+    "handler": "register_xor_immediate",
+    "predicates": {
+      "o>=99": true,
+      "o<148": false,
+      "o<173": false,
+      "o>=185": true,
+      "o>=191": true,
+      "o<194": false,
+      "o<196": false,
+      "o==197": false
+    },
+    "assignment": "r13 = bit32.bxor(r9, 38)",
+    "normal_successor_pc": 981,
+    "state_words_written": [],
+    "type_guard": "source register is a numeric operand; normal completion unproved",
+    "input_at_recorded_frontier_context_only": {
+      "owner": 664,
+      "root_node": 103,
+      "register": 9,
+      "word": null,
+      "before_trace_step": null,
+      "constant": null,
+      "nodes": [
+        {
+          "id": 102,
+          "op": "absent_frame_entry",
+          "deps": [],
+          "register": 35,
+          "type_contract": "nil in reviewed fresh frame; never numeric zero"
+        },
+        {
+          "id": 103,
+          "op": "copy",
+          "deps": [
+            102
+          ],
+          "step": 86,
+          "pc": 9910,
+          "register": 9
+        }
+      ],
+      "unresolved_leaves": [
+        102
+      ],
+      "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+    },
+    "variant": 228,
+    "activation_guard": "arrival under variant228 with this unchanged snapshot slot"
+  },
+  "rewritten_site_alignment": [
+    {
+      "owner": 664,
+      "reference_id": 74,
+      "old_pc": 981,
+      "variant": 228,
+      "current_instruction": [
+        125,
+        74,
+        4,
+        47
+      ],
+      "matching_equation_pcs": [
+        981
+      ],
+      "same_reference_candidates": [
+        {
+          "pc": 981,
+          "variant": 228,
+          "state_word": "V",
+          "operand": 4,
+          "guard": "dispatcher, rewritten-slot identity and actual reference use unproved"
+        },
+        {
+          "pc": 3238,
+          "variant": 228,
+          "state_word": null,
+          "operand": 112,
+          "guard": "dispatcher, rewritten-slot identity and actual reference use unproved"
+        }
+      ],
+      "relocation_verified": false,
+      "guard": "same equation is not instruction identity; rewrite lineage/dispatcher required",
+      "local_trace": {
+        "target_pc": 981,
+        "variant": 228,
+        "paths": [
+          {
+            "path": [
+              980,
+              981
+            ],
+            "status": "conditional_local_path",
+            "state_at_site": {
+              "input": "V"
+            },
+            "mutations": [
+              {
+                "pc": 980,
+                "register_writes": {
+                  "13": {
+                    "bit32_bxor": [
+                      {
+                        "register_input": 9
+                      },
+                      38
+                    ],
+                    "predicate": "numeric operands and uint32 conversion"
+                  }
+                },
+                "state_y": {
+                  "input": "y"
+                },
+                "state_V": {
+                  "input": "V"
+                }
+              }
+            ],
+            "predicates": [
+              {
+                "pc": 980,
+                "requires": "numeric operands and uint32 conversion",
+                "expression": {
+                  "bit32_bxor": [
+                    {
+                      "register_input": 9
+                    },
+                    38
+                  ],
+                  "predicate": "numeric operands and uint32 conversion"
+                }
+              }
+            ],
+            "constant_key": null
+          }
+        ],
+        "path_cap_hit": false,
+        "guard": [
+          "arrival at local cutpoint",
+          "assumed dispatcher",
+          "frontier code slots remain unmodified"
+        ],
+        "entry_reachability_proved": false,
+        "window": [
+          957,
+          1005
+        ],
+        "predecessor_scan_scope": "whole snapshot for incoming jumps; bounded backward path depth",
+        "fallthrough_barriers": "unreviewed instructions have no assumed successor"
+      }
+    },
+    {
+      "owner": 402,
+      "reference_id": 74,
+      "old_pc": 83,
+      "variant": 163,
+      "current_instruction": [
+        0,
+        53,
+        51,
+        91
+      ],
+      "matching_equation_pcs": [],
+      "same_reference_candidates": [],
+      "relocation_verified": false,
+      "guard": "same equation is not instruction identity; rewrite lineage/dispatcher required",
+      "local_trace": {
+        "target_pc": 83,
+        "variant": 163,
+        "paths": [
+          {
+            "path": [
+              83
+            ],
+            "status": "conditional_local_path",
+            "state_at_site": {
+              "input": "y"
+            },
+            "mutations": [],
+            "predicates": [],
+            "constant_key": null
+          }
+        ],
+        "path_cap_hit": false,
+        "guard": [
+          "arrival at local cutpoint",
+          "assumed dispatcher",
+          "frontier code slots remain unmodified"
+        ],
+        "entry_reachability_proved": false,
+        "window": [
+          59,
+          107
+        ],
+        "predecessor_scan_scope": "whole snapshot for incoming jumps; bounded backward path depth",
+        "fallthrough_barriers": "unreviewed instructions have no assumed successor"
+      }
+    },
+    {
+      "owner": 711,
+      "reference_id": 141,
+      "old_pc": 269,
+      "variant": 163,
+      "current_instruction": [
+        54,
+        130,
+        122,
+        74
+      ],
+      "matching_equation_pcs": [],
+      "same_reference_candidates": [],
+      "relocation_verified": false,
+      "guard": "same equation is not instruction identity; rewrite lineage/dispatcher required",
+      "local_trace": {
+        "target_pc": 269,
+        "variant": 163,
+        "paths": [
+          {
+            "path": [
+              269
+            ],
+            "status": "conditional_local_path",
+            "state_at_site": {
+              "input": "V"
+            },
+            "mutations": [],
+            "predicates": [],
+            "constant_key": null
+          }
+        ],
+        "path_cap_hit": false,
+        "guard": [
+          "arrival at local cutpoint",
+          "assumed dispatcher",
+          "frontier code slots remain unmodified"
+        ],
+        "entry_reachability_proved": false,
+        "window": [
+          245,
+          293
+        ],
+        "predecessor_scan_scope": "whole snapshot for incoming jumps; bounded backward path depth",
+        "fallthrough_barriers": "unreviewed instructions have no assumed successor"
+      }
+    },
+    {
+      "owner": 593,
+      "reference_id": 141,
+      "old_pc": 393,
+      "variant": 157,
+      "current_instruction": [
+        0,
+        254,
+        0,
+        32
+      ],
+      "matching_equation_pcs": [],
+      "same_reference_candidates": [],
+      "relocation_verified": false,
+      "guard": "same equation is not instruction identity; rewrite lineage/dispatcher required",
+      "local_trace": {
+        "target_pc": 393,
+        "variant": 157,
+        "paths": [
+          {
+            "path": [
+              393
+            ],
+            "status": "conditional_local_path",
+            "state_at_site": {
+              "input": "y"
+            },
+            "mutations": [],
+            "predicates": [],
+            "constant_key": null
+          }
+        ],
+        "path_cap_hit": false,
+        "guard": [
+          "arrival at local cutpoint",
+          "assumed dispatcher",
+          "frontier code slots remain unmodified"
+        ],
+        "entry_reachability_proved": false,
+        "window": [
+          369,
+          417
+        ],
+        "predecessor_scan_scope": "whole snapshot for incoming jumps; bounded backward path depth",
+        "fallthrough_barriers": "unreviewed instructions have no assumed successor"
+      }
+    },
+    {
+      "owner": 379,
+      "reference_id": 702,
+      "old_pc": 686,
+      "variant": 228,
+      "current_instruction": [
+        2,
+        645,
+        40,
+        99
+      ],
+      "matching_equation_pcs": [],
+      "same_reference_candidates": [],
+      "relocation_verified": false,
+      "guard": "same equation is not instruction identity; rewrite lineage/dispatcher required",
+      "local_trace": {
+        "target_pc": 686,
+        "variant": 228,
+        "paths": [
+          {
+            "path": [
+              686
+            ],
+            "status": "conditional_local_path",
+            "state_at_site": {
+              "input": "V"
+            },
+            "mutations": [],
+            "predicates": [],
+            "constant_key": null
+          }
+        ],
+        "path_cap_hit": false,
+        "guard": [
+          "arrival at local cutpoint",
+          "assumed dispatcher",
+          "frontier code slots remain unmodified"
+        ],
+        "entry_reachability_proved": false,
+        "window": [
+          662,
+          710
+        ],
+        "predecessor_scan_scope": "whole snapshot for incoming jumps; bounded backward path depth",
+        "fallthrough_barriers": "unreviewed instructions have no assumed successor"
+      }
+    }
+  ],
+  "closure567_proof": {
+    "parent": 664,
+    "child": 567,
+    "descriptor_id": 486,
+    "creation_pc": 8390,
+    "capture_ordinal": 1,
+    "cell_identity": "frame:664:register:107",
+    "capture_count": 2,
+    "factory_slot": 4890,
+    "capture_bound_evidence": [
+      {
+        "kind": 3,
+        "index_range": [
+          107,
+          108
+        ],
+        "advertised_allocation": 181,
+        "fits": true
+      },
+      {
+        "kind": 3,
+        "index_range": [
+          106,
+          107
+        ],
+        "advertised_allocation": 181,
+        "fits": true
+      }
+    ],
+    "guarded_binding_structurally_verified": true,
+    "capture_slice_before_creation": {
+      "owner": 664,
+      "root_node": 296,
+      "register": 107,
+      "word": null,
+      "before_trace_step": 354,
+      "constant": 0,
+      "nodes": [
+        {
+          "id": 296,
+          "op": "literal",
+          "deps": [],
+          "value": 0,
+          "step": 328,
+          "pc": 1008,
+          "register": 107,
+          "constant": 0
+        }
+      ],
+      "unresolved_leaves": [],
+      "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+    },
+    "subsequent_direct_writes_in_root_prefix": [],
+    "prefix_direct_write_stability": true,
+    "child_activation_verified": false,
+    "whole_lifetime_alias_stability_verified": false,
+    "hierarchy_admissible": false,
+    "missing": [
+      "actual child activation/order",
+      "intervening alias writes or escape effects",
+      "unconditional ancestry and global coverage"
+    ]
+  },
+  "verified_hierarchy": null,
+  "network_requests": 0,
+  "application_calls_executed": 0,
+  "factory_invocations": 0,
+  "verification": "148 Python tests, plus Lua syntax and git diff checks. No Roblox/payload runtime tests."
+}

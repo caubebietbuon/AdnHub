@@ -440,3 +440,26 @@ Run python tools/scope_tracer.py; python -m unittest discover -s tools;
 luac -p AdnHub.lua Loader.lua; git diff --check.142tests(133+9)pass, latest9
 rerun after final scope metadata. No payload/Lua/factory/API/network/runtime
 execution, no push; demo/ESP unchanged. Keep code-version guards explicit.
+
+## Phase 18 high-opcode source fallback / binding567 — 2026-10-22
+Added predecessor_auditor.py,test_phase18.py; extended scope_tracer localized
+rules with actual228default high-op XOR and Vassignment78. Numeric predicates
+from symbolic arithmetic retained even when later writes discard results.
+CORRECTION Phase17:14842 is not inherently invalid/undecoded by magnitude.
+Source228 predicates>=99,not<148,not<173,>=185,>=191,not<194,not<196,!=197
+select t[i]=bxor(t[H],A).196and>=198 usefallback;197 isarrayrewrite. Alias
+prefixes and[20]=bit32.bxor pinned.980 tuple14842/13/9/38 =>r13=bxor(r9,38),
+normal successor981; V/y unchanged. Local pathnow980->981; numericr9 and V
+reachingdefinition stillunproved, no keypromoted. Frontiercontext notsitevalue.
+Exactequation+sameID search allslots/threevariants:root981 exact981,2ID74sites;
+402:83,711:269,593:393,379:686 noexactsignature orsameID patchcandidates in
+currentexport. Noinventedrelocation; futureinstructionrewrites remainpossible.
+567 guardedbinding source8390 descriptor486 factory4890,2localcapturecellsfit;
+capture1=root107. Backwardslicebeforecreation proves0; no subsequent direct
+107writes inrecordedrootprefix. Scopedstructuralbinding anddirectwrite stability
+pass; activationorder/alias lifetime/unconditionalancestry/coverage remainopen.
+Nohierarchypromotion; verified_hierarchy=null. See research/predecessor-audit-
+2026-10-22/FINDINGS.md,summary.json. Detailedoutput/phase18/predecessor-proofs.json
+ignored. Run python tools/predecessor_auditor.py; unittestdiscovertools.
+148tests(142+6),latest6rerunforlocalpredicates;Lua syntax/diffchecks passed.
+No Lua/payload/factory/API/network/runtimeexecution; no push;demo/ESPunchanged.
