@@ -6,9 +6,9 @@
 >
 > Hướng dẫn bảo trì và lịch sử lỗi: [PROJECT_MEMORY.md](PROJECT_MEMORY.md).
 
-Phân tích tĩnh Chilli: [báo cáo Phase 15](research/layer-decomposition-2026-10-22/FINDINGS.md).
-Backward slicing, phương trình decoder tách khỏi guard và ma trận chẩn đoán
-prototype. Công cụ: `python tools/layer_decomposer.py`
+Phân tích tĩnh Chilli: [báo cáo Phase 16](research/promotion-proofs-2026-10-22/FINDINGS.md).
+Bảng kết quả XOR theo site, chứng chỉ state và proof proxy với guard giữ nguyên.
+Công cụ: `python tools/promotion_auditor.py`
 (cần các tệp g/d đã bóc tách cục bộ; không thực thi payload hay gọi mạng).
 
 ---

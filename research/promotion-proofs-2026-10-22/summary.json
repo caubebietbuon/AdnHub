@@ -1,0 +1,1063 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "static_string_table": [
+    {
+      "site_key": [
+        664,
+        3238,
+        74,
+        228
+      ],
+      "reference_id": 74,
+      "constant_key": 112,
+      "bytes_hex": "fcd0d1d1dadccbdadb",
+      "utf8": null,
+      "intermediate_sha256": "a1ad21b2821356196bb8408ed58f3cc8e4e4a0ae9af166f551d881e29d35c7de",
+      "proof": "each byte p=c XOR k; (p XOR k)=c; source operand fixes k at this candidate site",
+      "algebra_verified": true,
+      "table_scope": "site-indexed static equation result",
+      "activation_predicates": [
+        {
+          "predicate": "owner_activation",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "dispatcher_and_unmodified_slot",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "directory_payload_lifecycle",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "cache_hit_or_miss",
+          "status": "UNKNOWN"
+        }
+      ],
+      "runtime_constant_verified": false
+    },
+    {
+      "site_key": [
+        664,
+        4319,
+        141,
+        228
+      ],
+      "reference_id": 141,
+      "constant_key": 43,
+      "bytes_hex": "72656164663634",
+      "utf8": "readf64",
+      "intermediate_sha256": "3cad01fcca1b93ec1266d130b27ace86328e70c6acd85f44b338090a1be15907",
+      "proof": "each byte p=c XOR k; (p XOR k)=c; source operand fixes k at this candidate site",
+      "algebra_verified": true,
+      "table_scope": "site-indexed static equation result",
+      "activation_predicates": [
+        {
+          "predicate": "owner_activation",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "dispatcher_and_unmodified_slot",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "directory_payload_lifecycle",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "cache_hit_or_miss",
+          "status": "UNKNOWN"
+        }
+      ],
+      "runtime_constant_verified": false
+    },
+    {
+      "site_key": [
+        664,
+        3921,
+        203,
+        157
+      ],
+      "reference_id": 203,
+      "constant_key": 110,
+      "bytes_hex": "81",
+      "utf8": null,
+      "intermediate_sha256": "4d4d75d742863ab9656f3d5f76dff8589c3922e95a24ea6812157ffe4aaa3b6b",
+      "proof": "each byte p=c XOR k; (p XOR k)=c; source operand fixes k at this candidate site",
+      "algebra_verified": true,
+      "table_scope": "site-indexed static equation result",
+      "activation_predicates": [
+        {
+          "predicate": "owner_activation",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "dispatcher_and_unmodified_slot",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "directory_payload_lifecycle",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "cache_hit_or_miss",
+          "status": "UNKNOWN"
+        }
+      ],
+      "runtime_constant_verified": false
+    },
+    {
+      "site_key": [
+        664,
+        718,
+        203,
+        228
+      ],
+      "reference_id": 203,
+      "constant_key": 140,
+      "bytes_hex": "63",
+      "utf8": "c",
+      "intermediate_sha256": "4d4d75d742863ab9656f3d5f76dff8589c3922e95a24ea6812157ffe4aaa3b6b",
+      "proof": "each byte p=c XOR k; (p XOR k)=c; source operand fixes k at this candidate site",
+      "algebra_verified": true,
+      "table_scope": "site-indexed static equation result",
+      "activation_predicates": [
+        {
+          "predicate": "owner_activation",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "dispatcher_and_unmodified_slot",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "directory_payload_lifecycle",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "cache_hit_or_miss",
+          "status": "UNKNOWN"
+        }
+      ],
+      "runtime_constant_verified": false
+    },
+    {
+      "site_key": [
+        664,
+        7083,
+        267,
+        228
+      ],
+      "reference_id": 267,
+      "constant_key": 242,
+      "bytes_hex": "6c726f74617465",
+      "utf8": "lrotate",
+      "intermediate_sha256": "7721cb60b32e055ce0be8d5a43289f0f37243a06cb85080d12610a4933521148",
+      "proof": "each byte p=c XOR k; (p XOR k)=c; source operand fixes k at this candidate site",
+      "algebra_verified": true,
+      "table_scope": "site-indexed static equation result",
+      "activation_predicates": [
+        {
+          "predicate": "owner_activation",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "dispatcher_and_unmodified_slot",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "directory_payload_lifecycle",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "cache_hit_or_miss",
+          "status": "UNKNOWN"
+        }
+      ],
+      "runtime_constant_verified": false
+    },
+    {
+      "site_key": [
+        664,
+        7103,
+        432,
+        228
+      ],
+      "reference_id": 432,
+      "constant_key": 2,
+      "bytes_hex": "66696c6c",
+      "utf8": "fill",
+      "intermediate_sha256": "d85310e0dec7a6d2a4cfd112fff5be9742995990ac744ab18cb540b04330502d",
+      "proof": "each byte p=c XOR k; (p XOR k)=c; source operand fixes k at this candidate site",
+      "algebra_verified": true,
+      "table_scope": "site-indexed static equation result",
+      "activation_predicates": [
+        {
+          "predicate": "owner_activation",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "dispatcher_and_unmodified_slot",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "directory_payload_lifecycle",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "cache_hit_or_miss",
+          "status": "UNKNOWN"
+        }
+      ],
+      "runtime_constant_verified": false
+    },
+    {
+      "site_key": [
+        664,
+        5095,
+        457,
+        228
+      ],
+      "reference_id": 457,
+      "constant_key": 169,
+      "bytes_hex": "726570",
+      "utf8": "rep",
+      "intermediate_sha256": "d19f35f9d3f05b9bd8ffdde1b496d29b82ceacef26581b4d3e721b10d355a914",
+      "proof": "each byte p=c XOR k; (p XOR k)=c; source operand fixes k at this candidate site",
+      "algebra_verified": true,
+      "table_scope": "site-indexed static equation result",
+      "activation_predicates": [
+        {
+          "predicate": "owner_activation",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "dispatcher_and_unmodified_slot",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "directory_payload_lifecycle",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "cache_hit_or_miss",
+          "status": "UNKNOWN"
+        }
+      ],
+      "runtime_constant_verified": false
+    },
+    {
+      "site_key": [
+        664,
+        4809,
+        476,
+        228
+      ],
+      "reference_id": 476,
+      "constant_key": 80,
+      "bytes_hex": "7772697465693332",
+      "utf8": "writei32",
+      "intermediate_sha256": "203daf5c4ba4bb0d0694602b1841fc2ff60d05e3f9dae8d85f1e34eac348b1e7",
+      "proof": "each byte p=c XOR k; (p XOR k)=c; source operand fixes k at this candidate site",
+      "algebra_verified": true,
+      "table_scope": "site-indexed static equation result",
+      "activation_predicates": [
+        {
+          "predicate": "owner_activation",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "dispatcher_and_unmodified_slot",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "directory_payload_lifecycle",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "cache_hit_or_miss",
+          "status": "UNKNOWN"
+        }
+      ],
+      "runtime_constant_verified": false
+    },
+    {
+      "site_key": [
+        664,
+        4810,
+        485,
+        228
+      ],
+      "reference_id": 485,
+      "constant_key": 146,
+      "bytes_hex": "e1848fe185a8e186bfe18491e185afe18781e18481e185b4e18782e18485e185b5e186bce1848ae185abe186be",
+      "utf8": "\u110f\u1168\u11bf\u1111\u116f\u11c1\u1101\u1174\u11c2\u1105\u1175\u11bc\u110a\u116b\u11be",
+      "intermediate_sha256": "7d584939ae6400b505b11101a1c3650f5fa5558a6a4cfe11f969087afd381a7a",
+      "proof": "each byte p=c XOR k; (p XOR k)=c; source operand fixes k at this candidate site",
+      "algebra_verified": true,
+      "table_scope": "site-indexed static equation result",
+      "activation_predicates": [
+        {
+          "predicate": "owner_activation",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "dispatcher_and_unmodified_slot",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "directory_payload_lifecycle",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "cache_hit_or_miss",
+          "status": "UNKNOWN"
+        }
+      ],
+      "runtime_constant_verified": false
+    }
+  ],
+  "conflicting_reference_results": [
+    {
+      "reference_id": 203,
+      "keys": [
+        110,
+        140
+      ],
+      "reason": "distinct guarded sites; no unconditional merge"
+    }
+  ],
+  "state_certificates": [
+    {
+      "reference_id": 74,
+      "owner": 664,
+      "pc": 981,
+      "variant": 228,
+      "equation": "key=4 XOR mix(V_at_site)",
+      "state_domain_size": 2048,
+      "at_site_proofs": [],
+      "core_state_resolved": false,
+      "frontier_slice": {
+        "owner": 664,
+        "root_node": 0,
+        "register": null,
+        "word": "V",
+        "before_trace_step": null,
+        "constant": 4179906283,
+        "nodes": [
+          {
+            "id": 0,
+            "op": "header_word",
+            "deps": [],
+            "value": 4179906283,
+            "word": "V",
+            "constant": 4179906283
+          }
+        ],
+        "unresolved_leaves": [],
+        "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+      },
+      "frontier_to_site_equality_proved": false,
+      "missing_proof": "reaching definition across intervening paths, calls and instruction rewrites",
+      "activation_predicates": [
+        {
+          "predicate": "owner_activation",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "dispatcher_and_unmodified_slot",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "directory_payload_lifecycle",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "cache_hit_or_miss",
+          "status": "UNKNOWN"
+        }
+      ],
+      "runtime_key_promoted": false
+    },
+    {
+      "reference_id": 74,
+      "owner": 402,
+      "pc": 83,
+      "variant": 163,
+      "equation": "key=7 XOR mix(y_at_site)",
+      "state_domain_size": 2048,
+      "at_site_proofs": [],
+      "core_state_resolved": false,
+      "frontier_slice": {
+        "owner": 402,
+        "root_node": 1,
+        "register": null,
+        "word": "y",
+        "before_trace_step": null,
+        "constant": 912615588,
+        "nodes": [
+          {
+            "id": 1,
+            "op": "header_word",
+            "deps": [],
+            "value": 912615588,
+            "word": "y",
+            "constant": 912615588
+          }
+        ],
+        "unresolved_leaves": [],
+        "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+      },
+      "frontier_to_site_equality_proved": false,
+      "missing_proof": "reaching definition across intervening paths, calls and instruction rewrites",
+      "activation_predicates": [
+        {
+          "predicate": "owner_activation",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "dispatcher_and_unmodified_slot",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "directory_payload_lifecycle",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "cache_hit_or_miss",
+          "status": "UNKNOWN"
+        }
+      ],
+      "runtime_key_promoted": false
+    },
+    {
+      "reference_id": 141,
+      "owner": 711,
+      "pc": 269,
+      "variant": 163,
+      "equation": "key=2 XOR mix(V_at_site)",
+      "state_domain_size": 2048,
+      "at_site_proofs": [],
+      "core_state_resolved": false,
+      "frontier_slice": {
+        "owner": 711,
+        "root_node": 0,
+        "register": null,
+        "word": "V",
+        "before_trace_step": null,
+        "constant": 83622480,
+        "nodes": [
+          {
+            "id": 0,
+            "op": "header_word",
+            "deps": [],
+            "value": 83622480,
+            "word": "V",
+            "constant": 83622480
+          }
+        ],
+        "unresolved_leaves": [],
+        "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+      },
+      "frontier_to_site_equality_proved": false,
+      "missing_proof": "reaching definition across intervening paths, calls and instruction rewrites",
+      "activation_predicates": [
+        {
+          "predicate": "owner_activation",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "dispatcher_and_unmodified_slot",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "directory_payload_lifecycle",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "cache_hit_or_miss",
+          "status": "UNKNOWN"
+        }
+      ],
+      "runtime_key_promoted": false
+    },
+    {
+      "reference_id": 141,
+      "owner": 593,
+      "pc": 393,
+      "variant": 157,
+      "equation": "key=121 XOR mix(y_at_site)",
+      "state_domain_size": 2048,
+      "at_site_proofs": [],
+      "core_state_resolved": false,
+      "frontier_slice": {
+        "owner": 593,
+        "root_node": 1,
+        "register": null,
+        "word": "y",
+        "before_trace_step": null,
+        "constant": 3311049926,
+        "nodes": [
+          {
+            "id": 1,
+            "op": "header_word",
+            "deps": [],
+            "value": 3311049926,
+            "word": "y",
+            "constant": 3311049926
+          }
+        ],
+        "unresolved_leaves": [],
+        "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+      },
+      "frontier_to_site_equality_proved": false,
+      "missing_proof": "reaching definition across intervening paths, calls and instruction rewrites",
+      "activation_predicates": [
+        {
+          "predicate": "owner_activation",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "dispatcher_and_unmodified_slot",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "directory_payload_lifecycle",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "cache_hit_or_miss",
+          "status": "UNKNOWN"
+        }
+      ],
+      "runtime_key_promoted": false
+    },
+    {
+      "reference_id": 702,
+      "owner": 379,
+      "pc": 686,
+      "variant": 228,
+      "equation": "key=52 XOR mix(V_at_site)",
+      "state_domain_size": 2048,
+      "at_site_proofs": [],
+      "core_state_resolved": false,
+      "frontier_slice": {
+        "owner": 379,
+        "root_node": 0,
+        "register": null,
+        "word": "V",
+        "before_trace_step": null,
+        "constant": 1529380524,
+        "nodes": [
+          {
+            "id": 0,
+            "op": "header_word",
+            "deps": [],
+            "value": 1529380524,
+            "word": "V",
+            "constant": 1529380524
+          }
+        ],
+        "unresolved_leaves": [],
+        "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+      },
+      "frontier_to_site_equality_proved": false,
+      "missing_proof": "reaching definition across intervening paths, calls and instruction rewrites",
+      "activation_predicates": [
+        {
+          "predicate": "owner_activation",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "dispatcher_and_unmodified_slot",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "directory_payload_lifecycle",
+          "status": "UNKNOWN"
+        },
+        {
+          "predicate": "cache_hit_or_miss",
+          "status": "UNKNOWN"
+        }
+      ],
+      "runtime_key_promoted": false
+    }
+  ],
+  "proxy_binding_proofs": [
+    {
+      "parent": 137,
+      "child": 747,
+      "descriptor_id": 58,
+      "diagnostic_results": {
+        "capture_bounds": "PASS",
+        "upvalue_mappings": "PASS",
+        "child_headers": "UNKNOWN",
+        "control_flow": "FAIL",
+        "coverage": "FAIL",
+        "cycle_checks": "PASS"
+      },
+      "validator_proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "constructor_route": [
+        {
+          "id": "prototype:137",
+          "kind": "proposed_owner"
+        },
+        {
+          "id": "wrapper_use:137:747:58",
+          "kind": "lazy_wrapper_use"
+        },
+        {
+          "id": "cache_lookup:747",
+          "kind": "shared_cache_lookup"
+        },
+        {
+          "id": "template:747",
+          "kind": "decoded_template"
+        },
+        {
+          "id": "constructor_use:137:747:58",
+          "kind": "constructor_instance"
+        },
+        {
+          "id": "closure:137:747:58",
+          "kind": "capture_bound_body"
+        }
+      ],
+      "route_status": "source_family_hypothesis",
+      "formal_statement": "if activation, slot identity and cache lifecycle guards hold, descriptor binds this constructor use to the proposed frame",
+      "unproved_premises": [
+        "child_header_verified",
+        "control_flow_verified",
+        "ancestry_unconditional"
+      ],
+      "cache_identity_proved": false,
+      "unique_ancestry_proved": false,
+      "admissible_parent_edge": false,
+      "shared_factory_is_parent_evidence": false
+    },
+    {
+      "parent": 237,
+      "child": 572,
+      "descriptor_id": 181,
+      "diagnostic_results": {
+        "capture_bounds": "UNKNOWN",
+        "upvalue_mappings": "UNKNOWN",
+        "child_headers": "UNKNOWN",
+        "control_flow": "UNKNOWN",
+        "coverage": "FAIL",
+        "cycle_checks": "PASS"
+      },
+      "validator_proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": false,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "constructor_route": [
+        {
+          "id": "prototype:237",
+          "kind": "proposed_owner"
+        },
+        {
+          "id": "wrapper_use:237:572:181",
+          "kind": "lazy_wrapper_use"
+        },
+        {
+          "id": "cache_lookup:572",
+          "kind": "shared_cache_lookup"
+        },
+        {
+          "id": "template:572",
+          "kind": "decoded_template"
+        },
+        {
+          "id": "constructor_use:237:572:181",
+          "kind": "constructor_instance"
+        },
+        {
+          "id": "closure:237:572:181",
+          "kind": "capture_bound_body"
+        }
+      ],
+      "route_status": "source_family_hypothesis",
+      "formal_statement": "if activation, slot identity and cache lifecycle guards hold, descriptor binds this constructor use to the proposed frame",
+      "unproved_premises": [
+        "capture_indices_fit_owner",
+        "child_header_verified",
+        "control_flow_verified",
+        "ancestry_unconditional"
+      ],
+      "cache_identity_proved": false,
+      "unique_ancestry_proved": false,
+      "admissible_parent_edge": false,
+      "shared_factory_is_parent_evidence": false
+    },
+    {
+      "parent": 664,
+      "child": 258,
+      "descriptor_id": 486,
+      "diagnostic_results": {
+        "capture_bounds": "PASS",
+        "upvalue_mappings": "PASS",
+        "child_headers": "PASS",
+        "control_flow": "PASS",
+        "coverage": "FAIL",
+        "cycle_checks": "PASS"
+      },
+      "validator_proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "constructor_route": [
+        {
+          "id": "prototype:664",
+          "kind": "proposed_owner"
+        },
+        {
+          "id": "wrapper_use:664:258:486",
+          "kind": "lazy_wrapper_use"
+        },
+        {
+          "id": "cache_lookup:258",
+          "kind": "shared_cache_lookup"
+        },
+        {
+          "id": "template:258",
+          "kind": "decoded_template"
+        },
+        {
+          "id": "constructor_use:664:258:486",
+          "kind": "constructor_instance"
+        },
+        {
+          "id": "closure:664:258:486",
+          "kind": "capture_bound_body"
+        }
+      ],
+      "route_status": "guarded_source_transfer",
+      "formal_statement": "if activation, slot identity and cache lifecycle guards hold, descriptor binds this constructor use to the proposed frame",
+      "unproved_premises": [
+        "child_header_verified",
+        "control_flow_verified",
+        "ancestry_unconditional"
+      ],
+      "cache_identity_proved": false,
+      "unique_ancestry_proved": false,
+      "admissible_parent_edge": false,
+      "shared_factory_is_parent_evidence": false
+    },
+    {
+      "parent": 664,
+      "child": 379,
+      "descriptor_id": 462,
+      "diagnostic_results": {
+        "capture_bounds": "PASS",
+        "upvalue_mappings": "PASS",
+        "child_headers": "PASS",
+        "control_flow": "PASS",
+        "coverage": "FAIL",
+        "cycle_checks": "PASS"
+      },
+      "validator_proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "constructor_route": [
+        {
+          "id": "prototype:664",
+          "kind": "proposed_owner"
+        },
+        {
+          "id": "wrapper_use:664:379:462",
+          "kind": "lazy_wrapper_use"
+        },
+        {
+          "id": "cache_lookup:379",
+          "kind": "shared_cache_lookup"
+        },
+        {
+          "id": "template:379",
+          "kind": "decoded_template"
+        },
+        {
+          "id": "constructor_use:664:379:462",
+          "kind": "constructor_instance"
+        },
+        {
+          "id": "closure:664:379:462",
+          "kind": "capture_bound_body"
+        }
+      ],
+      "route_status": "guarded_source_transfer",
+      "formal_statement": "if activation, slot identity and cache lifecycle guards hold, descriptor binds this constructor use to the proposed frame",
+      "unproved_premises": [
+        "child_header_verified",
+        "control_flow_verified",
+        "ancestry_unconditional"
+      ],
+      "cache_identity_proved": false,
+      "unique_ancestry_proved": false,
+      "admissible_parent_edge": false,
+      "shared_factory_is_parent_evidence": false
+    },
+    {
+      "parent": 664,
+      "child": 506,
+      "descriptor_id": 251,
+      "diagnostic_results": {
+        "capture_bounds": "PASS",
+        "upvalue_mappings": "UNKNOWN",
+        "child_headers": "UNKNOWN",
+        "control_flow": "UNKNOWN",
+        "coverage": "FAIL",
+        "cycle_checks": "PASS"
+      },
+      "validator_proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "constructor_route": [
+        {
+          "id": "prototype:664",
+          "kind": "proposed_owner"
+        },
+        {
+          "id": "wrapper_use:664:506:251",
+          "kind": "lazy_wrapper_use"
+        },
+        {
+          "id": "cache_lookup:506",
+          "kind": "shared_cache_lookup"
+        },
+        {
+          "id": "template:506",
+          "kind": "decoded_template"
+        },
+        {
+          "id": "constructor_use:664:506:251",
+          "kind": "constructor_instance"
+        },
+        {
+          "id": "closure:664:506:251",
+          "kind": "capture_bound_body"
+        }
+      ],
+      "route_status": "source_family_hypothesis",
+      "formal_statement": "if activation, slot identity and cache lifecycle guards hold, descriptor binds this constructor use to the proposed frame",
+      "unproved_premises": [
+        "child_header_verified",
+        "control_flow_verified",
+        "ancestry_unconditional"
+      ],
+      "cache_identity_proved": false,
+      "unique_ancestry_proved": false,
+      "admissible_parent_edge": false,
+      "shared_factory_is_parent_evidence": false
+    },
+    {
+      "parent": 664,
+      "child": 567,
+      "descriptor_id": 486,
+      "diagnostic_results": {
+        "capture_bounds": "PASS",
+        "upvalue_mappings": "PASS",
+        "child_headers": "PASS",
+        "control_flow": "PASS",
+        "coverage": "FAIL",
+        "cycle_checks": "PASS"
+      },
+      "validator_proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "constructor_route": [
+        {
+          "id": "prototype:664",
+          "kind": "proposed_owner"
+        },
+        {
+          "id": "wrapper_use:664:567:486",
+          "kind": "lazy_wrapper_use"
+        },
+        {
+          "id": "cache_lookup:567",
+          "kind": "shared_cache_lookup"
+        },
+        {
+          "id": "template:567",
+          "kind": "decoded_template"
+        },
+        {
+          "id": "constructor_use:664:567:486",
+          "kind": "constructor_instance"
+        },
+        {
+          "id": "closure:664:567:486",
+          "kind": "capture_bound_body"
+        }
+      ],
+      "route_status": "guarded_source_transfer",
+      "formal_statement": "if activation, slot identity and cache lifecycle guards hold, descriptor binds this constructor use to the proposed frame",
+      "unproved_premises": [
+        "child_header_verified",
+        "control_flow_verified",
+        "ancestry_unconditional"
+      ],
+      "cache_identity_proved": false,
+      "unique_ancestry_proved": false,
+      "admissible_parent_edge": false,
+      "shared_factory_is_parent_evidence": false
+    },
+    {
+      "parent": 664,
+      "child": 663,
+      "descriptor_id": 722,
+      "diagnostic_results": {
+        "capture_bounds": "PASS",
+        "upvalue_mappings": "PASS",
+        "child_headers": "PASS",
+        "control_flow": "PASS",
+        "coverage": "FAIL",
+        "cycle_checks": "PASS"
+      },
+      "validator_proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": true,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "constructor_route": [
+        {
+          "id": "prototype:664",
+          "kind": "proposed_owner"
+        },
+        {
+          "id": "wrapper_use:664:663:722",
+          "kind": "lazy_wrapper_use"
+        },
+        {
+          "id": "cache_lookup:663",
+          "kind": "shared_cache_lookup"
+        },
+        {
+          "id": "template:663",
+          "kind": "decoded_template"
+        },
+        {
+          "id": "constructor_use:664:663:722",
+          "kind": "constructor_instance"
+        },
+        {
+          "id": "closure:664:663:722",
+          "kind": "capture_bound_body"
+        }
+      ],
+      "route_status": "guarded_source_transfer",
+      "formal_statement": "if activation, slot identity and cache lifecycle guards hold, descriptor binds this constructor use to the proposed frame",
+      "unproved_premises": [
+        "child_header_verified",
+        "control_flow_verified",
+        "ancestry_unconditional"
+      ],
+      "cache_identity_proved": false,
+      "unique_ancestry_proved": false,
+      "admissible_parent_edge": false,
+      "shared_factory_is_parent_evidence": false
+    },
+    {
+      "parent": 704,
+      "child": 288,
+      "descriptor_id": 299,
+      "diagnostic_results": {
+        "capture_bounds": "UNKNOWN",
+        "upvalue_mappings": "UNKNOWN",
+        "child_headers": "UNKNOWN",
+        "control_flow": "UNKNOWN",
+        "coverage": "FAIL",
+        "cycle_checks": "PASS"
+      },
+      "validator_proofs": {
+        "source_consumer_verified": true,
+        "descriptor_parsed_exactly": true,
+        "capture_indices_fit_owner": false,
+        "child_header_verified": false,
+        "control_flow_verified": false,
+        "ancestry_unconditional": false
+      },
+      "constructor_route": [
+        {
+          "id": "prototype:704",
+          "kind": "proposed_owner"
+        },
+        {
+          "id": "wrapper_use:704:288:299",
+          "kind": "lazy_wrapper_use"
+        },
+        {
+          "id": "cache_lookup:288",
+          "kind": "shared_cache_lookup"
+        },
+        {
+          "id": "template:288",
+          "kind": "decoded_template"
+        },
+        {
+          "id": "constructor_use:704:288:299",
+          "kind": "constructor_instance"
+        },
+        {
+          "id": "closure:704:288:299",
+          "kind": "capture_bound_body"
+        }
+      ],
+      "route_status": "source_family_hypothesis",
+      "formal_statement": "if activation, slot identity and cache lifecycle guards hold, descriptor binds this constructor use to the proposed frame",
+      "unproved_premises": [
+        "capture_indices_fit_owner",
+        "child_header_verified",
+        "control_flow_verified",
+        "ancestry_unconditional"
+      ],
+      "cache_identity_proved": false,
+      "unique_ancestry_proved": false,
+      "admissible_parent_edge": false,
+      "shared_factory_is_parent_evidence": false
+    }
+  ],
+  "accepted_parent_edges": [],
+  "verified_hierarchy": null,
+  "runtime_string_table_promotions": [],
+  "network_requests": 0,
+  "application_calls_executed": 0,
+  "factory_invocations": 0,
+  "verification": "133 Python tests; Lua syntax and git diff checks. No Roblox/payload runtime checks."
+}

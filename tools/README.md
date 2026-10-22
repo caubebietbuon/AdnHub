@@ -269,3 +269,17 @@ routes through lazy wrappers, cache lookups and constructor instances. The
 historical validator is unchanged; verified_hierarchy remainsnull. Full output
 is ignored in output/phase15; tracked matrix and findings are under
 research/layer-decomposition-2026-10-22. No payload or network execution.
+
+## Phase 16: static table promotion and proxy proof admission
+
+```powershell
+python tools/promotion_auditor.py
+```
+
+Regenerates Phase15 and checks the tracked diagnostic Markdown against fresh
+evidence. Nine direct equations populate a site-indexed static string table;
+activation predicates and competing ID203 outputs remain distinct. Five state
+certificates expose missing reaching definitions. Eight proxy proofs retain
+explicit premises; no edge currently qualifies for the unchanged validator.
+Outputs stay ignored under output/phase16. See
+research/promotion-proofs-2026-10-22/FINDINGS.md. No payload/network execution.
