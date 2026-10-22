@@ -333,3 +333,14 @@ Audits root664 construction intervals, the663-to379 captured body alias and
 close-cell storage semantics. No byte repair, state key or hierarchy promotion
 is claimed without provenance. See research/reader-scope-audit-2026-10-22/
 FINDINGS.md and summary.json; full generated evidence stays in output/phase21.
+
+## Phase 22: adjacent schemas and predicate constraints
+
+Run `python tools/schema_constraint_auditor.py`. Maps directory-backed typed
+spans around134543 and proves the forced prefix crosses reference101/251.
+tools/predicate_solver.py narrows exact mixer domains using reviewed local
+predicate/register dependencies; unrelated or inexact expressions stay unknown.
+All five real domains remain2048 candidates; four sites lack current equation
+identity. Explicit activation/lifetime/tree gates reject promotion for the
+closure663 cluster. See research/schema-constraints-2026-10-22/FINDINGS.md and
+summary.json; generated output/phase22 remains ignored.

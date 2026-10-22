@@ -571,3 +571,49 @@ Roblox runtime checks or push. Commit locally after final verification.
 Validation:181 Python tests passed (167 prior +14 Phase21), final regression
 150.922s. Lua entry-script syntax, Python module compilation and working/staged
 Git diff checks pass. Phase21 standalone analysis regenerated successfully.
+
+### Phase 22 — adjacent schemas and predicate constraints (2026-10-22)
+
+Base31aabac. tools/schema_constraint_auditor.py: record_span/neighborhood map
+directory-backed reader boundaries; equation_search checks five state-dependent
+sites; promotion_gate/activation_conditions expose structural, activation,
+lifetime and global-tree obligations. tools/predicate_solver.py: affine/evaluate
+track exact arithmetic; constrain intersects finite mixer domains; normal_successors/
+path_constraints scan reviewed incoming edges and bounded local paths. Unknown
+inputs/effects, cycle cuts, limits and snapshot identity remain explicit guards.
+
+Nine directory-backed neighbors found within32 bytes of134543. Exported spans:
+436 uint32[134538,134543),101 uint8/value4[134543,134545),251 descriptor
+[134545,134562),36 negativeuint8[134562,134564),275 string[134564,134571),
+713 string[134571,134581). Descriptor251 decodes15 bytes to seven captures.
+691 at134532 is an unresolved fill reader: no end inferred from adjacency.
+483 at134512 requires an XOR-directory hypothesis. The forced raw prefix
+[134544,134547) crosses101 ciphertext and251 tag/length. No byte corruption
+or correction is inferred, and directory-backed alignment is not activation.
+
+Alternative finite-domain solver handles typed local predicates and unit-affine
+register/state dependencies, retaining unknown/fractional/inexact cases rather
+than defaulting them. Synthetic proofs narrow V to7; actual root981 path
+976..981 supplies r123<120 and r88<66 plus numeric XOR guards. No dependency
+on V is proved, so2048 local candidates remain. Patch978's normal data guard
+still fails in the Phase21 unchanged-backing contract. Four old child slots
+402:83,711:269,593:393,379:686 remain equation-identity mismatches; their2048
+domains are hypothetical only. No new state/key/relocation is promoted.
+
+Promotion requires the six prior criteria plus reachable exact invocation,
+arguments/cells/template identity, cell-creation and alias/write/close/rebind
+coverage, accounted-for call-time values, and complete/unique/acyclic tree
+proofs. Prior slot definitions are prefix facts, not cell allocation/activation
+proofs. Legal capture mutation is permitted; values must be derived at call,
+not frozen from frontier snapshots. All four closure gates remain ineligible;
+verified_hierarchy=null; formal promotionpatchapplicable=false,operations=[].
+
+Reproduce with python tools/schema_constraint_auditor.py. Full report ignored
+under output/phase22/schema-constraints.json; compact tracked evidence and
+findings live in research/schema-constraints-2026-10-22/. New tests:
+tools/test_phase22.py. No Lua/payload/factory/__index/application/network
+execution, input edits, Roblox runtime checks or demo/ESP changes. Keep local
+commit offline; no push.
+Validation:195 Python tests passed (181 prior +14 Phase22), final full suite
+168.593s. Standalone Phase22 analysis, Lua entry-script syntax, Python module
+compilation and working/staged git diff checks pass. No runtime checks run.

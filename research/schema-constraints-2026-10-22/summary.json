@@ -1,0 +1,1145 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "guard_source_evidence": [
+    {
+      "offset": 44993,
+      "text": "if o==172 then W=if t[i[W]]<A[W]then W else H[W];"
+    },
+    {
+      "offset": 27639,
+      "text": "if o<80 then if o~=79 then W=if t[H[W]]<=w[W]then W else A[W];"
+    },
+    {
+      "offset": 53047,
+      "text": "else W=if o~=14 then if t[i[W]]<=A[W]then W else H[W]else if t[A[W]]<t[H[W]]then W else i[W];end;end;"
+    }
+  ],
+  "activation_lifetime": {
+    "scope_audit": {
+      "closures": [
+        {
+          "child": 567,
+          "constructing_frame": 664,
+          "construction_pc": 8390,
+          "capture_cells": [
+            {
+              "ordinal": 1,
+              "cell": "frame:664:register:107",
+              "frame": 664,
+              "register": 107
+            },
+            {
+              "ordinal": 2,
+              "cell": "frame:664:register:106",
+              "frame": 664,
+              "register": 106
+            }
+          ],
+          "criteria": {
+            "source_consumer_verified": true,
+            "descriptor_parsed_exactly": true,
+            "capture_indices_fit_owner": true,
+            "child_header_verified": false,
+            "control_flow_verified": false,
+            "ancestry_unconditional": false
+          },
+          "failed_or_unproved": [
+            "child_header_verified",
+            "control_flow_verified",
+            "ancestry_unconditional"
+          ],
+          "child_entry_frontier": 24,
+          "activation_verified": false,
+          "close_reachability_verified": false,
+          "all_alias_effects_verified": false,
+          "lifetime_verified": false,
+          "promotion_admissible": false
+        },
+        {
+          "child": 258,
+          "constructing_frame": 664,
+          "construction_pc": 8391,
+          "capture_cells": [
+            {
+              "ordinal": 1,
+              "cell": "frame:664:register:107",
+              "frame": 664,
+              "register": 107
+            },
+            {
+              "ordinal": 2,
+              "cell": "frame:664:register:106",
+              "frame": 664,
+              "register": 106
+            }
+          ],
+          "criteria": {
+            "source_consumer_verified": true,
+            "descriptor_parsed_exactly": true,
+            "capture_indices_fit_owner": true,
+            "child_header_verified": false,
+            "control_flow_verified": false,
+            "ancestry_unconditional": false
+          },
+          "failed_or_unproved": [
+            "child_header_verified",
+            "control_flow_verified",
+            "ancestry_unconditional"
+          ],
+          "child_entry_frontier": 37,
+          "activation_verified": false,
+          "close_reachability_verified": false,
+          "all_alias_effects_verified": false,
+          "lifetime_verified": false,
+          "promotion_admissible": false
+        },
+        {
+          "child": 379,
+          "constructing_frame": 664,
+          "construction_pc": 8393,
+          "capture_cells": [
+            {
+              "ordinal": 1,
+              "cell": "frame:664:register:107",
+              "frame": 664,
+              "register": 107
+            },
+            {
+              "ordinal": 2,
+              "cell": "frame:664:register:106",
+              "frame": 664,
+              "register": 106
+            },
+            {
+              "ordinal": 3,
+              "cell": "frame:664:register:103",
+              "frame": 664,
+              "register": 103
+            },
+            {
+              "ordinal": 4,
+              "cell": "frame:664:register:92",
+              "frame": 664,
+              "register": 92
+            },
+            {
+              "ordinal": 5,
+              "cell": "frame:664:register:104",
+              "frame": 664,
+              "register": 104
+            },
+            {
+              "ordinal": 6,
+              "cell": "frame:664:register:93",
+              "frame": 664,
+              "register": 93
+            }
+          ],
+          "criteria": {
+            "source_consumer_verified": true,
+            "descriptor_parsed_exactly": true,
+            "capture_indices_fit_owner": true,
+            "child_header_verified": false,
+            "control_flow_verified": false,
+            "ancestry_unconditional": false
+          },
+          "failed_or_unproved": [
+            "child_header_verified",
+            "control_flow_verified",
+            "ancestry_unconditional"
+          ],
+          "child_entry_frontier": 1849,
+          "activation_verified": false,
+          "close_reachability_verified": false,
+          "all_alias_effects_verified": false,
+          "lifetime_verified": false,
+          "promotion_admissible": false
+        },
+        {
+          "child": 663,
+          "constructing_frame": 664,
+          "construction_pc": 8394,
+          "capture_cells": [
+            {
+              "ordinal": 1,
+              "cell": "frame:664:register:159",
+              "frame": 664,
+              "register": 159
+            },
+            {
+              "ordinal": 2,
+              "cell": "frame:664:register:105",
+              "frame": 664,
+              "register": 105
+            }
+          ],
+          "criteria": {
+            "source_consumer_verified": true,
+            "descriptor_parsed_exactly": true,
+            "capture_indices_fit_owner": true,
+            "child_header_verified": false,
+            "control_flow_verified": false,
+            "ancestry_unconditional": false
+          },
+          "failed_or_unproved": [
+            "child_header_verified",
+            "control_flow_verified",
+            "ancestry_unconditional"
+          ],
+          "child_entry_frontier": 544,
+          "activation_verified": false,
+          "close_reachability_verified": false,
+          "all_alias_effects_verified": false,
+          "lifetime_verified": false,
+          "promotion_admissible": false
+        }
+      ],
+      "body_register_intervals": [
+        {
+          "child": 567,
+          "body_register": 108,
+          "start_step": 354,
+          "end_step_exclusive": 363,
+          "end_reason": "right-censored at analysis frontier",
+          "register_interval_is_cell_lifetime": false
+        },
+        {
+          "child": 258,
+          "body_register": 109,
+          "start_step": 355,
+          "end_step_exclusive": 363,
+          "end_reason": "right-censored at analysis frontier",
+          "register_interval_is_cell_lifetime": false
+        },
+        {
+          "child": 379,
+          "body_register": 159,
+          "start_step": 357,
+          "end_step_exclusive": 363,
+          "end_reason": "right-censored at analysis frontier",
+          "register_interval_is_cell_lifetime": false
+        },
+        {
+          "child": 663,
+          "body_register": 85,
+          "start_step": 358,
+          "end_step_exclusive": 363,
+          "end_reason": "right-censored at analysis frontier",
+          "register_interval_is_cell_lifetime": false
+        }
+      ],
+      "captured_body_edges": [
+        {
+          "holder": 663,
+          "target_body": 379,
+          "capture_ordinal": 1,
+          "cell": "frame:664:register:159",
+          "holder_creation_pc": 8394,
+          "relation": "captures cell containing a closure body on guarded construction path",
+          "is_lexical_parent_edge": false,
+          "is_activation_edge": false
+        }
+      ],
+      "scope_conclusion": "all four constructed in guarded root664 frame; body aliases do not prove lexical nesting",
+      "formal_promotion_patch": {
+        "applicable": false,
+        "operations": []
+      },
+      "verified_hierarchy": null
+    },
+    "conditions": [
+      {
+        "child": 567,
+        "slot_definition_evidence": [
+          {
+            "cell": "frame:664:register:107",
+            "last_direct_definition_step": 328
+          },
+          {
+            "cell": "frame:664:register:106",
+            "last_direct_definition_step": 327
+          }
+        ],
+        "activation": {
+          "reachable_call": null,
+          "callee_identity": null,
+          "arguments_valid": null,
+          "capture_cells_at_call": null,
+          "live_template_cache_identity": null,
+          "normal_constructor_continuation": null
+        },
+        "lifetime": {
+          "frame_slot_defined_before_capture": true,
+          "cell_creation_order_verified": null,
+          "all_alias_writes_covered": null,
+          "call_time_capture_values_accounted_for": null,
+          "close_or_rebind_paths_covered": null,
+          "storage_identity_at_call": null,
+          "escape_effects_covered": null
+        },
+        "tree": {
+          "unique_incoming_owner": null,
+          "complete_node_coverage": null,
+          "cycle_free_verified_edges": null
+        },
+        "gate": {
+          "eligible": false,
+          "missing_or_failed": [
+            "structural:child_header_verified",
+            "structural:control_flow_verified",
+            "structural:ancestry_unconditional",
+            "activation:reachable_call",
+            "activation:callee_identity",
+            "activation:arguments_valid",
+            "activation:capture_cells_at_call",
+            "activation:live_template_cache_identity",
+            "activation:normal_constructor_continuation",
+            "lifetime:cell_creation_order_verified",
+            "lifetime:all_alias_writes_covered",
+            "lifetime:call_time_capture_values_accounted_for",
+            "lifetime:close_or_rebind_paths_covered",
+            "lifetime:storage_identity_at_call",
+            "lifetime:escape_effects_covered",
+            "tree:unique_incoming_owner",
+            "tree:complete_node_coverage",
+            "tree:cycle_free_verified_edges"
+          ],
+          "rule": "all structural, activation, lifetime and global tree obligations require explicit True"
+        },
+        "quantified_stability_condition": "for every reachable alias path from capture to call, account for writes/close/rebind and preserve binding identity; derive call-time values instead of freezing the frontier",
+        "captured_values_must_be_immutable": false,
+        "activation_condition": "a reachable call resolves to this closure with its exact live template, arguments and captured cells",
+        "scope": "known construction facts only; no actual invocation inferred"
+      },
+      {
+        "child": 258,
+        "slot_definition_evidence": [
+          {
+            "cell": "frame:664:register:107",
+            "last_direct_definition_step": 328
+          },
+          {
+            "cell": "frame:664:register:106",
+            "last_direct_definition_step": 327
+          }
+        ],
+        "activation": {
+          "reachable_call": null,
+          "callee_identity": null,
+          "arguments_valid": null,
+          "capture_cells_at_call": null,
+          "live_template_cache_identity": null,
+          "normal_constructor_continuation": null
+        },
+        "lifetime": {
+          "frame_slot_defined_before_capture": true,
+          "cell_creation_order_verified": null,
+          "all_alias_writes_covered": null,
+          "call_time_capture_values_accounted_for": null,
+          "close_or_rebind_paths_covered": null,
+          "storage_identity_at_call": null,
+          "escape_effects_covered": null
+        },
+        "tree": {
+          "unique_incoming_owner": null,
+          "complete_node_coverage": null,
+          "cycle_free_verified_edges": null
+        },
+        "gate": {
+          "eligible": false,
+          "missing_or_failed": [
+            "structural:child_header_verified",
+            "structural:control_flow_verified",
+            "structural:ancestry_unconditional",
+            "activation:reachable_call",
+            "activation:callee_identity",
+            "activation:arguments_valid",
+            "activation:capture_cells_at_call",
+            "activation:live_template_cache_identity",
+            "activation:normal_constructor_continuation",
+            "lifetime:cell_creation_order_verified",
+            "lifetime:all_alias_writes_covered",
+            "lifetime:call_time_capture_values_accounted_for",
+            "lifetime:close_or_rebind_paths_covered",
+            "lifetime:storage_identity_at_call",
+            "lifetime:escape_effects_covered",
+            "tree:unique_incoming_owner",
+            "tree:complete_node_coverage",
+            "tree:cycle_free_verified_edges"
+          ],
+          "rule": "all structural, activation, lifetime and global tree obligations require explicit True"
+        },
+        "quantified_stability_condition": "for every reachable alias path from capture to call, account for writes/close/rebind and preserve binding identity; derive call-time values instead of freezing the frontier",
+        "captured_values_must_be_immutable": false,
+        "activation_condition": "a reachable call resolves to this closure with its exact live template, arguments and captured cells",
+        "scope": "known construction facts only; no actual invocation inferred"
+      },
+      {
+        "child": 379,
+        "slot_definition_evidence": [
+          {
+            "cell": "frame:664:register:107",
+            "last_direct_definition_step": 328
+          },
+          {
+            "cell": "frame:664:register:106",
+            "last_direct_definition_step": 327
+          },
+          {
+            "cell": "frame:664:register:103",
+            "last_direct_definition_step": 308
+          },
+          {
+            "cell": "frame:664:register:92",
+            "last_direct_definition_step": 262
+          },
+          {
+            "cell": "frame:664:register:104",
+            "last_direct_definition_step": 326
+          },
+          {
+            "cell": "frame:664:register:93",
+            "last_direct_definition_step": 309
+          }
+        ],
+        "activation": {
+          "reachable_call": null,
+          "callee_identity": null,
+          "arguments_valid": null,
+          "capture_cells_at_call": null,
+          "live_template_cache_identity": null,
+          "normal_constructor_continuation": null
+        },
+        "lifetime": {
+          "frame_slot_defined_before_capture": true,
+          "cell_creation_order_verified": null,
+          "all_alias_writes_covered": null,
+          "call_time_capture_values_accounted_for": null,
+          "close_or_rebind_paths_covered": null,
+          "storage_identity_at_call": null,
+          "escape_effects_covered": null
+        },
+        "tree": {
+          "unique_incoming_owner": null,
+          "complete_node_coverage": null,
+          "cycle_free_verified_edges": null
+        },
+        "gate": {
+          "eligible": false,
+          "missing_or_failed": [
+            "structural:child_header_verified",
+            "structural:control_flow_verified",
+            "structural:ancestry_unconditional",
+            "activation:reachable_call",
+            "activation:callee_identity",
+            "activation:arguments_valid",
+            "activation:capture_cells_at_call",
+            "activation:live_template_cache_identity",
+            "activation:normal_constructor_continuation",
+            "lifetime:cell_creation_order_verified",
+            "lifetime:all_alias_writes_covered",
+            "lifetime:call_time_capture_values_accounted_for",
+            "lifetime:close_or_rebind_paths_covered",
+            "lifetime:storage_identity_at_call",
+            "lifetime:escape_effects_covered",
+            "tree:unique_incoming_owner",
+            "tree:complete_node_coverage",
+            "tree:cycle_free_verified_edges"
+          ],
+          "rule": "all structural, activation, lifetime and global tree obligations require explicit True"
+        },
+        "quantified_stability_condition": "for every reachable alias path from capture to call, account for writes/close/rebind and preserve binding identity; derive call-time values instead of freezing the frontier",
+        "captured_values_must_be_immutable": false,
+        "activation_condition": "a reachable call resolves to this closure with its exact live template, arguments and captured cells",
+        "scope": "known construction facts only; no actual invocation inferred"
+      },
+      {
+        "child": 663,
+        "slot_definition_evidence": [
+          {
+            "cell": "frame:664:register:159",
+            "last_direct_definition_step": 357
+          },
+          {
+            "cell": "frame:664:register:105",
+            "last_direct_definition_step": 326
+          }
+        ],
+        "activation": {
+          "reachable_call": null,
+          "callee_identity": null,
+          "arguments_valid": null,
+          "capture_cells_at_call": null,
+          "live_template_cache_identity": null,
+          "normal_constructor_continuation": null
+        },
+        "lifetime": {
+          "frame_slot_defined_before_capture": true,
+          "cell_creation_order_verified": null,
+          "all_alias_writes_covered": null,
+          "call_time_capture_values_accounted_for": null,
+          "close_or_rebind_paths_covered": null,
+          "storage_identity_at_call": null,
+          "escape_effects_covered": null
+        },
+        "tree": {
+          "unique_incoming_owner": null,
+          "complete_node_coverage": null,
+          "cycle_free_verified_edges": null
+        },
+        "gate": {
+          "eligible": false,
+          "missing_or_failed": [
+            "structural:child_header_verified",
+            "structural:control_flow_verified",
+            "structural:ancestry_unconditional",
+            "activation:reachable_call",
+            "activation:callee_identity",
+            "activation:arguments_valid",
+            "activation:capture_cells_at_call",
+            "activation:live_template_cache_identity",
+            "activation:normal_constructor_continuation",
+            "lifetime:cell_creation_order_verified",
+            "lifetime:all_alias_writes_covered",
+            "lifetime:call_time_capture_values_accounted_for",
+            "lifetime:close_or_rebind_paths_covered",
+            "lifetime:storage_identity_at_call",
+            "lifetime:escape_effects_covered",
+            "tree:unique_incoming_owner",
+            "tree:complete_node_coverage",
+            "tree:cycle_free_verified_edges"
+          ],
+          "rule": "all structural, activation, lifetime and global tree obligations require explicit True"
+        },
+        "quantified_stability_condition": "for every reachable alias path from capture to call, account for writes/close/rebind and preserve binding identity; derive call-time values instead of freezing the frontier",
+        "captured_values_must_be_immutable": false,
+        "activation_condition": "a reachable call resolves to this closure with its exact live template, arguments and captured cells",
+        "scope": "known construction facts only; no actual invocation inferred"
+      }
+    ],
+    "formal_promotion_patch": {
+      "applicable": false,
+      "operations": []
+    },
+    "verified_hierarchy": null
+  },
+  "verified_hierarchy": null,
+  "input_byte_edits": 0,
+  "network_requests": 0,
+  "application_calls_executed": 0,
+  "factory_invocations": 0,
+  "schema_neighborhood": {
+    "center": 134543,
+    "radius": 32,
+    "boundaries": [
+      {
+        "left": 483,
+        "right": 21,
+        "left_end": 134526,
+        "right_begin": 134526,
+        "relation": "exact_adjacency",
+        "both_directory_parities_exported": false
+      },
+      {
+        "left": 21,
+        "right": 691,
+        "left_end": 134532,
+        "right_begin": 134532,
+        "relation": "exact_adjacency",
+        "both_directory_parities_exported": true
+      },
+      {
+        "left": 691,
+        "right": 436,
+        "left_end": null,
+        "right_begin": 134538,
+        "relation": "unknown_span",
+        "both_directory_parities_exported": true
+      },
+      {
+        "left": 436,
+        "right": 101,
+        "left_end": 134543,
+        "right_begin": 134543,
+        "relation": "exact_adjacency",
+        "both_directory_parities_exported": true
+      },
+      {
+        "left": 101,
+        "right": 251,
+        "left_end": 134545,
+        "right_begin": 134545,
+        "relation": "exact_adjacency",
+        "both_directory_parities_exported": true
+      },
+      {
+        "left": 251,
+        "right": 36,
+        "left_end": 134562,
+        "right_begin": 134562,
+        "relation": "exact_adjacency",
+        "both_directory_parities_exported": true
+      },
+      {
+        "left": 36,
+        "right": 275,
+        "left_end": 134564,
+        "right_begin": 134564,
+        "relation": "exact_adjacency",
+        "both_directory_parities_exported": true
+      },
+      {
+        "left": 275,
+        "right": 713,
+        "left_end": 134571,
+        "right_begin": 134571,
+        "relation": "exact_adjacency",
+        "both_directory_parities_exported": true
+      }
+    ],
+    "forced_raw_prefix": {
+      "status": "length_out_of_bounds",
+      "position": 134543,
+      "length": 1492916,
+      "prefix_begin": 134544,
+      "prefix_end": 134547,
+      "prefix_hex": "b4db0f",
+      "available_payload_bytes": 17630,
+      "scope": "raw patch-handler read; not a tag-based constant reader selection"
+    },
+    "forced_prefix_intersections": [
+      {
+        "reference_id": 101,
+        "overlap_half_open": [
+          134544,
+          134545
+        ],
+        "part": "primitive payload",
+        "directory_parity_hypothesis": 0
+      },
+      {
+        "reference_id": 251,
+        "overlap_half_open": [
+          134545,
+          134547
+        ],
+        "part": "includes tag/header",
+        "directory_parity_hypothesis": 0
+      }
+    ],
+    "scope": "only directory-backed starts; no arbitrary byte/tag scan or inferred global packing",
+    "records": [
+      {
+        "reference_id": 483,
+        "position": 134512,
+        "end_exclusive": 134526,
+        "tag": 174,
+        "leaf_state": 98,
+        "directory_parity_hypothesis": 1,
+        "primitive_observation": {
+          "kind": null,
+          "value": null
+        },
+        "descriptor_count": null
+      },
+      {
+        "reference_id": 21,
+        "position": 134526,
+        "end_exclusive": 134532,
+        "tag": 174,
+        "leaf_state": 98,
+        "directory_parity_hypothesis": 0,
+        "primitive_observation": {
+          "kind": null,
+          "value": null
+        },
+        "descriptor_count": null
+      },
+      {
+        "reference_id": 691,
+        "position": 134532,
+        "end_exclusive": null,
+        "tag": 197,
+        "leaf_state": 68,
+        "directory_parity_hypothesis": 0,
+        "primitive_observation": {
+          "kind": null,
+          "value": null
+        },
+        "descriptor_count": null
+      },
+      {
+        "reference_id": 436,
+        "position": 134538,
+        "end_exclusive": 134543,
+        "tag": 218,
+        "leaf_state": 58,
+        "directory_parity_hypothesis": 0,
+        "primitive_observation": {
+          "kind": "uint32",
+          "value": 3918176663
+        },
+        "descriptor_count": null
+      },
+      {
+        "reference_id": 101,
+        "position": 134543,
+        "end_exclusive": 134545,
+        "tag": 195,
+        "leaf_state": 130,
+        "directory_parity_hypothesis": 0,
+        "primitive_observation": {
+          "kind": "uint8",
+          "value": 4
+        },
+        "descriptor_count": null
+      },
+      {
+        "reference_id": 251,
+        "position": 134545,
+        "end_exclusive": 134562,
+        "tag": 219,
+        "leaf_state": 95,
+        "directory_parity_hypothesis": 0,
+        "primitive_observation": {
+          "kind": null,
+          "value": null
+        },
+        "descriptor_count": 7
+      },
+      {
+        "reference_id": 36,
+        "position": 134562,
+        "end_exclusive": 134564,
+        "tag": 70,
+        "leaf_state": 161,
+        "directory_parity_hypothesis": 0,
+        "primitive_observation": {
+          "kind": "negative_uint8",
+          "value": -5
+        },
+        "descriptor_count": null
+      },
+      {
+        "reference_id": 275,
+        "position": 134564,
+        "end_exclusive": 134571,
+        "tag": 174,
+        "leaf_state": 98,
+        "directory_parity_hypothesis": 0,
+        "primitive_observation": {
+          "kind": null,
+          "value": null
+        },
+        "descriptor_count": null
+      },
+      {
+        "reference_id": 713,
+        "position": 134571,
+        "end_exclusive": 134581,
+        "tag": 174,
+        "leaf_state": 98,
+        "directory_parity_hypothesis": 0,
+        "primitive_observation": {
+          "kind": null,
+          "value": null
+        },
+        "descriptor_count": null
+      }
+    ]
+  },
+  "state_equation_constraints": [
+    {
+      "reference_id": 74,
+      "owner": 664,
+      "pc": 981,
+      "variant": 228,
+      "expected_equation": [
+        "V",
+        74,
+        4
+      ],
+      "actual_instruction": [
+        125,
+        74,
+        4,
+        47
+      ],
+      "equation_identity_verified": true,
+      "state_count": 2048,
+      "state_domain_scope": "necessary mixer-local candidates on enumerated conditional paths, not witnessed runtime states",
+      "path_cap_hit": false,
+      "scope": "fixed snapshot/dispatcher; unknown effects and rewrites remain barriers",
+      "all_incoming_edges_known": false,
+      "unconditional_state": null,
+      "promoted_keys": [],
+      "promotion_blockers": [
+        "entry reachability and rewrite history",
+        "live reader/cache activation"
+      ],
+      "paths": [
+        {
+          "path": {
+            "path": [
+              976,
+              977,
+              978,
+              979,
+              980,
+              981
+            ],
+            "status": "conditional_local_path",
+            "state_at_site": {
+              "input": "V"
+            },
+            "mutations": [
+              {
+                "pc": 977,
+                "register_writes": {
+                  "118": {
+                    "bit32_bxor": [
+                      {
+                        "register_input": 74
+                      },
+                      113
+                    ],
+                    "predicate": "numeric operands and uint32 conversion"
+                  }
+                },
+                "state_y": {
+                  "input": "y"
+                },
+                "state_V": {
+                  "input": "V"
+                }
+              },
+              {
+                "pc": 980,
+                "register_writes": {
+                  "13": {
+                    "bit32_bxor": [
+                      {
+                        "register_input": 9
+                      },
+                      38
+                    ],
+                    "predicate": "numeric operands and uint32 conversion"
+                  }
+                },
+                "state_y": {
+                  "input": "y"
+                },
+                "state_V": {
+                  "input": "V"
+                }
+              }
+            ],
+            "predicates": [
+              {
+                "pc": 977,
+                "requires": "numeric operands and uint32 conversion",
+                "expression": {
+                  "bit32_bxor": [
+                    {
+                      "register_input": 74
+                    },
+                    113
+                  ],
+                  "predicate": "numeric operands and uint32 conversion"
+                }
+              },
+              {
+                "pc": 980,
+                "requires": "numeric operands and uint32 conversion",
+                "expression": {
+                  "bit32_bxor": [
+                    {
+                      "register_input": 9
+                    },
+                    38
+                  ],
+                  "predicate": "numeric operands and uint32 conversion"
+                }
+              },
+              {
+                "pc": 976,
+                "operator": "<",
+                "left": {
+                  "register_input": 123
+                },
+                "right": 120,
+                "allowed_truth_values": [
+                  true
+                ]
+              },
+              {
+                "pc": 979,
+                "operator": "<",
+                "left": {
+                  "register_input": 88
+                },
+                "right": 66,
+                "allowed_truth_values": [
+                  true
+                ]
+              }
+            ],
+            "cutpoint_reason": "open_predecessor_frontier",
+            "normal_patch_completion_pcs": [
+              978
+            ]
+          },
+          "finite_constraints": {
+            "state_count_before": 2048,
+            "state_count_after": 2048,
+            "conditional_unique_state": null,
+            "conditional_unique_key": null,
+            "unconditional_state": null,
+            "residual_predicates": [
+              "predicate:0:type/effect guard",
+              "predicate:1:type/effect guard",
+              "predicate:2:unbound or inexact input",
+              "predicate:3:unbound or inexact input"
+            ],
+            "status": "conditional_finite_domain",
+            "scope": "same snapshot/dispatcher and local arrival; exact integer arithmetic where evaluated",
+            "key_count": 256
+          }
+        }
+      ]
+    },
+    {
+      "reference_id": 74,
+      "owner": 402,
+      "pc": 83,
+      "variant": 163,
+      "expected_equation": [
+        "y",
+        74,
+        7
+      ],
+      "actual_instruction": [
+        0,
+        53,
+        51,
+        91
+      ],
+      "equation_identity_verified": false,
+      "state_count": 2048,
+      "state_domain_scope": "necessary mixer-local candidates on enumerated conditional paths, not witnessed runtime states",
+      "path_cap_hit": false,
+      "scope": "fixed snapshot/dispatcher; unknown effects and rewrites remain barriers",
+      "all_incoming_edges_known": false,
+      "unconditional_state": null,
+      "promoted_keys": [],
+      "promotion_blockers": [
+        "entry reachability and rewrite history",
+        "live reader/cache activation",
+        "selected slot is not the hypothesized patch equation"
+      ],
+      "paths": [
+        {
+          "path": {
+            "path": [
+              83
+            ],
+            "status": "conditional_local_path",
+            "state_at_site": {
+              "input": "y"
+            },
+            "mutations": [],
+            "predicates": [],
+            "cutpoint_reason": "open_predecessor_frontier",
+            "normal_patch_completion_pcs": []
+          },
+          "finite_constraints": {
+            "state_count_before": 2048,
+            "state_count_after": 2048,
+            "conditional_unique_state": null,
+            "conditional_unique_key": null,
+            "unconditional_state": null,
+            "residual_predicates": [],
+            "status": "conditional_finite_domain",
+            "scope": "same snapshot/dispatcher and local arrival; exact integer arithmetic where evaluated",
+            "key_count": 256
+          }
+        }
+      ]
+    },
+    {
+      "reference_id": 141,
+      "owner": 711,
+      "pc": 269,
+      "variant": 163,
+      "expected_equation": [
+        "V",
+        141,
+        2
+      ],
+      "actual_instruction": [
+        54,
+        130,
+        122,
+        74
+      ],
+      "equation_identity_verified": false,
+      "state_count": 2048,
+      "state_domain_scope": "necessary mixer-local candidates on enumerated conditional paths, not witnessed runtime states",
+      "path_cap_hit": false,
+      "scope": "fixed snapshot/dispatcher; unknown effects and rewrites remain barriers",
+      "all_incoming_edges_known": false,
+      "unconditional_state": null,
+      "promoted_keys": [],
+      "promotion_blockers": [
+        "entry reachability and rewrite history",
+        "live reader/cache activation",
+        "selected slot is not the hypothesized patch equation"
+      ],
+      "paths": [
+        {
+          "path": {
+            "path": [
+              269
+            ],
+            "status": "conditional_local_path",
+            "state_at_site": {
+              "input": "V"
+            },
+            "mutations": [],
+            "predicates": [],
+            "cutpoint_reason": "open_predecessor_frontier",
+            "normal_patch_completion_pcs": []
+          },
+          "finite_constraints": {
+            "state_count_before": 2048,
+            "state_count_after": 2048,
+            "conditional_unique_state": null,
+            "conditional_unique_key": null,
+            "unconditional_state": null,
+            "residual_predicates": [],
+            "status": "conditional_finite_domain",
+            "scope": "same snapshot/dispatcher and local arrival; exact integer arithmetic where evaluated",
+            "key_count": 256
+          }
+        }
+      ]
+    },
+    {
+      "reference_id": 141,
+      "owner": 593,
+      "pc": 393,
+      "variant": 157,
+      "expected_equation": [
+        "y",
+        141,
+        121
+      ],
+      "actual_instruction": [
+        0,
+        254,
+        0,
+        32
+      ],
+      "equation_identity_verified": false,
+      "state_count": 2048,
+      "state_domain_scope": "necessary mixer-local candidates on enumerated conditional paths, not witnessed runtime states",
+      "path_cap_hit": false,
+      "scope": "fixed snapshot/dispatcher; unknown effects and rewrites remain barriers",
+      "all_incoming_edges_known": false,
+      "unconditional_state": null,
+      "promoted_keys": [],
+      "promotion_blockers": [
+        "entry reachability and rewrite history",
+        "live reader/cache activation",
+        "selected slot is not the hypothesized patch equation"
+      ],
+      "paths": [
+        {
+          "path": {
+            "path": [
+              393
+            ],
+            "status": "conditional_local_path",
+            "state_at_site": {
+              "input": "y"
+            },
+            "mutations": [],
+            "predicates": [],
+            "cutpoint_reason": "open_predecessor_frontier",
+            "normal_patch_completion_pcs": []
+          },
+          "finite_constraints": {
+            "state_count_before": 2048,
+            "state_count_after": 2048,
+            "conditional_unique_state": null,
+            "conditional_unique_key": null,
+            "unconditional_state": null,
+            "residual_predicates": [],
+            "status": "conditional_finite_domain",
+            "scope": "same snapshot/dispatcher and local arrival; exact integer arithmetic where evaluated",
+            "key_count": 256
+          }
+        }
+      ]
+    },
+    {
+      "reference_id": 702,
+      "owner": 379,
+      "pc": 686,
+      "variant": 228,
+      "expected_equation": [
+        "V",
+        702,
+        52
+      ],
+      "actual_instruction": [
+        2,
+        645,
+        40,
+        99
+      ],
+      "equation_identity_verified": false,
+      "state_count": 2048,
+      "state_domain_scope": "necessary mixer-local candidates on enumerated conditional paths, not witnessed runtime states",
+      "path_cap_hit": false,
+      "scope": "fixed snapshot/dispatcher; unknown effects and rewrites remain barriers",
+      "all_incoming_edges_known": false,
+      "unconditional_state": null,
+      "promoted_keys": [],
+      "promotion_blockers": [
+        "entry reachability and rewrite history",
+        "live reader/cache activation",
+        "selected slot is not the hypothesized patch equation"
+      ],
+      "paths": [
+        {
+          "path": {
+            "path": [
+              686
+            ],
+            "status": "conditional_local_path",
+            "state_at_site": {
+              "input": "V"
+            },
+            "mutations": [],
+            "predicates": [],
+            "cutpoint_reason": "open_predecessor_frontier",
+            "normal_patch_completion_pcs": []
+          },
+          "finite_constraints": {
+            "state_count_before": 2048,
+            "state_count_after": 2048,
+            "conditional_unique_state": null,
+            "conditional_unique_key": null,
+            "unconditional_state": null,
+            "residual_predicates": [],
+            "status": "conditional_finite_domain",
+            "scope": "same snapshot/dispatcher and local arrival; exact integer arithmetic where evaluated",
+            "key_count": 256
+          }
+        }
+      ]
+    }
+  ]
+}
