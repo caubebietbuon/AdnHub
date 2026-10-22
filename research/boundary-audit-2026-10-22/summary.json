@@ -1,0 +1,2098 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "source_evidence": [
+    {
+      "offset": 48524,
+      "text": "else if o<75 then t[H[W]]=p(t[A[W]],t[i[W]]);else if o~=76 then T=g[i[W]];t[H[W]]=T[6][T[5]];"
+    },
+    {
+      "offset": 41417,
+      "text": "else if o<100 then if k then for f in X,k,nil do local xJ=k[f];if xJ then xJ[6]=xJ;xJ[4]=t[f];xJ[5]=4;k[f]=nil;end;end;end;"
+    },
+    {
+      "offset": 41023,
+      "text": "if o<103 then if k then for f in X,k,nil do local xJ=k[f];if xJ then xJ[6]=xJ;xJ[4]=t[f];xJ[5]=4;k[f]=nil;end;end;end;"
+    }
+  ],
+  "verified_hierarchy": null,
+  "formal_promotion_patch": {
+    "applicable": false,
+    "operations": []
+  },
+  "network_requests": 0,
+  "application_calls_executed": 0,
+  "factory_invocations": 0,
+  "input_byte_edits": 0,
+  "equations": [
+    {
+      "reference_id": 74,
+      "owner": 664,
+      "pc": 981,
+      "variant": 228,
+      "expected_equation": [
+        "V",
+        74,
+        4
+      ],
+      "actual_instruction": [
+        125,
+        74,
+        4,
+        47
+      ],
+      "equation_identity_verified": true,
+      "state_count": 2048,
+      "state_domain_scope": "necessary mixer-local candidates on enumerated conditional paths, not witnessed runtime states",
+      "path_cap_hit": false,
+      "scope": "fixed snapshot/dispatcher; unknown effects and rewrites remain barriers",
+      "all_incoming_edges_known": false,
+      "unconditional_state": null,
+      "promoted_keys": [],
+      "promotion_blockers": [
+        "entry reachability and rewrite history",
+        "live reader/cache activation"
+      ],
+      "revision_history": {
+        "pc": 981,
+        "variant_hypothesis": 228,
+        "initial": {
+          "instruction": [
+            15,
+            118,
+            87,
+            21
+          ],
+          "equation": null,
+          "matches_expected": false
+        },
+        "revisions": [
+          {
+            "step": 12,
+            "source_pc": 9953,
+            "source_variant": 157,
+            "source_opcode": 127,
+            "state_words_before": [
+              4179906283,
+              1947447901
+            ],
+            "rewritten_range": [
+              5,
+              9933
+            ],
+            "writes": [
+              {
+                "array": "j",
+                "pc": 981,
+                "before": 118,
+                "after": 36
+              },
+              {
+                "array": "Z",
+                "pc": 981,
+                "before": 87,
+                "after": 72
+              },
+              {
+                "array": "B",
+                "pc": 981,
+                "before": 15,
+                "after": 73
+              },
+              {
+                "array": "O",
+                "pc": 981,
+                "before": 21,
+                "after": 4
+              }
+            ],
+            "instruction": [
+              73,
+              36,
+              72,
+              4
+            ],
+            "equation": null,
+            "matches_expected": false
+          },
+          {
+            "step": 138,
+            "source_pc": 9901,
+            "source_variant": 163,
+            "source_opcode": 134,
+            "state_words_before": [
+              4179906283,
+              1947447901
+            ],
+            "rewritten_range": [
+              17,
+              9844
+            ],
+            "writes": [
+              {
+                "array": "B",
+                "pc": 981,
+                "before": 73,
+                "after": 37
+              },
+              {
+                "array": "Z",
+                "pc": 981,
+                "before": 72,
+                "after": 118
+              },
+              {
+                "array": "O",
+                "pc": 981,
+                "before": 4,
+                "after": 22
+              },
+              {
+                "array": "j",
+                "pc": 981,
+                "before": 36,
+                "after": 121
+              }
+            ],
+            "instruction": [
+              37,
+              121,
+              118,
+              22
+            ],
+            "equation": null,
+            "matches_expected": false
+          },
+          {
+            "step": 150,
+            "source_pc": 23,
+            "source_variant": 163,
+            "source_opcode": 134,
+            "state_words_before": [
+              4179906283,
+              1947447901
+            ],
+            "rewritten_range": [
+              26,
+              9844
+            ],
+            "writes": [
+              {
+                "array": "B",
+                "pc": 981,
+                "before": 37,
+                "after": 32
+              },
+              {
+                "array": "Z",
+                "pc": 981,
+                "before": 118,
+                "after": 75
+              },
+              {
+                "array": "O",
+                "pc": 981,
+                "before": 22,
+                "after": 112
+              },
+              {
+                "array": "j",
+                "pc": 981,
+                "before": 121,
+                "after": 104
+              }
+            ],
+            "instruction": [
+              32,
+              104,
+              75,
+              112
+            ],
+            "equation": null,
+            "matches_expected": false
+          },
+          {
+            "step": 163,
+            "source_pc": 9842,
+            "source_variant": 163,
+            "source_opcode": 52,
+            "state_words_before": [
+              4179906283,
+              1947447901
+            ],
+            "rewritten_range": [
+              26,
+              9835
+            ],
+            "writes": [
+              {
+                "array": "B",
+                "pc": 981,
+                "before": 32,
+                "after": 113
+              },
+              {
+                "array": "Z",
+                "pc": 981,
+                "before": 75,
+                "after": 29
+              },
+              {
+                "array": "O",
+                "pc": 981,
+                "before": 112,
+                "after": 1
+              },
+              {
+                "array": "j",
+                "pc": 981,
+                "before": 104,
+                "after": 35
+              }
+            ],
+            "instruction": [
+              113,
+              35,
+              29,
+              1
+            ],
+            "equation": null,
+            "matches_expected": false
+          },
+          {
+            "step": 173,
+            "source_pc": 9832,
+            "source_variant": 228,
+            "source_opcode": 145,
+            "state_words_before": [
+              4179906283,
+              1947447901
+            ],
+            "rewritten_range": [
+              26,
+              9825
+            ],
+            "writes": [
+              {
+                "array": "j",
+                "pc": 981,
+                "before": 35,
+                "after": 62
+              },
+              {
+                "array": "Z",
+                "pc": 981,
+                "before": 29,
+                "after": 86
+              },
+              {
+                "array": "O",
+                "pc": 981,
+                "before": 1,
+                "after": 73
+              },
+              {
+                "array": "B",
+                "pc": 981,
+                "before": 113,
+                "after": 63
+              }
+            ],
+            "instruction": [
+              63,
+              62,
+              86,
+              73
+            ],
+            "equation": null,
+            "matches_expected": false
+          },
+          {
+            "step": 274,
+            "source_pc": 9792,
+            "source_variant": 228,
+            "source_opcode": 197,
+            "state_words_before": [
+              4179906283,
+              1947447901
+            ],
+            "rewritten_range": [
+              211,
+              1441
+            ],
+            "writes": [
+              {
+                "array": "j",
+                "pc": 981,
+                "before": 62,
+                "after": 74
+              },
+              {
+                "array": "Z",
+                "pc": 981,
+                "before": 86,
+                "after": 4
+              },
+              {
+                "array": "O",
+                "pc": 981,
+                "before": 73,
+                "after": 47
+              },
+              {
+                "array": "B",
+                "pc": 981,
+                "before": 63,
+                "after": 125
+              }
+            ],
+            "instruction": [
+              125,
+              74,
+              4,
+              47
+            ],
+            "equation": [
+              "V",
+              74,
+              4
+            ],
+            "matches_expected": true
+          }
+        ],
+        "final": {
+          "instruction": [
+            125,
+            74,
+            4,
+            47
+          ],
+          "equation": [
+            "V",
+            74,
+            4
+          ],
+          "matches_expected": true
+        },
+        "observed_visits": [],
+        "scope": "complete watched slot changes on the guarded recorded prefix only; no future rewrite proof"
+      },
+      "version_diagnosis": "inspect retained version and visit evidence",
+      "final_same_reference_patch_sites": [
+        {
+          "pc": 981,
+          "variant": 228,
+          "equation": [
+            "V",
+            74,
+            4
+          ],
+          "relocation_verified": false
+        },
+        {
+          "pc": 3238,
+          "variant": 228,
+          "equation": [
+            null,
+            74,
+            112
+          ],
+          "relocation_verified": false
+        }
+      ],
+      "admissible_declared_model_count": 0,
+      "paths": [
+        {
+          "path": {
+            "path": [
+              976,
+              977,
+              978,
+              979,
+              980,
+              981
+            ],
+            "status": "conditional_local_path",
+            "state_at_site": {
+              "input": "V"
+            },
+            "mutations": [
+              {
+                "pc": 977,
+                "register_writes": {
+                  "118": {
+                    "bit32_bxor": [
+                      {
+                        "register_input": 74
+                      },
+                      113
+                    ],
+                    "predicate": "numeric operands and uint32 conversion"
+                  }
+                },
+                "state_y": {
+                  "input": "y"
+                },
+                "state_V": {
+                  "input": "V"
+                }
+              },
+              {
+                "pc": 980,
+                "register_writes": {
+                  "13": {
+                    "bit32_bxor": [
+                      {
+                        "register_input": 9
+                      },
+                      38
+                    ],
+                    "predicate": "numeric operands and uint32 conversion"
+                  }
+                },
+                "state_y": {
+                  "input": "y"
+                },
+                "state_V": {
+                  "input": "V"
+                }
+              }
+            ],
+            "predicates": [
+              {
+                "pc": 977,
+                "requires": "numeric operands and uint32 conversion",
+                "expression": {
+                  "bit32_bxor": [
+                    {
+                      "register_input": 74
+                    },
+                    113
+                  ],
+                  "predicate": "numeric operands and uint32 conversion"
+                }
+              },
+              {
+                "pc": 980,
+                "requires": "numeric operands and uint32 conversion",
+                "expression": {
+                  "bit32_bxor": [
+                    {
+                      "register_input": 9
+                    },
+                    38
+                  ],
+                  "predicate": "numeric operands and uint32 conversion"
+                }
+              },
+              {
+                "pc": 976,
+                "operator": "<",
+                "left": {
+                  "register_input": 123
+                },
+                "right": 120,
+                "allowed_truth_values": [
+                  true
+                ]
+              },
+              {
+                "pc": 979,
+                "operator": "<",
+                "left": {
+                  "register_input": 88
+                },
+                "right": 66,
+                "allowed_truth_values": [
+                  true
+                ]
+              }
+            ],
+            "cutpoint_reason": "open_predecessor_frontier",
+            "normal_patch_completion_pcs": [
+              978
+            ]
+          },
+          "finite_constraints": {
+            "state_count_before": 2048,
+            "state_count_after": 2048,
+            "conditional_unique_state": null,
+            "conditional_unique_key": null,
+            "unconditional_state": null,
+            "residual_predicates": [
+              "predicate:0:type/effect guard",
+              "predicate:1:type/effect guard",
+              "predicate:2:unbound or inexact input",
+              "predicate:3:unbound or inexact input"
+            ],
+            "status": "conditional_finite_domain",
+            "scope": "same snapshot/dispatcher and local arrival; exact integer arithmetic where evaluated",
+            "key_count": 256
+          }
+        }
+      ],
+      "boundary_constraints": [
+        {
+          "boundary_obligations": [
+            {
+              "name": "current equation identity",
+              "proved": true,
+              "scope": "this fixed rewritten slot under the selected dispatcher"
+            },
+            {
+              "name": "entry and code epoch at local cutpoint",
+              "proved": null,
+              "scope": "no complete entry-to-cutpoint frame/code/directory history is assumed"
+            },
+            {
+              "name": "patch978 normal reader completion",
+              "proved": false,
+              "scope": "unchanged reconstructed backing and exported directory101 only; other histories remain open"
+            }
+          ],
+          "rejected_boundaries": [
+            "patch978 normal reader completion"
+          ],
+          "unknown_boundaries": [
+            "entry and code epoch at local cutpoint"
+          ],
+          "model_status": "refuted_declared_model",
+          "global_reachability_proved": false,
+          "unconditional_state": null,
+          "note": "rejection is scoped; algebraic candidates remain separate from runtime proof"
+        }
+      ]
+    },
+    {
+      "reference_id": 74,
+      "owner": 402,
+      "pc": 83,
+      "variant": 163,
+      "expected_equation": [
+        "y",
+        74,
+        7
+      ],
+      "actual_instruction": [
+        0,
+        53,
+        51,
+        91
+      ],
+      "equation_identity_verified": false,
+      "state_count": 2048,
+      "state_domain_scope": "necessary mixer-local candidates on enumerated conditional paths, not witnessed runtime states",
+      "path_cap_hit": false,
+      "scope": "fixed snapshot/dispatcher; unknown effects and rewrites remain barriers",
+      "all_incoming_edges_known": false,
+      "unconditional_state": null,
+      "promoted_keys": [],
+      "promotion_blockers": [
+        "entry reachability and rewrite history",
+        "live reader/cache activation",
+        "selected slot is not the hypothesized patch equation"
+      ],
+      "revision_history": {
+        "pc": 83,
+        "variant_hypothesis": 163,
+        "initial": {
+          "instruction": [
+            84,
+            74,
+            7,
+            42
+          ],
+          "equation": [
+            "y",
+            74,
+            7
+          ],
+          "matches_expected": true
+        },
+        "revisions": [
+          {
+            "step": 6,
+            "source_pc": 210,
+            "source_variant": 157,
+            "source_opcode": 57,
+            "state_words_before": [
+              3571614402,
+              912615588
+            ],
+            "rewritten_range": [
+              1,
+              115
+            ],
+            "writes": [
+              {
+                "array": "j",
+                "pc": 83,
+                "before": 84,
+                "after": 0
+              },
+              {
+                "array": "Z",
+                "pc": 83,
+                "before": 7,
+                "after": 51
+              },
+              {
+                "array": "B",
+                "pc": 83,
+                "before": 74,
+                "after": 53
+              },
+              {
+                "array": "O",
+                "pc": 83,
+                "before": 42,
+                "after": 91
+              }
+            ],
+            "instruction": [
+              0,
+              53,
+              51,
+              91
+            ],
+            "equation": null,
+            "matches_expected": false
+          }
+        ],
+        "final": {
+          "instruction": [
+            0,
+            53,
+            51,
+            91
+          ],
+          "equation": null,
+          "matches_expected": false
+        },
+        "observed_visits": [],
+        "scope": "complete watched slot changes on the guarded recorded prefix only; no future rewrite proof"
+      },
+      "version_diagnosis": "initial pattern invalidated on recorded prefix",
+      "final_same_reference_patch_sites": [],
+      "admissible_declared_model_count": 0,
+      "paths": [
+        {
+          "path": {
+            "path": [
+              83
+            ],
+            "status": "conditional_local_path",
+            "state_at_site": {
+              "input": "y"
+            },
+            "mutations": [],
+            "predicates": [],
+            "cutpoint_reason": "open_predecessor_frontier",
+            "normal_patch_completion_pcs": []
+          },
+          "finite_constraints": {
+            "state_count_before": 2048,
+            "state_count_after": 2048,
+            "conditional_unique_state": null,
+            "conditional_unique_key": null,
+            "unconditional_state": null,
+            "residual_predicates": [],
+            "status": "conditional_finite_domain",
+            "scope": "same snapshot/dispatcher and local arrival; exact integer arithmetic where evaluated",
+            "key_count": 256
+          }
+        }
+      ],
+      "boundary_constraints": [
+        {
+          "boundary_obligations": [
+            {
+              "name": "current equation identity",
+              "proved": false,
+              "scope": "this fixed rewritten slot under the selected dispatcher"
+            },
+            {
+              "name": "entry and code epoch at local cutpoint",
+              "proved": null,
+              "scope": "no complete entry-to-cutpoint frame/code/directory history is assumed"
+            }
+          ],
+          "rejected_boundaries": [
+            "current equation identity"
+          ],
+          "unknown_boundaries": [
+            "entry and code epoch at local cutpoint"
+          ],
+          "model_status": "refuted_declared_model",
+          "global_reachability_proved": false,
+          "unconditional_state": null,
+          "note": "rejection is scoped; algebraic candidates remain separate from runtime proof"
+        }
+      ]
+    },
+    {
+      "reference_id": 141,
+      "owner": 711,
+      "pc": 269,
+      "variant": 163,
+      "expected_equation": [
+        "V",
+        141,
+        2
+      ],
+      "actual_instruction": [
+        54,
+        130,
+        122,
+        74
+      ],
+      "equation_identity_verified": false,
+      "state_count": 2048,
+      "state_domain_scope": "necessary mixer-local candidates on enumerated conditional paths, not witnessed runtime states",
+      "path_cap_hit": false,
+      "scope": "fixed snapshot/dispatcher; unknown effects and rewrites remain barriers",
+      "all_incoming_edges_known": false,
+      "unconditional_state": null,
+      "promoted_keys": [],
+      "promotion_blockers": [
+        "entry reachability and rewrite history",
+        "live reader/cache activation",
+        "selected slot is not the hypothesized patch equation"
+      ],
+      "revision_history": {
+        "pc": 269,
+        "variant_hypothesis": 163,
+        "initial": {
+          "instruction": [
+            96,
+            141,
+            2,
+            17
+          ],
+          "equation": [
+            "V",
+            141,
+            2
+          ],
+          "matches_expected": true
+        },
+        "revisions": [
+          {
+            "step": 9,
+            "source_pc": 16,
+            "source_variant": 157,
+            "source_opcode": 57,
+            "state_words_before": [
+              83622480,
+              432882652
+            ],
+            "rewritten_range": [
+              19,
+              1149
+            ],
+            "writes": [
+              {
+                "array": "j",
+                "pc": 269,
+                "before": 96,
+                "after": 54
+              },
+              {
+                "array": "Z",
+                "pc": 269,
+                "before": 2,
+                "after": 122
+              },
+              {
+                "array": "B",
+                "pc": 269,
+                "before": 141,
+                "after": 130
+              },
+              {
+                "array": "O",
+                "pc": 269,
+                "before": 17,
+                "after": 74
+              }
+            ],
+            "instruction": [
+              54,
+              130,
+              122,
+              74
+            ],
+            "equation": null,
+            "matches_expected": false
+          }
+        ],
+        "final": {
+          "instruction": [
+            54,
+            130,
+            122,
+            74
+          ],
+          "equation": null,
+          "matches_expected": false
+        },
+        "observed_visits": [],
+        "scope": "complete watched slot changes on the guarded recorded prefix only; no future rewrite proof"
+      },
+      "version_diagnosis": "initial pattern invalidated on recorded prefix",
+      "final_same_reference_patch_sites": [],
+      "admissible_declared_model_count": 0,
+      "paths": [
+        {
+          "path": {
+            "path": [
+              269
+            ],
+            "status": "conditional_local_path",
+            "state_at_site": {
+              "input": "V"
+            },
+            "mutations": [],
+            "predicates": [],
+            "cutpoint_reason": "open_predecessor_frontier",
+            "normal_patch_completion_pcs": []
+          },
+          "finite_constraints": {
+            "state_count_before": 2048,
+            "state_count_after": 2048,
+            "conditional_unique_state": null,
+            "conditional_unique_key": null,
+            "unconditional_state": null,
+            "residual_predicates": [],
+            "status": "conditional_finite_domain",
+            "scope": "same snapshot/dispatcher and local arrival; exact integer arithmetic where evaluated",
+            "key_count": 256
+          }
+        }
+      ],
+      "boundary_constraints": [
+        {
+          "boundary_obligations": [
+            {
+              "name": "current equation identity",
+              "proved": false,
+              "scope": "this fixed rewritten slot under the selected dispatcher"
+            },
+            {
+              "name": "entry and code epoch at local cutpoint",
+              "proved": null,
+              "scope": "no complete entry-to-cutpoint frame/code/directory history is assumed"
+            }
+          ],
+          "rejected_boundaries": [
+            "current equation identity"
+          ],
+          "unknown_boundaries": [
+            "entry and code epoch at local cutpoint"
+          ],
+          "model_status": "refuted_declared_model",
+          "global_reachability_proved": false,
+          "unconditional_state": null,
+          "note": "rejection is scoped; algebraic candidates remain separate from runtime proof"
+        }
+      ]
+    },
+    {
+      "reference_id": 141,
+      "owner": 593,
+      "pc": 393,
+      "variant": 157,
+      "expected_equation": [
+        "y",
+        141,
+        121
+      ],
+      "actual_instruction": [
+        0,
+        254,
+        0,
+        32
+      ],
+      "equation_identity_verified": false,
+      "state_count": 2048,
+      "state_domain_scope": "necessary mixer-local candidates on enumerated conditional paths, not witnessed runtime states",
+      "path_cap_hit": false,
+      "scope": "fixed snapshot/dispatcher; unknown effects and rewrites remain barriers",
+      "all_incoming_edges_known": false,
+      "unconditional_state": null,
+      "promoted_keys": [],
+      "promotion_blockers": [
+        "entry reachability and rewrite history",
+        "live reader/cache activation",
+        "selected slot is not the hypothesized patch equation"
+      ],
+      "revision_history": {
+        "pc": 393,
+        "variant_hypothesis": 157,
+        "initial": {
+          "instruction": [
+            11,
+            141,
+            121,
+            38
+          ],
+          "equation": [
+            "y",
+            141,
+            121
+          ],
+          "matches_expected": true
+        },
+        "revisions": [
+          {
+            "step": 19,
+            "source_pc": 590,
+            "source_variant": 228,
+            "source_opcode": 197,
+            "state_words_before": [
+              2776742766,
+              3311049926
+            ],
+            "rewritten_range": [
+              208,
+              424
+            ],
+            "writes": [
+              {
+                "array": "j",
+                "pc": 393,
+                "before": 141,
+                "after": 254
+              },
+              {
+                "array": "Z",
+                "pc": 393,
+                "before": 121,
+                "after": 0
+              },
+              {
+                "array": "O",
+                "pc": 393,
+                "before": 11,
+                "after": 0
+              },
+              {
+                "array": "B",
+                "pc": 393,
+                "before": 38,
+                "after": 32
+              }
+            ],
+            "instruction": [
+              0,
+              254,
+              0,
+              32
+            ],
+            "equation": null,
+            "matches_expected": false
+          }
+        ],
+        "final": {
+          "instruction": [
+            0,
+            254,
+            0,
+            32
+          ],
+          "equation": null,
+          "matches_expected": false
+        },
+        "observed_visits": [],
+        "scope": "complete watched slot changes on the guarded recorded prefix only; no future rewrite proof"
+      },
+      "version_diagnosis": "initial pattern invalidated on recorded prefix",
+      "final_same_reference_patch_sites": [],
+      "admissible_declared_model_count": 0,
+      "paths": [
+        {
+          "path": {
+            "path": [
+              393
+            ],
+            "status": "conditional_local_path",
+            "state_at_site": {
+              "input": "y"
+            },
+            "mutations": [],
+            "predicates": [],
+            "cutpoint_reason": "open_predecessor_frontier",
+            "normal_patch_completion_pcs": []
+          },
+          "finite_constraints": {
+            "state_count_before": 2048,
+            "state_count_after": 2048,
+            "conditional_unique_state": null,
+            "conditional_unique_key": null,
+            "unconditional_state": null,
+            "residual_predicates": [],
+            "status": "conditional_finite_domain",
+            "scope": "same snapshot/dispatcher and local arrival; exact integer arithmetic where evaluated",
+            "key_count": 256
+          }
+        }
+      ],
+      "boundary_constraints": [
+        {
+          "boundary_obligations": [
+            {
+              "name": "current equation identity",
+              "proved": false,
+              "scope": "this fixed rewritten slot under the selected dispatcher"
+            },
+            {
+              "name": "entry and code epoch at local cutpoint",
+              "proved": null,
+              "scope": "no complete entry-to-cutpoint frame/code/directory history is assumed"
+            }
+          ],
+          "rejected_boundaries": [
+            "current equation identity"
+          ],
+          "unknown_boundaries": [
+            "entry and code epoch at local cutpoint"
+          ],
+          "model_status": "refuted_declared_model",
+          "global_reachability_proved": false,
+          "unconditional_state": null,
+          "note": "rejection is scoped; algebraic candidates remain separate from runtime proof"
+        }
+      ]
+    },
+    {
+      "reference_id": 702,
+      "owner": 379,
+      "pc": 686,
+      "variant": 228,
+      "expected_equation": [
+        "V",
+        702,
+        52
+      ],
+      "actual_instruction": [
+        2,
+        645,
+        40,
+        99
+      ],
+      "equation_identity_verified": false,
+      "state_count": 2048,
+      "state_domain_scope": "necessary mixer-local candidates on enumerated conditional paths, not witnessed runtime states",
+      "path_cap_hit": false,
+      "scope": "fixed snapshot/dispatcher; unknown effects and rewrites remain barriers",
+      "all_incoming_edges_known": false,
+      "unconditional_state": null,
+      "promoted_keys": [],
+      "promotion_blockers": [
+        "entry reachability and rewrite history",
+        "live reader/cache activation",
+        "selected slot is not the hypothesized patch equation"
+      ],
+      "revision_history": {
+        "pc": 686,
+        "variant_hypothesis": 228,
+        "initial": {
+          "instruction": [
+            125,
+            702,
+            52,
+            56
+          ],
+          "equation": [
+            "V",
+            702,
+            52
+          ],
+          "matches_expected": true
+        },
+        "revisions": [
+          {
+            "step": 7,
+            "source_pc": 2106,
+            "source_variant": 157,
+            "source_opcode": 33,
+            "state_words_before": [
+              1529380524,
+              3439263949
+            ],
+            "rewritten_range": [
+              1,
+              2088
+            ],
+            "writes": [
+              {
+                "array": "j",
+                "pc": 686,
+                "before": 702,
+                "after": 645
+              },
+              {
+                "array": "Z",
+                "pc": 686,
+                "before": 52,
+                "after": 40
+              },
+              {
+                "array": "B",
+                "pc": 686,
+                "before": 125,
+                "after": 2
+              },
+              {
+                "array": "O",
+                "pc": 686,
+                "before": 56,
+                "after": 99
+              }
+            ],
+            "instruction": [
+              2,
+              645,
+              40,
+              99
+            ],
+            "equation": null,
+            "matches_expected": false
+          }
+        ],
+        "final": {
+          "instruction": [
+            2,
+            645,
+            40,
+            99
+          ],
+          "equation": null,
+          "matches_expected": false
+        },
+        "observed_visits": [],
+        "scope": "complete watched slot changes on the guarded recorded prefix only; no future rewrite proof"
+      },
+      "version_diagnosis": "initial pattern invalidated on recorded prefix",
+      "final_same_reference_patch_sites": [],
+      "admissible_declared_model_count": 0,
+      "paths": [
+        {
+          "path": {
+            "path": [
+              686
+            ],
+            "status": "conditional_local_path",
+            "state_at_site": {
+              "input": "V"
+            },
+            "mutations": [],
+            "predicates": [],
+            "cutpoint_reason": "open_predecessor_frontier",
+            "normal_patch_completion_pcs": []
+          },
+          "finite_constraints": {
+            "state_count_before": 2048,
+            "state_count_after": 2048,
+            "conditional_unique_state": null,
+            "conditional_unique_key": null,
+            "unconditional_state": null,
+            "residual_predicates": [],
+            "status": "conditional_finite_domain",
+            "scope": "same snapshot/dispatcher and local arrival; exact integer arithmetic where evaluated",
+            "key_count": 256
+          }
+        }
+      ],
+      "boundary_constraints": [
+        {
+          "boundary_obligations": [
+            {
+              "name": "current equation identity",
+              "proved": false,
+              "scope": "this fixed rewritten slot under the selected dispatcher"
+            },
+            {
+              "name": "entry and code epoch at local cutpoint",
+              "proved": null,
+              "scope": "no complete entry-to-cutpoint frame/code/directory history is assumed"
+            }
+          ],
+          "rejected_boundaries": [
+            "current equation identity"
+          ],
+          "unknown_boundaries": [
+            "entry and code epoch at local cutpoint"
+          ],
+          "model_status": "refuted_declared_model",
+          "global_reachability_proved": false,
+          "unconditional_state": null,
+          "note": "rejection is scoped; algebraic candidates remain separate from runtime proof"
+        }
+      ]
+    }
+  ],
+  "scope_exits": [
+    {
+      "owner": 664,
+      "frontier_pc": 8398,
+      "frontier_instruction": [
+        228,
+        93,
+        0,
+        5,
+        2
+      ],
+      "capture_reads": [],
+      "reached_exit_instruction_boundaries": [],
+      "fused_call_boundary": {
+        "pc": 8398,
+        "opcode": 93,
+        "pre_call_copy": {
+          "destination": 2,
+          "source": 5
+        },
+        "callee_register": 2,
+        "callee_expression": {
+          "decoder_context_slot": 109
+        },
+        "argument_count": 2,
+        "argument_range_half_open": [
+          3,
+          5
+        ],
+        "requested_results": 1,
+        "result_range_half_open": [
+          2,
+          3
+        ],
+        "pack": "table.pack retains actual result count in n, including nil positions",
+        "move": "copy requested results1..I to t[T..T+I-1], pad missing values with nil",
+        "normal_return_pc": 8400,
+        "exception_or_nonreturn_pc": null,
+        "callee_invoked": false,
+        "effects": "unknown until callee and alias effects are proven"
+      },
+      "exit_reachability_complete": false,
+      "scope_exit_lifetime_verified": false,
+      "obligations": [
+        "actual frame activation",
+        "all dispatcher/code-version paths",
+        "normal/error/nonreturn outcomes",
+        "open-cell and span-close order",
+        "all escaping alias effects"
+      ],
+      "reviewed_exit_candidate_count": 70,
+      "reviewed_exit_candidates": [
+        {
+          "pc": 102,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 359,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 403,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 662,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 675,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 773,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 1442,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 1572,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 1639,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 1678,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 1821,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 1873,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 1924,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 1930,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 1975,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 2067,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 2143,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 2338,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 2402,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 2532,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 2944,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 2991,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 3352,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 3363,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 3428,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 3430,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 3488,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 3540,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 3547,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 3575,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 3701,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 3880,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 3992,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 4023,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 4143,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 4240,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 4300,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 4575,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 4647,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 4990,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 5331,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 5694,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 6167,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 6193,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 6275,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 6620,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 6658,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 6771,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 6796,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 6841,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 6850,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 6909,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 6928,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 7162,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 7418,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 7738,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 7745,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 7862,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 7992,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 7993,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 8193,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 8693,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 9114,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 9488,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 9586,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 9649,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 9701,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 9735,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 9756,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 9801,
+          "variant_guard": 228,
+          "opcode": 102
+        }
+      ]
+    },
+    {
+      "owner": 258,
+      "frontier_pc": 37,
+      "frontier_instruction": [
+        228,
+        97,
+        56,
+        5,
+        19
+      ],
+      "capture_reads": [],
+      "reached_exit_instruction_boundaries": [],
+      "fused_call_boundary": null,
+      "exit_reachability_complete": false,
+      "scope_exit_lifetime_verified": false,
+      "obligations": [
+        "actual frame activation",
+        "all dispatcher/code-version paths",
+        "normal/error/nonreturn outcomes",
+        "open-cell and span-close order",
+        "all escaping alias effects"
+      ],
+      "reviewed_exit_candidate_count": 0,
+      "reviewed_exit_candidates": []
+    },
+    {
+      "owner": 379,
+      "frontier_pc": 1852,
+      "frontier_instruction": [
+        228,
+        97,
+        56,
+        4,
+        19
+      ],
+      "capture_reads": [
+        {
+          "pc": 1849,
+          "ordinal": 2,
+          "destination": 15,
+          "value_dereferenced": false,
+          "guarded_root_binding": "frame:664:register:106",
+          "binding_scope": "recorded constructor context, not a value-at-invocation proof"
+        },
+        {
+          "pc": 1850,
+          "ordinal": 1,
+          "destination": 16,
+          "value_dereferenced": false,
+          "guarded_root_binding": "frame:664:register:107",
+          "binding_scope": "recorded constructor context, not a value-at-invocation proof"
+        }
+      ],
+      "reached_exit_instruction_boundaries": [],
+      "fused_call_boundary": null,
+      "exit_reachability_complete": false,
+      "scope_exit_lifetime_verified": false,
+      "obligations": [
+        "actual frame activation",
+        "all dispatcher/code-version paths",
+        "normal/error/nonreturn outcomes",
+        "open-cell and span-close order",
+        "all escaping alias effects"
+      ],
+      "reviewed_exit_candidate_count": 9,
+      "reviewed_exit_candidates": [
+        {
+          "pc": 514,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 1043,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 1124,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 1200,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 1269,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 1363,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 1386,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 1516,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 1997,
+          "variant_guard": 228,
+          "opcode": 99
+        }
+      ]
+    },
+    {
+      "owner": 567,
+      "frontier_pc": 24,
+      "frontier_instruction": [
+        163,
+        83,
+        3,
+        1,
+        3
+      ],
+      "capture_reads": [],
+      "reached_exit_instruction_boundaries": [],
+      "fused_call_boundary": null,
+      "exit_reachability_complete": false,
+      "scope_exit_lifetime_verified": false,
+      "obligations": [
+        "actual frame activation",
+        "all dispatcher/code-version paths",
+        "normal/error/nonreturn outcomes",
+        "open-cell and span-close order",
+        "all escaping alias effects"
+      ],
+      "reviewed_exit_candidate_count": 0,
+      "reviewed_exit_candidates": []
+    },
+    {
+      "owner": 663,
+      "frontier_pc": 546,
+      "frontier_instruction": [
+        228,
+        98,
+        6,
+        735,
+        8
+      ],
+      "capture_reads": [
+        {
+          "pc": 544,
+          "ordinal": 1,
+          "destination": 4,
+          "value_dereferenced": false,
+          "guarded_root_binding": "frame:664:register:159",
+          "binding_scope": "recorded constructor context, not a value-at-invocation proof"
+        }
+      ],
+      "reached_exit_instruction_boundaries": [],
+      "fused_call_boundary": null,
+      "exit_reachability_complete": false,
+      "scope_exit_lifetime_verified": false,
+      "obligations": [
+        "actual frame activation",
+        "all dispatcher/code-version paths",
+        "normal/error/nonreturn outcomes",
+        "open-cell and span-close order",
+        "all escaping alias effects"
+      ],
+      "reviewed_exit_candidate_count": 3,
+      "reviewed_exit_candidates": [
+        {
+          "pc": 47,
+          "variant_guard": 228,
+          "opcode": 102
+        },
+        {
+          "pc": 431,
+          "variant_guard": 228,
+          "opcode": 99
+        },
+        {
+          "pc": 536,
+          "variant_guard": 228,
+          "opcode": 102
+        }
+      ]
+    }
+  ],
+  "activation_conditions": [
+    {
+      "child": 567,
+      "slot_definition_evidence": [
+        {
+          "cell": "frame:664:register:107",
+          "last_direct_definition_step": 328
+        },
+        {
+          "cell": "frame:664:register:106",
+          "last_direct_definition_step": 327
+        }
+      ],
+      "activation": {
+        "reachable_call": null,
+        "callee_identity": null,
+        "arguments_valid": null,
+        "capture_cells_at_call": null,
+        "live_template_cache_identity": null,
+        "normal_constructor_continuation": null
+      },
+      "lifetime": {
+        "frame_slot_defined_before_capture": true,
+        "cell_creation_order_verified": null,
+        "all_alias_writes_covered": null,
+        "call_time_capture_values_accounted_for": null,
+        "close_or_rebind_paths_covered": null,
+        "storage_identity_at_call": null,
+        "escape_effects_covered": null
+      },
+      "tree": {
+        "unique_incoming_owner": null,
+        "complete_node_coverage": null,
+        "cycle_free_verified_edges": null
+      },
+      "gate": {
+        "eligible": false,
+        "missing_or_failed": [
+          "structural:child_header_verified",
+          "structural:control_flow_verified",
+          "structural:ancestry_unconditional",
+          "activation:reachable_call",
+          "activation:callee_identity",
+          "activation:arguments_valid",
+          "activation:capture_cells_at_call",
+          "activation:live_template_cache_identity",
+          "activation:normal_constructor_continuation",
+          "lifetime:cell_creation_order_verified",
+          "lifetime:all_alias_writes_covered",
+          "lifetime:call_time_capture_values_accounted_for",
+          "lifetime:close_or_rebind_paths_covered",
+          "lifetime:storage_identity_at_call",
+          "lifetime:escape_effects_covered",
+          "tree:unique_incoming_owner",
+          "tree:complete_node_coverage",
+          "tree:cycle_free_verified_edges"
+        ],
+        "rule": "all structural, activation, lifetime and global tree obligations require explicit True"
+      },
+      "quantified_stability_condition": "for every reachable alias path from capture to call, account for writes/close/rebind and preserve binding identity; derive call-time values instead of freezing the frontier",
+      "captured_values_must_be_immutable": false,
+      "activation_condition": "a reachable call resolves to this closure with its exact live template, arguments and captured cells",
+      "scope": "known construction facts only; no actual invocation inferred"
+    },
+    {
+      "child": 258,
+      "slot_definition_evidence": [
+        {
+          "cell": "frame:664:register:107",
+          "last_direct_definition_step": 328
+        },
+        {
+          "cell": "frame:664:register:106",
+          "last_direct_definition_step": 327
+        }
+      ],
+      "activation": {
+        "reachable_call": null,
+        "callee_identity": null,
+        "arguments_valid": null,
+        "capture_cells_at_call": null,
+        "live_template_cache_identity": null,
+        "normal_constructor_continuation": null
+      },
+      "lifetime": {
+        "frame_slot_defined_before_capture": true,
+        "cell_creation_order_verified": null,
+        "all_alias_writes_covered": null,
+        "call_time_capture_values_accounted_for": null,
+        "close_or_rebind_paths_covered": null,
+        "storage_identity_at_call": null,
+        "escape_effects_covered": null
+      },
+      "tree": {
+        "unique_incoming_owner": null,
+        "complete_node_coverage": null,
+        "cycle_free_verified_edges": null
+      },
+      "gate": {
+        "eligible": false,
+        "missing_or_failed": [
+          "structural:child_header_verified",
+          "structural:control_flow_verified",
+          "structural:ancestry_unconditional",
+          "activation:reachable_call",
+          "activation:callee_identity",
+          "activation:arguments_valid",
+          "activation:capture_cells_at_call",
+          "activation:live_template_cache_identity",
+          "activation:normal_constructor_continuation",
+          "lifetime:cell_creation_order_verified",
+          "lifetime:all_alias_writes_covered",
+          "lifetime:call_time_capture_values_accounted_for",
+          "lifetime:close_or_rebind_paths_covered",
+          "lifetime:storage_identity_at_call",
+          "lifetime:escape_effects_covered",
+          "tree:unique_incoming_owner",
+          "tree:complete_node_coverage",
+          "tree:cycle_free_verified_edges"
+        ],
+        "rule": "all structural, activation, lifetime and global tree obligations require explicit True"
+      },
+      "quantified_stability_condition": "for every reachable alias path from capture to call, account for writes/close/rebind and preserve binding identity; derive call-time values instead of freezing the frontier",
+      "captured_values_must_be_immutable": false,
+      "activation_condition": "a reachable call resolves to this closure with its exact live template, arguments and captured cells",
+      "scope": "known construction facts only; no actual invocation inferred"
+    },
+    {
+      "child": 379,
+      "slot_definition_evidence": [
+        {
+          "cell": "frame:664:register:107",
+          "last_direct_definition_step": 328
+        },
+        {
+          "cell": "frame:664:register:106",
+          "last_direct_definition_step": 327
+        },
+        {
+          "cell": "frame:664:register:103",
+          "last_direct_definition_step": 308
+        },
+        {
+          "cell": "frame:664:register:92",
+          "last_direct_definition_step": 262
+        },
+        {
+          "cell": "frame:664:register:104",
+          "last_direct_definition_step": 326
+        },
+        {
+          "cell": "frame:664:register:93",
+          "last_direct_definition_step": 309
+        }
+      ],
+      "activation": {
+        "reachable_call": null,
+        "callee_identity": null,
+        "arguments_valid": null,
+        "capture_cells_at_call": null,
+        "live_template_cache_identity": null,
+        "normal_constructor_continuation": null
+      },
+      "lifetime": {
+        "frame_slot_defined_before_capture": true,
+        "cell_creation_order_verified": null,
+        "all_alias_writes_covered": null,
+        "call_time_capture_values_accounted_for": null,
+        "close_or_rebind_paths_covered": null,
+        "storage_identity_at_call": null,
+        "escape_effects_covered": null
+      },
+      "tree": {
+        "unique_incoming_owner": null,
+        "complete_node_coverage": null,
+        "cycle_free_verified_edges": null
+      },
+      "gate": {
+        "eligible": false,
+        "missing_or_failed": [
+          "structural:child_header_verified",
+          "structural:control_flow_verified",
+          "structural:ancestry_unconditional",
+          "activation:reachable_call",
+          "activation:callee_identity",
+          "activation:arguments_valid",
+          "activation:capture_cells_at_call",
+          "activation:live_template_cache_identity",
+          "activation:normal_constructor_continuation",
+          "lifetime:cell_creation_order_verified",
+          "lifetime:all_alias_writes_covered",
+          "lifetime:call_time_capture_values_accounted_for",
+          "lifetime:close_or_rebind_paths_covered",
+          "lifetime:storage_identity_at_call",
+          "lifetime:escape_effects_covered",
+          "tree:unique_incoming_owner",
+          "tree:complete_node_coverage",
+          "tree:cycle_free_verified_edges"
+        ],
+        "rule": "all structural, activation, lifetime and global tree obligations require explicit True"
+      },
+      "quantified_stability_condition": "for every reachable alias path from capture to call, account for writes/close/rebind and preserve binding identity; derive call-time values instead of freezing the frontier",
+      "captured_values_must_be_immutable": false,
+      "activation_condition": "a reachable call resolves to this closure with its exact live template, arguments and captured cells",
+      "scope": "known construction facts only; no actual invocation inferred"
+    },
+    {
+      "child": 663,
+      "slot_definition_evidence": [
+        {
+          "cell": "frame:664:register:159",
+          "last_direct_definition_step": 357
+        },
+        {
+          "cell": "frame:664:register:105",
+          "last_direct_definition_step": 326
+        }
+      ],
+      "activation": {
+        "reachable_call": null,
+        "callee_identity": null,
+        "arguments_valid": null,
+        "capture_cells_at_call": null,
+        "live_template_cache_identity": null,
+        "normal_constructor_continuation": null
+      },
+      "lifetime": {
+        "frame_slot_defined_before_capture": true,
+        "cell_creation_order_verified": null,
+        "all_alias_writes_covered": null,
+        "call_time_capture_values_accounted_for": null,
+        "close_or_rebind_paths_covered": null,
+        "storage_identity_at_call": null,
+        "escape_effects_covered": null
+      },
+      "tree": {
+        "unique_incoming_owner": null,
+        "complete_node_coverage": null,
+        "cycle_free_verified_edges": null
+      },
+      "gate": {
+        "eligible": false,
+        "missing_or_failed": [
+          "structural:child_header_verified",
+          "structural:control_flow_verified",
+          "structural:ancestry_unconditional",
+          "activation:reachable_call",
+          "activation:callee_identity",
+          "activation:arguments_valid",
+          "activation:capture_cells_at_call",
+          "activation:live_template_cache_identity",
+          "activation:normal_constructor_continuation",
+          "lifetime:cell_creation_order_verified",
+          "lifetime:all_alias_writes_covered",
+          "lifetime:call_time_capture_values_accounted_for",
+          "lifetime:close_or_rebind_paths_covered",
+          "lifetime:storage_identity_at_call",
+          "lifetime:escape_effects_covered",
+          "tree:unique_incoming_owner",
+          "tree:complete_node_coverage",
+          "tree:cycle_free_verified_edges"
+        ],
+        "rule": "all structural, activation, lifetime and global tree obligations require explicit True"
+      },
+      "quantified_stability_condition": "for every reachable alias path from capture to call, account for writes/close/rebind and preserve binding identity; derive call-time values instead of freezing the frontier",
+      "captured_values_must_be_immutable": false,
+      "activation_condition": "a reachable call resolves to this closure with its exact live template, arguments and captured cells",
+      "scope": "known construction facts only; no actual invocation inferred"
+    }
+  ]
+}

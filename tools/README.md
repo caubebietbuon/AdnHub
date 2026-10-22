@@ -344,3 +344,15 @@ All five real domains remain2048 candidates; four sites lack current equation
 identity. Explicit activation/lifetime/tree gates reject promotion for the
 closure663 cluster. See research/schema-constraints-2026-10-22/FINDINGS.md and
 summary.json; generated output/phase22 remains ignored.
+
+## Phase 23: code/data boundaries and scope-exit contracts
+
+Run `python tools/boundary_auditor.py`. Optional watched-slot logging in
+prologue_analyzer/obligation_resolver anchors exact normalization revisions.
+All four mismatches are initial-version patterns overwritten on recorded
+prefixes; current-model boundary rejection is separated from algebraic keys.
+An opt-in source transfer models228/75 capture reads symbolically, extending
+663 to546 and379 to1852. Return99/tailcall102 are exit candidates, not lifetime
+witnesses. No state or hierarchy promotion. See
+research/boundary-audit-2026-10-22/FINDINGS.md and summary.json; full evidence
+is ignored under output/phase23. Earlier tool defaults remain unchanged.

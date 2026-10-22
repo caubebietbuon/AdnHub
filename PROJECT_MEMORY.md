@@ -617,3 +617,53 @@ commit offline; no push.
 Validation:195 Python tests passed (181 prior +14 Phase22), final full suite
 168.593s. Standalone Phase22 analysis, Lua entry-script syntax, Python module
 compilation and working/staged git diff checks pass. No runtime checks run.
+
+### Phase 23 — code-version boundaries and scope exits (2026-10-22)
+
+Base8b75233. tools/boundary_auditor.py orchestrates scoped constraints,
+slot_revisions (independent initial anchor + reverse/atomic-forward/final checks),
+exit_contract/exit_audit, and optional capture_transfer228/75. predicate_solver
+adds constrain_boundaries, separating algebraic candidates from declared-model
+applicability. prologue_analyzer.analyze adds optional watch_code_slots with
+per-field before/after logs; obligation_resolver threads watch maps and opt-in
+extra_source_transfer, exporting independent initial_watched_slots. Existing
+defaults remain unchanged. register_slicer recognizes228/75 capture ordinals.
+
+Four mismatches explained:402:83 initial(84,74,7,42) rewritten by210/op57 to
+(0,53,51,91);711:269 initial(96,141,2,17) by16/op57 to(54,130,122,74);
+593:393 initial(11,141,121,38) by590/op197 to(0,254,0,32);379:686 initial
+(125,702,52,56) by2106/op33 to(2,645,40,99). Initial equation patterns exist
+only before recorded normalization; no matching visit is observed, and no
+same-reference patch remains in final arrays across reviewed variants.
+These hypotheses are invalidated for the recorded normalized prefix, not
+relocated by guesswork or refuted in all future activations. Root981 becomes
+the actual matching tuple after six rewrites, last at9792/op197(step274).
+
+All five algebraic domains remain2048 states. Admissible counts under declared
+current models are0: root path fails patch978's unchanged-backing/exported-dir
+reader contract; four child sites fail current equation identity. This is not
+a solved key or global empty domain. Cutpoint/code/directory epochs and future
+rewrite histories remain unproved; no new mask/state/string is promoted.
+
+New source-pinned228/75 reads T=g[iW],r[HW]=T[6][T[5]] symbolically.663 reads
+capture1/root159 at544 into r4 and stops546/op98;379 reads capture2/root106 at
+1849 andcapture1/root107 at1850, stops1852/op97.567 stays24/163op83;258 stays
+37/228op97;root stays8398/228op93. Do not freeze root159's379 body value at
+actual child invocation. Reader success is still a guard, not activation.
+
+Reviewed228op99 constant-return and102 tail-call close open cells/spans before
+return/call evaluation. Potential exit sites are dispatcher/code-version guarded;
+no actual exit or complete scope coverage is proved. Close storage rebasing
+preserves aliases. All activation/lifetime/tree gates remain ineligible;
+verified_hierarchy=null; formal patchapplicable=false,operations=[].
+
+Run python tools/boundary_auditor.py. Ignored output/phase23/boundary-proofs.json;
+tracked compact evidence and findings in research/boundary-audit-2026-10-22/.
+New tests tools/test_phase23.py cover logging parity, independent anchors,
+tampered/missing history, boundary scopes, symbolic reads and exit contracts.
+No Lua/payload/factory/__index/application/network execution, input edits,
+Roblox runtime checks, demo/ESP changes or push. Commit locally after checks.
+Validation:207 Python tests passed (195 prior +12 Phase23), full suite204.112s.
+Latest12 tests reran successfully after strict watched-index validation,14.030s.
+Standalone Phase23, Lua entry-script syntax, Python module compilation and
+working/staged diff checks pass. No runtime verification was performed.

@@ -14,8 +14,30 @@ def mix(word):
 
 def analyze(streams, entry, first_word, second_word, budget=10000, numeric_constant=None, text_constant=None,
             symbolic_environment=False, branch_decisions=None, snapshot_pcs=(), symbolic_field_reads=False,
-            patch_observer=None, track_register_writes=False, closure_builder=None, source_transfer=None):
+            patch_observer=None, track_register_writes=False, closure_builder=None, source_transfer=None,
+            watch_code_slots=()):
     arrays = deepcopy(streams)
+    limit = min(len(values) for values in arrays.values())
+    requested_slots = tuple(watch_code_slots)
+    if any(type(slot) is not int or not 1<=slot<=limit for slot in requested_slots):
+        raise ValueError('Watched code slot outside arrays')
+    watched = set(requested_slots)
+    class WatchedSlots(list):
+        event = None
+        def __setitem__(self, index, value):
+            before = self[index]
+            super().__setitem__(index,value)
+            if index+1 in watched and before!=value and self.event is not None:
+                self.event.setdefault('code_slot_writes',[]).append({
+                    'array':self.name,'pc':index+1,'before':before,'after':value})
+        def __deepcopy__(self, memo):
+            # Exported arrays can be reused without retaining logging contexts.
+            return [deepcopy(value,memo) for value in self]
+    if watched:
+        for name,values in arrays.items():
+            array=WatchedSlots(values)
+            array.name=name
+            arrays[name]=array
     class Registers(dict):
         event = None
         def __setitem__(self, register, value):
@@ -27,7 +49,6 @@ def analyze(streams, entry, first_word, second_word, budget=10000, numeric_const
     pc = entry
     variant = 157
     branch_decisions = branch_decisions or {}
-    limit = min(len(values) for values in arrays.values())
     for _ in range(budget):
         if not 1 <= pc <= limit:
             return {"trace": trace, "patches": patches, "stop": "PC outside reviewed arrays", "pc": pc, "arrays": arrays, "heap": heap}
@@ -39,7 +60,9 @@ def analyze(streams, entry, first_word, second_word, budget=10000, numeric_const
         op, a, b, c = [arrays[k][ix] for k in names]
         event = {"pc": pc, "variant": variant, "opcode": op, "operand1": a, "H": b, "operand3": c}
         registers.event = event
-        if track_register_writes:
+        if watched:
+            for array in arrays.values(): array.event=event
+        if track_register_writes or watched:
             event["state_words_before"] = [first_word, second_word]
         if pc in snapshot_pcs:
             event["registers_before"] = dict(registers)

@@ -90,6 +90,30 @@ def constrain(path, operand):
             'scope':'same snapshot/dispatcher and local arrival; exact integer arithmetic where evaluated'}
 
 
+def constrain_boundaries(path, operand, obligations):
+    """Keep algebraic domains separate from applicability in a named model.
+
+    A failed code/data boundary rejects that conditional path/model, not every
+    future activation or the numerical key itself. Unknown boundaries never
+    select a word. The caller must supply explicit scoped proof observations.
+    """
+    local=constrain(path,operand)
+    failed,unknown=[],[]
+    for row in obligations:
+        value=row['proved']
+        if value is not None and type(value) is not bool: raise ValueError('Expected boolean or unknown boundary proof')
+        if not row.get('scope'): raise ValueError('Boundary scope required')
+        if value is False: failed.append(row['name'])
+        if value is None: unknown.append(row['name'])
+    return {'local':local,'boundary_obligations':obligations,
+            'rejected_boundaries':failed,'unknown_boundaries':unknown,
+            'admissible_in_declared_model':[] if failed else local['states'],
+            'model_status':'refuted_declared_model' if failed or not local['states'] else
+                           'conditional_model' if unknown else 'local_boundaries_satisfied',
+            'global_reachability_proved':False,'unconditional_state':None,
+            'note':'rejection is scoped; algebraic candidates remain separate from runtime proof'}
+
+
 def normal_successors(pc, inst, variant):
     op,a,b,c = inst
     if variant==228 and op==172: return sorted({pc+1,b+1})

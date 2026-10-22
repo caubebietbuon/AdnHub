@@ -33,7 +33,7 @@ FIELD_157 = "elseif xJ==108 then t[H[W]]=t[w[W]][i[W]];"
 ADD_163 = "else t[A[W]]=t[w[W]]+H[W];end;end;else if o<80 then"
 
 
-def source_transfer(variant, opcode, a, b, c, registers, event, constants=None):
+def source_transfer(variant, opcode, a, b, c, registers, event, constants=None, extra=None):
     """A context-table read is a symbolic alias, never a context function call."""
     if variant == 228 and opcode == 131:
         registers[a] = {"decoder_context_slot": b}
@@ -58,7 +58,7 @@ def source_transfer(variant, opcode, a, b, c, registers, event, constants=None):
         registers[c] = left + b
         event["exact_integer_addition"] = [left, b, left + b]
         return True
-    return False
+    return extra(variant,opcode,a,b,c,registers,event) if extra else False
 
 
 def patch_equation(event):
@@ -240,13 +240,15 @@ def local_ambiguity_certificate(backing, entries, reference):
             "utf8_or_readability_used_as_proof": False}
 
 
-def scan_candidate_entries(baseline, root_context, source, defs):
+def scan_candidate_entries(baseline, root_context, source, defs, watch_code_slots=None, extra_source_transfer=None):
     """Bounded hypothetical activations; no sibling state or actual call inferred."""
     results = []
     for function in baseline["functions"]:
         for candidate in function["candidates"]:
             if candidate["format"] != 0: continue
             arrays, words = symbolic_resolver.arrays_from_candidate(candidate)
+            initial_slots={str(pc):{name:values[pc-1] for name,values in arrays.items()}
+                           for pc in (watch_code_slots or {}).get(function['reference_id'],())}
             context = phase13.Constants(root_context.backing, root_context.entries)
             context.positions, context.effects = dict(root_context.positions), dict(root_context.effects)
             owner = function["reference_id"]
@@ -264,7 +266,8 @@ def scan_candidate_entries(baseline, root_context, source, defs):
                 budget=2000, numeric_constant=context.number, text_constant=context.text,
                 symbolic_environment=True, symbolic_field_reads=True, track_register_writes=True,
                 patch_observer=context.observe, closure_builder=closures.build,
-                source_transfer=partial(source_transfer, constants=context))
+                source_transfer=partial(source_transfer, constants=context, extra=extra_source_transfer),
+                watch_code_slots=(watch_code_slots or {}).get(owner,()))
             strings = []
             # analyze() retains attempted patches even if the observer rejects
             # their directory transition. Only accepted transitions are evidence.
@@ -290,10 +293,11 @@ def scan_candidate_entries(baseline, root_context, source, defs):
                 "patch_violations": context.violations, "header_confidence": candidate["verification"],
                 "guard": "hypothetical activation at root frontier with unknown arguments/captures; source/header/cache constraints pending",
                 "all_paths_explored": False})
+            if watch_code_slots: results[-1]['initial_watched_slots']=initial_slots
     return results
 
 
-def run(source_path, data_path, output, include_analysis_arrays=False):
+def run(source_path, data_path, output, include_analysis_arrays=False, watch_code_slots=None, extra_source_transfer=None):
     raw_source, data = analyzer.bounded_read(source_path), analyzer.bounded_read(data_path)
     if hashlib.sha256(raw_source).hexdigest() != analyzer.SOURCE_SHA or hashlib.sha256(data).hexdigest() != analyzer.DATA_SHA:
         raise ValueError("Unknown g/d snapshot")
@@ -317,13 +321,15 @@ def run(source_path, data_path, output, include_analysis_arrays=False):
     words = struct.unpack_from("<II", plain, initial_header(plain)["u32_words_offset"])
     root = analyze(streams, 9942, *words, numeric_constant=context.number, text_constant=context.text,
                    symbolic_environment=True, symbolic_field_reads=True, patch_observer=context.observe,
-                   track_register_writes=True, closure_builder=closures.build, source_transfer=partial(source_transfer, constants=context),
+                   track_register_writes=True, closure_builder=closures.build,
+                   source_transfer=partial(source_transfer, constants=context, extra=extra_source_transfer),
+                   watch_code_slots=(watch_code_slots or {}).get(664,()),
                    snapshot_pcs=tuple(range(8395, 8406)))
     audits, parent_traces = phase13.audit_ownership(
         {"candidate_capture_ownership": previous["previous_ownership_candidates"]}, baseline,
-        root, context, source, defs, source_transfer_factory=lambda ctx: partial(source_transfer, constants=ctx))
+        root, context, source, defs, source_transfer_factory=lambda ctx: partial(source_transfer, constants=ctx, extra=extra_source_transfer))
     updated_previous = {**previous, "ownership_audits": audits}
-    entries_analysis = scan_candidate_entries(baseline, context, source, defs)
+    entries_analysis = scan_candidate_entries(baseline, context, source, defs, watch_code_slots, extra_source_transfer)
     traces = [(entry["owner"], {**entry["state"], "patches": entry["path_local_patch_events"]})
               for entry in entries_analysis]
     mask_sites = phase13.string_constraints(baseline["functions"], root, traces)
@@ -364,6 +370,10 @@ def run(source_path, data_path, output, include_analysis_arrays=False):
     if include_analysis_arrays:
         report['analysis_arrays'] = {str(entry['owner']): entry['state']['arrays'] for entry in entries_analysis}
         report['analysis_arrays']['664'] = root['arrays']
+    if watch_code_slots:
+        report['initial_watched_slots']={str(entry['owner']):entry['initial_watched_slots'] for entry in entries_analysis}
+        report['initial_watched_slots']['664']={str(pc):{name:values[pc-1] for name,values in streams.items()}
+                                               for pc in watch_code_slots.get(664,())}
     report["still_without_trace_equation"] = [row["reference_id"] for row in masks if not row["new_guarded_trace_equations"]]
     last = root["trace"][-1]
     if last["variant"] == 228 and last["opcode"] == 93:

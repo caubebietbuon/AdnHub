@@ -87,6 +87,7 @@ class RegisterSlicer:
             if opcode == 17: return {"op": "decoder_context"}
             if opcode == 22: return {"op": "capture_cell_value", "ordinal": b}
         elif variant == 228:
+            if opcode == 75: return {'op':'capture_cell_value','ordinal':a}
             if opcode == 31: return copy(b)
             if opcode == 23: return copy(a if destination == c else b)
             if opcode == 139: return literal(c)
