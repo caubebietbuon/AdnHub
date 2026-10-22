@@ -1,5 +1,30 @@
 # AdnHub — project memory
 
+## Phase33 handover — 2026-10-23
+
+Baseline4a7ba56. New tools/epoch_mapper.py and tools/test_phase33.py. Run
+`python tools/epoch_mapper.py`; output/phase33/epoch-mapping.json is ignored.
+Tracked report:research/epoch-mapping-2026-10-23/{FINDINGS.md,summary.json}.
+Pinned4890 interval[7929,71878):1195 t[...] sites/36 expressions,952 stream,
+180 scalar,63 affine-window; eight source V/y assignment candidates. Lexical
+inventory is not a proof excluding hidden scalar/indirect transformations.
+Finite516 call162 argument mapping:r24..25 ->544:r31..32, offset+7, already
+present in SSA. Guarded explicit copy edges add no positive V@981 meeting.
+258 call131 uses immediate/lazy args ->callee20..21, not a register permutation.
+Affine mod2**width congruence/rotate-XOR fitters distinguish candidate fits from
+source evidence. No paired global root-V observations; global fits unproved.
+Payload mixer inverse:V=(masked XOR high) OR(high<<29),0<=high<8. It yields
+eight states per29-bit output, not a unique state or a register address map.
+RootV981 still unvisited; no default states/guessed aliases. All2048 candidates,
+19 global gates retained, verified_hierarchy null, promotion false/empty.
+No payload/Lua/factory/__index/application/network execution or demo/ESP edits.
+Verify full unittest discovery, Python compilation, Lua entry syntax and both
+working/staged git diff checks. Commit locally only; no push in this phase.
+Verification:378 tests (355 retained+23 new) passed in370.328s;131072 additional
+exhaustive four-bit affine cases passed. Fresh standalone report regeneration,
+Python compilation, both entry Lua syntax checks and working/staged diff checks
+passed. Roblox runtime checks were not run. Local commit only, no push.
+
 ## Phase32 handover — 2026-10-23
 
 Baseline ac10bc3. tools/constraint_inverter.py regenerates pinned Phase31 and

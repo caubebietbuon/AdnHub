@@ -487,3 +487,17 @@ distinct. V@981 remains unvisited: no positive meeting or numeric filter proved.
 All2048 candidates/19 gates remain; hierarchy null. Findings/summary:
 research/constraint-inversion-2026-10-23/. Full evidence:output/phase32 (ignored).
 Tests:test_phase32.py. Everything remains offline, static Python metadata.
+
+## Phase33: register/state epoch mapping
+
+Run `python tools/epoch_mapper.py`. It rebuilds Phase32 evidence and audits the
+pinned factory's register subscripts/state assignments. The source-checked
+finite call162 map516:r24..25 ->544:r31..32 has offset+7; existing SSA already
+contains these dependencies. Adding explicit guarded copy edges establishes no
+new V@981 meeting. The payload mask mixer's exact inverse has8 uint32 states
+per29-bit output; it is not a register permutation or a unique V definition.
+Exact affine-congruence and bounded rotate/XOR fitters produce hypotheses,
+never source proofs or guessed aliases. All2048 candidates/19 gates remain,
+hierarchy null. Findings/summary:research/epoch-mapping-2026-10-23/.
+Full regenerated evidence:ignored output/phase33. Tests:test_phase33.py.
+No target or network execution; demo/ESP unchanged.

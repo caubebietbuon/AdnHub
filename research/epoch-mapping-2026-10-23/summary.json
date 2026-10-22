@@ -1,0 +1,659 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "factory_audit": {
+    "factory_interval": [
+      7929,
+      71878
+    ],
+    "anchors": [
+      {
+        "text": "[4890]=function(x,W,W,b,h,w,j,O,o,S,S,A,B,B,H,i,Z,R)",
+        "offset": 7929
+      },
+      {
+        "text": "local V,m,k=W[1];local y,t=W[2],D(h);",
+        "offset": 8297
+      },
+      {
+        "text": "x[34],x[88],x[66],x[18],x[90]",
+        "offset": 8025
+      },
+      {
+        "text": "local D,e,P,K,X,v,Y,_,J,M,r,L,F,G,p,C,u,f,n=R,N,z,E,Q,I,T,l,a,U,q,s,c,d,V,m,k,y,t;",
+        "offset": 8161
+      },
+      {
+        "text": "[18]=table.move,",
+        "offset": 429381
+      },
+      {
+        "text": "[34]=table.create,",
+        "offset": 240237
+      },
+      {
+        "text": "[20]=bit32.bxor,",
+        "offset": 233470
+      },
+      {
+        "text": "if xJ~=74 then T,d={...},w[W];K(T,1,i[W],d,t);",
+        "offset": 12877
+      },
+      {
+        "text": "T,d,I=A[W+1],H[W+1],i[W+1];m,R,Q=T+I-1,T+d,e(t[T](P(t,T+1,T+d)));K(Q,1,I,T,t);",
+        "offset": 50011
+      },
+      {
+        "text": "Y(_(V,(Y(v(V,29),7))),536870911)",
+        "offset": 10996
+      }
+    ],
+    "index_expressions": {
+      "T": 79,
+      "T+1": 46,
+      "WJ": 5,
+      "H[W]": 325,
+      "i[W]": 165,
+      "w[W]": 204,
+      "T+2": 15,
+      "R": 7,
+      "H[WJ]": 1,
+      "bJ": 4,
+      "SJ": 1,
+      "m": 3,
+      "I+T-1": 1,
+      "f": 40,
+      "A[W]": 229,
+      "S": 9,
+      "w[S]": 1,
+      "H[S]": 1,
+      "xJ": 7,
+      "OJ": 2,
+      "i[W+1]": 2,
+      "H[W+3]": 2,
+      "A[f]": 5,
+      "i[f]": 4,
+      "H[f]": 5,
+      "A[W+1]": 3,
+      "H[W+1]": 2,
+      "H[W+2]": 1,
+      "A[W+3]": 1,
+      "A[W+4]": 1,
+      "o": 3,
+      "I": 1,
+      "j": 8,
+      "z": 1,
+      "T+3": 1,
+      "x": 10
+    },
+    "index_categories": {
+      "scalar_index": 180,
+      "affine_window_index": 63,
+      "stream_index": 952
+    },
+    "state_assignment_candidates": [
+      {
+        "word": "V",
+        "offset": 13649,
+        "text": "V=t[i[W]];",
+        "scope": "lexical source assignment candidate; path/epoch arrival unproved"
+      },
+      {
+        "word": "y",
+        "offset": 15800,
+        "text": "y=t[H[W]];",
+        "scope": "lexical source assignment candidate; path/epoch arrival unproved"
+      },
+      {
+        "word": "V",
+        "offset": 23856,
+        "text": "V=t[w[W]];",
+        "scope": "lexical source assignment candidate; path/epoch arrival unproved"
+      },
+      {
+        "word": "y",
+        "offset": 37099,
+        "text": "y=t[H[W]];",
+        "scope": "lexical source assignment candidate; path/epoch arrival unproved"
+      },
+      {
+        "word": "y",
+        "offset": 39592,
+        "text": "y=t[H[W]];",
+        "scope": "lexical source assignment candidate; path/epoch arrival unproved"
+      },
+      {
+        "word": "V",
+        "offset": 48180,
+        "text": "V=t[i[W]];",
+        "scope": "lexical source assignment candidate; path/epoch arrival unproved"
+      },
+      {
+        "word": "y",
+        "offset": 66262,
+        "text": "y=t[w[W]];",
+        "scope": "lexical source assignment candidate; path/epoch arrival unproved"
+      },
+      {
+        "word": "V",
+        "offset": 68155,
+        "text": "V=t[A[W]];",
+        "scope": "lexical source assignment candidate; path/epoch arrival unproved"
+      }
+    ],
+    "header_rule": {
+      "V": "W[1]",
+      "y": "W[2]",
+      "register_table": "table.create(h)"
+    },
+    "mask_mixer": {
+      "expression": "(V XOR ((V >> 29) AND 7)) AND 0x1fffffff",
+      "space": "payload key material, not register address",
+      "injective_on_uint32": false,
+      "preimages_per_29bit_output": 8,
+      "inverse_family": "V = (masked XOR high) OR (high << 29), 0<=high<8; masked is 29-bit"
+    },
+    "global_register_permutation_proved": false,
+    "limitations": "syntactic pinned-factory subscript inventory, not a complete semantic alias or indirect-call proof"
+  },
+  "controlled_intersections": [
+    {
+      "owner": 544,
+      "windows": [
+        {
+          "source_interval": [
+            24,
+            26
+          ],
+          "target_interval": [
+            31,
+            33
+          ],
+          "offset": 7,
+          "pairs": [
+            [
+              24,
+              31
+            ],
+            [
+              25,
+              32
+            ]
+          ],
+          "symbolic_proof": "r=source_start+k; q=target_start+k; q=r+(target_start-source_start), 0<=k<count",
+          "scope": "argument slots in one source-checked call, not global register identities",
+          "caller": 516,
+          "callee": 544,
+          "call_pc": 162,
+          "bindings": [
+            {
+              "from": "frame516:r24@161:23:0",
+              "to": "frame544:r31@49:0:0"
+            },
+            {
+              "from": "frame516:r25@159:21:0",
+              "to": "frame544:r32@49:0:1"
+            }
+          ],
+          "proof": "pinned source93 argument window and source157/73 parameter move",
+          "sample_model_checks": {
+            "affine_uint32": {
+              "status": "UNIQUE_FIT",
+              "coefficient_residue": 1,
+              "coefficient_period": 4294967296,
+              "coefficient_count": 1,
+              "offset_expression": {
+                "op": "mod",
+                "args": [
+                  {
+                    "op": "subtract",
+                    "args": [
+                      31,
+                      {
+                        "op": "multiply",
+                        "args": [
+                          "a",
+                          24
+                        ]
+                      }
+                    ]
+                  },
+                  4294967296
+                ]
+              },
+              "offset_for_residue": 7,
+              "symbolic_rule": "target = (a * source + b) mod 2**width",
+              "source_transfer_proved": false
+            },
+            "rotate_xor_uint32": {
+              "status": "INCONSISTENT",
+              "models": [],
+              "source_transfer_proved": false,
+              "symbolic_rule": "target = rotate_left(source,s,width) XOR k"
+            }
+          },
+          "already_represented_as_data_edges": true
+        }
+      ],
+      "queries": [
+        {
+          "sink": "frame544:capture1.table-write@17:34",
+          "before": {
+            "source": "516:call162:0:path0:root664:V@981:unvisited",
+            "sink": "516:call162:0:path0:frame544:capture1.table-write@17:34",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "516:call162:0:path0:root664:V@981:unvisited"
+            ],
+            "backward_nodes": [
+              "516:call162:0:path0:cell:frame:664:register:160",
+              "516:call162:0:path0:constant:16",
+              "516:call162:0:path0:constant:28",
+              "516:call162:0:path0:frame516:r24@161:23:0",
+              "516:call162:0:path0:frame544:capture1",
+              "516:call162:0:path0:frame544:capture1.table-write@17:34",
+              "516:call162:0:path0:frame544:r31@49:0:0"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          },
+          "after": {
+            "source": "516:call162:0:path0:root664:V@981:unvisited",
+            "sink": "516:call162:0:path0:frame544:capture1.table-write@17:34",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "516:call162:0:path0:root664:V@981:unvisited"
+            ],
+            "backward_nodes": [
+              "516:call162:0:path0:cell:frame:664:register:160",
+              "516:call162:0:path0:constant:16",
+              "516:call162:0:path0:constant:28",
+              "516:call162:0:path0:frame516:r24@161:23:0",
+              "516:call162:0:path0:frame544:capture1",
+              "516:call162:0:path0:frame544:capture1.table-write@17:34",
+              "516:call162:0:path0:frame544:r31@49:0:0"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          }
+        },
+        {
+          "sink": "frame544:capture1.table-write@19:36",
+          "before": {
+            "source": "516:call162:0:path0:root664:V@981:unvisited",
+            "sink": "516:call162:0:path0:frame544:capture1.table-write@19:36",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "516:call162:0:path0:root664:V@981:unvisited"
+            ],
+            "backward_nodes": [
+              "516:call162:0:path0:cell:frame:664:register:160",
+              "516:call162:0:path0:constant:16",
+              "516:call162:0:path0:constant:28",
+              "516:call162:0:path0:frame516:r24@161:23:0",
+              "516:call162:0:path0:frame544:capture1",
+              "516:call162:0:path0:frame544:capture1.table-write@17:34",
+              "516:call162:0:path0:frame544:capture1.table-write@19:36",
+              "516:call162:0:path0:frame544:initial-nil:r18",
+              "516:call162:0:path0:frame544:r31@49:0:0"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          },
+          "after": {
+            "source": "516:call162:0:path0:root664:V@981:unvisited",
+            "sink": "516:call162:0:path0:frame544:capture1.table-write@19:36",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "516:call162:0:path0:root664:V@981:unvisited"
+            ],
+            "backward_nodes": [
+              "516:call162:0:path0:cell:frame:664:register:160",
+              "516:call162:0:path0:constant:16",
+              "516:call162:0:path0:constant:28",
+              "516:call162:0:path0:frame516:r24@161:23:0",
+              "516:call162:0:path0:frame544:capture1",
+              "516:call162:0:path0:frame544:capture1.table-write@17:34",
+              "516:call162:0:path0:frame544:capture1.table-write@19:36",
+              "516:call162:0:path0:frame544:initial-nil:r18",
+              "516:call162:0:path0:frame544:r31@49:0:0"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          }
+        },
+        {
+          "sink": "frame544:return@44",
+          "before": {
+            "source": "516:call162:0:path0:root664:V@981:unvisited",
+            "sink": "516:call162:0:path0:frame544:return@44",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "516:call162:0:path0:root664:V@981:unvisited"
+            ],
+            "backward_nodes": [
+              "516:call162:0:path0:cell:frame:664:register:160",
+              "516:call162:0:path0:constant:16",
+              "516:call162:0:path0:constant:28",
+              "516:call162:0:path0:frame516:r21@116:0:1",
+              "516:call162:0:path0:frame516:r24@161:23:0",
+              "516:call162:0:path0:frame516:r25@159:21:0",
+              "516:call162:0:path0:frame544:capture1",
+              "516:call162:0:path0:frame544:capture1.table-write@17:34",
+              "516:call162:0:path0:frame544:r2@18:35:0",
+              "516:call162:0:path0:frame544:r31@21:38:0",
+              "516:call162:0:path0:frame544:r31@49:0:0",
+              "516:call162:0:path0:frame544:r32@49:0:1",
+              "516:call162:0:path0:frame544:return@44",
+              "516:call162:0:path0:root664.r74@8521"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          },
+          "after": {
+            "source": "516:call162:0:path0:root664:V@981:unvisited",
+            "sink": "516:call162:0:path0:frame544:return@44",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "516:call162:0:path0:root664:V@981:unvisited"
+            ],
+            "backward_nodes": [
+              "516:call162:0:path0:cell:frame:664:register:160",
+              "516:call162:0:path0:constant:16",
+              "516:call162:0:path0:constant:28",
+              "516:call162:0:path0:frame516:r21@116:0:1",
+              "516:call162:0:path0:frame516:r24@161:23:0",
+              "516:call162:0:path0:frame516:r25@159:21:0",
+              "516:call162:0:path0:frame544:capture1",
+              "516:call162:0:path0:frame544:capture1.table-write@17:34",
+              "516:call162:0:path0:frame544:r2@18:35:0",
+              "516:call162:0:path0:frame544:r31@21:38:0",
+              "516:call162:0:path0:frame544:r31@49:0:0",
+              "516:call162:0:path0:frame544:r32@49:0:1",
+              "516:call162:0:path0:frame544:return@44",
+              "516:call162:0:path0:root664.r74@8521"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          }
+        }
+      ],
+      "translation_edges_added": [
+        {
+          "source": "516:call162:0:path0:frame516:r24@161:23:0",
+          "target": "516:call162:0:path0:frame544:r31@49:0:0",
+          "kind": "copy",
+          "predicate": {
+            "atom": "reviewed-call162-native-move-parameter-frame"
+          }
+        },
+        {
+          "source": "516:call162:0:path0:frame516:r25@159:21:0",
+          "target": "516:call162:0:path0:frame544:r32@49:0:1",
+          "kind": "copy",
+          "predicate": {
+            "atom": "reviewed-call162-native-move-parameter-frame"
+          }
+        }
+      ],
+      "positive_bridge_proved": false
+    },
+    {
+      "owner": 258,
+      "windows": [
+        {
+          "callee": 258,
+          "call_pc": 131,
+          "target_interval": [
+            20,
+            22
+          ],
+          "rule": "immediate lazy arguments to local parameters; no parent register permutation inferred"
+        }
+      ],
+      "queries": [
+        {
+          "sink": "frame258:type-error@71",
+          "before": {
+            "source": "516:call131:1:path0:root664:V@981:unvisited",
+            "sink": "516:call131:1:path0:frame258:type-error@71",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "516:call131:1:path0:root664:V@981:unvisited"
+            ],
+            "backward_nodes": [
+              "516:call131:1:path0:constant:3",
+              "516:call131:1:path0:constant:45",
+              "516:call131:1:path0:frame258:r1@115:37:1",
+              "516:call131:1:path0:frame258:r21@105:0:1",
+              "516:call131:1:path0:frame258:r2@113:36:1",
+              "516:call131:1:path0:frame258:r4@115:37:0",
+              "516:call131:1:path0:frame258:r4@39:13:0",
+              "516:call131:1:path0:frame258:type-error@71"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          },
+          "after": {
+            "source": "516:call131:1:path0:root664:V@981:unvisited",
+            "sink": "516:call131:1:path0:frame258:type-error@71",
+            "meetings": [],
+            "status": "no_meeting_in_recorded_graph",
+            "forward_nodes": [
+              "516:call131:1:path0:root664:V@981:unvisited"
+            ],
+            "backward_nodes": [
+              "516:call131:1:path0:constant:3",
+              "516:call131:1:path0:constant:45",
+              "516:call131:1:path0:frame258:r1@115:37:1",
+              "516:call131:1:path0:frame258:r21@105:0:1",
+              "516:call131:1:path0:frame258:r2@113:36:1",
+              "516:call131:1:path0:frame258:r4@115:37:0",
+              "516:call131:1:path0:frame258:r4@39:13:0",
+              "516:call131:1:path0:frame258:type-error@71"
+            ],
+            "budget_exhausted": false,
+            "global_absence_proved": false,
+            "positive_bridge_proved": false
+          }
+        }
+      ],
+      "translation_edges_added": [],
+      "positive_bridge_proved": false
+    }
+  ],
+  "global_translation_hypotheses": {
+    "affine": {
+      "status": "UNDERCONSTRAINED",
+      "source_transfer_proved": false
+    },
+    "rotate_xor": {
+      "status": "UNDERCONSTRAINED",
+      "models": [],
+      "source_transfer_proved": false
+    },
+    "reason": "no source-proved paired root-V/register observations across these epochs"
+  },
+  "global_gate_matrix": [
+    {
+      "gate": "activation:arguments_valid/incoming_arity_and_values",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "incoming-argument-values"
+      ]
+    },
+    {
+      "gate": "activation:arguments_valid/incoming_type_predicates",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "incoming-argument-values",
+        "incoming-type-proof"
+      ]
+    },
+    {
+      "gate": "activation:callee_identity/call_time_callee_value",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "call-target-identity"
+      ]
+    },
+    {
+      "gate": "activation:capture_cells_at_call/call_time_storage_and_values",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "capture-reaching-definitions"
+      ]
+    },
+    {
+      "gate": "activation:live_template_cache_identity/live_shared_cache_identity",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "live-template-identity",
+        "complete-cache-effects"
+      ]
+    },
+    {
+      "gate": "activation:normal_constructor_continuation/plain_context_binding",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "live-context-identity"
+      ]
+    },
+    {
+      "gate": "activation:reachable_call/incoming_call_witness",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "call-target-identity"
+      ]
+    },
+    {
+      "gate": "activation:reachable_call/incoming_path_predicates",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "entry-control-predicates"
+      ]
+    },
+    {
+      "gate": "lifetime:all_alias_writes_covered/escaping_and_future_alias_writes",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-alias-effects",
+        "complete-path-coverage"
+      ]
+    },
+    {
+      "gate": "lifetime:call_time_capture_values_accounted_for/all_reaching_call_definitions",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "capture-reaching-definitions",
+        "complete-path-coverage"
+      ]
+    },
+    {
+      "gate": "lifetime:close_or_rebind_paths_covered/all_exit_reachability",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-path-coverage",
+        "exit-outcome-proof"
+      ]
+    },
+    {
+      "gate": "lifetime:escape_effects_covered/all_call_outcomes",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-path-coverage",
+        "callee-results-and-effects"
+      ]
+    },
+    {
+      "gate": "lifetime:storage_identity_at_call/close_rebase_at_call",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "all-close-rebind-effects"
+      ]
+    },
+    {
+      "gate": "structural:ancestry_unconditional/all_lexical_owners",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-owner-inventory",
+        "unique-owner-proof"
+      ]
+    },
+    {
+      "gate": "structural:child_header_verified/template_at_invocation",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "live-template-identity"
+      ]
+    },
+    {
+      "gate": "structural:control_flow_verified/entry_call_path",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "actual663-invocation",
+        "entry-control-predicates"
+      ]
+    },
+    {
+      "gate": "tree:complete_node_coverage/full_reachable_inventory",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-owner-inventory",
+        "complete-path-coverage"
+      ]
+    },
+    {
+      "gate": "tree:cycle_free_verified_edges/all_verified_edges_complete",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-owner-inventory",
+        "complete-path-coverage",
+        "verified-edge-inventory"
+      ]
+    },
+    {
+      "gate": "tree:unique_incoming_owner/all_owners_excluded",
+      "status": "UNDERCONSTRAINED",
+      "unproved_requirements": [
+        "complete-owner-inventory",
+        "unique-owner-proof"
+      ]
+    }
+  ],
+  "numeric_filters_admitted": [],
+  "verified_hierarchy": null,
+  "formal_promotion_patch": {
+    "applicable": false,
+    "operations": []
+  },
+  "positive_bridge_proved": false,
+  "network_requests": 0,
+  "factory_invocations": 0,
+  "application_calls_executed": 0,
+  "baseline": "4a7ba56",
+  "candidate_count": 2048
+}
