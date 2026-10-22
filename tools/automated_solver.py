@@ -72,7 +72,7 @@ def activation_queries(paths,target=663):
     return rows
 
 
-def run(source,data,output,matrix=None):
+def run(source,data,output,matrix=None,boundary_observer=None):
     target=output/'automated-analysis.json'
     matrix=matrix or Path('research/provenance-bridge-2026-10-22/SUBGATE_MATRIX.md')
     protected={p.resolve() for p in (source,data,matrix)}
@@ -102,7 +102,8 @@ def run(source,data,output,matrix=None):
         for row in continuation['trace']:
             premises += [f'{condition}:at:{row["pc"]}' for condition in row['conditions']]
         paths=explore(evidence['analysis_arrays']['664'],continuation['frontier_pc'],registers,metadata,
-                      captured=captured,initial_conditions=[{'kind':'atom','name':s,'truth':True} for s in dict.fromkeys(premises)])
+                      captured=captured,initial_conditions=[{'kind':'atom','name':s,'truth':True} for s in dict.fromkeys(premises)],
+                      boundary_observer=boundary_observer)
     template=evidence['guarded_template_evidence'][663]
     candidate=next(row for row in evidence['candidate_entry_analyses'] if row['owner']==663)
     queries=gate_queries(prior,{'header-bytes-agree':template['header']['plain_sha256']==candidate['candidate_plain_sha256'],

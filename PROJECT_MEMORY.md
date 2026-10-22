@@ -896,3 +896,53 @@ complete live context/cache/alias coverage.20 focused tests passed; full suite
 Lua syntax, Python compilation and working/staged diff checks pass. No payload/
 LuaVM/factory/__index/application/network execution, package installs, input
 edits, Roblox runtime checks, demo/ESP changes or push. Commit locally after checks.
+
+## Phase29: body516 interprocedural invariants (2026-10-22)
+
+Baseline b2cf133. tools/interprocedural_solver.py rebuilds the pinned Phase28
+caller and receives an isolated boundary snapshot through a new optional
+boundary_observer argument in automated_explorer.explore/automated_solver.run.
+The observer sees copied registers/heap/arrays/conditions and forked metadata;
+default explorer/report behavior is unchanged. No old output is trusted as proof.
+tests:tools/test_phase29.py. tools/README.md maps invocation; tracked findings
+and compact summary:research/interprocedural-solving-2026-10-22/. Full regenerated
+evidence:ignored output/phase29/interprocedural-analysis.json (plus caller/).
+
+At root8521, cached516 key111/desc579 header SHA531a23e3614d3da4a980f269f833faf0
+893bea623de8fd4dc4d53bafd5ca8156; entry116; its own V/y4177667352/1242051610.
+Call arguments:reference112 effective int32 at127107=162944256 and symbolic
+global.Instance (root74). Entry157/73 places them in516 r20/r21. Call-time capture
+projection:1=root111 complement table,2=root109/closure258,3=root95/474124151,
+4=root110/closure137,5=root54/closure544. Activation/plain-context/cache/cell
+conditions stay explicit; this is neither immutable storage nor lexical proof.
+
+Private root111 table at8357/8359 resolves reference111=false/reference16=true,
+giving{[false]=true,[true]=false}. Exact516 PC47not/48capture-table-read reduces
+PC49 to LuaTruth(argument2). Zero/empty string are truthy; bool true != numeric1
+as table keys. Repeated symbolic test172 reuses the same predicate, eliminating
+the incompatible extra fork. No global.Instance value is assumed or fetched.
+Truthy branch reaches162/22893 ->544("table",symbolic type(Instance)); source
+slot25=type is modeled conditionally as a pure symbolic transfer, not invoked.
+False/nil branch reaches131/22816 first fused call ->258(520442978,4), refs8/45.
+All post-call results, fused capture writes/reads, continuation and hidden effects
+are deferred. Two scoped DPLL candidate queries refute these first calls as663;
+this does not exclude later/nested/future663 activation.
+
+Capture1/2/5 are read before opaque calls; capture3/root95 is not. Callee state
+words stay unchanged on these reviewed prefixes. They are not caller V@981.
+Four scoped invariants have no proved same-activation/reaching-definition/value-
+flow/complete-effects bridge. propagate() admits zero new numeric filters;
+2048/2048 candidates retained. Fresh DPLL queries retain all19 global gates as
+UNDERCONSTRAINED. Local facts are namespaced and cannot overwrite global663
+activation obligations. verified_hierarchy=null; promotion patchfalse/empty.
+No progress counter is reduced simply because a new constant was decoded.
+
+Next:review body544/body258 outcomes, their capture/alias effects and subsequent
+caller path, then establish a V@981 reaching definition. Complete663 invocation,
+context/cache identity, close/rebind, alias and exit coverage remain unproved.
+16 new focused tests pass. Full regression:296 tests passed in353.963s (280
+prior +16 new). After final observer isolation hardening, all36 affected
+Phase28/29 tests passed again in44.389s. Standalone regenerated analysis, Python
+compilation, Lua entry syntax and working/staged diff checks pass.
+No payload/LuaVM/factory/__index/application/network
+execution, installs, input edits, Roblox runtime tests, demo/ESP edits or push.

@@ -112,7 +112,7 @@ def state_key(state):
                        state['arrays']],sort_keys=True,separators=(',',':'))
 
 
-def explore(arrays,entry,registers,metadata,captured=(),max_steps=128,max_paths=16,initial_conditions=()):
+def explore(arrays,entry,registers,metadata,captured=(),max_steps=128,max_paths=16,initial_conditions=(),boundary_observer=None):
     """Automatic forks + reduction, with closed-world claims explicitly blocked.
 
     Unknown ordered comparisons use fresh opaque atoms unless the value is a
@@ -127,6 +127,12 @@ def explore(arrays,entry,registers,metadata,captured=(),max_steps=128,max_paths=
     queue=deque([start]); terminals=[]; pruned=[]; seen=set(); explored=0; dropped_work=0
     state_budget=min(max_steps*max_paths,512)
     def finish(state,reason):
+        if boundary_observer is not None:
+            snapshot=deepcopy({k:v for k,v in state.items() if k!='metadata'})
+            # Callbacks get full isolation, including the directory/definition
+            # containers treated as immutable by internal path-local forks.
+            snapshot['metadata']=deepcopy(state['metadata'])
+            boundary_observer(snapshot,reason)
         terminals.append({k:deepcopy(state[k]) for k in ('pc','conditions','trace','registers','effects_epoch')}|
                          {'reason':reason,'actual_activation_proved':False})
     while queue and len(terminals)<max_paths and explored<state_budget:

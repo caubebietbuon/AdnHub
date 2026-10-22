@@ -422,3 +422,18 @@ No native SMT package is required or installed; no factory/body runs. See
 research/automated-solving-2026-10-22/{FINDINGS.md,GATE_QUERIES.md,summary.json,
 constraints.smt2}. Full output stays ignored under output/phase28. Older tools
 and promotion rules remain unchanged.
+
+## Phase 29: interprocedural invariants at root PC8521
+
+Run `python tools/interprocedural_solver.py`. A new optional isolated boundary
+observer in automated_explorer/automated_solver supplies the current private
+templates, registers and heap. interprocedural_solver.py resolves effective
+primitive keys, call-time capture projections and argument flow; symbolically
+reduces body516's Boolean complement table and repeats truth facts consistently.
+It follows both outcomes to opaque calls544@162 and258@131, retaining source
+builtin/cache/cell/activation conditions and deferring fused effects after calls.
+No function is invoked. Numeric filters require an explicit same-activation,
+reaching-definition, value-flow and complete-effects certificate to caller V@981.
+Actual result:2048 models retained,19 global gates underconstrained, no hierarchy
+promotion. See research/interprocedural-solving-2026-10-22/{FINDINGS.md,summary.json};
+full regenerated evidence stays in ignored output/phase29. Tests:test_phase29.py.

@@ -1,0 +1,289 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "invariants": [
+    {
+      "name": "body516.argument1",
+      "value": 162944256,
+      "target": "callee516.argument1"
+    },
+    {
+      "name": "body516.capture3",
+      "value": 474124151,
+      "target": "callee516.capture3"
+    },
+    {
+      "name": "body516.boolean-table",
+      "target": "callee516.capture1",
+      "relation": "capture1[not argument2] = Lua truthiness(argument2)"
+    },
+    {
+      "name": "body516.frame-state",
+      "target": "callee516.V,y",
+      "values": [
+        4177667352,
+        1242051610
+      ],
+      "scope": "initialization through first opaque call only; distinct lexical frame from caller V"
+    }
+  ],
+  "guarded_call_queries": [
+    {
+      "gate": "body516.pc162.activates663",
+      "status": "REFUTED_CERTIFICATE",
+      "requirements": [
+        "callee-is663"
+      ],
+      "known_facts": {
+        "callee-is663": false
+      },
+      "positive_query": {
+        "status": "UNSAT",
+        "model": null,
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "2": false,
+          "1": false
+        },
+        "search_nodes": 1
+      },
+      "variable_ids": {
+        "body516.pc162.activates663": 1,
+        "callee-is663": 2
+      },
+      "scope": "first opaque call on this guarded body516 prefix only",
+      "observed_body": 544,
+      "decisions": {
+        "49": true
+      }
+    },
+    {
+      "gate": "body516.pc131.activates663",
+      "status": "REFUTED_CERTIFICATE",
+      "requirements": [
+        "callee-is663"
+      ],
+      "known_facts": {
+        "callee-is663": false
+      },
+      "positive_query": {
+        "status": "UNSAT",
+        "model": null,
+        "search_nodes": 1
+      },
+      "negative_query": {
+        "status": "SAT",
+        "model": {
+          "2": false,
+          "1": false
+        },
+        "search_nodes": 1
+      },
+      "variable_ids": {
+        "body516.pc131.activates663": 1,
+        "callee-is663": 2
+      },
+      "scope": "first opaque call on this guarded body516 prefix only",
+      "observed_body": 258,
+      "decisions": {
+        "49": false
+      }
+    }
+  ],
+  "verified_hierarchy": null,
+  "formal_promotion_patch": {
+    "applicable": false,
+    "operations": []
+  },
+  "network_requests": 0,
+  "factory_invocations": 0,
+  "application_calls_executed": 0,
+  "candidate_count": 2048,
+  "numeric_filters_admitted": 0,
+  "global_gates": [
+    {
+      "gate": "activation:arguments_valid/incoming_arity_and_values",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "activation:arguments_valid/incoming_type_predicates",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "activation:callee_identity/call_time_callee_value",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "activation:capture_cells_at_call/call_time_storage_and_values",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "activation:live_template_cache_identity/live_shared_cache_identity",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "activation:normal_constructor_continuation/plain_context_binding",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "activation:reachable_call/incoming_call_witness",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "activation:reachable_call/incoming_path_predicates",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "lifetime:all_alias_writes_covered/escaping_and_future_alias_writes",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "lifetime:call_time_capture_values_accounted_for/all_reaching_call_definitions",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "lifetime:close_or_rebind_paths_covered/all_exit_reachability",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "lifetime:escape_effects_covered/all_call_outcomes",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "lifetime:storage_identity_at_call/close_rebase_at_call",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "structural:ancestry_unconditional/all_lexical_owners",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "structural:child_header_verified/template_at_invocation",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "structural:control_flow_verified/entry_call_path",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "tree:complete_node_coverage/full_reachable_inventory",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "tree:cycle_free_verified_edges/all_verified_edges_complete",
+      "status": "UNDERCONSTRAINED"
+    },
+    {
+      "gate": "tree:unique_incoming_owner/all_owners_excluded",
+      "status": "UNDERCONSTRAINED"
+    }
+  ],
+  "calls": [
+    {
+      "caller_pc": 8521,
+      "callee": 516,
+      "header_sha256": "531a23e3614d3da4a980f269f833faf0893bea623de8fd4dc4d53bafd5ca8156",
+      "arguments": [
+        162944256,
+        {
+          "symbol": "global.Instance"
+        }
+      ],
+      "captures": [
+        {
+          "ordinal": 1,
+          "cell": "frame:664:register:111",
+          "call_time_value": {
+            "plain_entries": [
+              {
+                "key": false,
+                "value": true
+              },
+              {
+                "key": true,
+                "value": false
+              }
+            ]
+          },
+          "guard": "caller guarded reaching definitions; no intervening hidden cell writes"
+        },
+        {
+          "ordinal": 2,
+          "cell": "frame:664:register:109",
+          "call_time_value": {
+            "symbolic_closure": 258,
+            "owner": 664,
+            "creation_pc": 8391,
+            "captures": [
+              {
+                "cell_identity": "frame:664:register:107",
+                "span": 1
+              },
+              {
+                "cell_identity": "frame:664:register:106",
+                "span": 1
+              }
+            ],
+            "capture_argument_is_nil": false
+          },
+          "guard": "caller guarded reaching definitions; no intervening hidden cell writes"
+        },
+        {
+          "ordinal": 3,
+          "cell": "frame:664:register:95",
+          "call_time_value": 474124151,
+          "guard": "caller guarded reaching definitions; no intervening hidden cell writes"
+        },
+        {
+          "ordinal": 4,
+          "cell": "frame:664:register:110",
+          "call_time_value": {
+            "symbolic_closure": 137,
+            "owner": 664,
+            "creation_pc": 8481,
+            "captures": [],
+            "capture_argument_is_nil": true,
+            "symbolic_instance": "constructor:8481:step:1"
+          },
+          "guard": "caller guarded reaching definitions; no intervening hidden cell writes"
+        },
+        {
+          "ordinal": 5,
+          "cell": "frame:664:register:54",
+          "call_time_value": {
+            "symbolic_closure": 544,
+            "owner": 664,
+            "creation_pc": 8361,
+            "captures": [
+              {
+                "cell_identity": "frame:664:register:160",
+                "span": 1
+              },
+              {
+                "cell_identity": "frame:664:register:111",
+                "span": 1
+              }
+            ],
+            "capture_argument_is_nil": false,
+            "symbolic_instance": "constructor:8361:step:11"
+          },
+          "guard": "caller guarded reaching definitions; no intervening hidden cell writes"
+        }
+      ],
+      "prefix_effect_summary": {
+        "capture_ordinals_read": [
+          1,
+          2,
+          5
+        ],
+        "capture3_read_before_first_opaque_calls": false,
+        "callee_state_words_unchanged_on_reviewed_prefixes": true,
+        "caller_V_at981_reaching_definition_proved": false,
+        "effects_past_opaque_calls": "unknown; no caller continuation or future cell stability inferred"
+      }
+    }
+  ]
+}
