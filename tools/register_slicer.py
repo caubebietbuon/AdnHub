@@ -48,9 +48,9 @@ class RegisterSlicer:
             result["constant"] = metadata["value"]
         elif op == "copy" and values and type(values[0]) is int:
             result["constant"] = values[0]
-        elif op in ("add", "xor") and len(values) == 2 and all(type(value) is int for value in values):
-            value = values[0] + values[1] if op == "add" else values[0] ^ values[1]
-            if (op == "xor" and all(0 <= n <= 0xffffffff for n in values)) or (op == "add" and max(abs(n) for n in (*values, value)) <= 2**53):
+        elif op in ("add", "subtract", "xor") and len(values) == 2 and all(type(value) is int for value in values):
+            value = values[0] + values[1] if op == "add" else values[0] - values[1] if op == "subtract" else values[0] ^ values[1]
+            if (op == "xor" and all(0 <= n <= 0xffffffff for n in values)) or (op in ("add", "subtract") and max(abs(n) for n in (*values, value)) <= 2**53):
                 result["constant"] = value
         self.nodes.append(result)
         return result["id"]
@@ -87,6 +87,15 @@ class RegisterSlicer:
             if opcode == 17: return {"op": "decoder_context"}
             if opcode == 22: return {"op": "capture_cell_value", "ordinal": b}
         elif variant == 228:
+            if opcode in (97,98,140) and 'checkpoint_arithmetic' in event:
+                observation=event['checkpoint_arithmetic']['primitive']
+                constant=self.node('decoded_constant',value=observation['value'],reference_id=observation['reference_id'],
+                    premise='reviewed primitive in guarded effective directory/cache context') if observation else None
+                if opcode in (97,98) and constant is None:
+                    return {'op':'opaque_write','reason':'missing checkpoint primitive provenance'}
+                if opcode==97: return {'op':'add','deps':[constant,self.node('literal',value=c)]}
+                if opcode==98: return {'op':'subtract','deps':[self.reg(regs,a),constant]}
+                return {'op':'subtract','deps':[self.node('literal',value=c),self.reg(regs,a)]}
             if opcode == 75: return {'op':'capture_cell_value','ordinal':a}
             if opcode == 31: return copy(b)
             if opcode == 23: return copy(a if destination == c else b)

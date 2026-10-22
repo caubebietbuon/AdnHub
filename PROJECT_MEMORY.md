@@ -667,3 +667,51 @@ Validation:207 Python tests passed (195 prior +12 Phase23), full suite204.112s.
 Latest12 tests reran successfully after strict watched-index validation,14.030s.
 Standalone Phase23, Lua entry-script syntax, Python module compilation and
 working/staged diff checks pass. No runtime verification was performed.
+
+### Phase 24 — epoch alignment and exact checkpoints (2026-10-22)
+
+Basedcc4181. tools/checkpoint_aligner.py adds align_history/aligned_models
+(epoch-specific equation applicability), primitive_input (effective directory,
+unapplied-mask rejection, checked integer observations), checkpoint_transfer/
+checkpoint_factory (opt-in exact228/97,98,140 plus symbolic75), checkpoint_proofs
+(forward + backward arithmetic), parallel_call_summary (228/4 parallel copies
+and packed-call metadata), conditional_activation (guarded663-to379 body
+candidate, not lexical ancestry). obligation_resolver gains an optional
+extra_source_transfer_factory per context; defaults stay unchanged.
+register_slicer adds checked subtraction and checkpoint primitive provenance.
+
+Aligned model now has one current equation:root664:981 V/ref74/operand4 with
+2048 necessary local states; patch978 still rejects the unchanged-backing/
+exported-directory model. Four historical initial patterns402:83,711:269,
+593:393,379:686 are retired for current normalized-domain accounting; their
+2048-state domains remain historical provenance, not solved/empty runtime key
+domains or proof that string targets disappear. Future reactivation is open.
+
+Exact guarded arithmetic:663 PC545 reads y=871012737 into r6; PC546 subtracts
+primitive735/int32(664522614 at134412) ->r8=206490123.379 PC1852 primitive56
+(uint8=1 at101425)+19 ->r4=20;1853 immediate0-r4 ->r8=-20;1839 primitive60
+(uint8=255 at487)+19 ->r7=274.258 PC37 ->r5=20;38 immediate1-r5 ->r6=-19.
+Backward result slices agree with the arithmetic and retain primitive/cache
+and activation guards. No unknown capture value becomes a numeric default.
+
+663 PC547 is228/op4 parallel fused call: precopy r6=oldr4(capture1 value),
+r7=oldr8(206490123); targetr6,one argumentr7,two requested slotsr6..r7,
+normal-return continuation549. Callee/results/effects are not executed or
+assumed.663 capture1/root159 has body candidate379 at the root frontier, but
+target identity at call, actual663 activation, live template/captures/cache,
+normal return and alias/close/rebind effects remain unproved. This is a
+conditional call graph candidate, not a lexical parent or verified hierarchy.
+
+New frontiers663:547/228op4;379:1840/228op113;258:40/228op113;567 remains
+24/163op83;root remains8398/228op93. Source exit contracts alone cannot prove
+scope completion. All structural/activation/lifetime/tree gates remain strict;
+verified_hierarchy=null; promotionpatchapplicable=false,operations=[].
+
+Run python tools/checkpoint_aligner.py. Full output ignored under output/phase24/
+checkpoint-alignment.json; tracked findings/compact evidence under research/
+checkpoint-alignment-2026-10-22/. New tests tools/test_phase24.py. No Lua,
+payload/factory/__index/application/network execution, input byte edits,
+Roblox runtime checks, demo/ESP changes or push. Commit locally after checks.
+Validation:222 Python tests passed (207 prior +15 Phase24), full suite292.830s.
+Standalone Phase24 regeneration, Lua entry-script syntax, Python compilation,
+and working/staged Git diff checks passed. No runtime verification performed.

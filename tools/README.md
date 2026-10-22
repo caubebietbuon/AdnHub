@@ -356,3 +356,15 @@ An opt-in source transfer models228/75 capture reads symbolically, extending
 witnesses. No state or hierarchy promotion. See
 research/boundary-audit-2026-10-22/FINDINGS.md and summary.json; full evidence
 is ignored under output/phase23. Earlier tool defaults remain unchanged.
+
+## Phase 24: epoch alignment and arithmetic checkpoints
+
+Run `python tools/checkpoint_aligner.py`. Epoch alignment retains root981's
+current equation and retires four packed initial patterns from current-domain
+accounting. Checked primitive reads and opt-in228/97/98/140 arithmetic prove
+663's206490123 argument and further379/258 constants. A parallel fused-call4
+summary stops663 at547 without invoking capture1; the379 target is conditional
+on root159 lifetime/cache identity. No key or hierarchy promotion is inferred.
+See research/checkpoint-alignment-2026-10-22/FINDINGS.md and summary.json;
+full generated evidence is ignored under output/phase24. Older defaults stay
+unchanged; obligation_resolver accepts an optional context-bound transfer factory.

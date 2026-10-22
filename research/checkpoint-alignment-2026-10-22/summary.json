@@ -1,0 +1,1612 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "source_evidence": [
+    {
+      "offset": 49750,
+      "text": "if o>=92 then if o>=95 then if o<97 then if o==96 then t[H[W]]=not t[i[W]];else t[H[W]]=t[A[W]][j[W]];end;elseif o~=98 then t[H[W]]=j[W]+O[W];else t[A[W]]=t[i[W]]-Z[W];end;else if o<93 then W=t[H[W]];else if o==94 then t[H[W]]=i[W]*t[A[W]];else t[A[W]]=t[H[W]];T,d,I=A[W+1],H[W+1],i[W+1];m,R,Q=T+I-1,T+d,e(t[T](P(t,T+1,T+d)));K(Q,1,I,T,t);W=W+1;end;end;end;"
+    },
+    {
+      "offset": 48524,
+      "text": "else if o<75 then t[H[W]]=p(t[A[W]],t[i[W]]);else if o~=76 then T=g[i[W]];t[H[W]]=T[6][T[5]];"
+    },
+    {
+      "offset": 41417,
+      "text": "else if o<100 then if k then for f in X,k,nil do local xJ=k[f];if xJ then xJ[6]=xJ;xJ[4]=t[f];xJ[5]=4;k[f]=nil;end;end;end;"
+    },
+    {
+      "offset": 41023,
+      "text": "if o<103 then if k then for f in X,k,nil do local xJ=k[f];if xJ then xJ[6]=xJ;xJ[4]=t[f];xJ[5]=4;k[f]=nil;end;end;end;"
+    },
+    {
+      "offset": 38486,
+      "text": "else if o>=139 then if o==140 then t[H[W]]=A[W]-t[i[W]];else t[i[W]]=A[W];end;"
+    },
+    {
+      "offset": 54500,
+      "text": "else if o>=3 then if o<4 then t[A[W]]=t[i[W]]<=t[H[W]];else if o==5 then W=if t[A[W]]~=j[W]then H[W]else W;else T=A[W];t[T],t[T+1]=t[i[W]],t[H[W]];T,d,I=A[W+1],H[W+1],i[W+1];m,R,Q=T+I-1,T+d,e(t[T](P(t,T+1,T+d)));K(Q,1,I,T,t);W=W+1;end;end;"
+    }
+  ],
+  "checkpoint_proofs": [
+    {
+      "owner": 258,
+      "previous_checkpoint": 37,
+      "checkpoint_transfer_verified": true,
+      "arithmetic": [
+        {
+          "step": 11,
+          "pc": 37,
+          "state_words_before": [
+            468219372,
+            283229248
+          ],
+          "operation": "add",
+          "left": 1,
+          "right": 19,
+          "result": 20,
+          "destination": 5,
+          "primitive": {
+            "reference_id": 56,
+            "position": 101425,
+            "kind": "uint8",
+            "value": 1,
+            "scope": "reviewed primitive bytes in current guarded data context; actual lazy/cache activation not invoked"
+          },
+          "input_register": null,
+          "normal_completion_guard": "source lazy constant/cache binding agrees with the reviewed primitive data context",
+          "register_input_definition": null,
+          "result_slice": {
+            "owner": 258,
+            "root_node": 8,
+            "register": 5,
+            "word": null,
+            "before_trace_step": 12,
+            "constant": 20,
+            "nodes": [
+              {
+                "id": 6,
+                "op": "decoded_constant",
+                "deps": [],
+                "value": 1,
+                "reference_id": 56,
+                "premise": "reviewed primitive in guarded effective directory/cache context",
+                "constant": 1
+              },
+              {
+                "id": 7,
+                "op": "literal",
+                "deps": [],
+                "value": 19,
+                "constant": 19
+              },
+              {
+                "id": 8,
+                "op": "add",
+                "deps": [
+                  6,
+                  7
+                ],
+                "step": 11,
+                "pc": 37,
+                "register": 5,
+                "constant": 20
+              }
+            ],
+            "unresolved_leaves": [],
+            "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+          }
+        },
+        {
+          "step": 12,
+          "pc": 38,
+          "state_words_before": [
+            468219372,
+            283229248
+          ],
+          "operation": "subtract",
+          "left": 1,
+          "right": 20,
+          "result": -19,
+          "destination": 6,
+          "primitive": null,
+          "input_register": 5,
+          "normal_completion_guard": "input register has the established exact numeric provenance",
+          "register_input_definition": {
+            "step": 11,
+            "pc": 37,
+            "variant": 228,
+            "opcode": 97,
+            "value": 20,
+            "state_word_read": null
+          },
+          "result_slice": {
+            "owner": 258,
+            "root_node": 10,
+            "register": 6,
+            "word": null,
+            "before_trace_step": 13,
+            "constant": -19,
+            "nodes": [
+              {
+                "id": 6,
+                "op": "decoded_constant",
+                "deps": [],
+                "value": 1,
+                "reference_id": 56,
+                "premise": "reviewed primitive in guarded effective directory/cache context",
+                "constant": 1
+              },
+              {
+                "id": 7,
+                "op": "literal",
+                "deps": [],
+                "value": 19,
+                "constant": 19
+              },
+              {
+                "id": 8,
+                "op": "add",
+                "deps": [
+                  6,
+                  7
+                ],
+                "step": 11,
+                "pc": 37,
+                "register": 5,
+                "constant": 20
+              },
+              {
+                "id": 9,
+                "op": "literal",
+                "deps": [],
+                "value": 1,
+                "constant": 1
+              },
+              {
+                "id": 10,
+                "op": "subtract",
+                "deps": [
+                  9,
+                  8
+                ],
+                "step": 12,
+                "pc": 38,
+                "register": 6,
+                "constant": -19
+              }
+            ],
+            "unresolved_leaves": [],
+            "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+          }
+        }
+      ],
+      "frontier_pc": 40,
+      "frontier_instruction": [
+        228,
+        113,
+        0,
+        1,
+        5
+      ],
+      "residual_boundary": null,
+      "parallel_fused_call_boundary": null,
+      "entry_guard": "hypothetical activation at root frontier with unknown arguments/captures; source/header/cache constraints pending",
+      "activation_verified": false,
+      "complete_lifetime_verified": false
+    },
+    {
+      "owner": 379,
+      "previous_checkpoint": 1852,
+      "checkpoint_transfer_verified": true,
+      "arithmetic": [
+        {
+          "step": 38,
+          "pc": 1852,
+          "state_words_before": [
+            1529380524,
+            3439263949
+          ],
+          "operation": "add",
+          "left": 1,
+          "right": 19,
+          "result": 20,
+          "destination": 4,
+          "primitive": {
+            "reference_id": 56,
+            "position": 101425,
+            "kind": "uint8",
+            "value": 1,
+            "scope": "reviewed primitive bytes in current guarded data context; actual lazy/cache activation not invoked"
+          },
+          "input_register": null,
+          "normal_completion_guard": "source lazy constant/cache binding agrees with the reviewed primitive data context",
+          "register_input_definition": null,
+          "result_slice": {
+            "owner": 379,
+            "root_node": 27,
+            "register": 4,
+            "word": null,
+            "before_trace_step": 39,
+            "constant": 20,
+            "nodes": [
+              {
+                "id": 25,
+                "op": "decoded_constant",
+                "deps": [],
+                "value": 1,
+                "reference_id": 56,
+                "premise": "reviewed primitive in guarded effective directory/cache context",
+                "constant": 1
+              },
+              {
+                "id": 26,
+                "op": "literal",
+                "deps": [],
+                "value": 19,
+                "constant": 19
+              },
+              {
+                "id": 27,
+                "op": "add",
+                "deps": [
+                  25,
+                  26
+                ],
+                "step": 38,
+                "pc": 1852,
+                "register": 4,
+                "constant": 20
+              }
+            ],
+            "unresolved_leaves": [],
+            "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+          }
+        },
+        {
+          "step": 39,
+          "pc": 1853,
+          "state_words_before": [
+            1529380524,
+            3439263949
+          ],
+          "operation": "subtract",
+          "left": 0,
+          "right": 20,
+          "result": -20,
+          "destination": 8,
+          "primitive": null,
+          "input_register": 4,
+          "normal_completion_guard": "input register has the established exact numeric provenance",
+          "register_input_definition": {
+            "step": 38,
+            "pc": 1852,
+            "variant": 228,
+            "opcode": 97,
+            "value": 20,
+            "state_word_read": null
+          },
+          "result_slice": {
+            "owner": 379,
+            "root_node": 29,
+            "register": 8,
+            "word": null,
+            "before_trace_step": 40,
+            "constant": -20,
+            "nodes": [
+              {
+                "id": 25,
+                "op": "decoded_constant",
+                "deps": [],
+                "value": 1,
+                "reference_id": 56,
+                "premise": "reviewed primitive in guarded effective directory/cache context",
+                "constant": 1
+              },
+              {
+                "id": 26,
+                "op": "literal",
+                "deps": [],
+                "value": 19,
+                "constant": 19
+              },
+              {
+                "id": 27,
+                "op": "add",
+                "deps": [
+                  25,
+                  26
+                ],
+                "step": 38,
+                "pc": 1852,
+                "register": 4,
+                "constant": 20
+              },
+              {
+                "id": 28,
+                "op": "literal",
+                "deps": [],
+                "value": 0,
+                "constant": 0
+              },
+              {
+                "id": 29,
+                "op": "subtract",
+                "deps": [
+                  28,
+                  27
+                ],
+                "step": 39,
+                "pc": 1853,
+                "register": 8,
+                "constant": -20
+              }
+            ],
+            "unresolved_leaves": [],
+            "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+          }
+        },
+        {
+          "step": 43,
+          "pc": 1839,
+          "state_words_before": [
+            1529380524,
+            3439263949
+          ],
+          "operation": "add",
+          "left": 255,
+          "right": 19,
+          "result": 274,
+          "destination": 7,
+          "primitive": {
+            "reference_id": 60,
+            "position": 487,
+            "kind": "uint8",
+            "value": 255,
+            "scope": "reviewed primitive bytes in current guarded data context; actual lazy/cache activation not invoked"
+          },
+          "input_register": null,
+          "normal_completion_guard": "source lazy constant/cache binding agrees with the reviewed primitive data context",
+          "register_input_definition": null,
+          "result_slice": {
+            "owner": 379,
+            "root_node": 33,
+            "register": 7,
+            "word": null,
+            "before_trace_step": 44,
+            "constant": 274,
+            "nodes": [
+              {
+                "id": 31,
+                "op": "decoded_constant",
+                "deps": [],
+                "value": 255,
+                "reference_id": 60,
+                "premise": "reviewed primitive in guarded effective directory/cache context",
+                "constant": 255
+              },
+              {
+                "id": 32,
+                "op": "literal",
+                "deps": [],
+                "value": 19,
+                "constant": 19
+              },
+              {
+                "id": 33,
+                "op": "add",
+                "deps": [
+                  31,
+                  32
+                ],
+                "step": 43,
+                "pc": 1839,
+                "register": 7,
+                "constant": 274
+              }
+            ],
+            "unresolved_leaves": [],
+            "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+          }
+        }
+      ],
+      "frontier_pc": 1840,
+      "frontier_instruction": [
+        228,
+        113,
+        0,
+        3,
+        5
+      ],
+      "residual_boundary": null,
+      "parallel_fused_call_boundary": null,
+      "entry_guard": "hypothetical activation at root frontier with unknown arguments/captures; source/header/cache constraints pending",
+      "activation_verified": false,
+      "complete_lifetime_verified": false
+    },
+    {
+      "owner": 567,
+      "previous_checkpoint": null,
+      "checkpoint_transfer_verified": false,
+      "arithmetic": [],
+      "frontier_pc": 24,
+      "frontier_instruction": [
+        163,
+        83,
+        3,
+        1,
+        3
+      ],
+      "residual_boundary": null,
+      "parallel_fused_call_boundary": null,
+      "entry_guard": "hypothetical activation at root frontier with unknown arguments/captures; source/header/cache constraints pending",
+      "activation_verified": false,
+      "complete_lifetime_verified": false
+    },
+    {
+      "owner": 663,
+      "previous_checkpoint": 546,
+      "checkpoint_transfer_verified": true,
+      "arithmetic": [
+        {
+          "step": 46,
+          "pc": 546,
+          "state_words_before": [
+            2811776362,
+            871012737
+          ],
+          "operation": "subtract",
+          "left": 871012737,
+          "right": 664522614,
+          "result": 206490123,
+          "destination": 8,
+          "primitive": {
+            "reference_id": 735,
+            "position": 134412,
+            "kind": "int32",
+            "value": 664522614,
+            "scope": "reviewed primitive bytes in current guarded data context; actual lazy/cache activation not invoked"
+          },
+          "input_register": 6,
+          "normal_completion_guard": "source lazy constant/cache binding agrees with the reviewed primitive data context",
+          "register_input_definition": {
+            "step": 45,
+            "pc": 545,
+            "variant": 228,
+            "opcode": 56,
+            "value": 871012737,
+            "state_word_read": {
+              "destination": 6,
+              "word": "y",
+              "value": 871012737
+            }
+          },
+          "result_slice": {
+            "owner": 663,
+            "root_node": 25,
+            "register": 8,
+            "word": null,
+            "before_trace_step": 47,
+            "constant": 206490123,
+            "nodes": [
+              {
+                "id": 1,
+                "op": "header_word",
+                "deps": [],
+                "value": 871012737,
+                "word": "y",
+                "constant": 871012737
+              },
+              {
+                "id": 23,
+                "op": "copy",
+                "deps": [
+                  1
+                ],
+                "step": 45,
+                "pc": 545,
+                "register": 6,
+                "constant": 871012737
+              },
+              {
+                "id": 24,
+                "op": "decoded_constant",
+                "deps": [],
+                "value": 664522614,
+                "reference_id": 735,
+                "premise": "reviewed primitive in guarded effective directory/cache context",
+                "constant": 664522614
+              },
+              {
+                "id": 25,
+                "op": "subtract",
+                "deps": [
+                  23,
+                  24
+                ],
+                "step": 46,
+                "pc": 546,
+                "register": 8,
+                "constant": 206490123
+              }
+            ],
+            "unresolved_leaves": [],
+            "scope": "recorded path only; not a reaching-definition proof at an unvisited PC"
+          }
+        }
+      ],
+      "frontier_pc": 547,
+      "frontier_instruction": [
+        228,
+        4,
+        4,
+        8,
+        6
+      ],
+      "residual_boundary": null,
+      "parallel_fused_call_boundary": {
+        "pc": 547,
+        "opcode": 4,
+        "parallel_pre_call_copies": [
+          {
+            "destination": 6,
+            "source": 4,
+            "value": {
+              "enclosing_capture_value": 1
+            }
+          },
+          {
+            "destination": 7,
+            "source": 8,
+            "value": 206490123
+          }
+        ],
+        "callee_register": 6,
+        "callee_expression": {
+          "enclosing_capture_value": 1
+        },
+        "argument_count": 1,
+        "argument_range_half_open": [
+          7,
+          8
+        ],
+        "argument_expressions": [
+          206490123
+        ],
+        "requested_results": 2,
+        "result_range_half_open": [
+          6,
+          8
+        ],
+        "normal_return_pc": 549,
+        "callee_invoked": false,
+        "actual_activation_proved": false,
+        "result_values": null,
+        "call_effects_accounted_for": false
+      },
+      "entry_guard": "hypothetical activation at root frontier with unknown arguments/captures; source/header/cache constraints pending",
+      "activation_verified": false,
+      "complete_lifetime_verified": false
+    }
+  ],
+  "conditional_activation_candidate": {
+    "caller": 663,
+    "pc": 547,
+    "callee_capture_ordinal": 1,
+    "cell_identity": "frame:664:register:159",
+    "body_candidate_at_root_frontier": 379,
+    "argument_expressions": [
+      206490123
+    ],
+    "requested_results": 2,
+    "packed_numeric_argument_verified": true,
+    "target_identity_at_call_verified": false,
+    "actual_activation_verified": false,
+    "is_lexical_parent_edge": false,
+    "verified_hierarchy_edge": null,
+    "obligations": [
+      "actual663 activation and normal path to547",
+      "root159 still holds the proposed body at the call, accounting for close/rebind and alias effects",
+      "proposed callee template/cache and full captured-cell environment are the expected live objects",
+      "guarded primitive observations agree with the source lazy constant/cache state",
+      "normal call return and all escaping effects before claiming exit/lifetime"
+    ]
+  },
+  "verified_hierarchy": null,
+  "formal_promotion_patch": {
+    "applicable": false,
+    "operations": []
+  },
+  "network_requests": 0,
+  "factory_invocations": 0,
+  "application_calls_executed": 0,
+  "input_byte_edits": 0,
+  "aligned_models": [
+    {
+      "owner": 664,
+      "pc": 981,
+      "reference_id": 74,
+      "expected_equation": [
+        "V",
+        74,
+        4
+      ],
+      "alignment": {
+        "status": "current_equation_identity",
+        "epochs": [
+          {
+            "after_trace_step": -1,
+            "before_next_revision_step": 12,
+            "instruction": [
+              15,
+              118,
+              87,
+              21
+            ],
+            "equation": null,
+            "matches_expected": false,
+            "epoch_scope": "observed revision sequence; last epoch is not a promise about future writes"
+          },
+          {
+            "after_trace_step": 12,
+            "before_next_revision_step": 138,
+            "instruction": [
+              73,
+              36,
+              72,
+              4
+            ],
+            "equation": null,
+            "matches_expected": false,
+            "epoch_scope": "observed revision sequence; last epoch is not a promise about future writes"
+          },
+          {
+            "after_trace_step": 138,
+            "before_next_revision_step": 150,
+            "instruction": [
+              37,
+              121,
+              118,
+              22
+            ],
+            "equation": null,
+            "matches_expected": false,
+            "epoch_scope": "observed revision sequence; last epoch is not a promise about future writes"
+          },
+          {
+            "after_trace_step": 150,
+            "before_next_revision_step": 163,
+            "instruction": [
+              32,
+              104,
+              75,
+              112
+            ],
+            "equation": null,
+            "matches_expected": false,
+            "epoch_scope": "observed revision sequence; last epoch is not a promise about future writes"
+          },
+          {
+            "after_trace_step": 163,
+            "before_next_revision_step": 173,
+            "instruction": [
+              113,
+              35,
+              29,
+              1
+            ],
+            "equation": null,
+            "matches_expected": false,
+            "epoch_scope": "observed revision sequence; last epoch is not a promise about future writes"
+          },
+          {
+            "after_trace_step": 173,
+            "before_next_revision_step": 274,
+            "instruction": [
+              63,
+              62,
+              86,
+              73
+            ],
+            "equation": null,
+            "matches_expected": false,
+            "epoch_scope": "observed revision sequence; last epoch is not a promise about future writes"
+          },
+          {
+            "after_trace_step": 274,
+            "before_next_revision_step": null,
+            "instruction": [
+              125,
+              74,
+              4,
+              47
+            ],
+            "equation": [
+              "V",
+              74,
+              4
+            ],
+            "matches_expected": true,
+            "epoch_scope": "observed revision sequence; last epoch is not a promise about future writes"
+          }
+        ],
+        "active_equation": [
+          "V",
+          74,
+          4
+        ],
+        "current_algebraic_domain_applicable": true,
+        "historical_matching_visits": [],
+        "runtime_state_proved": false,
+        "future_reactivation_excluded": false
+      },
+      "historical_mixer_candidate_count": 2048,
+      "current_mixer_candidate_count": 2048,
+      "promoted_keys": [],
+      "scope": "epoch alignment retires an instruction hypothesis, not a string target or all possible future equations",
+      "current_paths": [
+        {
+          "path": {
+            "path": [
+              976,
+              977,
+              978,
+              979,
+              980,
+              981
+            ],
+            "status": "conditional_local_path",
+            "state_at_site": {
+              "input": "V"
+            },
+            "mutations": [
+              {
+                "pc": 977,
+                "register_writes": {
+                  "118": {
+                    "bit32_bxor": [
+                      {
+                        "register_input": 74
+                      },
+                      113
+                    ],
+                    "predicate": "numeric operands and uint32 conversion"
+                  }
+                },
+                "state_y": {
+                  "input": "y"
+                },
+                "state_V": {
+                  "input": "V"
+                }
+              },
+              {
+                "pc": 980,
+                "register_writes": {
+                  "13": {
+                    "bit32_bxor": [
+                      {
+                        "register_input": 9
+                      },
+                      38
+                    ],
+                    "predicate": "numeric operands and uint32 conversion"
+                  }
+                },
+                "state_y": {
+                  "input": "y"
+                },
+                "state_V": {
+                  "input": "V"
+                }
+              }
+            ],
+            "predicates": [
+              {
+                "pc": 977,
+                "requires": "numeric operands and uint32 conversion",
+                "expression": {
+                  "bit32_bxor": [
+                    {
+                      "register_input": 74
+                    },
+                    113
+                  ],
+                  "predicate": "numeric operands and uint32 conversion"
+                }
+              },
+              {
+                "pc": 980,
+                "requires": "numeric operands and uint32 conversion",
+                "expression": {
+                  "bit32_bxor": [
+                    {
+                      "register_input": 9
+                    },
+                    38
+                  ],
+                  "predicate": "numeric operands and uint32 conversion"
+                }
+              },
+              {
+                "pc": 976,
+                "operator": "<",
+                "left": {
+                  "register_input": 123
+                },
+                "right": 120,
+                "allowed_truth_values": [
+                  true
+                ]
+              },
+              {
+                "pc": 979,
+                "operator": "<",
+                "left": {
+                  "register_input": 88
+                },
+                "right": 66,
+                "allowed_truth_values": [
+                  true
+                ]
+              }
+            ],
+            "cutpoint_reason": "open_predecessor_frontier",
+            "normal_patch_completion_pcs": [
+              978
+            ]
+          },
+          "constraints": {
+            "boundary_obligations": [
+              {
+                "name": "aligned current equation identity",
+                "proved": true,
+                "scope": "validated final instruction under selected dispatcher"
+              },
+              {
+                "name": "entry/cutpoint data and code epoch",
+                "proved": null,
+                "scope": "no unobserved invocation or unchanged future state is assumed"
+              },
+              {
+                "name": "normal patch978 geometry",
+                "proved": false,
+                "scope": "unchanged reconstructed backing and exported directory101; not all future histories"
+              }
+            ],
+            "rejected_boundaries": [
+              "normal patch978 geometry"
+            ],
+            "unknown_boundaries": [
+              "entry/cutpoint data and code epoch"
+            ],
+            "model_status": "refuted_declared_model",
+            "global_reachability_proved": false,
+            "unconditional_state": null,
+            "note": "rejection is scoped; algebraic candidates remain separate from runtime proof",
+            "local": {
+              "state_count_before": 2048,
+              "state_count_after": 2048,
+              "conditional_unique_state": null,
+              "conditional_unique_key": null,
+              "unconditional_state": null,
+              "residual_predicates": [
+                "predicate:0:type/effect guard",
+                "predicate:1:type/effect guard",
+                "predicate:2:unbound or inexact input",
+                "predicate:3:unbound or inexact input"
+              ],
+              "status": "conditional_finite_domain",
+              "scope": "same snapshot/dispatcher and local arrival; exact integer arithmetic where evaluated",
+              "key_count": 256
+            },
+            "admissible_declared_model_count": 0
+          }
+        }
+      ]
+    },
+    {
+      "owner": 402,
+      "pc": 83,
+      "reference_id": 74,
+      "expected_equation": [
+        "y",
+        74,
+        7
+      ],
+      "alignment": {
+        "status": "retired_initial_pattern",
+        "epochs": [
+          {
+            "after_trace_step": -1,
+            "before_next_revision_step": 6,
+            "instruction": [
+              84,
+              74,
+              7,
+              42
+            ],
+            "equation": [
+              "y",
+              74,
+              7
+            ],
+            "matches_expected": true,
+            "epoch_scope": "observed revision sequence; last epoch is not a promise about future writes"
+          },
+          {
+            "after_trace_step": 6,
+            "before_next_revision_step": null,
+            "instruction": [
+              0,
+              53,
+              51,
+              91
+            ],
+            "equation": null,
+            "matches_expected": false,
+            "epoch_scope": "observed revision sequence; last epoch is not a promise about future writes"
+          }
+        ],
+        "active_equation": null,
+        "current_algebraic_domain_applicable": false,
+        "historical_matching_visits": [],
+        "runtime_state_proved": false,
+        "future_reactivation_excluded": false
+      },
+      "historical_mixer_candidate_count": 2048,
+      "current_mixer_candidate_count": null,
+      "promoted_keys": [],
+      "scope": "epoch alignment retires an instruction hypothesis, not a string target or all possible future equations",
+      "current_paths": []
+    },
+    {
+      "owner": 711,
+      "pc": 269,
+      "reference_id": 141,
+      "expected_equation": [
+        "V",
+        141,
+        2
+      ],
+      "alignment": {
+        "status": "retired_initial_pattern",
+        "epochs": [
+          {
+            "after_trace_step": -1,
+            "before_next_revision_step": 9,
+            "instruction": [
+              96,
+              141,
+              2,
+              17
+            ],
+            "equation": [
+              "V",
+              141,
+              2
+            ],
+            "matches_expected": true,
+            "epoch_scope": "observed revision sequence; last epoch is not a promise about future writes"
+          },
+          {
+            "after_trace_step": 9,
+            "before_next_revision_step": null,
+            "instruction": [
+              54,
+              130,
+              122,
+              74
+            ],
+            "equation": null,
+            "matches_expected": false,
+            "epoch_scope": "observed revision sequence; last epoch is not a promise about future writes"
+          }
+        ],
+        "active_equation": null,
+        "current_algebraic_domain_applicable": false,
+        "historical_matching_visits": [],
+        "runtime_state_proved": false,
+        "future_reactivation_excluded": false
+      },
+      "historical_mixer_candidate_count": 2048,
+      "current_mixer_candidate_count": null,
+      "promoted_keys": [],
+      "scope": "epoch alignment retires an instruction hypothesis, not a string target or all possible future equations",
+      "current_paths": []
+    },
+    {
+      "owner": 593,
+      "pc": 393,
+      "reference_id": 141,
+      "expected_equation": [
+        "y",
+        141,
+        121
+      ],
+      "alignment": {
+        "status": "retired_initial_pattern",
+        "epochs": [
+          {
+            "after_trace_step": -1,
+            "before_next_revision_step": 19,
+            "instruction": [
+              11,
+              141,
+              121,
+              38
+            ],
+            "equation": [
+              "y",
+              141,
+              121
+            ],
+            "matches_expected": true,
+            "epoch_scope": "observed revision sequence; last epoch is not a promise about future writes"
+          },
+          {
+            "after_trace_step": 19,
+            "before_next_revision_step": null,
+            "instruction": [
+              0,
+              254,
+              0,
+              32
+            ],
+            "equation": null,
+            "matches_expected": false,
+            "epoch_scope": "observed revision sequence; last epoch is not a promise about future writes"
+          }
+        ],
+        "active_equation": null,
+        "current_algebraic_domain_applicable": false,
+        "historical_matching_visits": [],
+        "runtime_state_proved": false,
+        "future_reactivation_excluded": false
+      },
+      "historical_mixer_candidate_count": 2048,
+      "current_mixer_candidate_count": null,
+      "promoted_keys": [],
+      "scope": "epoch alignment retires an instruction hypothesis, not a string target or all possible future equations",
+      "current_paths": []
+    },
+    {
+      "owner": 379,
+      "pc": 686,
+      "reference_id": 702,
+      "expected_equation": [
+        "V",
+        702,
+        52
+      ],
+      "alignment": {
+        "status": "retired_initial_pattern",
+        "epochs": [
+          {
+            "after_trace_step": -1,
+            "before_next_revision_step": 7,
+            "instruction": [
+              125,
+              702,
+              52,
+              56
+            ],
+            "equation": [
+              "V",
+              702,
+              52
+            ],
+            "matches_expected": true,
+            "epoch_scope": "observed revision sequence; last epoch is not a promise about future writes"
+          },
+          {
+            "after_trace_step": 7,
+            "before_next_revision_step": null,
+            "instruction": [
+              2,
+              645,
+              40,
+              99
+            ],
+            "equation": null,
+            "matches_expected": false,
+            "epoch_scope": "observed revision sequence; last epoch is not a promise about future writes"
+          }
+        ],
+        "active_equation": null,
+        "current_algebraic_domain_applicable": false,
+        "historical_matching_visits": [],
+        "runtime_state_proved": false,
+        "future_reactivation_excluded": false
+      },
+      "historical_mixer_candidate_count": 2048,
+      "current_mixer_candidate_count": null,
+      "promoted_keys": [],
+      "scope": "epoch alignment retires an instruction hypothesis, not a string target or all possible future equations",
+      "current_paths": []
+    }
+  ],
+  "scope_exits": [
+    {
+      "owner": 664,
+      "frontier_pc": 8398,
+      "frontier_instruction": [
+        228,
+        93,
+        0,
+        5,
+        2
+      ],
+      "capture_reads": [],
+      "reached_exit_instruction_boundaries": [],
+      "fused_call_boundary": {
+        "pc": 8398,
+        "opcode": 93,
+        "pre_call_copy": {
+          "destination": 2,
+          "source": 5
+        },
+        "callee_register": 2,
+        "callee_expression": {
+          "decoder_context_slot": 109
+        },
+        "argument_count": 2,
+        "argument_range_half_open": [
+          3,
+          5
+        ],
+        "requested_results": 1,
+        "result_range_half_open": [
+          2,
+          3
+        ],
+        "pack": "table.pack retains actual result count in n, including nil positions",
+        "move": "copy requested results1..I to t[T..T+I-1], pad missing values with nil",
+        "normal_return_pc": 8400,
+        "exception_or_nonreturn_pc": null,
+        "callee_invoked": false,
+        "effects": "unknown until callee and alias effects are proven"
+      },
+      "exit_reachability_complete": false,
+      "scope_exit_lifetime_verified": false,
+      "obligations": [
+        "actual frame activation",
+        "all dispatcher/code-version paths",
+        "normal/error/nonreturn outcomes",
+        "open-cell and span-close order",
+        "all escaping alias effects"
+      ],
+      "reviewed_exit_candidate_count": 70
+    },
+    {
+      "owner": 258,
+      "frontier_pc": 40,
+      "frontier_instruction": [
+        228,
+        113,
+        0,
+        1,
+        5
+      ],
+      "capture_reads": [],
+      "reached_exit_instruction_boundaries": [],
+      "fused_call_boundary": null,
+      "exit_reachability_complete": false,
+      "scope_exit_lifetime_verified": false,
+      "obligations": [
+        "actual frame activation",
+        "all dispatcher/code-version paths",
+        "normal/error/nonreturn outcomes",
+        "open-cell and span-close order",
+        "all escaping alias effects"
+      ],
+      "reviewed_exit_candidate_count": 0
+    },
+    {
+      "owner": 379,
+      "frontier_pc": 1840,
+      "frontier_instruction": [
+        228,
+        113,
+        0,
+        3,
+        5
+      ],
+      "capture_reads": [
+        {
+          "pc": 1849,
+          "ordinal": 2,
+          "destination": 15,
+          "value_dereferenced": false,
+          "guarded_root_binding": "frame:664:register:106",
+          "binding_scope": "recorded constructor context, not a value-at-invocation proof"
+        },
+        {
+          "pc": 1850,
+          "ordinal": 1,
+          "destination": 16,
+          "value_dereferenced": false,
+          "guarded_root_binding": "frame:664:register:107",
+          "binding_scope": "recorded constructor context, not a value-at-invocation proof"
+        }
+      ],
+      "reached_exit_instruction_boundaries": [],
+      "fused_call_boundary": null,
+      "exit_reachability_complete": false,
+      "scope_exit_lifetime_verified": false,
+      "obligations": [
+        "actual frame activation",
+        "all dispatcher/code-version paths",
+        "normal/error/nonreturn outcomes",
+        "open-cell and span-close order",
+        "all escaping alias effects"
+      ],
+      "reviewed_exit_candidate_count": 9
+    },
+    {
+      "owner": 567,
+      "frontier_pc": 24,
+      "frontier_instruction": [
+        163,
+        83,
+        3,
+        1,
+        3
+      ],
+      "capture_reads": [],
+      "reached_exit_instruction_boundaries": [],
+      "fused_call_boundary": null,
+      "exit_reachability_complete": false,
+      "scope_exit_lifetime_verified": false,
+      "obligations": [
+        "actual frame activation",
+        "all dispatcher/code-version paths",
+        "normal/error/nonreturn outcomes",
+        "open-cell and span-close order",
+        "all escaping alias effects"
+      ],
+      "reviewed_exit_candidate_count": 0
+    },
+    {
+      "owner": 663,
+      "frontier_pc": 547,
+      "frontier_instruction": [
+        228,
+        4,
+        4,
+        8,
+        6
+      ],
+      "capture_reads": [
+        {
+          "pc": 544,
+          "ordinal": 1,
+          "destination": 4,
+          "value_dereferenced": false,
+          "guarded_root_binding": "frame:664:register:159",
+          "binding_scope": "recorded constructor context, not a value-at-invocation proof"
+        }
+      ],
+      "reached_exit_instruction_boundaries": [],
+      "fused_call_boundary": {
+        "pc": 547,
+        "opcode": 4,
+        "parallel_pre_call_copies": [
+          {
+            "destination": 6,
+            "source": 4,
+            "value": {
+              "enclosing_capture_value": 1
+            }
+          },
+          {
+            "destination": 7,
+            "source": 8,
+            "value": 206490123
+          }
+        ],
+        "callee_register": 6,
+        "callee_expression": {
+          "enclosing_capture_value": 1
+        },
+        "argument_count": 1,
+        "argument_range_half_open": [
+          7,
+          8
+        ],
+        "argument_expressions": [
+          206490123
+        ],
+        "requested_results": 2,
+        "result_range_half_open": [
+          6,
+          8
+        ],
+        "normal_return_pc": 549,
+        "callee_invoked": false,
+        "actual_activation_proved": false,
+        "result_values": null,
+        "call_effects_accounted_for": false
+      },
+      "exit_reachability_complete": false,
+      "scope_exit_lifetime_verified": false,
+      "obligations": [
+        "actual frame activation",
+        "all dispatcher/code-version paths",
+        "normal/error/nonreturn outcomes",
+        "open-cell and span-close order",
+        "all escaping alias effects"
+      ],
+      "reviewed_exit_candidate_count": 3
+    }
+  ],
+  "activation_conditions": [
+    {
+      "child": 567,
+      "slot_definition_evidence": [
+        {
+          "cell": "frame:664:register:107",
+          "last_direct_definition_step": 328
+        },
+        {
+          "cell": "frame:664:register:106",
+          "last_direct_definition_step": 327
+        }
+      ],
+      "activation": {
+        "reachable_call": null,
+        "callee_identity": null,
+        "arguments_valid": null,
+        "capture_cells_at_call": null,
+        "live_template_cache_identity": null,
+        "normal_constructor_continuation": null
+      },
+      "lifetime": {
+        "frame_slot_defined_before_capture": true,
+        "cell_creation_order_verified": null,
+        "all_alias_writes_covered": null,
+        "call_time_capture_values_accounted_for": null,
+        "close_or_rebind_paths_covered": null,
+        "storage_identity_at_call": null,
+        "escape_effects_covered": null
+      },
+      "tree": {
+        "unique_incoming_owner": null,
+        "complete_node_coverage": null,
+        "cycle_free_verified_edges": null
+      },
+      "gate": {
+        "eligible": false,
+        "missing_or_failed": [
+          "structural:child_header_verified",
+          "structural:control_flow_verified",
+          "structural:ancestry_unconditional",
+          "activation:reachable_call",
+          "activation:callee_identity",
+          "activation:arguments_valid",
+          "activation:capture_cells_at_call",
+          "activation:live_template_cache_identity",
+          "activation:normal_constructor_continuation",
+          "lifetime:cell_creation_order_verified",
+          "lifetime:all_alias_writes_covered",
+          "lifetime:call_time_capture_values_accounted_for",
+          "lifetime:close_or_rebind_paths_covered",
+          "lifetime:storage_identity_at_call",
+          "lifetime:escape_effects_covered",
+          "tree:unique_incoming_owner",
+          "tree:complete_node_coverage",
+          "tree:cycle_free_verified_edges"
+        ],
+        "rule": "all structural, activation, lifetime and global tree obligations require explicit True"
+      },
+      "quantified_stability_condition": "for every reachable alias path from capture to call, account for writes/close/rebind and preserve binding identity; derive call-time values instead of freezing the frontier",
+      "captured_values_must_be_immutable": false,
+      "activation_condition": "a reachable call resolves to this closure with its exact live template, arguments and captured cells",
+      "scope": "known construction facts only; no actual invocation inferred"
+    },
+    {
+      "child": 258,
+      "slot_definition_evidence": [
+        {
+          "cell": "frame:664:register:107",
+          "last_direct_definition_step": 328
+        },
+        {
+          "cell": "frame:664:register:106",
+          "last_direct_definition_step": 327
+        }
+      ],
+      "activation": {
+        "reachable_call": null,
+        "callee_identity": null,
+        "arguments_valid": null,
+        "capture_cells_at_call": null,
+        "live_template_cache_identity": null,
+        "normal_constructor_continuation": null
+      },
+      "lifetime": {
+        "frame_slot_defined_before_capture": true,
+        "cell_creation_order_verified": null,
+        "all_alias_writes_covered": null,
+        "call_time_capture_values_accounted_for": null,
+        "close_or_rebind_paths_covered": null,
+        "storage_identity_at_call": null,
+        "escape_effects_covered": null
+      },
+      "tree": {
+        "unique_incoming_owner": null,
+        "complete_node_coverage": null,
+        "cycle_free_verified_edges": null
+      },
+      "gate": {
+        "eligible": false,
+        "missing_or_failed": [
+          "structural:child_header_verified",
+          "structural:control_flow_verified",
+          "structural:ancestry_unconditional",
+          "activation:reachable_call",
+          "activation:callee_identity",
+          "activation:arguments_valid",
+          "activation:capture_cells_at_call",
+          "activation:live_template_cache_identity",
+          "activation:normal_constructor_continuation",
+          "lifetime:cell_creation_order_verified",
+          "lifetime:all_alias_writes_covered",
+          "lifetime:call_time_capture_values_accounted_for",
+          "lifetime:close_or_rebind_paths_covered",
+          "lifetime:storage_identity_at_call",
+          "lifetime:escape_effects_covered",
+          "tree:unique_incoming_owner",
+          "tree:complete_node_coverage",
+          "tree:cycle_free_verified_edges"
+        ],
+        "rule": "all structural, activation, lifetime and global tree obligations require explicit True"
+      },
+      "quantified_stability_condition": "for every reachable alias path from capture to call, account for writes/close/rebind and preserve binding identity; derive call-time values instead of freezing the frontier",
+      "captured_values_must_be_immutable": false,
+      "activation_condition": "a reachable call resolves to this closure with its exact live template, arguments and captured cells",
+      "scope": "known construction facts only; no actual invocation inferred"
+    },
+    {
+      "child": 379,
+      "slot_definition_evidence": [
+        {
+          "cell": "frame:664:register:107",
+          "last_direct_definition_step": 328
+        },
+        {
+          "cell": "frame:664:register:106",
+          "last_direct_definition_step": 327
+        },
+        {
+          "cell": "frame:664:register:103",
+          "last_direct_definition_step": 308
+        },
+        {
+          "cell": "frame:664:register:92",
+          "last_direct_definition_step": 262
+        },
+        {
+          "cell": "frame:664:register:104",
+          "last_direct_definition_step": 326
+        },
+        {
+          "cell": "frame:664:register:93",
+          "last_direct_definition_step": 309
+        }
+      ],
+      "activation": {
+        "reachable_call": null,
+        "callee_identity": null,
+        "arguments_valid": null,
+        "capture_cells_at_call": null,
+        "live_template_cache_identity": null,
+        "normal_constructor_continuation": null
+      },
+      "lifetime": {
+        "frame_slot_defined_before_capture": true,
+        "cell_creation_order_verified": null,
+        "all_alias_writes_covered": null,
+        "call_time_capture_values_accounted_for": null,
+        "close_or_rebind_paths_covered": null,
+        "storage_identity_at_call": null,
+        "escape_effects_covered": null
+      },
+      "tree": {
+        "unique_incoming_owner": null,
+        "complete_node_coverage": null,
+        "cycle_free_verified_edges": null
+      },
+      "gate": {
+        "eligible": false,
+        "missing_or_failed": [
+          "structural:child_header_verified",
+          "structural:control_flow_verified",
+          "structural:ancestry_unconditional",
+          "activation:reachable_call",
+          "activation:callee_identity",
+          "activation:arguments_valid",
+          "activation:capture_cells_at_call",
+          "activation:live_template_cache_identity",
+          "activation:normal_constructor_continuation",
+          "lifetime:cell_creation_order_verified",
+          "lifetime:all_alias_writes_covered",
+          "lifetime:call_time_capture_values_accounted_for",
+          "lifetime:close_or_rebind_paths_covered",
+          "lifetime:storage_identity_at_call",
+          "lifetime:escape_effects_covered",
+          "tree:unique_incoming_owner",
+          "tree:complete_node_coverage",
+          "tree:cycle_free_verified_edges"
+        ],
+        "rule": "all structural, activation, lifetime and global tree obligations require explicit True"
+      },
+      "quantified_stability_condition": "for every reachable alias path from capture to call, account for writes/close/rebind and preserve binding identity; derive call-time values instead of freezing the frontier",
+      "captured_values_must_be_immutable": false,
+      "activation_condition": "a reachable call resolves to this closure with its exact live template, arguments and captured cells",
+      "scope": "known construction facts only; no actual invocation inferred"
+    },
+    {
+      "child": 663,
+      "slot_definition_evidence": [
+        {
+          "cell": "frame:664:register:159",
+          "last_direct_definition_step": 357
+        },
+        {
+          "cell": "frame:664:register:105",
+          "last_direct_definition_step": 326
+        }
+      ],
+      "activation": {
+        "reachable_call": null,
+        "callee_identity": null,
+        "arguments_valid": null,
+        "capture_cells_at_call": null,
+        "live_template_cache_identity": null,
+        "normal_constructor_continuation": null
+      },
+      "lifetime": {
+        "frame_slot_defined_before_capture": true,
+        "cell_creation_order_verified": null,
+        "all_alias_writes_covered": null,
+        "call_time_capture_values_accounted_for": null,
+        "close_or_rebind_paths_covered": null,
+        "storage_identity_at_call": null,
+        "escape_effects_covered": null
+      },
+      "tree": {
+        "unique_incoming_owner": null,
+        "complete_node_coverage": null,
+        "cycle_free_verified_edges": null
+      },
+      "gate": {
+        "eligible": false,
+        "missing_or_failed": [
+          "structural:child_header_verified",
+          "structural:control_flow_verified",
+          "structural:ancestry_unconditional",
+          "activation:reachable_call",
+          "activation:callee_identity",
+          "activation:arguments_valid",
+          "activation:capture_cells_at_call",
+          "activation:live_template_cache_identity",
+          "activation:normal_constructor_continuation",
+          "lifetime:cell_creation_order_verified",
+          "lifetime:all_alias_writes_covered",
+          "lifetime:call_time_capture_values_accounted_for",
+          "lifetime:close_or_rebind_paths_covered",
+          "lifetime:storage_identity_at_call",
+          "lifetime:escape_effects_covered",
+          "tree:unique_incoming_owner",
+          "tree:complete_node_coverage",
+          "tree:cycle_free_verified_edges"
+        ],
+        "rule": "all structural, activation, lifetime and global tree obligations require explicit True"
+      },
+      "quantified_stability_condition": "for every reachable alias path from capture to call, account for writes/close/rebind and preserve binding identity; derive call-time values instead of freezing the frontier",
+      "captured_values_must_be_immutable": false,
+      "activation_condition": "a reachable call resolves to this closure with its exact live template, arguments and captured cells",
+      "scope": "known construction facts only; no actual invocation inferred"
+    }
+  ]
+}

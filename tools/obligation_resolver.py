@@ -240,7 +240,8 @@ def local_ambiguity_certificate(backing, entries, reference):
             "utf8_or_readability_used_as_proof": False}
 
 
-def scan_candidate_entries(baseline, root_context, source, defs, watch_code_slots=None, extra_source_transfer=None):
+def scan_candidate_entries(baseline, root_context, source, defs, watch_code_slots=None, extra_source_transfer=None,
+                           extra_source_transfer_factory=None):
     """Bounded hypothetical activations; no sibling state or actual call inferred."""
     results = []
     for function in baseline["functions"]:
@@ -262,11 +263,12 @@ def scan_candidate_entries(baseline, root_context, source, defs, watch_code_slot
             start, end = candidate["footer"]["backing_slice_range"]
             context.backing = reconstructor.apply_fill_copy(context.backing, start, end - start, candidate["footer"]["fill_byte"])
             closures = phase13.Closures(source, context, owner, candidate["layout"]["register_capacity"]["value"], defs)
+            extra=extra_source_transfer_factory(context) if extra_source_transfer_factory else extra_source_transfer
             state = analyze(arrays, candidate["layout"]["entry_pc"]["value"], *words,
                 budget=2000, numeric_constant=context.number, text_constant=context.text,
                 symbolic_environment=True, symbolic_field_reads=True, track_register_writes=True,
                 patch_observer=context.observe, closure_builder=closures.build,
-                source_transfer=partial(source_transfer, constants=context, extra=extra_source_transfer),
+                source_transfer=partial(source_transfer, constants=context, extra=extra),
                 watch_code_slots=(watch_code_slots or {}).get(owner,()))
             strings = []
             # analyze() retains attempted patches even if the observer rejects
@@ -297,7 +299,8 @@ def scan_candidate_entries(baseline, root_context, source, defs, watch_code_slot
     return results
 
 
-def run(source_path, data_path, output, include_analysis_arrays=False, watch_code_slots=None, extra_source_transfer=None):
+def run(source_path, data_path, output, include_analysis_arrays=False, watch_code_slots=None, extra_source_transfer=None,
+        extra_source_transfer_factory=None):
     raw_source, data = analyzer.bounded_read(source_path), analyzer.bounded_read(data_path)
     if hashlib.sha256(raw_source).hexdigest() != analyzer.SOURCE_SHA or hashlib.sha256(data).hexdigest() != analyzer.DATA_SHA:
         raise ValueError("Unknown g/d snapshot")
@@ -319,17 +322,20 @@ def run(source_path, data_path, output, include_analysis_arrays=False, watch_cod
     defs, _ = definitions(source)
     closures = phase13.Closures(source, context, 664, 181, defs)
     words = struct.unpack_from("<II", plain, initial_header(plain)["u32_words_offset"])
+    def extra_for(ctx):
+        return extra_source_transfer_factory(ctx) if extra_source_transfer_factory else extra_source_transfer
     root = analyze(streams, 9942, *words, numeric_constant=context.number, text_constant=context.text,
                    symbolic_environment=True, symbolic_field_reads=True, patch_observer=context.observe,
                    track_register_writes=True, closure_builder=closures.build,
-                   source_transfer=partial(source_transfer, constants=context, extra=extra_source_transfer),
+                   source_transfer=partial(source_transfer, constants=context, extra=extra_for(context)),
                    watch_code_slots=(watch_code_slots or {}).get(664,()),
                    snapshot_pcs=tuple(range(8395, 8406)))
     audits, parent_traces = phase13.audit_ownership(
         {"candidate_capture_ownership": previous["previous_ownership_candidates"]}, baseline,
-        root, context, source, defs, source_transfer_factory=lambda ctx: partial(source_transfer, constants=ctx, extra=extra_source_transfer))
+        root, context, source, defs, source_transfer_factory=lambda ctx: partial(source_transfer, constants=ctx, extra=extra_for(ctx)))
     updated_previous = {**previous, "ownership_audits": audits}
-    entries_analysis = scan_candidate_entries(baseline, context, source, defs, watch_code_slots, extra_source_transfer)
+    entries_analysis = scan_candidate_entries(baseline, context, source, defs, watch_code_slots, extra_source_transfer,
+                                             extra_source_transfer_factory)
     traces = [(entry["owner"], {**entry["state"], "patches": entry["path_local_patch_events"]})
               for entry in entries_analysis]
     mask_sites = phase13.string_constraints(baseline["functions"], root, traces)
