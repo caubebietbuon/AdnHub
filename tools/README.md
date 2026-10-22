@@ -322,3 +322,14 @@ captured body aliases for567/258/379. Directory-only repair at134543 also fails
 the length reader. No numeric input or lifetime promotion is invented. See
 research/interblock-audit-2026-10-22/FINDINGS.md and summary.json. Rebuilt output
 is ignored under output/phase20; hierarchy remains null.
+
+## Phase 21: typed prefix diagnosis and closure663 scope
+
+Run `python tools/reader_scope_auditor.py`. Corrects the reader selection at
+offset134543: tag195 is uint8/reference101/value4, not a damaged string length.
+Exports raw patch-length rejection separately, directory parity, source-proven
+prefix exclusion from payload XOR, and a bounded copy-only payload patch model.
+Audits root664 construction intervals, the663-to379 captured body alias and
+close-cell storage semantics. No byte repair, state key or hierarchy promotion
+is claimed without provenance. See research/reader-scope-audit-2026-10-22/
+FINDINGS.md and summary.json; full generated evidence stays in output/phase21.

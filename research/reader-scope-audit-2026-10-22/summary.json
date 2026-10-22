@@ -1,0 +1,369 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "source_contract": {
+    "evidence": [
+      {
+        "offset": 40234,
+        "text": "if o==125 then local f,xJ,WJ=i[W],_(H[W],(Y(_(V,(Y(v(V,29),7))),536870911))),b[5];local bJ=_(WJ[f],306486104);WJ[f]=bJ;WJ,f=b[4],bJ+1;bJ=J(WJ,f);"
+      },
+      {
+        "offset": 40678,
+        "text": "f,bJ=xJ*16843009,wJ+hJ;local jJ=bJ-hJ%4;for hJ=wJ,jJ-1,4 do M(WJ,hJ,(_(r(WJ,hJ),f)));end;for f=jJ,bJ-1,1 do L(WJ,f,(_(J(WJ,f),xJ)));end;"
+      },
+      {
+        "offset": 32498,
+        "text": "xJ[6]=xJ;xJ[4]=t[f];xJ[5]=4;k[f]=nil;"
+      }
+    ],
+    "directory_written_before_length_read": true,
+    "payload_mask_starts_after_length_prefix": true,
+    "payload_mask_changes_length_prefix": false,
+    "close_cell_layout": {
+      "slot6": "same cell object",
+      "slot4": "frame value at close",
+      "slot5": 4
+    },
+    "close_semantics": "rebase shared cell storage; not deletion of all aliases",
+    "actual_close_event_proved": false
+  },
+  "shared_V_result": {
+    "key_relation": "key74 = key101 XOR49 under same uint32 V and byte-key contracts",
+    "new_keys_promoted": [],
+    "unblocked": false,
+    "reason": "patch978 reader fails before its payload XOR"
+  },
+  "cluster": {
+    "closures": [
+      {
+        "child": 567,
+        "constructing_frame": 664,
+        "construction_pc": 8390,
+        "capture_cells": [
+          {
+            "ordinal": 1,
+            "cell": "frame:664:register:107",
+            "frame": 664,
+            "register": 107
+          },
+          {
+            "ordinal": 2,
+            "cell": "frame:664:register:106",
+            "frame": 664,
+            "register": 106
+          }
+        ],
+        "criteria": {
+          "source_consumer_verified": true,
+          "descriptor_parsed_exactly": true,
+          "capture_indices_fit_owner": true,
+          "child_header_verified": false,
+          "control_flow_verified": false,
+          "ancestry_unconditional": false
+        },
+        "failed_or_unproved": [
+          "child_header_verified",
+          "control_flow_verified",
+          "ancestry_unconditional"
+        ],
+        "child_entry_frontier": 24,
+        "activation_verified": false,
+        "close_reachability_verified": false,
+        "all_alias_effects_verified": false,
+        "lifetime_verified": false,
+        "promotion_admissible": false
+      },
+      {
+        "child": 258,
+        "constructing_frame": 664,
+        "construction_pc": 8391,
+        "capture_cells": [
+          {
+            "ordinal": 1,
+            "cell": "frame:664:register:107",
+            "frame": 664,
+            "register": 107
+          },
+          {
+            "ordinal": 2,
+            "cell": "frame:664:register:106",
+            "frame": 664,
+            "register": 106
+          }
+        ],
+        "criteria": {
+          "source_consumer_verified": true,
+          "descriptor_parsed_exactly": true,
+          "capture_indices_fit_owner": true,
+          "child_header_verified": false,
+          "control_flow_verified": false,
+          "ancestry_unconditional": false
+        },
+        "failed_or_unproved": [
+          "child_header_verified",
+          "control_flow_verified",
+          "ancestry_unconditional"
+        ],
+        "child_entry_frontier": 37,
+        "activation_verified": false,
+        "close_reachability_verified": false,
+        "all_alias_effects_verified": false,
+        "lifetime_verified": false,
+        "promotion_admissible": false
+      },
+      {
+        "child": 379,
+        "constructing_frame": 664,
+        "construction_pc": 8393,
+        "capture_cells": [
+          {
+            "ordinal": 1,
+            "cell": "frame:664:register:107",
+            "frame": 664,
+            "register": 107
+          },
+          {
+            "ordinal": 2,
+            "cell": "frame:664:register:106",
+            "frame": 664,
+            "register": 106
+          },
+          {
+            "ordinal": 3,
+            "cell": "frame:664:register:103",
+            "frame": 664,
+            "register": 103
+          },
+          {
+            "ordinal": 4,
+            "cell": "frame:664:register:92",
+            "frame": 664,
+            "register": 92
+          },
+          {
+            "ordinal": 5,
+            "cell": "frame:664:register:104",
+            "frame": 664,
+            "register": 104
+          },
+          {
+            "ordinal": 6,
+            "cell": "frame:664:register:93",
+            "frame": 664,
+            "register": 93
+          }
+        ],
+        "criteria": {
+          "source_consumer_verified": true,
+          "descriptor_parsed_exactly": true,
+          "capture_indices_fit_owner": true,
+          "child_header_verified": false,
+          "control_flow_verified": false,
+          "ancestry_unconditional": false
+        },
+        "failed_or_unproved": [
+          "child_header_verified",
+          "control_flow_verified",
+          "ancestry_unconditional"
+        ],
+        "child_entry_frontier": 1849,
+        "activation_verified": false,
+        "close_reachability_verified": false,
+        "all_alias_effects_verified": false,
+        "lifetime_verified": false,
+        "promotion_admissible": false
+      },
+      {
+        "child": 663,
+        "constructing_frame": 664,
+        "construction_pc": 8394,
+        "capture_cells": [
+          {
+            "ordinal": 1,
+            "cell": "frame:664:register:159",
+            "frame": 664,
+            "register": 159
+          },
+          {
+            "ordinal": 2,
+            "cell": "frame:664:register:105",
+            "frame": 664,
+            "register": 105
+          }
+        ],
+        "criteria": {
+          "source_consumer_verified": true,
+          "descriptor_parsed_exactly": true,
+          "capture_indices_fit_owner": true,
+          "child_header_verified": false,
+          "control_flow_verified": false,
+          "ancestry_unconditional": false
+        },
+        "failed_or_unproved": [
+          "child_header_verified",
+          "control_flow_verified",
+          "ancestry_unconditional"
+        ],
+        "child_entry_frontier": 544,
+        "activation_verified": false,
+        "close_reachability_verified": false,
+        "all_alias_effects_verified": false,
+        "lifetime_verified": false,
+        "promotion_admissible": false
+      }
+    ],
+    "body_register_intervals": [
+      {
+        "child": 567,
+        "body_register": 108,
+        "start_step": 354,
+        "end_step_exclusive": 363,
+        "end_reason": "right-censored at analysis frontier",
+        "register_interval_is_cell_lifetime": false
+      },
+      {
+        "child": 258,
+        "body_register": 109,
+        "start_step": 355,
+        "end_step_exclusive": 363,
+        "end_reason": "right-censored at analysis frontier",
+        "register_interval_is_cell_lifetime": false
+      },
+      {
+        "child": 379,
+        "body_register": 159,
+        "start_step": 357,
+        "end_step_exclusive": 363,
+        "end_reason": "right-censored at analysis frontier",
+        "register_interval_is_cell_lifetime": false
+      },
+      {
+        "child": 663,
+        "body_register": 85,
+        "start_step": 358,
+        "end_step_exclusive": 363,
+        "end_reason": "right-censored at analysis frontier",
+        "register_interval_is_cell_lifetime": false
+      }
+    ],
+    "captured_body_edges": [
+      {
+        "holder": 663,
+        "target_body": 379,
+        "capture_ordinal": 1,
+        "cell": "frame:664:register:159",
+        "holder_creation_pc": 8394,
+        "relation": "captures cell containing a closure body on guarded construction path",
+        "is_lexical_parent_edge": false,
+        "is_activation_edge": false
+      }
+    ],
+    "scope_conclusion": "all four constructed in guarded root664 frame; body aliases do not prove lexical nesting",
+    "formal_promotion_patch": {
+      "applicable": false,
+      "operations": []
+    },
+    "verified_hierarchy": null
+  },
+  "verified_hierarchy": null,
+  "network_requests": 0,
+  "factory_invocations": 0,
+  "application_calls_executed": 0,
+  "input_byte_edits": 0,
+  "directory101": {
+    "interpretation_correction": {
+      "reference_id": 101,
+      "position": 134543,
+      "tag": 195,
+      "leaf_state": 130,
+      "length_prefix_applicable": false,
+      "byte_edits": [],
+      "status": "primitive_reader_selected",
+      "fixed_width": 1,
+      "observation": {
+        "reference_id": 101,
+        "slice_offset": 134543,
+        "tag": 195,
+        "leaf_state": 130,
+        "decision_path": [
+          {
+            "state": 119,
+            "predicate": "wJ>203",
+            "result": false
+          },
+          {
+            "state": 92,
+            "predicate": "174>=wJ",
+            "result": false
+          },
+          {
+            "state": 6,
+            "predicate": "195<wJ",
+            "result": false
+          }
+        ],
+        "runtime_reachability": "not established; potential stream reference only",
+        "status": "explicit_python_primitive_reader",
+        "kind": "uint8",
+        "auxiliary": 255,
+        "value": 4,
+        "plain_hex": "04"
+      },
+      "correction": "select primitive reader; do not repair a nonexistent length field"
+    },
+    "parity_cases": [
+      {
+        "hypothetical_toggle_count": 0,
+        "position": 134543,
+        "raw_patch_prefix": {
+          "status": "length_out_of_bounds",
+          "position": 134543,
+          "length": 1492916,
+          "prefix_begin": 134544,
+          "prefix_end": 134547,
+          "prefix_hex": "b4db0f",
+          "available_payload_bytes": 17630,
+          "scope": "raw patch-handler read; not a tag-based constant reader selection"
+        }
+      },
+      {
+        "hypothetical_toggle_count": 1,
+        "position": 306616023,
+        "raw_patch_prefix": {
+          "status": "outside_backing",
+          "position": 306616023
+        }
+      },
+      {
+        "hypothetical_toggle_count": 2,
+        "position": 134543,
+        "raw_patch_prefix": {
+          "status": "length_out_of_bounds",
+          "position": 134543,
+          "length": 1492916,
+          "prefix_begin": 134544,
+          "prefix_end": 134547,
+          "prefix_hex": "b4db0f",
+          "available_payload_bytes": 17630,
+          "scope": "raw patch-handler read; not a tag-based constant reader selection"
+        }
+      }
+    ],
+    "patch_attempts": [
+      {
+        "context": "unchanged_directory",
+        "normal_patch_length_contract": false,
+        "error": "Tag position outside backing",
+        "key_independent_failure": true
+      },
+      {
+        "context": "hypothetical_prior_toggle",
+        "normal_patch_length_contract": false,
+        "error": "String/descriptor length outside backing or allocation limit",
+        "key_independent_failure": true
+      }
+    ],
+    "byte_edits": [],
+    "state_equations_unblocked": false
+  }
+}

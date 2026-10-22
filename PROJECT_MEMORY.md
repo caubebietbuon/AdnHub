@@ -530,3 +530,44 @@ runtime checks; demo/ESP unchanged. Keep the local commit offline (no push).
 Validation: 167 Python tests passed (155 prior + 12 Phase20), including pinned
 integration; final suite 127.945s. luac -p AdnHub.lua Loader.lua, Python module
 compilation, git diff --check and staged diff checks all pass.
+
+### Phase 21 — typed prefix correction and closure663 scope (2026-10-22)
+
+Base12177a5. tools/reader_scope_auditor.py adds source_contract (228/125 reader
+order and close-cell assignments), raw_prefix (explicitly untyped), typed_probe
+(schema-first primitive/length/unresolved family selection), copy_payload_patch
+(bounded XOR on independent bytes), directory_audit (parity and raw patch
+guards), and lifetime_audit (scoped body aliases, right-censored intervals and
+the unchanged six-criterion ledger). Run python tools/reader_scope_auditor.py;
+full evidence is ignored in output/phase21/reader-scope-proofs.json. Tracked
+report and compact summary: research/reader-scope-audit-2026-10-22/.
+
+Correction to Phase20's length diagnosis: reference101 at134543 has tag195,
+leaf130, fixed-width uint8/aux255/value4. It has no length field in that schema.
+Forcing raw length interpretation reads b4db0f ->1492916 with only17630 bytes
+remaining. This is a wrong-reader diagnosis, not evidence of corrupt payload.
+Directory parity alternates134543/306616023. The source patch978 blindly reads
+length after toggling, so both unchanged-directory and hypothetical-prior-toggle
+paths still fail its raw reader contract. Payload XOR starts after the prefix;
+it cannot correct that prefix within this handler. No source-proven replacement
+length, byte repair, new state key or new string is promoted. Existing value4
+is a primitive observation. Different backing/code/history still needs proof.
+
+Guarded root664 constructions:567@8390->r108,258@8391->r109,379@8393->r159,
+663@8394->r85. Capture663[1] references root159 containing379, not directly107.
+This alias is not lexical nesting or activation. Observed body-register
+intervals354/355/357/358..363 are right-censored, not complete cell lifetimes.
+Close-cell source semantics rebase storage into the same cell object; they do
+not prove close reachability or delete all captured aliases. Hypothetical
+child frontiers567/258/379/663 are24/37/1849/544. Source/descriptor/index flags
+pass structurally; live header/control flow/unconditional ancestry remain
+unproved. Lifetime/activation/alias coverage do not permit promotion;
+verified_hierarchy=null and formal patchapplicable=false,operations=[].
+
+New tests: tools/test_phase21.py, including all256 masks on a synthetic copied
+payload, schema boundaries, directory parity, scoped aliases and pinned data.
+Original input/demo/ESP untouched; no Lua/payload/factory/API/network execution,
+Roblox runtime checks or push. Commit locally after final verification.
+Validation:181 Python tests passed (167 prior +14 Phase21), final regression
+150.922s. Lua entry-script syntax, Python module compilation and working/staged
+Git diff checks pass. Phase21 standalone analysis regenerated successfully.
