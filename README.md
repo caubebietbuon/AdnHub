@@ -6,9 +6,9 @@
 >
 > Hướng dẫn bảo trì và lịch sử lỗi: [PROJECT_MEMORY.md](PROJECT_MEMORY.md).
 
-Phân tích tĩnh Chilli: [báo cáo Phase 16](research/promotion-proofs-2026-10-22/FINDINGS.md).
-Bảng kết quả XOR theo site, chứng chỉ state và proof proxy với guard giữ nguyên.
-Công cụ: `python tools/promotion_auditor.py`
+Phân tích tĩnh Chilli: [báo cáo Phase 17](research/scope-tracing-2026-10-22/FINDINGS.md).
+Truy vết symbolic cục bộ, kiểm tra phiên bản lệnh và phạm vi upvalue.
+Công cụ: `python tools/scope_tracer.py`
 (cần các tệp g/d đã bóc tách cục bộ; không thực thi payload hay gọi mạng).
 
 ---

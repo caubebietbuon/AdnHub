@@ -415,3 +415,28 @@ python tools/promotion_auditor.py. Verification:133 tests(124+9), Lua syntax and
 git diff --check passed; latest9tests rerun after uint32 state bound check.
 No payload/Lua/factory/metatable/API/network execution or runtimechecks; no push.
 Demo/ESP unchanged. Continue static decomposition with guards explicit.
+
+## Phase 17 localized paths / extended upvalue scopes — 2026-10-22
+Added scope_tracer.py,test_phase17.py; Phase14 run optionally exports arrays
+via include_analysis_arrays=True (default unchanged). Rebuilds pinned data,
+bounded backward predecessor search over snapshot including nonlocal jumps.
+Whitelisted symbolic transfers only; opaque op/indirect jump is barrier.
+Numeric branches pruned only with exact known operands. Local cutpoint arrival,
+dispatcher and stable-code guards never asserted true. All5actual paths currently
+cut at site; no constant keys. IMPORTANT4oldsite equations mismatch post-prefix
+slots:402:83,711:269,593:393,379:686. Scope is current code version only; future
+rewrites not ruled out.664:981 stillmatches butpredecessor980opcode14842 unknown.
+Thus instruction normalization/version provenance is a blocker before statekeys.
+Upvalue binder distinguishes kind0copiedvalue/1forwardedcapture/2span/3cell,
+one-based incoming environment bounds, preserves cellidentity through nesting.
+Eightpair scopes audited, incoming237/704 stillunknown.567PC23capture1 maps
+rootcell107, frontier snapshot0; lifetime stability toactivation notproved, no
+literal substitution. Knownroot child environments capacities2/2/6/2.
+Extended31functionprefix consumer search compares4known environment shapes;
+capacitycompatibility notparentage, unseenreads unknown. All31newparentedgesnull.
+No hierarchy promotion, verified_hierarchy=null. See research/scope-tracing-
+2026-10-22/FINDINGS.md and summary.json; output/phase17/scope-traces.json ignored.
+Run python tools/scope_tracer.py; python -m unittest discover -s tools;
+luac -p AdnHub.lua Loader.lua; git diff --check.142tests(133+9)pass, latest9
+rerun after final scope metadata. No payload/Lua/factory/API/network/runtime
+execution, no push; demo/ESP unchanged. Keep code-version guards explicit.

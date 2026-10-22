@@ -1,0 +1,1561 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "localized_mask_traces": [
+    {
+      "reference_id": 74,
+      "owner": 664,
+      "site_equation_matches_snapshot": true,
+      "expected_equation": [
+        "V",
+        74,
+        4
+      ],
+      "actual_site_instruction": [
+        125,
+        74,
+        4,
+        47
+      ],
+      "actual_patch_equation": [
+        "V",
+        74,
+        4
+      ],
+      "mismatch_scope": "current exported code version only; future rewrites remain possible",
+      "target_pc": 981,
+      "variant": 228,
+      "paths": [
+        {
+          "path": [
+            981
+          ],
+          "status": "conditional_local_path",
+          "state_at_site": {
+            "input": "V"
+          },
+          "mutations": [],
+          "predicates": [],
+          "constant_key": null
+        }
+      ],
+      "path_cap_hit": false,
+      "guard": [
+        "arrival at local cutpoint",
+        "assumed dispatcher",
+        "frontier code slots remain unmodified"
+      ],
+      "entry_reachability_proved": false,
+      "window": [
+        957,
+        1005
+      ],
+      "predecessor_scan_scope": "whole snapshot for incoming jumps; bounded backward path depth",
+      "fallthrough_barriers": "unreviewed instructions have no assumed successor",
+      "immediate_predecessor_snapshot": {
+        "pc": 980,
+        "instruction": [
+          14842,
+          13,
+          9,
+          38
+        ],
+        "reviewed_successors": []
+      }
+    },
+    {
+      "reference_id": 74,
+      "owner": 402,
+      "site_equation_matches_snapshot": false,
+      "expected_equation": [
+        "y",
+        74,
+        7
+      ],
+      "actual_site_instruction": [
+        0,
+        53,
+        51,
+        91
+      ],
+      "actual_patch_equation": null,
+      "mismatch_scope": "current exported code version only; future rewrites remain possible",
+      "target_pc": 83,
+      "variant": 163,
+      "paths": [
+        {
+          "path": [
+            83
+          ],
+          "status": "conditional_local_path",
+          "state_at_site": {
+            "input": "y"
+          },
+          "mutations": [],
+          "predicates": [],
+          "constant_key": null
+        }
+      ],
+      "path_cap_hit": false,
+      "guard": [
+        "arrival at local cutpoint",
+        "assumed dispatcher",
+        "frontier code slots remain unmodified"
+      ],
+      "entry_reachability_proved": false,
+      "window": [
+        59,
+        107
+      ],
+      "predecessor_scan_scope": "whole snapshot for incoming jumps; bounded backward path depth",
+      "fallthrough_barriers": "unreviewed instructions have no assumed successor",
+      "immediate_predecessor_snapshot": {
+        "pc": 82,
+        "instruction": [
+          126,
+          90,
+          98,
+          64
+        ],
+        "reviewed_successors": []
+      }
+    },
+    {
+      "reference_id": 141,
+      "owner": 711,
+      "site_equation_matches_snapshot": false,
+      "expected_equation": [
+        "V",
+        141,
+        2
+      ],
+      "actual_site_instruction": [
+        54,
+        130,
+        122,
+        74
+      ],
+      "actual_patch_equation": null,
+      "mismatch_scope": "current exported code version only; future rewrites remain possible",
+      "target_pc": 269,
+      "variant": 163,
+      "paths": [
+        {
+          "path": [
+            269
+          ],
+          "status": "conditional_local_path",
+          "state_at_site": {
+            "input": "V"
+          },
+          "mutations": [],
+          "predicates": [],
+          "constant_key": null
+        }
+      ],
+      "path_cap_hit": false,
+      "guard": [
+        "arrival at local cutpoint",
+        "assumed dispatcher",
+        "frontier code slots remain unmodified"
+      ],
+      "entry_reachability_proved": false,
+      "window": [
+        245,
+        293
+      ],
+      "predecessor_scan_scope": "whole snapshot for incoming jumps; bounded backward path depth",
+      "fallthrough_barriers": "unreviewed instructions have no assumed successor",
+      "immediate_predecessor_snapshot": {
+        "pc": 268,
+        "instruction": [
+          100,
+          187,
+          114,
+          25
+        ],
+        "reviewed_successors": []
+      }
+    },
+    {
+      "reference_id": 141,
+      "owner": 593,
+      "site_equation_matches_snapshot": false,
+      "expected_equation": [
+        "y",
+        141,
+        121
+      ],
+      "actual_site_instruction": [
+        0,
+        254,
+        0,
+        32
+      ],
+      "actual_patch_equation": null,
+      "mismatch_scope": "current exported code version only; future rewrites remain possible",
+      "target_pc": 393,
+      "variant": 157,
+      "paths": [
+        {
+          "path": [
+            393
+          ],
+          "status": "conditional_local_path",
+          "state_at_site": {
+            "input": "y"
+          },
+          "mutations": [],
+          "predicates": [],
+          "constant_key": null
+        }
+      ],
+      "path_cap_hit": false,
+      "guard": [
+        "arrival at local cutpoint",
+        "assumed dispatcher",
+        "frontier code slots remain unmodified"
+      ],
+      "entry_reachability_proved": false,
+      "window": [
+        369,
+        417
+      ],
+      "predecessor_scan_scope": "whole snapshot for incoming jumps; bounded backward path depth",
+      "fallthrough_barriers": "unreviewed instructions have no assumed successor",
+      "immediate_predecessor_snapshot": {
+        "pc": 392,
+        "instruction": [
+          15,
+          8,
+          307,
+          13
+        ],
+        "reviewed_successors": []
+      }
+    },
+    {
+      "reference_id": 702,
+      "owner": 379,
+      "site_equation_matches_snapshot": false,
+      "expected_equation": [
+        "V",
+        702,
+        52
+      ],
+      "actual_site_instruction": [
+        2,
+        645,
+        40,
+        99
+      ],
+      "actual_patch_equation": null,
+      "mismatch_scope": "current exported code version only; future rewrites remain possible",
+      "target_pc": 686,
+      "variant": 228,
+      "paths": [
+        {
+          "path": [
+            686
+          ],
+          "status": "conditional_local_path",
+          "state_at_site": {
+            "input": "V"
+          },
+          "mutations": [],
+          "predicates": [],
+          "constant_key": null
+        }
+      ],
+      "path_cap_hit": false,
+      "guard": [
+        "arrival at local cutpoint",
+        "assumed dispatcher",
+        "frontier code slots remain unmodified"
+      ],
+      "entry_reachability_proved": false,
+      "window": [
+        662,
+        710
+      ],
+      "predecessor_scan_scope": "whole snapshot for incoming jumps; bounded backward path depth",
+      "fallthrough_barriers": "unreviewed instructions have no assumed successor",
+      "immediate_predecessor_snapshot": {
+        "pc": 685,
+        "instruction": [
+          25,
+          31,
+          16,
+          6
+        ],
+        "reviewed_successors": []
+      }
+    }
+  ],
+  "upvalue_scope_audit": [
+    {
+      "parent": 664,
+      "child": 506,
+      "descriptor_id": 251,
+      "bindings": [
+        {
+          "cell_identity": "frame:664:register:53",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:121",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:54",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:109",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:95",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:110",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:111",
+          "span": 1
+        }
+      ],
+      "bounds_errors": [],
+      "incoming_scope_known": true,
+      "child_capture_reads": [],
+      "out_of_range_reads": [],
+      "scope": "guarded descriptor binding; child trace activation unproved",
+      "lexical_parent_verified": false
+    },
+    {
+      "parent": 137,
+      "child": 747,
+      "descriptor_id": 58,
+      "bindings": [],
+      "bounds_errors": [],
+      "incoming_scope_known": false,
+      "child_capture_reads": [],
+      "out_of_range_reads": [],
+      "scope": "guarded descriptor binding; child trace activation unproved",
+      "lexical_parent_verified": false
+    },
+    {
+      "parent": 237,
+      "child": 572,
+      "descriptor_id": 181,
+      "bindings": [
+        {
+          "cell_identity": "frame:237:register:11",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:237:register:4",
+          "span": 1
+        },
+        {
+          "unresolved_enclosing_capture": 8,
+          "frame": 237
+        },
+        {
+          "unresolved_enclosing_capture": 9,
+          "frame": 237
+        },
+        {
+          "unresolved_enclosing_capture": 10,
+          "frame": 237
+        }
+      ],
+      "bounds_errors": [],
+      "incoming_scope_known": false,
+      "child_capture_reads": [],
+      "out_of_range_reads": [],
+      "scope": "guarded descriptor binding; child trace activation unproved",
+      "lexical_parent_verified": false
+    },
+    {
+      "parent": 704,
+      "child": 288,
+      "descriptor_id": 299,
+      "bindings": [
+        {
+          "copied_register_value": 4,
+          "frame": 704,
+          "value_known": false
+        },
+        {
+          "copied_register_value": 10,
+          "frame": 704,
+          "value_known": false
+        },
+        {
+          "unresolved_enclosing_capture": 1,
+          "frame": 704
+        },
+        {
+          "unresolved_enclosing_capture": 2,
+          "frame": 704
+        },
+        {
+          "unresolved_enclosing_capture": 3,
+          "frame": 704
+        },
+        {
+          "unresolved_enclosing_capture": 4,
+          "frame": 704
+        },
+        {
+          "unresolved_enclosing_capture": 5,
+          "frame": 704
+        },
+        {
+          "unresolved_enclosing_capture": 6,
+          "frame": 704
+        },
+        {
+          "unresolved_enclosing_capture": 7,
+          "frame": 704
+        },
+        {
+          "unresolved_enclosing_capture": 8,
+          "frame": 704
+        },
+        {
+          "unresolved_enclosing_capture": 9,
+          "frame": 704
+        }
+      ],
+      "bounds_errors": [],
+      "incoming_scope_known": false,
+      "child_capture_reads": [],
+      "out_of_range_reads": [],
+      "scope": "guarded descriptor binding; child trace activation unproved",
+      "lexical_parent_verified": false
+    },
+    {
+      "parent": 664,
+      "child": 567,
+      "descriptor_id": 486,
+      "bindings": [
+        {
+          "cell_identity": "frame:664:register:107",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:106",
+          "span": 1
+        }
+      ],
+      "bounds_errors": [],
+      "incoming_scope_known": true,
+      "child_capture_reads": [
+        {
+          "pc": 23,
+          "ordinal": 1,
+          "operation": "cell_value",
+          "resolved_cell_identity": "frame:664:register:107",
+          "value_at_root_frontier": 0,
+          "value_stability_proved_until_child_activation": false
+        }
+      ],
+      "out_of_range_reads": [],
+      "scope": "guarded descriptor binding; child trace activation unproved",
+      "lexical_parent_verified": false
+    },
+    {
+      "parent": 664,
+      "child": 258,
+      "descriptor_id": 486,
+      "bindings": [
+        {
+          "cell_identity": "frame:664:register:107",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:106",
+          "span": 1
+        }
+      ],
+      "bounds_errors": [],
+      "incoming_scope_known": true,
+      "child_capture_reads": [],
+      "out_of_range_reads": [],
+      "scope": "guarded descriptor binding; child trace activation unproved",
+      "lexical_parent_verified": false
+    },
+    {
+      "parent": 664,
+      "child": 379,
+      "descriptor_id": 462,
+      "bindings": [
+        {
+          "cell_identity": "frame:664:register:107",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:106",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:103",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:92",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:104",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:93",
+          "span": 1
+        }
+      ],
+      "bounds_errors": [],
+      "incoming_scope_known": true,
+      "child_capture_reads": [],
+      "out_of_range_reads": [],
+      "scope": "guarded descriptor binding; child trace activation unproved",
+      "lexical_parent_verified": false
+    },
+    {
+      "parent": 664,
+      "child": 663,
+      "descriptor_id": 722,
+      "bindings": [
+        {
+          "cell_identity": "frame:664:register:159",
+          "span": 1
+        },
+        {
+          "cell_identity": "frame:664:register:105",
+          "span": 1
+        }
+      ],
+      "bounds_errors": [],
+      "incoming_scope_known": true,
+      "child_capture_reads": [],
+      "out_of_range_reads": [],
+      "scope": "guarded descriptor binding; child trace activation unproved",
+      "lexical_parent_verified": false
+    }
+  ],
+  "verified_hierarchy": null,
+  "extended_environment_search": [
+    {
+      "function": 136,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 137,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 139,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 232,
+      "observed_capture_ordinals": [
+        1
+      ],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 237,
+      "observed_capture_ordinals": [
+        1
+      ],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 258,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 283,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 288,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 307,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 349,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 361,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 379,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 392,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 402,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 445,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 516,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 544,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 567,
+      "observed_capture_ordinals": [
+        1
+      ],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 609,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 631,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 663,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 670,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 679,
+      "observed_capture_ordinals": [
+        1
+      ],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 704,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 711,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 742,
+      "observed_capture_ordinals": [
+        1
+      ],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 747,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 748,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 593,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 647,
+      "observed_capture_ordinals": [
+        2
+      ],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "PASS",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    },
+    {
+      "function": 728,
+      "observed_capture_ordinals": [],
+      "environment_compatibility": [
+        {
+          "environment_of_closure": 567,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 258,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 379,
+          "capacity": 6,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        },
+        {
+          "environment_of_closure": 663,
+          "capacity": 2,
+          "status": "UNKNOWN",
+          "scope": "observed reads only; compatible capacity is not a binding or lexical edge"
+        }
+      ],
+      "complete_upvalue_set_proved": false,
+      "new_parent_edge": null
+    }
+  ],
+  "application_calls_executed": 0,
+  "factory_invocations": 0,
+  "network_requests": 0
+}

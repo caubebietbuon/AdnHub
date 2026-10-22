@@ -293,7 +293,7 @@ def scan_candidate_entries(baseline, root_context, source, defs):
     return results
 
 
-def run(source_path, data_path, output):
+def run(source_path, data_path, output, include_analysis_arrays=False):
     raw_source, data = analyzer.bounded_read(source_path), analyzer.bounded_read(data_path)
     if hashlib.sha256(raw_source).hexdigest() != analyzer.SOURCE_SHA or hashlib.sha256(data).hexdigest() != analyzer.DATA_SHA:
         raise ValueError("Unknown g/d snapshot")
@@ -361,6 +361,9 @@ def run(source_path, data_path, output):
               "factory_invocations": 0}
     report["new_conditional_string_results"] = [{"owner": entry["owner"], **string}
         for entry in entries_analysis for string in entry["new_guarded_strings"]]
+    if include_analysis_arrays:
+        report['analysis_arrays'] = {str(entry['owner']): entry['state']['arrays'] for entry in entries_analysis}
+        report['analysis_arrays']['664'] = root['arrays']
     report["still_without_trace_equation"] = [row["reference_id"] for row in masks if not row["new_guarded_trace_equations"]]
     last = root["trace"][-1]
     if last["variant"] == 228 and last["opcode"] == 93:

@@ -283,3 +283,13 @@ certificates expose missing reaching definitions. Eight proxy proofs retain
 explicit premises; no edge currently qualifies for the unchanged validator.
 Outputs stay ignored under output/phase16. See
 research/promotion-proofs-2026-10-22/FINDINGS.md. No payload/network execution.
+
+## Phase 17: local symbolic paths and capture scopes
+
+Run `python tools/scope_tracer.py`. Rebuilds exported post-prefix arrays and
+checks the five candidate site equations against their current slots. Four
+mismatch this code version; root981 retains an opaque predecessor. Local
+numeric/state paths remain guarded and bounded. Audits eight capture bindings
+and31 prefixes against known environment shapes without inferring ancestry
+from capacity. See research/scope-tracing-2026-10-22/FINDINGS.md. No payload or
+network execution; outputs remain ignored under output/phase17.
