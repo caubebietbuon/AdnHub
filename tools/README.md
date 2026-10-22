@@ -312,3 +312,13 @@ The unchanged directory fails that local path contract; no numeric default or
 site V is invented. Audits567 creation, activation witnesses and shared cells
 with258/379. Promotion remains non-applicable. See
 research/lineage-audit-2026-10-22/FINDINGS.md; output/phase19 is ignored.
+
+## Phase 20: inter-block lineage and root107 cluster
+
+Run `python tools/interblock_auditor.py`. Combines trace-order SSA with a bounded
+snapshot predecessor worklist, separates numeric shared-V guard witnesses from
+reader/activation guards, and checks the root107 construction intervals and
+captured body aliases for567/258/379. Directory-only repair at134543 also fails
+the length reader. No numeric input or lifetime promotion is invented. See
+research/interblock-audit-2026-10-22/FINDINGS.md and summary.json. Rebuilt output
+is ignored under output/phase20; hierarchy remains null.

@@ -1,0 +1,309 @@
+{
+  "source_sha256": "1bc1f3c9df9aed79ff79a392423a5f59e41b04f7c326c90c4e0603362c745ed8",
+  "data_sha256": "0131f80c4b90b7a49aeaf5d44707ab90575321ebd2b7d0587ea56484a8c56a13",
+  "recorded_segments": 114,
+  "recorded_r9_slice": {
+    "owner": 664,
+    "root_node": 103,
+    "register": 9,
+    "word": null,
+    "before_trace_step": null,
+    "constant": null,
+    "nodes": [
+      {
+        "id": 102,
+        "op": "absent_frame_entry",
+        "deps": [],
+        "register": 35,
+        "type_contract": "nil in reviewed fresh frame; never numeric zero",
+        "block": "frame_entry"
+      },
+      {
+        "id": 103,
+        "op": "copy",
+        "deps": [
+          102
+        ],
+        "step": 86,
+        "pc": 9910,
+        "register": 9,
+        "block": 19
+      }
+    ],
+    "unresolved_leaves": [
+      102
+    ],
+    "scope": "recorded path only; not a reaching-definition proof at an unvisited PC",
+    "cross_block_dependencies": [
+      {
+        "definition": 103,
+        "dependency": 102,
+        "from_block": "frame_entry",
+        "to_block": 19
+      }
+    ]
+  },
+  "r35_before9910_slice": {
+    "owner": 664,
+    "root_node": 102,
+    "register": 35,
+    "word": null,
+    "before_trace_step": 86,
+    "constant": null,
+    "nodes": [
+      {
+        "id": 102,
+        "op": "absent_frame_entry",
+        "deps": [],
+        "register": 35,
+        "type_contract": "nil in reviewed fresh frame; never numeric zero",
+        "block": "frame_entry"
+      }
+    ],
+    "unresolved_leaves": [
+      102
+    ],
+    "scope": "recorded path only; not a reaching-definition proof at an unvisited PC",
+    "cross_block_dependencies": []
+  },
+  "snapshot_r35_predecessors": {
+    "target_pc": 9910,
+    "input_register": 35,
+    "variant": 163,
+    "visited_states": 7,
+    "budget_exhausted": false,
+    "edges": [
+      {
+        "before_pc": 9910,
+        "register": 35,
+        "predecessor_pc": 9909,
+        "source_register": 35
+      },
+      {
+        "before_pc": 9909,
+        "register": 35,
+        "predecessor_pc": 9908,
+        "source_register": 35
+      },
+      {
+        "before_pc": 9908,
+        "register": 35,
+        "predecessor_pc": 9907,
+        "source_register": 35
+      },
+      {
+        "before_pc": 9907,
+        "register": 35,
+        "predecessor_pc": 9906,
+        "source_register": 35
+      },
+      {
+        "before_pc": 9906,
+        "register": 35,
+        "predecessor_pc": 9905,
+        "source_register": 35
+      },
+      {
+        "before_pc": 9905,
+        "register": 35,
+        "predecessor_pc": 9904,
+        "source_register": 35
+      }
+    ],
+    "terminals": [
+      {
+        "pc": 9904,
+        "register": 35,
+        "terminal": "open_predecessor_frontier"
+      }
+    ],
+    "all_incoming_edges_known": false,
+    "entry_reachability_proved": false,
+    "guards": [
+      "fixed rewritten snapshot and dispatcher",
+      "normal return at guarded patch edges",
+      "branch predicates on chosen predecessor edges",
+      "unknown handlers/rewrites may add edges"
+    ]
+  },
+  "guard978": {
+    "directory": {
+      "reference_id": 101,
+      "before": 134543,
+      "after": 306616023,
+      "backing_length": 152177,
+      "bounded_after": false,
+      "scope": "unchanged exported directory; not a proof about every future mutation history"
+    },
+    "local_constraints": {
+      "payload_guard": {
+        "position": 134543,
+        "bounded_length_payload": false,
+        "reason": "String/descriptor length outside backing or allocation limit"
+      },
+      "required_directory_before": 306616023,
+      "current_directory_before": 134543,
+      "current_directory_matches": false,
+      "numeric_models": [
+        {
+          "V": 0,
+          "r9": 0,
+          "r88": 0,
+          "r13": 38,
+          "key101": 53,
+          "key74": 4,
+          "scope": "numeric and byte-key guards only; no reaching definitions inferred"
+        },
+        {
+          "V": 3758096639,
+          "r9": 0,
+          "r88": 0,
+          "r13": 38,
+          "key101": 205,
+          "key74": 252,
+          "scope": "numeric and byte-key guards only; no reaching definitions inferred"
+        }
+      ],
+      "local_models": [],
+      "actual_path_proved": false,
+      "unsatisfied_obligations": [
+        "entry-to978 reachability",
+        "reaching r9/r88/V definitions",
+        "directory mutation history",
+        "string tag/cache activation",
+        "normal patch74 reader guards"
+      ]
+    },
+    "shared_V": {
+      "same_state_required": true,
+      "state_contract": "same uint32 V at both sites",
+      "xor_delta": 49,
+      "state_domain_count": 2048,
+      "unique_key_proved": false,
+      "key_pair_count": 256
+    },
+    "predicates": {
+      "979": "numeric r88 < 66",
+      "980": "r9 accepts bit32 numeric conversion",
+      "shared_V": "same uint32 V at978 and981; both patch keys are bytes",
+      "978": "directory XOR and payload readers complete under current tag/cache state"
+    },
+    "window": {
+      "978": [
+        125,
+        101,
+        53,
+        109
+      ],
+      "979": [
+        172,
+        88,
+        112,
+        66
+      ],
+      "980": [
+        14842,
+        13,
+        9,
+        38
+      ],
+      "981": [
+        125,
+        74,
+        4,
+        47
+      ]
+    },
+    "numeric_r9_proved_at980": false
+  },
+  "root107_cluster": {
+    "cell": "frame:664:register:107",
+    "members": [
+      {
+        "child": 567,
+        "construction_pc": 8390,
+        "construction_step": 354,
+        "construction_block": 113,
+        "shared_cell": "frame:664:register:107",
+        "capture_ordinal": 1,
+        "last_direct_value_before_construction": 0,
+        "direct_writes_in_recorded_interval": [],
+        "direct_prefix_stability": true,
+        "body_aliases_in_other_closures": [],
+        "hypothetical_child_capture_reads": [
+          {
+            "pc": 23,
+            "destination": 3,
+            "capture_ordinal": 1
+          }
+        ],
+        "child_trace_scope": "hypothetical activation at root frontier with unknown arguments/captures; source/header/cache constraints pending",
+        "child_stop": "unsupported or unresolved operation; application boundary",
+        "activation_witness": null,
+        "all_alias_effects_covered": false,
+        "whole_lifetime_stable": null,
+        "unconditional_ancestry_proved": false
+      },
+      {
+        "child": 258,
+        "construction_pc": 8391,
+        "construction_step": 355,
+        "construction_block": 113,
+        "shared_cell": "frame:664:register:107",
+        "capture_ordinal": 1,
+        "last_direct_value_before_construction": 0,
+        "direct_writes_in_recorded_interval": [],
+        "direct_prefix_stability": true,
+        "body_aliases_in_other_closures": [],
+        "hypothetical_child_capture_reads": [],
+        "child_trace_scope": "hypothetical activation at root frontier with unknown arguments/captures; source/header/cache constraints pending",
+        "child_stop": "unsupported or unresolved operation; application boundary",
+        "activation_witness": null,
+        "all_alias_effects_covered": false,
+        "whole_lifetime_stable": null,
+        "unconditional_ancestry_proved": false
+      },
+      {
+        "child": 379,
+        "construction_pc": 8393,
+        "construction_step": 357,
+        "construction_block": 113,
+        "shared_cell": "frame:664:register:107",
+        "capture_ordinal": 1,
+        "last_direct_value_before_construction": 0,
+        "direct_writes_in_recorded_interval": [],
+        "direct_prefix_stability": true,
+        "body_aliases_in_other_closures": [
+          {
+            "holder_child": 663,
+            "capture_ordinal": 1,
+            "cell_identity": "frame:664:register:159"
+          }
+        ],
+        "hypothetical_child_capture_reads": [],
+        "child_trace_scope": "hypothetical activation at root frontier with unknown arguments/captures; source/header/cache constraints pending",
+        "child_stop": "unsupported or unresolved operation; application boundary",
+        "activation_witness": null,
+        "all_alias_effects_covered": false,
+        "whole_lifetime_stable": null,
+        "unconditional_ancestry_proved": false
+      }
+    ],
+    "identity_shared": true,
+    "stability_scope": "direct writes between guarded construction and recorded root frontier only",
+    "missing_proofs": [
+      "actual invocation and order",
+      "all shared-cell writer effects",
+      "alias escape/close/rebinding coverage",
+      "all-path lifetime and unconditional ancestry"
+    ],
+    "formal_promotion_patch": {
+      "applicable": false,
+      "operations": []
+    }
+  },
+  "verified_hierarchy": null,
+  "network_requests": 0,
+  "application_calls_executed": 0,
+  "factory_invocations": 0
+}

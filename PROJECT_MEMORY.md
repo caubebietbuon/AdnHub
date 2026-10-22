@@ -486,3 +486,47 @@ output/phase19/lineage-proofs.json via python tools/lineage_auditor.py.
 155tests(148+7),latest7rerunafterbyte-modelmetadata;Lua syntax/diffcheckspass.
 No Lua/payload/factory/API/network execution or runtimechecks;no push;demos
 untouched. Keep localpathpremises and globalactivation proofs separate.
+
+### Phase 20 — inter-block lineage and root107 cluster (2026-10-22)
+
+Base commit 20bff5d. New tools/interblock_auditor.py builds recorded path
+segments, annotates SSA dependencies across them, and searches a bounded
+(PC-before-instruction, register) predecessor product graph on fixed snapshots.
+Unknown writes kill definitions; unknown predecessors stay open-world. Repeated
+PCs and parallel copies preserve trace-order/pre-event semantics. Code map:
+recorded_blocks/interblock_slice = prefix provenance; transfer/snapshot_lineage
+= reviewed backward CFG transfers; payload_guard/local_guard_models = numeric
+versus reader constraints; cluster_audit = scoped shared-cell/body-alias ledger.
+
+Root prefix has 114 observed segments. PC9910 copies r35 into r9; r35 remains
+absent at fresh-frame entry across the recorded prefix. No numeric value at
+unvisited PC980 is proved. The current variant163 snapshot walks seven states
+back to an open predecessor frontier at9904. Snapshot and earlier instruction
+versions are not interchangeable without rewrite history.
+
+Numeric/shared-V guards have conditional witnesses: V=0 gives keys101/74=53/4;
+V=3758096639 gives205/252. With r88=0 and r9=0, r13=38, these satisfy only the
+isolated numeric equations, not reaching definitions or actual activation.
+The full inverse remains2048 states/256 pairs. Directory101=134543 XOR306486104
+is out of bounds; even hypothetically restoring offset134543 fails the bounded
+length-prefix reader on freshly reconstructed backing. A directory-only repair
+is insufficient under that unchanged-backing contract. No combined real-target
+model or new string is promoted; tag/cache and patch74 guards remain open.
+
+Closures567/258/379 share root107 capture1; last direct value before guarded
+construction is0, no later direct root107 write in the recorded intervals.
+This is not lifetime immutability. Closure663 capture1 holds the root159 cell
+whose frontier value is closure379: an additional captured body alias, not a
+proved external escape/write. Child567 hypothetical PC23 reads capture1;
+all child effects, activation/order and alias lifetime coverage remain incomplete.
+whole_lifetime_stable is unknown; verified_hierarchy=null; promotion patch
+applicable=false with operations=[]. Root frontier remains assert/debug PC8398.
+
+Run python tools/interblock_auditor.py to regenerate ignored output/phase20/
+interblock-proofs.json. Tracked findings and compact evidence live in
+research/interblock-audit-2026-10-22/FINDINGS.md and summary.json. New tests:
+tools/test_phase20.py. No Lua/payload/factory/API/network execution or Roblox
+runtime checks; demo/ESP unchanged. Keep the local commit offline (no push).
+Validation: 167 Python tests passed (155 prior + 12 Phase20), including pinned
+integration; final suite 127.945s. luac -p AdnHub.lua Loader.lua, Python module
+compilation, git diff --check and staged diff checks all pass.
